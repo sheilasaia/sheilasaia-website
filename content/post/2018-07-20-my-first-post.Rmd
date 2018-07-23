@@ -1,0 +1,25 @@
+---
+title: "My First Post"
+author: "Sheila Saia"
+date: 2015-07-23T21:13:14-05:00
+categories: ["R"]
+tags: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+# Welcome to the wateR blog!
+
+
+
+```{r cars}
+
+```
+
+
+
+```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
+
+```
