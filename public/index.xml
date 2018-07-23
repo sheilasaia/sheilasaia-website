@@ -234,8 +234,11 @@ Project #2 GitHub Repository&amp;hellip;coming soon!&lt;/p&gt;
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>/post/2018-07-20-my-first-post/</guid>
-      <description>&lt;div id=&#34;welcome-to-the-water-blog&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Welcome to the wateR blog!&lt;/h1&gt;
+      <description>&lt;p&gt;Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this R-markdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both are so useful!).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Some of the specific goals of this blog are to (in no special order):&lt;/strong&gt;&lt;br&gt; * Practice my science communications skills.&lt;br&gt; * Review and demostrate new packages, datasets, and methods that might be useful to water resources research.&lt;br&gt; * Highlight newly published studies that use data science to advance water resources research.&lt;br&gt; * Discuss the present and future of water data science.&lt;br&gt; * Interviews with experts about water-related topics.&lt;br&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/static/img/2018-07-20-blog/boatdock_fig.jpg&#34; /&gt;
+
 &lt;/div&gt;
 </description>
     </item>
