@@ -19,8 +19,6 @@ Welcome to the wateR blog! I've been considering starting a water-centric data s
 * Discuss the present and future of water data science.<br>
 * Interviews with experts about water-related topics.<br>
 
-![](/static/img/2018-07-20-blog/boatdock_fig.jpg)
-
 
 ```{r cars}
 
