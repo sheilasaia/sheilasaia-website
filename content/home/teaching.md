@@ -23,7 +23,7 @@ weight = 6
 
 # past workshops: 
 
-- *Exploring Spatial Data with `sf`* - I organized and led a 2-hour workshop for R-Ladies RTP introducing members to the `sf` package in R on July 19, 2018. The repository for this workshop is available [here](https://github.com/rladies/meetup-presentations_rtp/tree/master/2018-07-19-sf) and you can read more about the USGS GAGES-II dataset that we used in the tutorial [here](https://water.usgs.gov/GIS/metadata/usgswrd/XML/gagesII_Sept2011.xml).
+- *Exploring Spatial Data with `sf`* - I organized and led a 2-hour workshop for [R-Ladies RTP](https://www.meetup.com/R-Ladies-RTP/) introducing members to the `sf` package in R on July 19, 2018. The repository for this workshop is available [here](https://github.com/rladies/meetup-presentations_rtp/tree/master/2018-07-19-sf) and you can read more about the USGS GAGES-II dataset that we used in the tutorial [here](https://water.usgs.gov/GIS/metadata/usgswrd/XML/gagesII_Sept2011.xml).
 
 - *Ecohydrological Modeling for Land and Climate* - I co-organized and co-led this 4-hour workshop with Dr. Kunwar Singh at the [North American International Association for Landscape Ecology (NA-IALE)](http://www.usiale.org/) annual conference in Chicago, IL on April 10, 2017. The goal of this workshop was to train US-IALE members how to calibrate, validate, and visualize SWAT outputs.
 

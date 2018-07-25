@@ -33,10 +33,9 @@ B Cutts (NC State), R Emanuel (NC State), K Martin (NC State), KM Suttles (USFS)
 The goal of this project is to combine past and future hydrology model (i.e., [Soil and Water Assessment Tool (SWAT)](https://swat.tamu.edu/)) outputs with demographics data to create maps and prioritize climate change preparation and adaptation strategies for especially vulnerable communities in Western North Carolina's Upper Yadkin-Pee Dee Watershed.
 
 # Project Links
-Project Publication #1...coming soon!<br>
-[Project #1 GitHub Repository](https://github.com/sheilasaia/paper-yadkin-swat-study)<br>
-Project Publiation #2...coming soon!<br>
-Project #2 GitHub Repository...coming soon!
+See publication links below.<br>
+[GitHub Repository for Suttles et al. 2018](https://github.com/sheilasaia/paper-yadkin-swat-study)<br>
+GitHub Repository for Saia et al. 2018...coming soon!
 
 # Acknowledgements
 Special thanks to the [Oak Ridge Institute for Science and Education](https://orise.orau.gov/) for support this work.
