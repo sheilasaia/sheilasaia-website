@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on  </title>
-    <link>/categories/r/</link>
+    <link>https://sheilasaia.rbind.io/categories/r/</link>
     <description>Recent content in R on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
     
-	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheilasaia.rbind.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My First Post</title>
-      <link>/post/2018-07-20-my-first-post/</link>
+      <link>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/post/2018-07-20-my-first-post/</guid>
+      <guid>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</guid>
       <description>Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this R-markdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both are so useful!).
 Some of the specific goals of this blog are to (in no special order):
 * Practice my science communications skills.</description>
