@@ -18,8 +18,8 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://sheilasaia.rbind.io/home/about/</guid>
-      <description>about me I&amp;rsquo;m an Oak Ridge Institute for Science and Education (ORISE) postdoctoral research fellow with the United States Forest Service (USFS). My current research with the USFS Southern Research Station focuses on linking hydrological models and demographics data to prioritize the location of climate change adaptation strategies for vulnerable communities in North Carolina.
-I also like to help organize R-Ladies RTP events, help update the R-Ladies Global website, voluneer at the Durham Farmer&amp;rsquo;s Market, explore the outdoors (hiking, biking, climbing, swimming), maintain my cultures (kombucha and sourdough), and cook/bake for friends.</description>
+      <description>about me I&amp;rsquo;m an Oak Ridge Institute for Science and Education (ORISE) postdoctoral research fellow with the US Forest Service (USFS). My current research focuses on linking hydrological model results and demographics data to identify vulnerable communities in NC and help them adapt to future climate change (e.g., flooding and drought). I&amp;rsquo;m broadly interested in research questions related to human impacts on water quantity and quality.
+I also like to help organize R-Ladies RTP events, help update the R-Ladies Global website, volunteer at the Durham Farmer&amp;rsquo;s Market, explore the outdoors (hiking, biking, climbing, swimming), maintain my cultures (kombucha and sourdough), and cook/bake for friends.</description>
     </item>
     
     <item>
@@ -64,7 +64,7 @@ I also like to help organize R-Ladies RTP events, help update the R-Ladies Globa
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://sheilasaia.rbind.io/home/teaching/</guid>
-      <description>upcoming workshops:  Building Better Graphs with R: ggplot and Base - I&amp;rsquo;m co-organizing and co-leading this 5-day course with Dr. Ashton Drew at Transmitting Science in Barcelona, Spain on November 5-9, 2018. The goal of this course is to train attendees to create publication-quality graphics in R.
+      <description>upcoming workshops:  Building Better Graphs with R: ggplot and Base - I&amp;rsquo;m co-organizing and co-leading this 5-day course with Dr. Ashton Drew at Transmitting Science in Barcelona, Spain from November 5-9, 2018. The goal of this course is to train attendees to create publication-quality graphics in R.
  R for Data Science Book Club - I&amp;rsquo;m currently leading a bi-monthly bookclub to work through R for Data Science for R-Ladies RTP.</description>
     </item>
     

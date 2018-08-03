@@ -14,7 +14,7 @@ weight = 1
     "biogeochemistry",
     "water resources management",
     "data science",
-    "reprducible research"
+    "reproducible research"
   ]
 
 # List your qualifications (such as academic degrees).
@@ -37,6 +37,6 @@ weight = 1
 
 # about me
 
-I'm an Oak Ridge Institute for Science and Education (ORISE) postdoctoral research fellow with the United States Forest Service (USFS). My current research with the USFS Southern Research Station focuses on linking hydrological models and demographics data to prioritize the location of climate change adaptation strategies for vulnerable communities in North Carolina.
+I'm an Oak Ridge Institute for Science and Education (ORISE) postdoctoral research fellow with the US Forest Service (USFS). My current research focuses on linking hydrological model results and demographics data to identify vulnerable communities in NC and help them adapt to future climate change (e.g., flooding and drought). I'm broadly interested in research questions related to human impacts on water quantity and quality.
 
-I also like to help organize [R-Ladies RTP](https://www.meetup.com/R-Ladies-RTP/) events, help update the [R-Ladies Global](https://rladies.org/) website, voluneer at the [Durham Farmer's Market](http://www.durhamfarmersmarket.com/), explore the outdoors (hiking, biking, climbing, swimming), maintain my cultures ([kombucha](https://en.wikipedia.org/wiki/Kombucha) and [sourdough](https://en.wikipedia.org/wiki/Sourdough#Starter)), and cook/bake for friends.
+I also like to help organize [R-Ladies RTP](https://www.meetup.com/R-Ladies-RTP/) events, help update the [R-Ladies Global](https://rladies.org/) website, volunteer at the [Durham Farmer's Market](http://www.durhamfarmersmarket.com/), explore the outdoors (hiking, biking, climbing, swimming), maintain my cultures ([kombucha](https://en.wikipedia.org/wiki/Kombucha) and [sourdough](https://en.wikipedia.org/wiki/Sourdough#Starter)), and cook/bake for friends.

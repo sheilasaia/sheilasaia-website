@@ -233,8 +233,15 @@ GitHub Repository for Saia et al. 2018&amp;hellip;coming soon!&lt;/p&gt;
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</guid>
-      <description>&lt;p&gt;Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this R-markdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both are so useful!).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Some of the specific goals of this blog are to (in no special order):&lt;/strong&gt;&lt;br&gt; * Practice my science communications skills.&lt;br&gt; * Review and demostrate new packages, datasets, and methods that might be useful to water resources research.&lt;br&gt; * Highlight newly published studies that use data science to advance water resources research.&lt;br&gt; * Discuss the present and future of water data science.&lt;br&gt; * Interviews with experts about water-related topics.&lt;br&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this blogdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both languages are so useful!).&lt;/p&gt;
+&lt;p&gt;Some of the specific goals of this blog are to (in no special order):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Practice developing my science communication and R skills.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Review and demo new packages, data sets, and methods that might be useful to water resources research.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Highlight newly published studies that use data science to advance or could be applied to water resources research.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Discuss the present and future of water data science.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Interview experts about water-related topics.&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

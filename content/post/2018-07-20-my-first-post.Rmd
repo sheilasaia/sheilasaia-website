@@ -10,14 +10,15 @@ tags: []
 knitr::opts_chunk$set(collapse = TRUE)
 ```
 
-Welcome to the wateR blog! I've been considering starting a water-centric data science blog for a while now. Getting this R-markdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users...and maybe Python users too (both are so useful!).
+Welcome to the wateR blog! I've been considering starting a water-centric data science blog for a while now. Getting this blogdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users...and maybe Python users too (both languages are so useful!).
 
-**Some of the specific goals of this blog are to (in no special order):**<br>
-* Practice my science communications skills.<br>
-* Review and demostrate new packages, datasets, and methods that might be useful to water resources research.<br>
-* Highlight newly published studies that use data science to advance water resources research.<br>
-* Discuss the present and future of water data science.<br>
-* Interviews with experts about water-related topics.<br>
+Some of the specific goals of this blog are to (in no special order):
+
+*  Practice developing my science communication and R skills.<br>
+*  Review and demo new packages, data sets, and methods that might be useful to water resources research.<br>
+*  Highlight newly published studies that use data science to advance or could be applied to water resources research.<br>
+*  Discuss the present and future of water data science.<br>
+*  Interview experts about water-related topics.<br>
 
 
 ```{r cars}
