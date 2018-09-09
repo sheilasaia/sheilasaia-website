@@ -13,9 +13,9 @@ knitr::opts_chunk$set(collapse = TRUE)
 
 # Background
 
-While attending rstudio::conf 2018, I heard about the [tibbletime package](https://cran.r-project.org/web/packages/tibbletime/tibbletime.pdf) developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his [conference talk](https://www.rstudio.com/resources/videos/the-future-of-time-series-and-financial-analysis-in-the-tidyverse/), Davis Vaughan presented several business/finance examples to showcase `tibbletime`'s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn't help but think about how this package might be especially helpful for environmental scientists working with time series data. I really liked `rollify()`, which could be used to create custom moving window functions (e.g., `mean()`) to time series data; where the size of the window (e.g., 3 days) could also be specified. I was aware of `movingAve()` and `movingDiff()` functions in the [smwrBase package](https://pubs.usgs.gov/of/2015/1202/downloads/appendix1.pdf) developed by the U.S. Geological Survey (USGS), which calculate moving averages and differences, respectively. However, `rollify()` seemed like it had a more flexibility; it could take a rolling standard deviation or a rolling ratio of two functions. The possibilities were endless.
+While attending rstudio::conf 2018, I heard about the [tibbletime package](https://cran.r-project.org/web/packages/tibbletime/tibbletime.pdf) developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his [conference talk](https://www.rstudio.com/resources/videos/the-future-of-time-series-and-financial-analysis-in-the-tidyverse/), Davis Vaughan presented several business/finance examples to showcase `tibbletime`'s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn't help but think about how this package might be especially helpful for environmental scientists working with time series data. I really liked `rollify()`, which could be used to create and apply custom moving window functions (e.g., `mean()`) to time series data; where the size of the window (e.g., 3 days) could also be specified. I was aware of `movingAve()` and `movingDiff()` functions in the [smwrBase package](https://pubs.usgs.gov/of/2015/1202/downloads/appendix1.pdf) developed by the U.S. Geological Survey (USGS), which calculate moving averages and differences, respectively. However, `rollify()` seemed like it had a more flexibility; it could take a rolling standard deviation, a rolling ratio of two functions, or a custom function designed. The possibilities are endless.
 
-Shortly after the conference, I also heard about the [dataRetreival package](https://cran.r-project.org/web/packages/dataRetrieval/dataRetrieval.pdf) developed by the USGS. This package allows users to import USGS streamflow data (and any other data associated with [USGS streamgages](https://water.usgs.gov/nsip/definition9.html)) directly into R.
+Shortly after the conference, I also heard about the [dataRetreival package](https://cran.r-project.org/web/packages/dataRetrieval/dataRetrieval.pdf) developed by the USGS. This package allows users to import USGS streamflow data (and any other data associated with [USGS streamgages](https://water.usgs.gov/nsip/definition9.html)) directly into R. Very exciting!
 
 # Goals of this Post
 
@@ -36,7 +36,7 @@ library(dataRetrieval)
 
 ```
 
-Before downloading the data you'll have to specify the date range you want and also look up the USGS gage identification numbers for the streamgages of interest. To find these id numbers you can go to the USGS [Water of the Nation website](https://waterdata.usgs.gov/nwis/inventory) and looked up the numbers for sites near Durham, NC. Here, let's choose two: Eno River at Hillsborough, NC (#02085000) and Eno River at Durham, NC (#02085070). The Hillsborough site is upstream of Durham and is less developed.
+Before downloading the data you'll have to specify the date range you want and also look up the USGS gage identification numbers for the streamgages of interest. To find these id numbers you can go to the USGS [Water of the Nation website](https://waterdata.usgs.gov/nwis/inventory). I looked up the numbers for sites near Durham, NC. For this post, I chose two: Eno River at Hillsborough, NC (#02085000) and Eno River at Durham, NC (#02085070). The Hillsborough site is upstream of Durham and is surrounded by less urban development.
 
 ```{r define sites and dates}
 # define start and end dates
@@ -54,7 +54,7 @@ site_info$station_nm
 
 ```
  
- Now we need to figure out what parameter code is associated with streamflow. To figure this out, we can save  `parameterCdFile` to a variable and `View()` to see the parameter code look-up table.
+Now we need to figure out what parameter code is associated with streamflow. To figure this out, we can save  `parameterCdFile` to a variable and `View()` to see the parameter code look-up table.
  
 ```{r parameter lookup}
 # look for parameters you want
@@ -65,7 +65,7 @@ my_parameter_code <- "00060"
 
 ```
  
- After doing this we see that 00060 is the code for discharge in cubic feet per second (cfs). Now we're ready to download streamflow data!
+After doing this we see that 00060 is the code for discharge in cubic feet per second (cfs). Now we're ready to download streamflow data!
  
 ```{r download data}
 discharge_raw <- readNWISuv(site_numbers, 
@@ -75,7 +75,7 @@ discharge_raw <- readNWISuv(site_numbers,
 
 ```
  
- Let's tidy the data up a little bit. We'll change some of the column names so they make more sense later, add a column with the site name, and select only the most important columns. If you want to do some QA/QC be sure to check out the discharge_code column to make sure you're not missing data or there wasn't something wrong with the gage.
+Let's tidy the data up a little bit. We'll change some of the column names so they make more sense later, add a column with the site name, and select only the most important columns. If you want to do some QA/QC be sure to check out the discharge_code column to make sure you're not missing data or there wasn't something wrong with the gage.
  
 ```{r tidy data}
 discharge = discharge_raw %>%
@@ -109,7 +109,7 @@ discharge_daily <- discharge %>%
 
 ```
 
- Now let's try plotting the hydrograph (i.e., average daily discharge vs time) for both sites!
+Now let's try plotting the hydrograph (i.e., average daily discharge vs time) for both sites!
  
 ```{r plotting daily data}
 ggplot(data = discharge_daily) +
@@ -139,11 +139,11 @@ mean_roll_1d <- rollify(mean, window = 96)
 
 ```
  
- In this post we'll focus on using the mean in our rolling functions but I can think of several other functions that might be useful for streamgage data lovers: difference, standard deviation, or maybe even the ratio between two calculations. You could even write your own function and roll that. Pretty flexible, right?
+In this post we'll focus on using the mean in our rolling functions but I can think of several other functions that might be useful for streamgage data lovers: difference, standard deviation, or maybe even the ratio between two calculations. You could even write your own function and roll that. Pretty flexible, right?
  
- After you you write the function `my_roll_function <- rollify(<function>, window = <row span>)` then you can call `my_roll_function(<original data column>)` in `mutate()` to create a new column. Depending on the function you're using, you could maybe even do a nested roll based on a previous column you created. This seems helpful if you're taking differences or summations across different time scales.
+After you you write the function `my_roll_function <- rollify(<function>, window = <row span>)` then you can call `my_roll_function(<original data column>)` in `mutate()` to create a new column. Depending on the function you're using, you could maybe even do a nested roll based on a previous column you created. This seems helpful if you're taking differences or summations across different time scales.
  
- Let's roll (our data)! 
+Let's roll (our data)! 
  
 ```{r rolling data}
 discharge_roll <- discharge %>%
@@ -159,7 +159,7 @@ discharge_roll <- discharge %>%
 
 ```
  
- Let's look at the data.
+Let's look at the data.
  
 ```{r looking at rolled data}
 head(discharge_roll, n = 10) 
@@ -170,7 +170,7 @@ head(discharge_roll, n = 10)
  
 The data frame has maintained it's length (except for the NA columns at the top we deleted using `na.omit()`) and there are four new columns with aggregations of discharge at the time scales we specified in our rolling functions.
  
- We can plot this as a hydrograph as we did above or we can also plot each aggregation period against the original 15-min data to see how they compare. Let's show the latter.
+We can plot this as a hydrograph as we did above or we can also plot each aggregation period against the original 15-min data to see how they compare. Let's show the latter.
  
 ```{r plot aggregated time scales}
 my_colors <- c("a_half_hour" = "grey20", "b_hour" = "grey40", "c_half_day" = "grey60", "d_day" = "grey80")
@@ -189,7 +189,7 @@ ggplot(data = discharge_roll) +
 
 ```
  
- There are some interesting patterns that (I think) are worth pointing out:
+There are some interesting patterns that (I think) are worth pointing out:
  
  - Based on the daily hydrograph we plotted above, the Eno River at Durham (top) data set has higher peak events. This was expected given the daily hydrograph we plotted above. We see that discharge values go up to over 10,000 cfs at the Eno River at Durham site whereas for the Eno River at Hillsborough they only go up to about 5,000 cfs.
  
