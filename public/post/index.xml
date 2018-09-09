@@ -15,7 +15,7 @@
     <item>
       <title>Using tibbletime::rollify with USGS Streamgage Data</title>
       <link>/post/usgs-rollify-rmd/</link>
-      <pubDate>Sat, 04 Aug 2018 21:12:00 -0500</pubDate>
+      <pubDate>Thu, 09 Aug 2018 21:12:00 -0500</pubDate>
       
       <guid>/post/usgs-rollify-rmd/</guid>
       <description>Background While attending rstudio::conf 2018, I heard about the tibbletime package developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his conference talk, Davis Vaughan presented several business/finance examples to showcase tibbletime’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data.</description>
