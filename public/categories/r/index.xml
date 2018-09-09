@@ -7,15 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 04 Aug 2018 21:12:00 -0500</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Using tibbletime::rollify with USGS Streamgage Data</title>
+      <link>/post/usgs-rollify-rmd/</link>
+      <pubDate>Sat, 04 Aug 2018 21:12:00 -0500</pubDate>
+      
+      <guid>/post/usgs-rollify-rmd/</guid>
+      <description>Background While attending rstudio::conf 2018, I heard about the tibbletime package developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his conference talk, Davis Vaughan presented several business/finance examples to showcase tibbletime’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data.</description>
+    </item>
+    
+    <item>
       <title>My First Post</title>
       <link>/post/2018-07-20-my-first-post/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <pubDate>Mon, 23 Jul 2018 21:13:14 -0500</pubDate>
       
       <guid>/post/2018-07-20-my-first-post/</guid>
       <description>Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this blogdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both languages are so useful!).
