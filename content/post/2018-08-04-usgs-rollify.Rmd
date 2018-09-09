@@ -2,7 +2,6 @@
 title: "Using tibbletime::rollify with USGS Streamgage Data"
 author: "Sheila Saia"
 date: 2018-08-09T21:12:00-05:00
-slug: usgs-rollify
 categories: ["R"]
 tags: []
 ---
@@ -21,12 +20,12 @@ Shortly after the conference, I also heard about the [dataRetreival package](htt
 
 This all sounded so amazing and I had to try it out, which brings me to the goals of this blog post:
 
-- Use the `dataRetreival` package to download streamflow data for two USGS gages into R
-- Use the `tibbletime` package (along with other `tidyverse` packages) to aggregate these data for different time periods
+- Use the `dataRetreival` package to download streamflow data for two USGS streamgages into R
+- Use the `tibbletime` package (along with other `tidyverse` packages) to aggregate and plot these data for different time periods
 
 A special thanks to [Dr. Kristina Hopkins](https://twitter.com/kghopkin?lang=en) at the USGS in Raleigh, NC for sharing her `dataRetrieval` code!
 
-First let's load the libraries we'll need to run the code in this post.
+First let's load the R libraries that we'll need to run the code in this post.
 
 ```{r load libraries, message = FALSE}
 library(tidyverse)
@@ -36,7 +35,7 @@ library(dataRetrieval)
 
 ```
 
-Before downloading the data you'll have to specify the date range you want and also look up the USGS gage identification numbers for the streamgages of interest. To find these id numbers you can go to the USGS [Water of the Nation website](https://waterdata.usgs.gov/nwis/inventory). I looked up the numbers for sites near Durham, NC. For this post, I chose two: Eno River at Hillsborough, NC (#02085000) and Eno River at Durham, NC (#02085070). The Hillsborough site is upstream of Durham and is surrounded by less urban development.
+Before downloading the data, you'll have to specify a desired date range and look up the USGS streamgage identification number(s) for streamgage(s) of interest. To find these identification numbers you can go to the USGS [Water of the Nation website](https://waterdata.usgs.gov/nwis/inventory). I looked up the numbers for sites near Durham, NC. For this post, I chose two: Eno River at Hillsborough, NC (#02085000) and Eno River at Durham, NC (#02085070). The Hillsborough site is upstream of Durham and is surrounded by less urban development.
 
 ```{r define sites and dates}
 # define start and end dates
@@ -54,7 +53,7 @@ site_info$station_nm
 
 ```
  
-Now we need to figure out what parameter code is associated with streamflow. To figure this out, we can save  `parameterCdFile` to a variable and `View()` to see the parameter code look-up table.
+Now we need to figure out what parameter code is associated with streamflow (i.e., discharge). To figure this out, we can save  `parameterCdFile` to a variable named `parameter_code_metadata` and `View(parameter_code_metadata)` it to see the parameter code look-up table in RStudio. We can even search this file using the filter search (in the `View()` window that pops up).
  
 ```{r parameter lookup}
 # look for parameters you want
@@ -65,7 +64,7 @@ my_parameter_code <- "00060"
 
 ```
  
-After doing this we see that 00060 is the code for discharge in cubic feet per second (cfs). Now we're ready to download streamflow data!
+After doing this, we see that 00060 is the code for discharge in cubic feet per second (cfs). Now we're ready to download streamflow data!
  
 ```{r download data}
 discharge_raw <- readNWISuv(site_numbers, 
@@ -75,7 +74,7 @@ discharge_raw <- readNWISuv(site_numbers,
 
 ```
  
-Let's tidy the data up a little bit. We'll change some of the column names so they make more sense later, add a column with the site name, and select only the most important columns. If you want to do some QA/QC be sure to check out the discharge_code column to make sure you're not missing data or there wasn't something wrong with the gage.
+Let's tidy the data up a bit. We'll change some of the column names so they make more sense later to us, add a column with the site name, and select only the most important columns. If you are using this for something more formal, you will want to do some QA/QC by checking out the discharge_code column. You can read more about what these codes mean [here](https://help.waterdata.usgs.gov/output-formats).
  
 ```{r tidy data}
 discharge = discharge_raw %>%
@@ -91,7 +90,7 @@ discharge = discharge_raw %>%
 
 ```
  
-Using `head()` we see that we've downloaded 15-min intervals of streamflow data for both sites. Let's say we need daily discharge data to calibrate a hydrology model. We can aggregate the 15-min data to daily data pretty easily using `tidyverse` functions.
+Using `head()`, we see that we've downloaded 15-min intervals of streamflow data for both sites. Let's say we need daily discharge data to calibrate a hydrology model. We can aggregate the 15-min data to daily data pretty easily using `tidyverse` functions.
 
 ```{r daily data via tidyverse}
 # look at discharge
@@ -109,7 +108,7 @@ discharge_daily <- discharge %>%
 
 ```
 
-Now let's try plotting the hydrograph (i.e., average daily discharge vs time) for both sites!
+Now let's try plotting the daily hydrograph (i.e., average daily discharge vs time) for both sites!
  
 ```{r plotting daily data}
 ggplot(data = discharge_daily) +
@@ -124,9 +123,9 @@ ggplot(data = discharge_daily) +
 
 ```
  
-As expected (remember the Eno River at Hillsborough site is upstream of the Eno River at Durham site), we see that the two sites mimic one another over this one year time period. We also see that the Eno River at Durham site (top, red line) has some higher peaks than the Eno River at Hillborough site (bottom, teal line). This also makes sense since the Durham site is surrounded by more urbanized land than the Hillsborough site.
+As expected, we see that the two sites mimic one another over this one year time period. Remember, the Eno River at Hillsborough site is upstream of the Eno River at Durham site. We also see that the Eno River at Durham site (top, red line) has some higher peaks than the Eno River at Hillborough site (bottom, teal line). This also makes sense since the Durham site is surrounded by more urbanized land than the Hillsborough site.
 
-Ok, so let's get back to that `tibbletime` package. What if we want to look at different time spans? That is, not just daily, but maybe hourly or half a day. First we have to define our rolling functions and time spans.
+Ok, so let's get back to the `tibbletime` package. What if we want to compare different time spans? That is, not just daily, but maybe hourly or half day. First we have to define our rolling functions and their associated time spans.
 
 For this post, let's create half hour, hourly, half day, and day rolls.
  
@@ -143,7 +142,7 @@ In this post we'll focus on using the mean in our rolling functions but I can th
  
 After you you write the function `my_roll_function <- rollify(<function>, window = <row span>)` then you can call `my_roll_function(<original data column>)` in `mutate()` to create a new column. Depending on the function you're using, you could maybe even do a nested roll based on a previous column you created. This seems helpful if you're taking differences or summations across different time scales.
  
-Let's roll (our data)! 
+Let's roll (our data)! :D
  
 ```{r rolling data}
 discharge_roll <- discharge %>%
