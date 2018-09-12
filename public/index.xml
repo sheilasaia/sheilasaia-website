@@ -18,48 +18,49 @@
       <guid>/post/2018-08-04-usgs-rollify/</guid>
       <description>&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Background&lt;/h1&gt;
-&lt;p&gt;While attending rstudio::conf 2018, I heard about the &lt;a href=&#34;https://cran.r-project.org/web/packages/tibbletime/tibbletime.pdf&#34;&gt;tibbletime package&lt;/a&gt; developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his &lt;a href=&#34;https://www.rstudio.com/resources/videos/the-future-of-time-series-and-financial-analysis-in-the-tidyverse/&#34;&gt;conference talk&lt;/a&gt;, Davis Vaughan presented several business/finance examples to showcase &lt;code&gt;tibbletime&lt;/code&gt;’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data. I really liked &lt;code&gt;rollify()&lt;/code&gt;, which could be used to create and apply custom moving window functions (e.g., &lt;code&gt;mean()&lt;/code&gt;) to time series data; where the size of the window (e.g., 3 days) could also be specified. I was aware of &lt;code&gt;movingAve()&lt;/code&gt; and &lt;code&gt;movingDiff()&lt;/code&gt; functions in the &lt;a href=&#34;https://pubs.usgs.gov/of/2015/1202/downloads/appendix1.pdf&#34;&gt;smwrBase package&lt;/a&gt; developed by the U.S. Geological Survey (USGS), which calculate moving averages and differences, respectively. However, &lt;code&gt;rollify()&lt;/code&gt; seemed like it had a more flexibility; it could take a rolling standard deviation, a rolling ratio of two functions, or a custom function designed. The possibilities are endless.&lt;/p&gt;
-&lt;p&gt;Shortly after the conference, I also heard about the &lt;a href=&#34;https://cran.r-project.org/web/packages/dataRetrieval/dataRetrieval.pdf&#34;&gt;dataRetrieval package&lt;/a&gt; developed by the USGS. This package allows users to import USGS streamflow data (and any other data associated with &lt;a href=&#34;https://water.usgs.gov/nsip/definition9.html&#34;&gt;USGS streamgages&lt;/a&gt;) directly into R. Very exciting!&lt;/p&gt;
+&lt;p&gt;While attending rstudio::conf 2018, I heard about the &lt;a href=&#34;https://cran.r-project.org/web/packages/tibbletime/tibbletime.pdf&#34;&gt;tibbletime package&lt;/a&gt; developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his &lt;a href=&#34;https://www.rstudio.com/resources/videos/the-future-of-time-series-and-financial-analysis-in-the-tidyverse/&#34;&gt;conference talk&lt;/a&gt;, Davis Vaughan presented several business/finance examples to showcase &lt;code&gt;tibbletime&lt;/code&gt;’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data. I really liked &lt;code&gt;rollify()&lt;/code&gt;, which could be used to create and apply custom moving-window functions (e.g., &lt;code&gt;mean()&lt;/code&gt;) to time series data; where the size of the window (e.g., 3 days) could also be specified. I was aware of the &lt;code&gt;movingAve()&lt;/code&gt; and &lt;code&gt;movingDiff()&lt;/code&gt; functions in the &lt;a href=&#34;https://pubs.usgs.gov/of/2015/1202/downloads/appendix1.pdf&#34;&gt;smwrBase package&lt;/a&gt; developed by the U.S. Geological Survey (USGS), which calculate moving average and difference, respectively. However, &lt;code&gt;rollify()&lt;/code&gt; has more flexibility; it can be used to take a rolling standard deviation, a rolling ratio of two build in R functions, or a rolling custom function. The possibilities are endless.&lt;/p&gt;
+&lt;p&gt;Shortly after the conference, I also heard about the &lt;a href=&#34;https://cran.r-project.org/web/packages/dataRetrieval/dataRetrieval.pdf&#34;&gt;dataRetrieval package&lt;/a&gt; developed by the USGS from my friend, Dr. Kristina Hopkins. This package allows users to import USGS streamflow data (and any other data associated with &lt;a href=&#34;https://water.usgs.gov/nsip/definition9.html&#34;&gt;USGS streamgages&lt;/a&gt;) directly into R. Very exciting!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;goals-of-this-post&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Goals of this Post&lt;/h1&gt;
 &lt;p&gt;This all sounded so amazing and I had to try it out, which brings me to the goals of this blog post:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Use the &lt;code&gt;dataRetrieval&lt;/code&gt; package to download streamflow data for two USGS streamgages into R&lt;/li&gt;
+&lt;li&gt;Use the &lt;code&gt;dataRetrieval&lt;/code&gt; package to download streamflow data into R for two USGS streamgages&lt;/li&gt;
 &lt;li&gt;Use the &lt;code&gt;tibbletime&lt;/code&gt; package (along with other &lt;code&gt;tidyverse&lt;/code&gt; packages) to aggregate and plot these data for different time periods&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Special thanks to &lt;a href=&#34;https://twitter.com/kghopkin?lang=en&#34;&gt;Dr. Kristina Hopkins&lt;/a&gt; at the USGS in Raleigh, NC for sharing her &lt;code&gt;dataRetrieval&lt;/code&gt; code!&lt;/p&gt;
+&lt;p&gt;Special thanks to &lt;a href=&#34;https://twitter.com/kghopkin?lang=en&#34;&gt;Dr. Kristina Hopkins&lt;/a&gt; at the USGS in Raleigh, NC for sharing her &lt;code&gt;dataRetrieval&lt;/code&gt; code and to &lt;a href=&#34;https://www.usgs.gov/staff-profiles/laura-decicco?qt-staff_profile_science_products=3#qt-staff_profile_science_products&#34;&gt;Dr. Laura DeCicco&lt;/a&gt; at the USGS in Middleton, WI for pointing out key features of the &lt;code&gt;dataRetrieval&lt;/code&gt; package!&lt;/p&gt;
 &lt;p&gt;First let’s load the R libraries that we’ll need to run the code in this post.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
 library(lubridate)
 library(tibbletime)
 library(dataRetrieval)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Before downloading the data, you’ll have to specify a desired date range and look up the USGS streamgage identification number(s) for streamgage(s) of interest. To find these identification numbers you can go to the USGS &lt;a href=&#34;https://waterdata.usgs.gov/nwis/inventory&#34;&gt;Water of the Nation website&lt;/a&gt;. I looked up the numbers for sites near Durham, NC. For this post, I chose two: Eno River at Hillsborough, NC (#02085000) and Eno River at Durham, NC (#02085070). The Hillsborough site is upstream of Durham and is surrounded by less urban development.&lt;/p&gt;
+&lt;p&gt;Before downloading data, you’ll have to specify a desired date range and look up the USGS streamgage identification number(s) for streamgage(s) of interest.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# define start and end dates
 start_date &amp;lt;- &amp;quot;2017-01-01&amp;quot;
-end_date &amp;lt;- &amp;quot;2018-01-01&amp;quot;
-
-# define sites (you can also just use one site here)
-site_numbers &amp;lt;- c(&amp;quot;02085070&amp;quot;, &amp;quot;02085000&amp;quot;)
-
-# save site info to a variable so we can look at it later
-site_info &amp;lt;- readNWISsite(site_numbers)
-
-# look at site info
-site_info$station_nm
-## [1] &amp;quot;ENO RIVER AT HILLSBOROUGH, NC&amp;quot; &amp;quot;ENO RIVER NEAR DURHAM, NC&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now we need to figure out what parameter code is associated with streamflow (i.e., discharge). To figure this out, we can save &lt;code&gt;parameterCdFile&lt;/code&gt; to a variable named &lt;code&gt;parameter_code_metadata&lt;/code&gt; and &lt;code&gt;View(parameter_code_metadata)&lt;/code&gt; it to see the parameter code look-up table in RStudio. We can even search this file using the filter search (in the &lt;code&gt;View()&lt;/code&gt; window that pops up).&lt;/p&gt;
+end_date &amp;lt;- &amp;quot;2018-01-01&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You’ll also need to specify the parameter code for the data you want to download (e.g., discharge, stage height, etc.). But how do we know what the parameter code is for our favorite data? The USFS have included a look-up table for that! To figure this out, we can save &lt;code&gt;parameterCdFile&lt;/code&gt; to a variable named &lt;code&gt;parameter_code_metadata&lt;/code&gt; and &lt;code&gt;View(parameter_code_metadata)&lt;/code&gt; it to see the parameter code look-up table in RStudio. We can even search through different columns of these data by clicking on the ‘Filter’ funnel icon in the RStudio &lt;code&gt;View()&lt;/code&gt; window.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# look for parameters you want
 parameter_code_metadata &amp;lt;- parameterCdFile
 
-# we want discharage in cubic feet per second which is code &amp;quot;00060&amp;quot;
+# after some looking around, we see that we want code &amp;quot;00060&amp;quot; for discharge in cubic feet per second (cfs)
 my_parameter_code &amp;lt;- &amp;quot;00060&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;After doing this, we see that 00060 is the code for discharge in cubic feet per second (cfs). Now we’re ready to download streamflow data!&lt;/p&gt;
+&lt;p&gt;After looking through the table, I figured out that 00060 is the code for discharge in cubic feet per second (cfs). We can save this to the variable &lt;code&gt;my_parameter_code&lt;/code&gt;, which leaves one last step…&lt;/p&gt;
+&lt;p&gt;We have to decide which streamgage to choose! If you’d rather do this manually/look at a map, you can you can go to the USGS &lt;a href=&#34;https://waterdata.usgs.gov/nwis/inventory&#34;&gt;Water of the Nation website&lt;/a&gt; and use their mapping tool to look up sites visually. Alternatively, you can use the look-up tables in the &lt;code&gt;dataRetrieval&lt;/code&gt; package to do this in R.&lt;/p&gt;
+&lt;p&gt;Let’s say we want to see all the sites in North Carolina. We can save the output from the &lt;code&gt;whatNWISsites()&lt;/code&gt; function to the variable &lt;code&gt;nc_sites&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nc_sites &amp;lt;- whatNWISsites(stateCd = &amp;quot;NC&amp;quot;, parameterCD = &amp;quot;00060&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Just like we did for the parameter code, we can use ‘Filter’ funnel icon in the RStudio &lt;code&gt;View()&lt;/code&gt; window to look for sites that might be interesting to us. I looked for ‘Eno River’ sites and discovered two that I’ll use here: Eno River at Hillsborough, NC (#02085000) and Eno River at Durham, NC (#02085070). The Hillsborough site is upstream of Durham and is surrounded by less urban development.&lt;/p&gt;
+&lt;p&gt;Note: If you want to search what data is available (e.g., period of record, available parameters, etc.) you can use &lt;code&gt;whatNWISdata()&lt;/code&gt;. See &lt;code&gt;?whatNWISdata&lt;/code&gt; for help on how to use this. For ease of use (and because Dr. Kristina Hopkins shared them with me! Thank you!), the service codes include: “dv” for daily data, “iv” for instantaneuos data, “qw” for water quality data, “sv” for site visit data, “pk” for peak measurement data, and “gw” for groundwater data.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# define sites (you can also just use one site here)
+site_numbers &amp;lt;- c(&amp;quot;02085070&amp;quot;, &amp;quot;02085000&amp;quot;)
+
+# save site info to a variable so we can look at it later
+site_info &amp;lt;- readNWISsite(site_numbers)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we’re ready to download discharge data for these two sites!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;discharge_raw &amp;lt;- readNWISuv(site_numbers, 
                             my_parameter_code, 
                             tz=&amp;#39;America/Jamaica&amp;#39;, 
                             start_date, end_date)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let’s tidy the data up a bit. We’ll change some of the column names so they make more sense later to us, add a column with the site name, and select only the most important columns. If you are using this for something more formal, you will want to do some QA/QC by checking out the discharge_code column. You can read more about what these codes mean &lt;a href=&#34;https://help.waterdata.usgs.gov/output-formats&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s tidy thse data up a bit. We’ll change some of the column names so they make more sense later to us, add a column with the site name, and select only the most important columns. If you are using this for something more formal, you will want to do some QA/QC by checking out the discharge_code column. You can read more about what these codes mean &lt;a href=&#34;https://help.waterdata.usgs.gov/output-formats&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;discharge = discharge_raw %&amp;gt;%
   select(site_number = site_no, 
          date_time = dateTime,
@@ -70,9 +71,8 @@ my_parameter_code &amp;lt;- &amp;quot;00060&amp;quot;&lt;/code&gt;&lt;/pre&gt;
     site_number == &amp;quot;02085000&amp;quot; ~ &amp;quot;eno_rv_hillsb&amp;quot;,
     site_number == &amp;quot;02085070&amp;quot; ~ &amp;quot;eno_rv_durham&amp;quot;)) %&amp;gt;%
   select(site_name, date_time, discharge_cfs)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Using &lt;code&gt;head()&lt;/code&gt;, we see that we’ve downloaded 15-min intervals of streamflow data for both sites. Let’s say we need daily discharge data to calibrate a hydrology model. We can aggregate the 15-min data to daily data pretty easily using &lt;code&gt;tidyverse&lt;/code&gt; functions.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# look at discharge
-head(discharge, n = 10)
+&lt;p&gt;Using &lt;code&gt;head()&lt;/code&gt;, we see that we’ve downloaded 15-min intervals of streamflow data for both sites.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(discharge, n = 10)
 ##        site_name           date_time discharge_cfs
 ## 1  eno_rv_hillsb 2017-01-01 00:00:00          9.68
 ## 2  eno_rv_hillsb 2017-01-01 00:15:00          9.68
@@ -83,10 +83,9 @@ head(discharge, n = 10)
 ## 7  eno_rv_hillsb 2017-01-01 01:30:00          9.32
 ## 8  eno_rv_hillsb 2017-01-01 01:45:00          9.32
 ## 9  eno_rv_hillsb 2017-01-01 02:00:00          9.32
-## 10 eno_rv_hillsb 2017-01-01 02:15:00          9.32
-
-# calculate daily average discharage
-discharge_daily &amp;lt;- discharge %&amp;gt;%
+## 10 eno_rv_hillsb 2017-01-01 02:15:00          9.32&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s say we need daily discharge data to calibrate a hydrology model. We can aggregate the 15-min data to daily data pretty easily using &lt;code&gt;tidyverse&lt;/code&gt; functions.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;discharge_daily &amp;lt;- discharge %&amp;gt;%
   mutate(year = year(date_time), 
          month = month(date_time),
          day = day(date_time)) %&amp;gt;%
@@ -94,7 +93,7 @@ discharge_daily &amp;lt;- discharge %&amp;gt;%
   select(site_name, date, discharge_cfs) %&amp;gt;%
   group_by(site_name, date) %&amp;gt;%
   summarize(avg_daily_discharge_cfs = mean(discharge_cfs))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now let’s try plotting the daily hydrograph (i.e., average daily discharge vs time) for both sites!&lt;/p&gt;
+&lt;p&gt;Now let’s try plotting the daily hydrograph (i.e., average daily discharge vs time) for both sites.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = discharge_daily) +
   geom_line(aes(x = date, y = avg_daily_discharge_cfs, color = site_name)) +
   facet_wrap(~site_name, nrow = 2, ncol = 1) +
@@ -108,8 +107,7 @@ discharge_daily &amp;lt;- discharge %&amp;gt;%
 &lt;p&gt;As expected, we see that the two sites mimic one another over this one year time period. Remember, the Eno River at Hillsborough site is upstream of the Eno River at Durham site. We also see that the Eno River at Durham site (top, red line) has some higher peaks than the Eno River at Hillborough site (bottom, teal line). This also makes sense since the Durham site is surrounded by more urbanized land than the Hillsborough site.&lt;/p&gt;
 &lt;p&gt;Ok, so let’s get back to the &lt;code&gt;tibbletime&lt;/code&gt; package. What if we want to compare different time spans? That is, not just daily, but maybe hourly or half day. First we have to define our rolling functions and their associated time spans.&lt;/p&gt;
 &lt;p&gt;For this post, let’s create half hour, hourly, half day, and day rolls.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# create rollify functions
-mean_roll_30min &amp;lt;- rollify(mean, window = 2)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean_roll_30min &amp;lt;- rollify(mean, window = 2)
 mean_roll_1hr &amp;lt;- rollify(mean, window = 4)
 mean_roll_12hr &amp;lt;- rollify(mean, window = 48)
 mean_roll_1d &amp;lt;- rollify(mean, window = 96)&lt;/code&gt;&lt;/pre&gt;
@@ -126,7 +124,7 @@ mean_roll_1d &amp;lt;- rollify(mean, window = 96)&lt;/code&gt;&lt;/pre&gt;
   na.omit()
 
 # use na.omit() to delete some of the first cells in the dataframe that are NA&amp;#39;s due to rolling&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let’s look at the data.&lt;/p&gt;
+&lt;p&gt;Let’s look at these data.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(discharge_roll, n = 10) 
 ## # A tibble: 10 x 7
 ## # Groups:   site_name [1]
@@ -143,10 +141,8 @@ mean_roll_1d &amp;lt;- rollify(mean, window = 96)&lt;/code&gt;&lt;/pre&gt;
 ##  9 eno_rv_h… 2017-01-02 01:45:00          12.1             12.1
 ## 10 eno_rv_h… 2017-01-02 02:00:00          12.5             12.3
 ## # ... with 3 more variables: hourly_avg_discharge_cfs &amp;lt;dbl&amp;gt;,
-## #   twelvehr_avg_discharge_cfs &amp;lt;dbl&amp;gt;, daily_avg_discharge_cfs &amp;lt;dbl&amp;gt;
-
-# or use View(discharge_roll) in your RStudio console.&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The data frame has maintained it’s length (except for the NA columns at the top we deleted using &lt;code&gt;na.omit()&lt;/code&gt;) and there are four new columns with aggregations of discharge at the time scales we specified in our rolling functions.&lt;/p&gt;
+## #   twelvehr_avg_discharge_cfs &amp;lt;dbl&amp;gt;, daily_avg_discharge_cfs &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The dataframe has maintained it’s length (except for the NA columns at the top we deleted using &lt;code&gt;na.omit()&lt;/code&gt;) and there are four new columns with aggregations of discharge at the time scales we specified in our rolling functions.&lt;/p&gt;
 &lt;p&gt;We can plot this as a hydrograph as we did above or we can also plot each aggregation period against the original 15-min data to see how they compare. Let’s show the latter.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;my_colors &amp;lt;- c(&amp;quot;a_half_hour&amp;quot; = &amp;quot;grey20&amp;quot;, &amp;quot;b_hour&amp;quot; = &amp;quot;grey40&amp;quot;, &amp;quot;c_half_day&amp;quot; = &amp;quot;grey60&amp;quot;, &amp;quot;d_day&amp;quot; = &amp;quot;grey80&amp;quot;)
 
@@ -161,12 +157,12 @@ ggplot(data = discharge_roll) +
   ylab(&amp;quot;Aggregated Discharge (cfs)&amp;quot;) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = &amp;quot;black&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-08-04-usgs-rollify_files/figure-html/plot%20aggregated%20time%20scales-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-08-04-usgs-rollify_files/figure-html/plot%20results-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;There are some interesting patterns that (I think) are worth pointing out:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Based on the daily hydrograph we plotted above, the Eno River at Durham (top) data set has higher peak events. This was expected given the daily hydrograph we plotted above. We see that discharge values go up to over 10,000 cfs at the Eno River at Durham site whereas for the Eno River at Hillsborough they only go up to about 5,000 cfs.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;I thought it was interesting that the half hour and hourly data sets match the 15-min time scale closely; we see the points follow the 1:1 line for both. However, the half day and daily data show dampened responses with lower peaks and skew away from the 1:1 line. This dampening wasn’t completely surprising to me but it made me wonder how this would impact downstream applications of daily streamflow data. Is this dampening represented by a linear or non-linear relationship? Is this relationship a function of watershed properties or near gage properties. Lot’s of questions like this come to mind. Most of which deal with being able to account for and maybe even predict this dampening.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The last thing that I wanted to point out was the spiraling nature of these figures. The more we aggregate the data, the more it seems to spiral into the origin at zero. Also, it’s interesting to compare the overlap of time scale spirals (i.e., half day and daily) between the two gages. More specifically, we see that one ring of the half day and daily spirals overlap for the Eno River at Hillsborough site but we don’t see this overlap at the Eno River at Durham site. I wonder why? Is it because urban development has caused a little more disconnection between water stored in the landscape for the Eno River at Durham site? Do antecedent moisture conditions play a larger role in future stream response in the less developed Eno River at Hillsborough site?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The last thing that I wanted to point out was the spiraling nature of these figures. The more we aggregate these data, the more it seems to spiral into the origin at zero. Also, it’s interesting to compare the overlap of time scale spirals (i.e., half day and daily) between the two gages. More specifically, we see that one ring of the half day and daily spirals overlap for the Eno River at Hillsborough site but we don’t see this overlap at the Eno River at Durham site. I wonder why? Is it because urban development has caused a little more disconnection between water stored in the landscape for the Eno River at Durham site? Do antecedent moisture conditions play a larger role in future stream response in the less developed Eno River at Hillsborough site?&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;There are still so many questions floating around in my head but figuring out how to integrate the &lt;code&gt;tibbletime&lt;/code&gt; and &lt;code&gt;dataRetrieval&lt;/code&gt; packages has been fun! If you know of any publications that address these questions or just want to say &lt;code&gt;Hi!&lt;/code&gt;, please let me know &lt;a href=&#34;https://twitter.com/sheilasaia?lang=en&#34;&gt;via Twitter&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
