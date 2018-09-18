@@ -77,6 +77,11 @@
   <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
   {{ end }}
 
+  <!-- Adding highlighting -->
+  <link rel="stylesheet" href="{{"css/github.css" | absURL}}" rel="stylesheet" id="theme-stylesheet">
+  <script src="{{ "js/highlight.pack.js" | absURL }}"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
   {{ if .Site.GoogleAnalytics }}
     <script>
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;

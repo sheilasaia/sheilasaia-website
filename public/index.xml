@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>  on  </title>
-    <link>/</link>
+    <link>https://sheilasaia.rbind.io/</link>
     <description>Recent content in   on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Using tibbletime::rollify with USGS Streamgage Data</title>
-      <link>/post/2018-08-04-usgs-rollify/</link>
+      <link>https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify/</link>
       <pubDate>Wed, 05 Sep 2018 21:12:00 -0500</pubDate>
       
-      <guid>/post/2018-08-04-usgs-rollify/</guid>
+      <guid>https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify/</guid>
       <description>&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Background&lt;/h1&gt;
 &lt;p&gt;While attending rstudio::conf 2018, I heard about the &lt;a href=&#34;https://cran.r-project.org/web/packages/tibbletime/tibbletime.pdf&#34;&gt;tibbletime package&lt;/a&gt; developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his &lt;a href=&#34;https://www.rstudio.com/resources/videos/the-future-of-time-series-and-financial-analysis-in-the-tidyverse/&#34;&gt;conference talk&lt;/a&gt;, Davis Vaughan presented several business/finance examples to showcase &lt;code&gt;tibbletime&lt;/code&gt;’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data. I really liked &lt;code&gt;rollify()&lt;/code&gt;, which could be used to create and apply custom moving-window functions (e.g., &lt;code&gt;mean()&lt;/code&gt;) to time series data; where the size of the window (e.g., 3 days) could also be specified. I was aware of the &lt;code&gt;movingAve()&lt;/code&gt; and &lt;code&gt;movingDiff()&lt;/code&gt; functions in the &lt;a href=&#34;https://pubs.usgs.gov/of/2015/1202/downloads/appendix1.pdf&#34;&gt;smwrBase package&lt;/a&gt; developed by the U.S. Geological Survey (USGS), which calculate moving average and difference, respectively. However, &lt;code&gt;rollify()&lt;/code&gt; has more flexibility; it can be used to take a rolling standard deviation, a rolling ratio of two build in R functions, or a rolling custom function. The possibilities are endless.&lt;/p&gt;
@@ -103,7 +103,7 @@ site_info &amp;lt;- readNWISsite(site_numbers)&lt;/code&gt;&lt;/pre&gt;
         panel.background = element_blank(),
         axis.line = element_line(colour = &amp;quot;black&amp;quot;),
         axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-08-04-usgs-rollify_files/figure-html/plotting%20daily%20data-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify_files/figure-html/plotting%20daily%20data-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;As expected, we see that the two sites mimic one another over this one year time period. Remember, the Eno River at Hillsborough site is upstream of the Eno River at Durham site. We also see that the Eno River at Durham site (top, red line) has some higher peaks than the Eno River at Hillborough site (bottom, teal line). This also makes sense since the Durham site is surrounded by more urbanized land than the Hillsborough site.&lt;/p&gt;
 &lt;p&gt;Ok, so let’s get back to the &lt;code&gt;tibbletime&lt;/code&gt; package. What if we want to compare different time spans? That is, not just daily, but maybe hourly or half day. First we have to define our rolling functions and their associated time spans.&lt;/p&gt;
 &lt;p&gt;For this post, let’s create half hour, hourly, half day, and day rolls.&lt;/p&gt;
@@ -157,7 +157,7 @@ ggplot(data = discharge_roll) +
   ylab(&amp;quot;Aggregated Discharge (cfs)&amp;quot;) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = &amp;quot;black&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-08-04-usgs-rollify_files/figure-html/plot%20results-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify_files/figure-html/plot%20results-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;There are some interesting patterns that (I think) are worth pointing out:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Based on the daily hydrograph we plotted above, the Eno River at Durham (top) data set has higher peak events. This was expected given the daily hydrograph we plotted above. We see that discharge values go up to over 10,000 cfs at the Eno River at Durham site whereas for the Eno River at Hillsborough they only go up to about 5,000 cfs.&lt;/p&gt;&lt;/li&gt;
@@ -171,10 +171,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>My First Post</title>
-      <link>/post/2018-07-20-my-first-post/</link>
+      <link>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</link>
       <pubDate>Mon, 23 Jul 2018 21:13:14 -0500</pubDate>
       
-      <guid>/post/2018-07-20-my-first-post/</guid>
+      <guid>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</guid>
       <description>&lt;p&gt;Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this blogdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both languages are so useful!).&lt;/p&gt;
 &lt;p&gt;Some of the specific goals of this blog are to (in no special order):&lt;/p&gt;
 &lt;ul&gt;
@@ -189,10 +189,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Modeling Water Quality in a Suburban Watershed</title>
-      <link>/project/mrgp-project/</link>
+      <link>https://sheilasaia.rbind.io/project/mrgp-project/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
       
-      <guid>/project/mrgp-project/</guid>
+      <guid>https://sheilasaia.rbind.io/project/mrgp-project/</guid>
       <description>
 
 &lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
@@ -219,10 +219,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Phosphorus Cycling in Stream Biofilms</title>
-      <link>/project/paos-streams-project/</link>
+      <link>https://sheilasaia.rbind.io/project/paos-streams-project/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
       
-      <guid>/project/paos-streams-project/</guid>
+      <guid>https://sheilasaia.rbind.io/project/paos-streams-project/</guid>
       <description>
 
 &lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
@@ -250,19 +250,19 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Assessment of Hydrologic Vulnerability to Urbanization and Climate Change in a Rapidly Changing Watershed in the Southeast US</title>
-      <link>/publication/yadkin-swat/</link>
+      <link>https://sheilasaia.rbind.io/publication/yadkin-swat/</link>
       <pubDate>Fri, 20 Jul 2018 00:00:00 -0400</pubDate>
       
-      <guid>/publication/yadkin-swat/</guid>
+      <guid>https://sheilasaia.rbind.io/publication/yadkin-swat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ecohydrological Modeling with Stable Isotopes</title>
-      <link>/project/stable-isotope-project/</link>
+      <link>https://sheilasaia.rbind.io/project/stable-isotope-project/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>/project/stable-isotope-project/</guid>
+      <guid>https://sheilasaia.rbind.io/project/stable-isotope-project/</guid>
       <description>
 
 &lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
@@ -290,10 +290,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Preparing for Climate Change: Using Hydrology Models and Census Data to Map Vulnerable Communities</title>
-      <link>/talk/ptrc-climate-may2018/</link>
+      <link>https://sheilasaia.rbind.io/talk/ptrc-climate-may2018/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>/talk/ptrc-climate-may2018/</guid>
+      <guid>https://sheilasaia.rbind.io/talk/ptrc-climate-may2018/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;This talk is being given by me and Kelly M. Suttles.&lt;/em&gt;&lt;/p&gt;
@@ -314,10 +314,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Sociohydrology in Western North Carolina</title>
-      <link>/project/nc-sociohydro-project/</link>
+      <link>https://sheilasaia.rbind.io/project/nc-sociohydro-project/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>/project/nc-sociohydro-project/</guid>
+      <guid>https://sheilasaia.rbind.io/project/nc-sociohydro-project/</guid>
       <description>
 
 &lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
@@ -346,10 +346,10 @@ GitHub Repository for Saia et al. 2018&amp;hellip;coming soon!&lt;/p&gt;
     
     <item>
       <title>Integrating Hydrological Models and Census Data to Prioritize Climate Change Preparedness</title>
-      <link>/talk/usiale-april2018/</link>
+      <link>https://sheilasaia.rbind.io/talk/usiale-april2018/</link>
       <pubDate>Sun, 01 Apr 2018 00:00:00 -0400</pubDate>
       
-      <guid>/talk/usiale-april2018/</guid>
+      <guid>https://sheilasaia.rbind.io/talk/usiale-april2018/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
@@ -360,10 +360,10 @@ GitHub Repository for Saia et al. 2018&amp;hellip;coming soon!&lt;/p&gt;
     
     <item>
       <title>Integrating Hydrological Models and Census Data to Prioritize Climate Change Preparedness</title>
-      <link>/talk/unc-feb2018/</link>
+      <link>https://sheilasaia.rbind.io/talk/unc-feb2018/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 -0500</pubDate>
       
-      <guid>/talk/unc-feb2018/</guid>
+      <guid>https://sheilasaia.rbind.io/talk/unc-feb2018/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
@@ -374,28 +374,28 @@ GitHub Repository for Saia et al. 2018&amp;hellip;coming soon!&lt;/p&gt;
     
     <item>
       <title>Ecohydrologic considerations for modeling of stable water isotopes in a small intermittent watershed</title>
-      <link>/publication/ecohydro-stable-isotope-model/</link>
+      <link>https://sheilasaia.rbind.io/publication/ecohydro-stable-isotope-model/</link>
       <pubDate>Fri, 30 Jun 2017 00:00:00 -0400</pubDate>
       
-      <guid>/publication/ecohydro-stable-isotope-model/</guid>
+      <guid>https://sheilasaia.rbind.io/publication/ecohydro-stable-isotope-model/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Evidence for polyphosphate accumulating organism (PAO)-mediated phosphorus cycling in stream biofilms under alternating aerobic/anaerobic conditions</title>
-      <link>/publication/p-cycling-in-stream-biofilms/</link>
+      <link>https://sheilasaia.rbind.io/publication/p-cycling-in-stream-biofilms/</link>
       <pubDate>Fri, 24 Feb 2017 00:00:00 -0500</pubDate>
       
-      <guid>/publication/p-cycling-in-stream-biofilms/</guid>
+      <guid>https://sheilasaia.rbind.io/publication/p-cycling-in-stream-biofilms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Factors Influencing Divergent Patterns of Phosphorus Availability in NY and PA Biogeochemical ‘Hotspots&#39;</title>
-      <link>/talk/agu-dec2016/</link>
+      <link>https://sheilasaia.rbind.io/talk/agu-dec2016/</link>
       <pubDate>Thu, 01 Dec 2016 00:00:00 -0500</pubDate>
       
-      <guid>/talk/agu-dec2016/</guid>
+      <guid>https://sheilasaia.rbind.io/talk/agu-dec2016/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
@@ -406,19 +406,19 @@ GitHub Repository for Saia et al. 2018&amp;hellip;coming soon!&lt;/p&gt;
     
     <item>
       <title>Asssessing BMP effectiveness and guiding BMP planning using process-based modeling</title>
-      <link>/publication/hct-model/</link>
+      <link>https://sheilasaia.rbind.io/publication/hct-model/</link>
       <pubDate>Wed, 01 Apr 2015 00:00:00 -0400</pubDate>
       
-      <guid>/publication/hct-model/</guid>
+      <guid>https://sheilasaia.rbind.io/publication/hct-model/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Incorporating pesticide transport into the WEPP model for mulch tillage and no tillage plots with an underlying claypan soil</title>
-      <link>/publication/wepp-pesticides-model/</link>
+      <link>https://sheilasaia.rbind.io/publication/wepp-pesticides-model/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 -0500</pubDate>
       
-      <guid>/publication/wepp-pesticides-model/</guid>
+      <guid>https://sheilasaia.rbind.io/publication/wepp-pesticides-model/</guid>
       <description></description>
     </item>
     

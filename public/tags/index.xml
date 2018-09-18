@@ -2,85 +2,85 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on  </title>
-    <link>/tags/</link>
+    <link>https://sheilasaia.rbind.io/tags/</link>
     <description>Recent content in Tags on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheilasaia.rbind.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Content tagged as &#39;Academic&#39;</title>
-      <link>/tags/academic/</link>
+      <link>https://sheilasaia.rbind.io/tags/academic/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
       
-      <guid>/tags/academic/</guid>
+      <guid>https://sheilasaia.rbind.io/tags/academic/</guid>
       <description>Here is a list of all the content that has been tagged as academic.</description>
     </item>
     
     <item>
       <title>Climate-change</title>
-      <link>/tags/climate-change/</link>
+      <link>https://sheilasaia.rbind.io/tags/climate-change/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>/tags/climate-change/</guid>
+      <guid>https://sheilasaia.rbind.io/tags/climate-change/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Modeling</title>
-      <link>/tags/modeling/</link>
+      <link>https://sheilasaia.rbind.io/tags/modeling/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
       
-      <guid>/tags/modeling/</guid>
+      <guid>https://sheilasaia.rbind.io/tags/modeling/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Phosphorus</title>
-      <link>/tags/phosphorus/</link>
+      <link>https://sheilasaia.rbind.io/tags/phosphorus/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
       
-      <guid>/tags/phosphorus/</guid>
+      <guid>https://sheilasaia.rbind.io/tags/phosphorus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sociohydrology</title>
-      <link>/tags/sociohydrology/</link>
+      <link>https://sheilasaia.rbind.io/tags/sociohydrology/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>/tags/sociohydrology/</guid>
+      <guid>https://sheilasaia.rbind.io/tags/sociohydrology/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stable-isotopes</title>
-      <link>/tags/stable-isotopes/</link>
+      <link>https://sheilasaia.rbind.io/tags/stable-isotopes/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>/tags/stable-isotopes/</guid>
+      <guid>https://sheilasaia.rbind.io/tags/stable-isotopes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Water-quality</title>
-      <link>/tags/water-quality/</link>
+      <link>https://sheilasaia.rbind.io/tags/water-quality/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
       
-      <guid>/tags/water-quality/</guid>
+      <guid>https://sheilasaia.rbind.io/tags/water-quality/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Water-quantity</title>
-      <link>/tags/water-quantity/</link>
+      <link>https://sheilasaia.rbind.io/tags/water-quantity/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>/tags/water-quantity/</guid>
+      <guid>https://sheilasaia.rbind.io/tags/water-quantity/</guid>
       <description></description>
     </item>
     

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on  </title>
-    <link>/categories/r/</link>
+    <link>https://sheilasaia.rbind.io/categories/r/</link>
     <description>Recent content in R on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Wed, 05 Sep 2018 21:12:00 -0500</lastBuildDate>
     
-	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheilasaia.rbind.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Using tibbletime::rollify with USGS Streamgage Data</title>
-      <link>/post/2018-08-04-usgs-rollify/</link>
+      <link>https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify/</link>
       <pubDate>Wed, 05 Sep 2018 21:12:00 -0500</pubDate>
       
-      <guid>/post/2018-08-04-usgs-rollify/</guid>
+      <guid>https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify/</guid>
       <description>Background While attending rstudio::conf 2018, I heard about the tibbletime package developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his conference talk, Davis Vaughan presented several business/finance examples to showcase tibbletime’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data.</description>
     </item>
     
     <item>
       <title>My First Post</title>
-      <link>/post/2018-07-20-my-first-post/</link>
+      <link>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</link>
       <pubDate>Mon, 23 Jul 2018 21:13:14 -0500</pubDate>
       
-      <guid>/post/2018-07-20-my-first-post/</guid>
+      <guid>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</guid>
       <description>Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this blogdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both languages are so useful!).
 Some of the specific goals of this blog are to (in no special order):
  Practice developing my science communication and R skills.</description>
