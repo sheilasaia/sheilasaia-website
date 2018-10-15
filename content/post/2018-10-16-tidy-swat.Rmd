@@ -1,7 +1,7 @@
 ---
 title: "Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs"
 author: "Sheila Saia"
-date: 2018-10-16T21:12:00-05:00
+date: 2018-10-15T21:12:00
 categories: ["R"]
 tags: []
 ---

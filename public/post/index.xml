@@ -15,7 +15,7 @@
     <item>
       <title>Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs</title>
       <link>/post/2018-10-16-tidy-swat/</link>
-      <pubDate>Tue, 16 Oct 2018 21:12:00 -0500</pubDate>
+      <pubDate>Mon, 15 Oct 2018 21:12:00 +0000</pubDate>
       
       <guid>/post/2018-10-16-tidy-swat/</guid>
       <description>Background I recently participated in Thomas Mock’s Tidy Tuesday R challenge with other members of the NC State University R Learning Group. It was a lot of fun and after participating, I felt motivated to share what I’ve been doing to tidy up my own data sets.
