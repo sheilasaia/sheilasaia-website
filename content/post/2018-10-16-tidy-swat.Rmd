@@ -3,7 +3,8 @@ title: "Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs"
 author: "Sheila Saia"
 date: '2018-10-16'
 categories: ["R"]
-tags: ["tidyr", "SWAT"]
+slug: 'tidy-swat'
+tags: ["tidyr", "SWAT", "modeling"]
 ---
 
 ```{r setup, include=FALSE}

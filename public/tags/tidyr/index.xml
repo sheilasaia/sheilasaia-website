@@ -14,10 +14,10 @@
     
     <item>
       <title>Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs</title>
-      <link>/post/2018-10-16-tidy-swat/</link>
+      <link>/post/tidy-swat/</link>
       <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-10-16-tidy-swat/</guid>
+      <guid>/post/tidy-swat/</guid>
       <description>Background I recently participated in Thomas Mock’s Tidy Tuesday R challenge with other members of the NC State University R Learning Group. It was a lot of fun and after participating, I felt motivated to share what I’ve been doing to tidy up my own data sets.
 Specifically, I’ve been working with collaborator, Kelly Suttles, to tidy up model outputs from the Soil and Water Assessment Tool (SWAT). SWAT is a hydrologic model used to predict daily and monthly streamflow and water quality at the watershed-scale.</description>
     </item>
