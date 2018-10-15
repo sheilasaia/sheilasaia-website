@@ -13,7 +13,7 @@ image_preview = "sociohydro_fig.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["water-quantity", "climate-change", "modeling", "sociohydrology"]
+tags = ["water-quantity", "climate-change", "modeling", "sociohydrology", "SWAT"]
 
 # Optional external URL for project (replaces project detail page).
 # external_link = "http://example.org"
