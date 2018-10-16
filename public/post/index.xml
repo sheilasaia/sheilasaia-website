@@ -14,10 +14,10 @@
     
     <item>
       <title>Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs</title>
-      <link>/post/tidy-swat/</link>
+      <link>/post/2018-10-16-tidy-swat/</link>
       <pubDate>Tue, 16 Oct 2018 21:08:00 -0400</pubDate>
       
-      <guid>/post/tidy-swat/</guid>
+      <guid>/post/2018-10-16-tidy-swat/</guid>
       <description>Background I recently participated in Thomas Mock’s Tidy Tuesday R challenge with other members of the NC State University R Learning Group. It was a lot of fun and after participating, I felt motivated to share what I’ve been doing to tidy up my own data sets.
 Specifically, I’ve been working with collaborator, Kelly Suttles, to tidy up model outputs from the Soil and Water Assessment Tool (SWAT). SWAT is a hydrologic model used to predict daily and monthly streamflow and water quality at the watershed-scale.</description>
     </item>
@@ -33,10 +33,10 @@ Specifically, I’ve been working with collaborator, Kelly Suttles, to tidy up m
     
     <item>
       <title>My First Post</title>
-      <link>/post/my-first-post/</link>
+      <link>/post/2018-07-20-my-first-post/</link>
       <pubDate>Mon, 23 Jul 2018 21:13:14 -0500</pubDate>
       
-      <guid>/post/my-first-post/</guid>
+      <guid>/post/2018-07-20-my-first-post/</guid>
       <description>Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this blogdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both languages are so useful!).
 Some of the specific goals of this blog are to (in no special order):
  Practice developing my science communication and R skills.</description>

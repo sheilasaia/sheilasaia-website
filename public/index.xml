@@ -12,10 +12,10 @@
     
     <item>
       <title>Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs</title>
-      <link>/post/tidy-swat/</link>
+      <link>/post/2018-10-16-tidy-swat/</link>
       <pubDate>Tue, 16 Oct 2018 21:08:00 -0400</pubDate>
       
-      <guid>/post/tidy-swat/</guid>
+      <guid>/post/2018-10-16-tidy-swat/</guid>
       <description>&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Background&lt;/h1&gt;
 &lt;p&gt;I recently participated in Thomas Mock’s &lt;a href=&#34;https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/&#34;&gt;Tidy Tuesday&lt;/a&gt; R challenge with other members of the NC State University R Learning Group. It was a lot of fun and after participating, I felt motivated to share what I’ve been doing to tidy up my own data sets.&lt;/p&gt;
@@ -575,10 +575,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>My First Post</title>
-      <link>/post/my-first-post/</link>
+      <link>/post/2018-07-20-my-first-post/</link>
       <pubDate>Mon, 23 Jul 2018 21:13:14 -0500</pubDate>
       
-      <guid>/post/my-first-post/</guid>
+      <guid>/post/2018-07-20-my-first-post/</guid>
       <description>&lt;p&gt;Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this blogdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both languages are so useful!).&lt;/p&gt;
 &lt;p&gt;Some of the specific goals of this blog are to (in no special order):&lt;/p&gt;
 &lt;ul&gt;
