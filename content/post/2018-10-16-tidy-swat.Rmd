@@ -1,7 +1,7 @@
 ---
 title: "Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs"
 author: "Sheila Saia"
-date: 2018-10-16T21:08:00-04:00
+date: '2018-10-15'
 categories: ["R"]
 tags: ["tidyr", "SWAT", "modeling"]
 ---
@@ -18,9 +18,9 @@ Specifically, I've been working with collaborator, [Kelly Suttles](https://chcs.
 
 I'm sure there are a lot of researchers out there who have developed their own ways of tidying up SWAT outputs but I thought it would be helpful to share some of the functions I've recently created to help Kelly migrate her SWAT output analysis from Excel to R.
 
-# Goals of this Post
+# Goals of This Post
 
-The goals of this blog post:
+The goals of this blog post are to:
 
 - Discuss how to tidy up SWAT daily and monthly outputs.
 - Create functions to make tidying up SWAT outputs easier.

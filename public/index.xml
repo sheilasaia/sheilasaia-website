@@ -13,7 +13,7 @@
     <item>
       <title>Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs</title>
       <link>/post/2018-10-16-tidy-swat/</link>
-      <pubDate>Tue, 16 Oct 2018 21:08:00 -0400</pubDate>
+      <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018-10-16-tidy-swat/</guid>
       <description>&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
@@ -23,8 +23,8 @@
 &lt;p&gt;I’m sure there are a lot of researchers out there who have developed their own ways of tidying up SWAT outputs but I thought it would be helpful to share some of the functions I’ve recently created to help Kelly migrate her SWAT output analysis from Excel to R.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;goals-of-this-post&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Goals of this Post&lt;/h1&gt;
-&lt;p&gt;The goals of this blog post:&lt;/p&gt;
+&lt;h1&gt;Goals of This Post&lt;/h1&gt;
+&lt;p&gt;The goals of this blog post are to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Discuss how to tidy up SWAT daily and monthly outputs.&lt;/li&gt;
 &lt;li&gt;Create functions to make tidying up SWAT outputs easier.&lt;/li&gt;

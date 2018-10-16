@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Tue, 16 Oct 2018 21:08:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 15 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/swat/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs</title>
       <link>/post/2018-10-16-tidy-swat/</link>
-      <pubDate>Tue, 16 Oct 2018 21:08:00 -0400</pubDate>
+      <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018-10-16-tidy-swat/</guid>
       <description>Background I recently participated in Thomas Mock’s Tidy Tuesday R challenge with other members of the NC State University R Learning Group. It was a lot of fun and after participating, I felt motivated to share what I’ve been doing to tidy up my own data sets.
