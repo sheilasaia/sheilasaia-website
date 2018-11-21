@@ -13,6 +13,24 @@
     
     
     <item>
+      <title>Coupling Hydrologic Model Outputs and Demographics Data to Inform Climate Change Planning (Poster)</title>
+      <link>/talk/agu_dec2018/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/agu_dec2018/</guid>
+      <description>Abstract: General Circulation Models (GCMs) project an increase in the frequency and magnitude of storm events in the Southeastern United States over the next several decades. Additionally, urban development in this region is expected to double by 2060. Communities unable to mitigate or adapt to climate- and land use-change induced impacts on water resources may experience adverse social and economic impacts. Hydrologic model outputs, such as those from the Soil and Water Assessment Tool (SWAT), are helpful at predicting changing hydrologic processes but do not directly incorporate community demographics that are required to assess vulnerability.</description>
+    </item>
+    
+    <item>
+      <title>Developing Climate Change Risk Management Tools Using R &amp; Python</title>
+      <link>/talk/duke-nov2018/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 -0400</pubDate>
+      
+      <guid>/talk/duke-nov2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Applying Climate Change Risk Management Tools to Combine Social Vulnerability and Future Streamflow Projections</title>
       <link>/talk/fer-oct2018/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 -0400</pubDate>
