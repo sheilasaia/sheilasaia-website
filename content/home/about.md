@@ -13,6 +13,7 @@ weight = 1
     "hydrology",
     "biogeochemistry",
     "water resources management",
+    "climate change adpation",
     "data science",
     "reproducible research"
   ]

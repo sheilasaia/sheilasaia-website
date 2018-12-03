@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Preprint: An Interdisciplinary Review of Polyphosphate Accumulating Organism (PAO)-Mediated Phosphorus Cycling for Landscape-Scale Water Quality Management</title>
+      <link>/publication/pao_review/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 -0500</pubDate>
+      
+      <guid>/publication/pao_review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Coupling Hydrologic Model Outputs and Demographics Data to Inform Climate Change Planning (Poster)</title>
       <link>/talk/agu_dec2018/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 -0500</pubDate>
@@ -800,15 +809,6 @@ GitHub Repository for Saia et al. 2018&amp;hellip;coming soon!&lt;/p&gt;
 
 &lt;p&gt;Global climate models project an increase in the frequency and magnitude of storm events in the Southeastern United States in the next several decades. Additionally, urban development in this region is expected to double by 2060 and this growth will likely intensify discrepancies between water supply and demand. Communities unable to prepare for climate-induced changes in water resources may experience adverse social and economic impacts. Given the likely impacts of climate and land use change on water resources, there is a need to (1) develop hydrological models capable of predicting watershed-scale impacts of climate change on water resources in North Carolina, (2) combine hydrological model outputs with demographics data to map communities especially vulnerable to future flooding, and (3) use this information to inform flooding preparedness efforts. We use the Soil Water Assessment Tool (SWAT) to estimate baseline (1982-2002) and future (2050-2070) stream discharge under four climate change scenarios for the Upper Yadkin-Pee Dee Watershed in North Carolina. We then couple SWAT streamflow outputs with social vulnerability index (SoVI) estimates derived from 2010-2014 American Community Survey data. By combining hydrological model outputs and demographics data, we gain insights into how climate change preparedness efforts may serve vulnerable communities.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Ecohydrologic considerations for modeling of stable water isotopes in a small intermittent watershed</title>
-      <link>/publication/ecohydro-stable-isotope-model/</link>
-      <pubDate>Fri, 30 Jun 2017 00:00:00 -0400</pubDate>
-      
-      <guid>/publication/ecohydro-stable-isotope-model/</guid>
-      <description></description>
     </item>
     
   </channel>
