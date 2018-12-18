@@ -3,7 +3,7 @@ title = "Assessment of Hydrologic Vulnerability to Urbanization and Climate Chan
 date = 2018-07-20T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["KM Suttles", "NK Singh", "JM Vose", "KL Martin", "RE Emanuel", "JW Coulston", "SM Saia", "MT Crump"]
+authors = ["KM Suttles", "NK Singh", "JM Vose", "KL Martin", "RE Emanuel", "JW Coulston", "**SM Saia**", "MT Crump"]
 
 # Publication type.
 # Legend:

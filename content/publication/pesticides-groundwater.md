@@ -3,7 +3,7 @@ title = "Surveying Upstate NY well water for pesticide contamination: Cayuga and
 date = 2011-01-01
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["BK Richards", "S Pacenka", "AE Salvucci", "SM Saia", "LF Whitbeck", "PM Furdyna", "TS Steenhuis"]
+authors = ["BK Richards", "S Pacenka", "AE Salvucci", "**SM Saia**", "LF Whitbeck", "PM Furdyna", "TS Steenhuis"]
 
 # Publication type.
 # Legend:

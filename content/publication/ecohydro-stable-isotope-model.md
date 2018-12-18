@@ -3,7 +3,7 @@ title = "Ecohydrologic considerations for modeling of stable water isotopes in a
 date = 2017-06-30T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["JO Knighton", "SM Saia", "CK Morris", "JA Archibald", "MT Walter"]
+authors = ["JO Knighton", "**SM Saia**", "CK Morris", "JA Archibald", "MT Walter"]
 
 # Publication type.
 # Legend:

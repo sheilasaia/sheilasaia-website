@@ -3,7 +3,7 @@ title = "Evidence for polyphosphate accumulating organism (PAO)-mediated phospho
 date = 2017-02-24T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["SM Saia", "PJ Sullivan", "JM Regan", "HJ Carrick", "AR Buda", "NA Locke", "MT Walter"]
+authors = ["**SM Saia**", "PJ Sullivan", "JM Regan", "HJ Carrick", "AR Buda", "NA Locke", "MT Walter"]
 
 # Publication type.
 # Legend:

@@ -3,7 +3,7 @@ title = "Incorporating pesticide transport into the WEPP model for mulch tillage
 date = 2013-01-01T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["SM Saia", "ES Brooks", "ZM Easton", "C Baffaut", "J Boll", "TS Steenhuis"]
+authors = ["**SM Saia**", "ES Brooks", "ZM Easton", "C Baffaut", "J Boll", "TS Steenhuis"]
 
 # Publication type.
 # Legend:

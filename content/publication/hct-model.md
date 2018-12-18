@@ -3,7 +3,7 @@ title = "Asssessing BMP effectiveness and guiding BMP planning using process-bas
 date = 2015-04-01T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["ES Brooks", "SM Saia", "J Boll", "L Wetzel", "ZM Easton", "TS Steenhuis"]
+authors = ["ES Brooks", "**SM Saia**", "J Boll", "L Wetzel", "ZM Easton", "TS Steenhuis"]
 
 # Publication type.
 # Legend:

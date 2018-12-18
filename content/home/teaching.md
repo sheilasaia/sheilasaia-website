@@ -17,11 +17,15 @@ weight = 6
 
 # upcoming workshops:
 
-- *[Building Better Graphs with R: ggplot and Base](https://www.transmittingscience.org/courses/building-better-graphs-with-r-ggplot2-and-base/)* - I'm co-organizing and co-leading this 5-day course with Dr. Ashton Drew at [Transmitting Science](https://www.transmittingscience.org/) in Barcelona, Spain from November 5-9, 2018. The goal of this course is to train attendees to create publication-quality graphics in R.
 
-- *R for Data Science Book Club* - I'm currently leading a bi-monthly bookclub to work through [R for Data Science](http://r4ds.had.co.nz/) for [R-Ladies RTP](https://www.meetup.com/R-Ladies-RTP/).
+Check back soon for more upcoming workshops.
+
 
 # past workshops: 
+
+- *Coding Help Desk* - I co-organized the Coding Help Desk with [Dr. Sam Zipper](https://samzipper.weebly.com/) at the American Geophysical Union (AGU) Fall Meeting 2018 in Washington, DC. AGU attendees were welcome to stop by and ask coding related questions to volunteers well-versed in R, Python, MatLab, etc. programming.
+
+- *R for Data Science Book Club* - I lead a bi-monthly bookclub to work through [R for Data Science](http://r4ds.had.co.nz/) for [R-Ladies RTP](https://www.meetup.com/R-Ladies-RTP/).
 
 - *Exploring Spatial Data with `sf`* - I organized and led a 2-hour workshop for [R-Ladies RTP](https://www.meetup.com/R-Ladies-RTP/) introducing members to the `sf` package in R on July 19, 2018. The repository for this workshop is available [here](https://github.com/rladies/meetup-presentations_rtp/tree/master/2018-07-19-sf) and you can read more about the USGS GAGES-II dataset that we used in the tutorial [here](https://water.usgs.gov/GIS/metadata/usgswrd/XML/gagesII_Sept2011.xml).
 

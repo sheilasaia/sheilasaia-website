@@ -3,7 +3,7 @@ title = "Preprint: An Interdisciplinary Review of Polyphosphate Accumulating Org
 date = 2018-12-01T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["SM Saia", "HJ Carrick", "AR Buda", "JM Regan", "MT Walter"]
+authors = ["**SM Saia**", "HJ Carrick", "AR Buda", "JM Regan", "MT Walter"]
 
 # Publication type.
 # Legend:
