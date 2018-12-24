@@ -11,6 +11,135 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>APIs to the Rescue (&amp; the Census of Agriculture)</title>
+      <link>/post/2018-12-20-nass-api/</link>
+      <pubDate>Sun, 30 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-12-20-nass-api/</guid>
+      <description>&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Background&lt;/h1&gt;
+&lt;p&gt;Application program interfaces (APIs) help users access (“API request”) and retreive (“API reponse”) data from a web-based, data server via programs like R. Several others before me have done a great job writing about API’s and R: &lt;a href=&#34;https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/&#34;&gt;this post by C. Waldhauser&lt;/a&gt; and &lt;a href=&#34;https://tclavelle.github.io/blog/r_and_apis/&#34;&gt;this post by T. Clavelle&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I recently learned about a few packages to help R users interface directly with APIs that are relevant to water-minded, data loving people like me. For example the &lt;a href=&#34;https://walkerke.github.io/tidycensus/&#34;&gt;&lt;code&gt;tidycensus&lt;/code&gt; package&lt;/a&gt; developed by &lt;a href=&#34;http://personal.tcu.edu/kylewalker/&#34;&gt;Kyle Walker&lt;/a&gt; allows R users to access the US Census API and download data directly into their R environment. It’s awesome. Additionally, &lt;a href=&#34;https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify/&#34;&gt;I previously wrote about&lt;/a&gt; the US Geologic Survey and US Environmental Protection Agency’s &lt;a href=&#34;https://cran.r-project.org/web/packages/dataRetrieval/dataRetrieval.pdf&#34;&gt;&lt;code&gt;dataRetrieval&lt;/code&gt; package&lt;/a&gt; that interfaces with the National Water Information System API. Some APIs will require you to have an API key (i.e., the US Census) while others don’t (i.e., the National Water Information System). The key is meant to ensure security on your end as well as on the end of the API administrator. In the case of the US Census, they can keep track of your queries and also make sure that you have permission to access certain types of data, etc. You can easily request an US Census API key &lt;a href=&#34;https://api.census.gov/data/key_signup.html&#34;&gt;here&lt;/a&gt; and read more about the US Census API &lt;a href=&#34;https://www.census.gov/data/developers/guidance/api-user-guide.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;But what if you’re working with an API that doesn’t already have an R package associated with it? This is the case for the data associated with the US Department of Agriculture National Agricultural Statistics Service (NASS). I could click through the options on NASS’s Quick Stats page &lt;a href=&#34;https://quickstats.nass.usda.gov/&#34;&gt;on the web&lt;/a&gt; and download the data that way; however, I wanted to see if I could use R to access the Quick Stats API (i.e., a more reproducible approach).&lt;/p&gt;
+&lt;p&gt;Before jumping into the coding fun, just a brief explainer on the NASS API. The NASS API includes two different types of data:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;NASS Agriculture Resource Management Survey (ARMS) - This survey includes data on the “production practices, resource use, and economic well-being of America’s farms and ranches” &lt;a href=&#34;https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Ag_Resource_Management/&#34;&gt;(NASS ARMS Webiste)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;NASS Census of Agriculture - This survey is conducted every 5 years and includes data on the number of US farms and ranches and the people who operate them (as long as more than $1000 was raised from associated agricultural goods). It also includes data on land use, land ownership, production practices, income, and expenses &lt;a href=&#34;https://www.nass.usda.gov/AgCensus/index.php&#34;&gt;(NASS Census of Agriculture Website)&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;goals-of-this-post&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Goals of This Post&lt;/h1&gt;
+&lt;p&gt;The main goal of this blog post is to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download and plot Agrilture Census data from NASS Quick Stats using R.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Special thanks to &lt;a href=&#34;http://nelson.rbind.io/&#34;&gt;Natalie Nelson&lt;/a&gt; of NC State University and Andrew Dau of NASS for the inspiration and R code samples that I modified for this post.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;set-up&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Set Up&lt;/h1&gt;
+&lt;p&gt;First let’s load the R libraries that we’ll need to run the code in this post.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(httr)
+library(jsonlite)
+library(tidycensus)
+library(tidyverse)
+library(mapview)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;httr&lt;/code&gt; and &lt;code&gt;jsonlite&lt;/code&gt; packages are necessary for interfacing with the Quick Stats API and reformatting API outputs so they can be used in R.&lt;/p&gt;
+&lt;p&gt;Let’s use the &lt;code&gt;tidycensus&lt;/code&gt; package to get some county boundaries. This will provide some spatial context for our analysis.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;tidyverse&lt;/code&gt; and &lt;code&gt;mapview&lt;/code&gt; packages will help us wrangle and visualize the API outputs.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# If you have never used your API key in your R session, run the line below.
+census_api_key(&amp;quot;YOUR API KEY GOES HERE&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# If you have used your API key in a previous R session, run the line below.
+options(tigris_use_cache = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You’ll have to also apply for a NASS API key. We’ll use this later but will definite it here as a string. You can apply for a NASS API key &lt;a href=&#34;https://quickstats.nass.usda.gov/api&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;my_nass_key &amp;lt;- &amp;quot;ADD YOUR NASS API KEY HERE&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, we’ll define the NASS url and path. In the path you’ll have to specify what type of data you want to query. To specify these you can go to &lt;a href=&#34;https://quickstats.nass.usda.gov/&#34; class=&#34;uri&#34;&gt;https://quickstats.nass.usda.gov/&lt;/a&gt; to see all your commodity options. I haven’t figured out another way to do this but please &lt;a href=&#34;mailto:ssaia@ncsu.edu&#34;&gt;contact me&lt;/a&gt; if you find an alternative.&lt;/p&gt;
+&lt;p&gt;For this post I’m selecting the “AG_LAND” commodity, which includes information on the acreage of irrigated farm and ranch lands, because this is the wateR blog after all. I’m also selecting the state of North Carolina because it seems to always be the subject of spatial mapping &lt;a href=&#34;https://r-spatial.github.io/sf/reference/geos_combine.html&#34;&gt;(e.g., see this post)&lt;/a&gt; in R and is also where I live. ;) You can also leave off the last “&amp;amp;state_alpha=NC” part of the string to get data from all states.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# NASS url
+nass_url &amp;lt;- &amp;quot;http://quickstats.nass.usda.gov&amp;quot;
+
+# commodity description of interest
+my_commodity_desc &amp;lt;- &amp;quot;AG LAND&amp;quot;
+
+# query start year
+my_year &amp;lt;- &amp;quot;2006&amp;quot;
+
+# state of interest
+my_state &amp;lt;- &amp;quot;NC&amp;quot;
+
+# final path string
+path_nc_ag_land &amp;lt;- paste0(&amp;quot;api/api_GET/?key=&amp;quot;, my_nass_key, &amp;quot;&amp;amp;commodity_desc=&amp;quot;, my_commodity_desc, &amp;quot;&amp;amp;year__GE=&amp;quot;, my_year, &amp;quot;&amp;amp;state_alpha=&amp;quot;, my_state)
+
+# check
+path_nc_ag_land
+## [1] &amp;quot;api/api_GET/?key=9BCD166E-39D9-3A6A-9BF9-4317FCC1E606&amp;amp;commodity_desc=AG LAND&amp;amp;year__GE=2006&amp;amp;state_alpha=NC&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;api-data-query&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;API Data Query&lt;/h1&gt;
+&lt;p&gt;Let’s query the NASS API.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#raw_result_nc_ag_land &amp;lt;- GET(url = nass_url, path = path_nc_ag_land)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can check to see if it worked by looking at &lt;code&gt;status_code&lt;/code&gt;. To read more about the different status codes and their meansing you can visit &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_HTTP_status_codes&#34; class=&#34;uri&#34;&gt;https://en.wikipedia.org/wiki/List_of_HTTP_status_codes&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#raw_result_nc_ag_land$status_code&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Great! We’re wanting to see status code 200 here. That means our query was requested and responded to. If we look at this in your RStudio session it will come in as a ‘Large resonse’ or in other words as a JSON object. For simplicity sake, we can think of this as a list of lists that we want to convert to something more usable in R. We’ll start by using &lt;code&gt;rawToChar()&lt;/code&gt;. We can check the size and look at the first few characters.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#char_raw_nc_ag_land &amp;lt;- rawToChar(raw_result_nc_ag_land$content)
+
+# check size of object
+#nchar(char_raw_nc_ag_land)
+
+# view first 100 characthers
+#substr(char_raw_nc_ag_land, 1, 100)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is still a little hard to work with so let’s use &lt;code&gt;fromJSON()&lt;/code&gt; and convert it to a large list and then a data frame.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#list_raw_nc_ag_land &amp;lt;- fromJSON(char_raw_nc_ag_land)
+
+# view first element (it&amp;#39;s big so we&amp;#39;ll comment it here)
+# list_raw_ag_land[[1]]
+
+# convert to a data frame
+#nc_ag_land_raw_data &amp;lt;- do.call(what = &amp;quot;rbind&amp;quot;, args = lapply(list_raw_nc_ag_land, as.data.frame))
+
+# look at the data frame
+#head(nc_ag_land_raw_data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# nc_irrigated &amp;lt;- nc_ag_land_raw_data %&amp;gt;%
+#   filter(domain_desc == &amp;quot;AREA OPERATED&amp;quot;) %&amp;gt;%
+#   filter(unit_desc == &amp;quot;ACRES&amp;quot;) %&amp;gt;%
+#   filter(agg_level_desc == &amp;quot;COUNTY&amp;quot;) %&amp;gt;%
+#   filter(domaincat_desc == &amp;quot;AREA OPERATED: (1,000 TO 1,999 ACRES)&amp;quot;) %&amp;gt;%
+#   mutate(value_trim = str_trim(Value)) %&amp;gt;% # trim tab from non-numeric values
+#   select(state_name, state_alpha, state_ansi, county_code, county_name, asd_desc,
+#          agg_level_desc, year, prodn_practice_desc_char=prodn_practice_desc,
+#          value_ac_per_yr_char=value_trim) %&amp;gt;%
+#   filter(value_ac_per_yr_char != &amp;quot;(D)&amp;quot; &amp;amp; value_ac_per_yr_char != &amp;quot;(Z)&amp;quot;) %&amp;gt;% # remove codes (D) = ?, (Z) = ?
+#   mutate(value_ac_per_yr = as.numeric(str_remove(value_ac_per_yr_char, &amp;quot;,&amp;quot;))) %&amp;gt;% #remove commas
+#   select(-value_ac_per_yr_char) %&amp;gt;%
+#   mutate(prodn_practice_desc = str_replace_all(str_to_lower(prodn_practice_desc_char), &amp;quot;[ ]&amp;quot;, &amp;quot;_&amp;quot;)) %&amp;gt;%
+#   select(-prodn_practice_desc_char) %&amp;gt;%
+#   group_by(county_code) %&amp;gt;%
+#   filter(n()&amp;gt;3) %&amp;gt;%
+#   group_by(county_code, year) %&amp;gt;%
+#   spread(prodn_practice_desc, value_ac_per_yr) %&amp;gt;%
+#   mutate(percent_irrigated_long = irrigated/all_production_practices*100) %&amp;gt;%
+#   mutate(GEOID = paste0(state_ansi, county_code))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Applied Data Analysis and Mapping in R: Where in Western NC Do Vulnerable Communities and Future Increases in Streamflow Meet?</title>
+      <link>/talk/ncgis_mar2019/</link>
+      <pubDate>Sat, 22 Dec 2018 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/ncgis_mar2019/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
+
+&lt;p&gt;Global climate models predict an increase in the frequency and magnitude of storm events in the Southeastern United States over the next several decades. Urban development in this region is expected to double by 2060 and associated increases in impervious surfaces may exacerbate flooding. Communities unable to respond and adapt to future changes in water resources are likely to experience adverse social and economic impacts. Socioeconomic metrics such as the social vulnerability index (SoVI) can be used to predict the location of potentially vulnerable communities but do not incorporate changing biophysical factors such as climate and land use change that impact streamflow. Hydrologic models, such as the Soil and Water Assessment Tool (SWAT), can predict the impacts of future climate and land use on streamflow but do not include socioeconomic factors (e.g., age, transportation access) that may influence a community’s ability to respond and adapt to future streamflow changes. Therefore, there is a need to couple SoVI and SWAT results to identify especially vulnerable communities for climate change adaptation planning. To address this need, we use R to implement a risk matrix framework approach that couples census tract SoVI estimates with changes in SWAT predicted streamflow from 1992-2002 (baseline) and 2050-2070 (global climate model projections) for the Yadkin-Pee Dee (YPD) Watershed in North Carolina, USA. We compare the spatial distribution of subbasins based on (1) SoVI results alone, (2) SWAT results alone, and (3) SoVI and SWAT results combined. SoVI results predicted spatially heterogeneous distributions of social vulnerability throughout the YPD and SWAT results predicted future increases in the number and variability of 10-yr and extreme flow events in southern regions of the YPD. The coupled SoVI and SWAT approach combined biophysical and socioeconomic factors to identify YPD subbasins with vulnerable communities that are likely to experience increases in 10-yr and extreme flow events. This approach can be used as the first of several steps (i.e., community surveying/focus groups, stakeholder visioning, and action taking) associated with effective climate change adaptation planning.&lt;/p&gt;
+
+&lt;p&gt;To read more, visit &lt;a href=&#34;https://ncgisconference.com/&#34; target=&#34;_blank&#34;&gt;the conference website&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Applying Climate Change Risk Management Tools to Integrate Streamflow Projections and Social Vulnerability</title>
       <link>/publication/yadkin-swat-sovi/</link>
       <pubDate>Fri, 07 Dec 2018 00:00:00 -0500</pubDate>
@@ -757,52 +886,6 @@ ggplot(data = discharge_roll) +
 &lt;li&gt;&lt;strong&gt;Summarize&lt;/strong&gt; future climate change impacts for the Upper Yadkin-Pee Dee Watershed region&lt;/br&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Illustrate&lt;/strong&gt; how census data and hydrology models can be combined to map vulnerable communities and inform climate change preparedness efforts&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Sociohydrology in Western North Carolina</title>
-      <link>/project/nc-sociohydro-project/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
-      
-      <guid>/project/nc-sociohydro-project/</guid>
-      <description>
-
-&lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
-
-&lt;p&gt;B Cutts (NC State), R Emanuel (NC State), K Martin (NC State), KM Suttles (USFS), J Vose (USFS), D Wear (USFS), J Coulston (USFS)&lt;/p&gt;
-
-&lt;h1 id=&#34;timeline&#34;&gt;Timeline&lt;/h1&gt;
-
-&lt;p&gt;2017-current&lt;/p&gt;
-
-&lt;h1 id=&#34;project-goal&#34;&gt;Project Goal&lt;/h1&gt;
-
-&lt;p&gt;The goal of this project is to combine past and future hydrology model (i.e., &lt;a href=&#34;https://swat.tamu.edu/&#34; target=&#34;_blank&#34;&gt;Soil and Water Assessment Tool (SWAT)&lt;/a&gt;) outputs with demographics data to create maps and prioritize climate change preparation and adaptation strategies for especially vulnerable communities in Western North Carolina&amp;rsquo;s Upper Yadkin-Pee Dee Watershed.&lt;/p&gt;
-
-&lt;h1 id=&#34;project-links&#34;&gt;Project Links&lt;/h1&gt;
-
-&lt;p&gt;See publication links below.&lt;br&gt;
-&lt;a href=&#34;https://github.com/sheilasaia/paper-yadkin-swat-study&#34; target=&#34;_blank&#34;&gt;GitHub Repository for Suttles et al. 2018&lt;/a&gt;&lt;br&gt;
-GitHub Repository for Saia et al. 2018&amp;hellip;coming soon!&lt;/p&gt;
-
-&lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h1&gt;
-
-&lt;p&gt;Special thanks to the &lt;a href=&#34;https://orise.orau.gov/&#34; target=&#34;_blank&#34;&gt;Oak Ridge Institute for Science and Education&lt;/a&gt; for support this work.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Integrating Hydrological Models and Census Data to Prioritize Climate Change Preparedness</title>
-      <link>/talk/usiale-april2018/</link>
-      <pubDate>Sun, 01 Apr 2018 00:00:00 -0400</pubDate>
-      
-      <guid>/talk/usiale-april2018/</guid>
-      <description>
-
-&lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
-
-&lt;p&gt;Global climate models project an increase in the frequency and magnitude of storm events in the Southeastern United States in the next several decades. Additionally, urban development in this region is expected to double by 2060 and this growth will likely intensify discrepancies between water supply and demand. Communities unable to prepare for climate-induced changes in water resources may experience adverse social and economic impacts. Given the likely impacts of climate and land use change on water resources, there is a need to (1) develop hydrological models capable of predicting watershed-scale impacts of climate change on water resources in North Carolina, (2) combine hydrological model outputs with demographics data to map communities especially vulnerable to future flooding, and (3) use this information to inform flooding preparedness efforts. We use the Soil Water Assessment Tool (SWAT) to estimate baseline (1982-2002) and future (2050-2070) stream discharge under four climate change scenarios for the Upper Yadkin-Pee Dee Watershed in North Carolina. We then couple SWAT streamflow outputs with social vulnerability index (SoVI) estimates derived from 2010-2014 American Community Survey data. By combining hydrological model outputs and demographics data, we gain insights into how climate change preparedness efforts may serve vulnerable communities.&lt;/p&gt;
 </description>
     </item>
     
