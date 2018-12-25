@@ -2,68 +2,68 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on  </title>
-    <link>/home/</link>
+    <link>https://sheilasaia.rbind.io/home/</link>
     <description>Recent content in Homes on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheilasaia.rbind.io/home/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/home/about/</link>
+      <link>https://sheilasaia.rbind.io/home/about/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/about/</guid>
+      <guid>https://sheilasaia.rbind.io/home/about/</guid>
       <description>about me I&amp;rsquo;m an Oak Ridge Institute for Science and Education (ORISE) postdoctoral research fellow with the US Forest Service (USFS). My current research focuses on linking hydrological model results and demographics data to identify vulnerable communities in NC and help them adapt to future climate change (e.g., flooding and drought). I&amp;rsquo;m broadly interested in research questions related to human impacts on water quantity and quality.
 I also like to help organize R-Ladies RTP events, help update the R-Ladies Global website, contribute to the FeminaSci Blog, volunteer at the Durham Farmer&amp;rsquo;s Market, explore the outdoors (hiking, biking, climbing, swimming), maintain my cultures (kombucha and sourdough), and cook/bake for friends.</description>
     </item>
     
     <item>
       <title>recent wateR blog posts</title>
-      <link>/home/posts/</link>
+      <link>https://sheilasaia.rbind.io/home/posts/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/posts/</guid>
+      <guid>https://sheilasaia.rbind.io/home/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>projects</title>
-      <link>/home/projects/</link>
+      <link>https://sheilasaia.rbind.io/home/projects/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/projects/</guid>
+      <guid>https://sheilasaia.rbind.io/home/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>recent publications</title>
-      <link>/home/publications/</link>
+      <link>https://sheilasaia.rbind.io/home/publications/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/publications/</guid>
+      <guid>https://sheilasaia.rbind.io/home/publications/</guid>
       <description></description>
     </item>
     
     <item>
       <title>recent &amp; upcoming talks</title>
-      <link>/home/talks/</link>
+      <link>https://sheilasaia.rbind.io/home/talks/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/talks/</guid>
+      <guid>https://sheilasaia.rbind.io/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>teaching &amp; workshops</title>
-      <link>/home/teaching/</link>
+      <link>https://sheilasaia.rbind.io/home/teaching/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/teaching/</guid>
+      <guid>https://sheilasaia.rbind.io/home/teaching/</guid>
       <description>upcoming workshops: Check back soon for more upcoming workshops.
 past workshops:  Coding Help Desk - I co-organized the Coding Help Desk with Dr. Sam Zipper at the American Geophysical Union (AGU) Fall Meeting 2018 in Washington, DC. AGU attendees were welcome to stop by and ask coding related questions to volunteers well-versed in R, Python, MatLab, etc. programming.
  R for Data Science Book Club - I lead a bi-monthly bookclub to work through R for Data Science for R-Ladies RTP.</description>
@@ -71,19 +71,19 @@ past workshops:  Coding Help Desk - I co-organized the Coding Help Desk with Dr.
     
     <item>
       <title>tags</title>
-      <link>/home/tags/</link>
+      <link>https://sheilasaia.rbind.io/home/tags/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 -0400</pubDate>
       
-      <guid>/home/tags/</guid>
+      <guid>https://sheilasaia.rbind.io/home/tags/</guid>
       <description></description>
     </item>
     
     <item>
       <title>contact</title>
-      <link>/home/contact/</link>
+      <link>https://sheilasaia.rbind.io/home/contact/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/contact/</guid>
+      <guid>https://sheilasaia.rbind.io/home/contact/</guid>
       <description></description>
     </item>
     

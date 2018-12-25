@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>  on  </title>
-    <link>/</link>
+    <link>https://sheilasaia.rbind.io/</link>
     <description>Recent content in   on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Applied Data Analysis and Mapping in R: Where in Western NC Do Vulnerable Communities and Future Increases in Streamflow Meet?</title>
-      <link>/talk/ncgis_mar2019/</link>
+      <link>https://sheilasaia.rbind.io/talk/ncgis_mar2019/</link>
       <pubDate>Sat, 22 Dec 2018 00:00:00 -0500</pubDate>
       
-      <guid>/talk/ncgis_mar2019/</guid>
+      <guid>https://sheilasaia.rbind.io/talk/ncgis_mar2019/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
@@ -28,28 +28,28 @@
     
     <item>
       <title>Applying Climate Change Risk Management Tools to Integrate Streamflow Projections and Social Vulnerability</title>
-      <link>/publication/yadkin-swat-sovi/</link>
+      <link>https://sheilasaia.rbind.io/publication/yadkin-swat-sovi/</link>
       <pubDate>Fri, 07 Dec 2018 00:00:00 -0500</pubDate>
       
-      <guid>/publication/yadkin-swat-sovi/</guid>
+      <guid>https://sheilasaia.rbind.io/publication/yadkin-swat-sovi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Preprint: An Interdisciplinary Review of Polyphosphate Accumulating Organism (PAO)-Mediated Phosphorus Cycling for Landscape-Scale Water Quality Management</title>
-      <link>/publication/pao_review/</link>
+      <link>https://sheilasaia.rbind.io/publication/pao_review/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 -0500</pubDate>
       
-      <guid>/publication/pao_review/</guid>
+      <guid>https://sheilasaia.rbind.io/publication/pao_review/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Coupling Hydrologic Model Outputs and Demographics Data to Inform Climate Change Planning (Poster)</title>
-      <link>/talk/agu_dec2018/</link>
+      <link>https://sheilasaia.rbind.io/talk/agu_dec2018/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 -0500</pubDate>
       
-      <guid>/talk/agu_dec2018/</guid>
+      <guid>https://sheilasaia.rbind.io/talk/agu_dec2018/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
@@ -62,20 +62,23 @@
     
     <item>
       <title>Developing Climate Change Risk Management Tools Using R &amp; Python</title>
-      <link>/talk/duke-nov2018/</link>
+      <link>https://sheilasaia.rbind.io/talk/duke-nov2018/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 -0400</pubDate>
       
-      <guid>/talk/duke-nov2018/</guid>
+      <guid>https://sheilasaia.rbind.io/talk/duke-nov2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs</title>
-      <link>/post/2018-10-16-tidy-swat/</link>
+      <link>https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat/</link>
       <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-10-16-tidy-swat/</guid>
-      <description>&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
+      <guid>https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat/</guid>
+      <description>
+
+
+&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Background&lt;/h1&gt;
 &lt;p&gt;I recently participated in Thomas Mock’s &lt;a href=&#34;https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/&#34;&gt;Tidy Tuesday&lt;/a&gt; R challenge with other members of the NC State University R Learning Group. It was a lot of fun and after participating, I felt motivated to share what I’ve been doing to tidy up my own data sets.&lt;/p&gt;
 &lt;p&gt;Specifically, I’ve been working with collaborator, &lt;a href=&#34;https://chcs.uncg.edu/about/gis-specialist/&#34;&gt;Kelly Suttles&lt;/a&gt;, to tidy up model outputs from the &lt;a href=&#34;https://swat.tamu.edu/&#34;&gt;Soil and Water Assessment Tool (SWAT)&lt;/a&gt;. SWAT is a hydrologic model used to predict daily and monthly streamflow and water quality at the watershed-scale. It’s pretty widely used and there are even some existing R packages to help researchers calibrate SWAT from the R command line. These include the &lt;a href=&#34;https://cran.r-project.org/web/packages/EcoHydRology/EcoHydRology.pdf&#34;&gt;&lt;code&gt;ecohydRology&lt;/code&gt; package&lt;/a&gt; and the &lt;a href=&#34;https://cran.r-project.org/web/packages/SWATmodel/SWATmodel.pdf&#34;&gt;&lt;code&gt;SWATmodel&lt;/code&gt; package&lt;/a&gt;. Check them out if you work with SWAT and use R.&lt;/p&gt;
@@ -227,7 +230,7 @@ ggplot(data = outlet_daily_data, mapping = aes(x = as.factor(YR), y = FLOW_OUTcm
   geom_jitter(alpha = 0.1, width = 0.1) +
   xlab(&amp;quot;Year&amp;quot;) +
   ylab(&amp;quot;Daily Discharge (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20daily%20data%20part%201-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat_files/figure-html/plotting%20daily%20data%20part%201-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Next, let’s plot the hydrograph of discharge at the the outlet (i.e., subbasin number 28) for 1982.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# select outlet data for 1982
 outlet_daily_1982_data &amp;lt;- output_daily_rch_test %&amp;gt;% 
@@ -239,7 +242,7 @@ ggplot(data = outlet_daily_1982_data, mapping = aes(x = date, y = FLOW_OUTcms)) 
   geom_line(color = &amp;quot;blue&amp;quot;) +
   xlab(&amp;quot;Date&amp;quot;) +
   ylab(&amp;quot;Daily Discharge (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20daily%20data%20part%202-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat_files/figure-html/plotting%20daily%20data%20part%202-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;monthly-data&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Monthly Data&lt;/h1&gt;
@@ -431,7 +434,7 @@ ggplot(data = outlet_monthly_data, mapping = aes(x = as.factor(YR), y = FLOW_OUT
   geom_jitter(alpha = 0.25, width = 0.1) +
   xlab(&amp;quot;Year&amp;quot;) +
   ylab(&amp;quot;Monthly Discharge (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%201-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%201-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Next, let’s plot the monthly discharge all subbasins versus simulation year.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = output_monthly_rch_test,
        mapping = aes(x = as.factor(YR), y = FLOW_OUTcms, color = as.factor(RCH))) +
@@ -441,14 +444,14 @@ ggplot(data = outlet_monthly_data, mapping = aes(x = as.factor(YR), y = FLOW_OUT
   ylab(&amp;quot;Monthly Discharge (cms)&amp;quot;) +
   scale_color_discrete(name = &amp;quot;Subbasin ID&amp;quot;) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%202-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%202-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Last, we’ll plot the range of monthly discharge for all subbasins versus month.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = output_monthly_rch_test, mapping = aes(x = as.factor(MO), y = FLOW_OUTcms)) +
   geom_boxplot() +
   geom_jitter(alpha = 0.25, width = 0.1) +
   xlab(&amp;quot;Month&amp;quot;) +
   ylab(&amp;quot;Monthly Discharge (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%203-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%203-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;I think using R to tidy up SWAT outputs is a great way to introduce principles of reproducible to your hydrology data analysis workflows. You can do this by saving the functions above in scripts. If you want to take it a step further you can save the functions to their own R script; where the name of the script is the same as the function name. For example, the code for the &lt;code&gt;tidy_daily_rch_file()&lt;/code&gt; function should be saved to &lt;code&gt;tidy_daily_rch_file.R&lt;/code&gt;. You can then load this file into your workspace using &lt;code&gt;load(&amp;quot;...tidy_daily_rch_file.R&amp;quot;)&lt;/code&gt; and use it after loading.&lt;/li&gt;
@@ -462,10 +465,10 @@ ggplot(data = outlet_monthly_data, mapping = aes(x = as.factor(YR), y = FLOW_OUT
     
     <item>
       <title>Applying Climate Change Risk Management Tools to Combine Social Vulnerability and Future Streamflow Projections</title>
-      <link>/talk/fer-oct2018/</link>
+      <link>https://sheilasaia.rbind.io/talk/fer-oct2018/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 -0400</pubDate>
       
-      <guid>/talk/fer-oct2018/</guid>
+      <guid>https://sheilasaia.rbind.io/talk/fer-oct2018/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
@@ -476,11 +479,14 @@ ggplot(data = outlet_monthly_data, mapping = aes(x = as.factor(YR), y = FLOW_OUT
     
     <item>
       <title>Using tibbletime::rollify with USGS Streamgage Data</title>
-      <link>/post/2018-08-04-usgs-rollify/</link>
+      <link>https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify/</link>
       <pubDate>Wed, 05 Sep 2018 21:12:00 -0500</pubDate>
       
-      <guid>/post/2018-08-04-usgs-rollify/</guid>
-      <description>&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
+      <guid>https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify/</guid>
+      <description>
+
+
+&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Background&lt;/h1&gt;
 &lt;p&gt;While attending rstudio::conf 2018, I heard about the &lt;a href=&#34;https://cran.r-project.org/web/packages/tibbletime/tibbletime.pdf&#34;&gt;tibbletime package&lt;/a&gt; developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his &lt;a href=&#34;https://www.rstudio.com/resources/videos/the-future-of-time-series-and-financial-analysis-in-the-tidyverse/&#34;&gt;conference talk&lt;/a&gt;, Davis Vaughan presented several business/finance examples to showcase &lt;code&gt;tibbletime&lt;/code&gt;’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data. I really liked &lt;code&gt;rollify()&lt;/code&gt;, which could be used to create and apply custom moving-window functions (e.g., &lt;code&gt;mean()&lt;/code&gt;) to time series data; where the size of the window (e.g., 3 days) could also be specified. I was aware of the &lt;code&gt;movingAve()&lt;/code&gt; and &lt;code&gt;movingDiff()&lt;/code&gt; functions in the &lt;a href=&#34;https://pubs.usgs.gov/of/2015/1202/downloads/appendix1.pdf&#34;&gt;smwrBase package&lt;/a&gt; developed by the U.S. Geological Survey (USGS), which calculate moving average and difference, respectively. However, &lt;code&gt;rollify()&lt;/code&gt; has more flexibility; it can be used to take a rolling standard deviation, a rolling ratio of two build in R functions, or a rolling custom function. The possibilities are endless.&lt;/p&gt;
 &lt;p&gt;Shortly after the conference, I also heard about the &lt;a href=&#34;https://cran.r-project.org/web/packages/dataRetrieval/dataRetrieval.pdf&#34;&gt;dataRetrieval package&lt;/a&gt; developed by the USGS from my friend, Dr. Kristina Hopkins. This package allows users to import USGS streamflow data (and any other data associated with &lt;a href=&#34;https://water.usgs.gov/nsip/definition9.html&#34;&gt;USGS streamgages&lt;/a&gt;) directly into R. Very exciting!&lt;/p&gt;
@@ -567,7 +573,7 @@ site_info &amp;lt;- readNWISsite(site_numbers)&lt;/code&gt;&lt;/pre&gt;
         panel.background = element_blank(),
         axis.line = element_line(colour = &amp;quot;black&amp;quot;),
         axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-08-04-usgs-rollify_files/figure-html/plotting%20daily%20data-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify_files/figure-html/plotting%20daily%20data-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;As expected, we see that the two sites mimic one another over this one year time period. Remember, the Eno River at Hillsborough site is upstream of the Eno River at Durham site. We also see that the Eno River at Durham site (top, red line) has some higher peaks than the Eno River at Hillborough site (bottom, teal line). This also makes sense since the Durham site is surrounded by more urbanized land than the Hillsborough site.&lt;/p&gt;
 &lt;p&gt;Ok, so let’s get back to the &lt;code&gt;tibbletime&lt;/code&gt; package. What if we want to compare different time spans? That is, not just daily, but maybe hourly or half day. First we have to define our rolling functions and their associated time spans.&lt;/p&gt;
 &lt;p&gt;For this post, let’s create half hour, hourly, half day, and day rolls.&lt;/p&gt;
@@ -621,7 +627,7 @@ ggplot(data = discharge_roll) +
   ylab(&amp;quot;Aggregated Discharge (cfs)&amp;quot;) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = &amp;quot;black&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-08-04-usgs-rollify_files/figure-html/plot%20results-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify_files/figure-html/plot%20results-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;There are some interesting patterns that (I think) are worth pointing out:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Based on the daily hydrograph we plotted above, the Eno River at Durham (top) data set has higher peak events. This was expected given the daily hydrograph we plotted above. We see that discharge values go up to over 10,000 cfs at the Eno River at Durham site whereas for the Eno River at Hillsborough they only go up to about 5,000 cfs.&lt;/p&gt;&lt;/li&gt;
@@ -635,11 +641,14 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>My First Post</title>
-      <link>/post/2018-07-20-my-first-post/</link>
+      <link>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</link>
       <pubDate>Mon, 23 Jul 2018 21:13:14 -0500</pubDate>
       
-      <guid>/post/2018-07-20-my-first-post/</guid>
-      <description>&lt;p&gt;Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this blogdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both languages are so useful!).&lt;/p&gt;
+      <guid>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</guid>
+      <description>
+
+
+&lt;p&gt;Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this blogdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both languages are so useful!).&lt;/p&gt;
 &lt;p&gt;Some of the specific goals of this blog are to (in no special order):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Practice developing my science communication and R skills.&lt;br&gt;&lt;/li&gt;
@@ -653,10 +662,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Modeling Water Quality in a Suburban Watershed</title>
-      <link>/project/mrgp-project/</link>
+      <link>https://sheilasaia.rbind.io/project/mrgp-project/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
       
-      <guid>/project/mrgp-project/</guid>
+      <guid>https://sheilasaia.rbind.io/project/mrgp-project/</guid>
       <description>
 
 &lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
@@ -683,10 +692,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Phosphorus Cycling in Stream Biofilms</title>
-      <link>/project/paos-streams-project/</link>
+      <link>https://sheilasaia.rbind.io/project/paos-streams-project/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
       
-      <guid>/project/paos-streams-project/</guid>
+      <guid>https://sheilasaia.rbind.io/project/paos-streams-project/</guid>
       <description>
 
 &lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
@@ -714,19 +723,19 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Assessment of Hydrologic Vulnerability to Urbanization and Climate Change in a Rapidly Changing Watershed in the Southeast US</title>
-      <link>/publication/yadkin-swat/</link>
+      <link>https://sheilasaia.rbind.io/publication/yadkin-swat/</link>
       <pubDate>Fri, 20 Jul 2018 00:00:00 -0400</pubDate>
       
-      <guid>/publication/yadkin-swat/</guid>
+      <guid>https://sheilasaia.rbind.io/publication/yadkin-swat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ecohydrological Modeling with Stable Isotopes</title>
-      <link>/project/stable-isotope-project/</link>
+      <link>https://sheilasaia.rbind.io/project/stable-isotope-project/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>/project/stable-isotope-project/</guid>
+      <guid>https://sheilasaia.rbind.io/project/stable-isotope-project/</guid>
       <description>
 
 &lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
@@ -754,10 +763,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Preparing for Climate Change: Using Hydrology Models and Census Data to Map Vulnerable Communities</title>
-      <link>/talk/ptrc-climate-may2018/</link>
+      <link>https://sheilasaia.rbind.io/talk/ptrc-climate-may2018/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>/talk/ptrc-climate-may2018/</guid>
+      <guid>https://sheilasaia.rbind.io/talk/ptrc-climate-may2018/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;This talk is being given by me and Kelly M. Suttles.&lt;/em&gt;&lt;/p&gt;
@@ -778,10 +787,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Sociohydrology in Western North Carolina</title>
-      <link>/project/nc-sociohydro-project/</link>
+      <link>https://sheilasaia.rbind.io/project/nc-sociohydro-project/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>/project/nc-sociohydro-project/</guid>
+      <guid>https://sheilasaia.rbind.io/project/nc-sociohydro-project/</guid>
       <description>
 
 &lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
