@@ -2,25 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>water-quantity on  </title>
-    <link>https://sheilasaia.rbind.io/tags/water-quantity/</link>
+    <link>/tags/water-quantity/</link>
     <description>Recent content in water-quantity on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Tue, 01 May 2018 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://sheilasaia.rbind.io/tags/water-quantity/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/water-quantity/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Sociohydrology in Western North Carolina</title>
-      <link>https://sheilasaia.rbind.io/project/nc-sociohydro-project/</link>
+      <link>/project/nc-sociohydro-project/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/project/nc-sociohydro-project/</guid>
+      <guid>/project/nc-sociohydro-project/</guid>
       <description>Collaborators B Cutts (NC State), R Emanuel (NC State), K Martin (NC State), KM Suttles (USFS), J Vose (USFS), D Wear (USFS), J Coulston (USFS)
 Timeline 2017-current
 Project Goal The goal of this project is to combine past and future hydrology model (i.e., Soil and Water Assessment Tool (SWAT)) outputs with demographics data to create maps and prioritize climate change preparation and adaptation strategies for especially vulnerable communities in Western North Carolina&amp;rsquo;s Upper Yadkin-Pee Dee Watershed.</description>
+    </item>
+    
+    <item>
+      <title>Water Management in Crete, Greece</title>
+      <link>/project/greece-project/</link>
+      <pubDate>Sat, 31 Dec 2011 00:00:00 -0500</pubDate>
+      
+      <guid>/project/greece-project/</guid>
+      <description>Collaborators M Kurth (Cornell University), M Bowes (Cornell University), TS Steenhuis (Cornell University), G Holst-Warhaft (Cornell University), Mayor N. Kastronakis (Municipality of Crete, Greece), G Garakis (Municipality of Crete, Greece)
+Timeline 2010-2012
+Project Goal The goal of this project was to collaborate with a law student (M Bowes) and a natural resources student (M Kurth) at Cornell University to synthesize a report on local water resources for the Municipality of Neapolis in Crete, Greece.</description>
     </item>
     
   </channel>

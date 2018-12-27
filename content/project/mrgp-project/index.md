@@ -1,15 +1,12 @@
 +++
-# Date this page was created.
-date = 2018-07-22T00:00:00
-
 # Project title.
 title = "Modeling Water Quality in a Suburban Watershed"
 
-# Project summary to display on homepage.
-summary = "Tested two spatial statisics approaches to predict in-stream water quality." 
+# Date this page was created.
+date = 2018-07-22T00:00:00
 
-# Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "mrgp_fig.jpg"
+# Project summary to display on homepage.
+summary = "Tested two spatial statisics approaches to predict in-stream water quality."
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
@@ -18,8 +15,18 @@ tags = ["modeling","water-quality"]
 # Optional external URL for project (replaces project detail page).
 # external_link = "http://example.org"
 
-# Does the project detail page use math formatting?
-math = false
+# Featured image
+# To use, add an image named `featured.jpg/png` to your project's folder.
+[image]
+# Caption (optional)
+#  caption = "caption here"
+
+# Focal point (optional)
+# Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+  focal_point = "Smart"
+
+# Does the project detail page use math formatting? (old version of hugo site)
+# math = false
 
 +++
 

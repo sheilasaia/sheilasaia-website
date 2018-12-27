@@ -17,8 +17,15 @@ folder = "project"
 
 # View.
 # Customize how projects are displayed.
-# Legend: 0 = list, 1 = cards.
+# Legend: 0 = list, 1 = cards, 2 = showcase.
 view = 1
+
+# Widget layout
+# Legend: 0 = two columns (default), 1 = single column
+widget_layout = 0
+
+# For Showcase view, flip alternate rows?
+flip_alt_rows = false
 
 # Filter toolbar.
 
@@ -28,17 +35,17 @@ filter_default = 0
 # Add or remove as many filters (`[[filter]]` instances) as you like.
 # Use "*" tag to show all projects or an existing tag prefixed with "." to filter by specific tag.
 # To remove toolbar, delete/comment all instances of `[[filter]]` below.
-[[filter]]
-  name = "All"
-  tag = "*"
+#[[filter]]
+#  name = "All"
+#  tag = "*"
 
-[[filter]]
-  name = "Water Quality"
-  tag = ".water-quality"
+#[[filter]]
+#  name = "Water Quality"
+#  tag = ".water-quality"
   
-[[filter]]
-  name = "Water Quantity"
-  tag = ".water-quantity"
+#[[filter]]
+#  name = "Water Quantity"
+#  tag = ".water-quantity"
 
 #[[filter]]
 #  name = "Other"

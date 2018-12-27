@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>  on  </title>
-    <link>https://sheilasaia.rbind.io/</link>
+    <link>/</link>
     <description>Recent content in   on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Applied Data Analysis and Mapping in R: Where in Western NC Do Vulnerable Communities and Future Increases in Streamflow Meet?</title>
-      <link>https://sheilasaia.rbind.io/talk/ncgis_mar2019/</link>
+      <link>/talk/ncgis_mar2019/</link>
       <pubDate>Sat, 22 Dec 2018 00:00:00 -0500</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/talk/ncgis_mar2019/</guid>
+      <guid>/talk/ncgis_mar2019/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
@@ -28,28 +28,28 @@
     
     <item>
       <title>Applying Climate Change Risk Management Tools to Integrate Streamflow Projections and Social Vulnerability</title>
-      <link>https://sheilasaia.rbind.io/publication/yadkin-swat-sovi/</link>
+      <link>/publication/yadkin-swat-sovi/</link>
       <pubDate>Fri, 07 Dec 2018 00:00:00 -0500</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/publication/yadkin-swat-sovi/</guid>
+      <guid>/publication/yadkin-swat-sovi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Preprint: An Interdisciplinary Review of Polyphosphate Accumulating Organism (PAO)-Mediated Phosphorus Cycling for Landscape-Scale Water Quality Management</title>
-      <link>https://sheilasaia.rbind.io/publication/pao_review/</link>
+      <link>/publication/pao_review/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 -0500</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/publication/pao_review/</guid>
+      <guid>/publication/pao_review/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Coupling Hydrologic Model Outputs and Demographics Data to Inform Climate Change Planning (Poster)</title>
-      <link>https://sheilasaia.rbind.io/talk/agu_dec2018/</link>
+      <link>/talk/agu_dec2018/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 -0500</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/talk/agu_dec2018/</guid>
+      <guid>/talk/agu_dec2018/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
@@ -62,19 +62,19 @@
     
     <item>
       <title>Developing Climate Change Risk Management Tools Using R &amp; Python</title>
-      <link>https://sheilasaia.rbind.io/talk/duke-nov2018/</link>
+      <link>/talk/duke-nov2018/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 -0400</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/talk/duke-nov2018/</guid>
+      <guid>/talk/duke-nov2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs</title>
-      <link>https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat/</link>
+      <link>/post/2018-10-16-tidy-swat/</link>
       <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat/</guid>
+      <guid>/post/2018-10-16-tidy-swat/</guid>
       <description>
 
 
@@ -115,9 +115,9 @@ head(output_daily_rch_raw)
 ## 1 SWAT May 20 2015    VER 2015/Rev 637                                    …
 ## 2 General Input/Output section (file.cio):                                 
 ## 3 9/30/2016 12:00:00 AM ARCGIS-SWAT interface AV                           
-## 4 &amp;lt;NA&amp;gt;                                                                     
-## 5 RCH      GIS  MO DA   YR     AREAkm2  FLOW_INcms FLOW_OUTcms     EVAPcms…
-## 6 REACH    1        0   1  1 1982   0.8080E+03  0.1230E+02  0.1260E+02  0.…&lt;/code&gt;&lt;/pre&gt;
+## 4 RCH      GIS  MO DA   YR     AREAkm2  FLOW_INcms FLOW_OUTcms     EVAPcms…
+## 5 REACH    1        0   1  1 1982   0.8080E+03  0.1230E+02  0.1260E+02  0.…
+## 6 REACH    2        0   1  1 1982   0.3187E+04  0.1486E+03  0.1538E+03  0.…&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Using the basic &lt;code&gt;read_csv()&lt;/code&gt; and without doing any formatting, we notice a few things:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;These data are being read in as one big column&lt;/li&gt;
@@ -130,7 +130,7 @@ head(output_daily_rch_raw)
 head(output_daily_rch_raw, n = 5)
 ## # A tibble: 5 x 53
 ##   X1       X2    X3    X4    X5    X6    X7    X8    X9     X10   X11
-##   &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
 ## 1 REACH     1     0     1     1  1982  808   12.3  12.6 1.87e-2     0
 ## 2 REACH     2     0     1     1  1982 3187  149.  154.  6.55e-2     0
 ## 3 REACH     3     0     1     1  1982 2238  138.  141.  4.33e-2     0
@@ -157,7 +157,7 @@ colnames(output_daily_rch) &amp;lt;- daily_rch_col_names
 head(output_daily_rch, n = 5)
 ## # A tibble: 5 x 53
 ##   FILE    RCH   GIS    MO    DA    YR AREAkm2 FLOW_INcms FLOW_OUTcms
-##   &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
+##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
 ## 1 REACH     1     0     1     1  1982    808        12.3        12.6
 ## 2 REACH     2     0     1     1  1982   3187       149.        154. 
 ## 3 REACH     3     0     1     1  1982   2238       138.        141. 
@@ -199,7 +199,7 @@ output_daily_rch_test &amp;lt;- tidy_daily_rch_file(output_daily_rch_raw_test)
 head(output_daily_rch_test, n = 5)
 ## # A tibble: 5 x 53
 ##   FILE    RCH   GIS    MO    DA    YR AREAkm2 FLOW_INcms FLOW_OUTcms
-##   &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
+##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
 ## 1 REACH     1     0     1     1  1982    808        12.3        12.6
 ## 2 REACH     2     0     1     1  1982   3187       149.        154. 
 ## 3 REACH     3     0     1     1  1982   2238       138.        141. 
@@ -230,7 +230,7 @@ ggplot(data = outlet_daily_data, mapping = aes(x = as.factor(YR), y = FLOW_OUTcm
   geom_jitter(alpha = 0.1, width = 0.1) +
   xlab(&amp;quot;Year&amp;quot;) +
   ylab(&amp;quot;Daily Discharge (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat_files/figure-html/plotting%20daily%20data%20part%201-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20daily%20data%20part%201-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Next, let’s plot the hydrograph of discharge at the the outlet (i.e., subbasin number 28) for 1982.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# select outlet data for 1982
 outlet_daily_1982_data &amp;lt;- output_daily_rch_test %&amp;gt;% 
@@ -242,7 +242,7 @@ ggplot(data = outlet_daily_1982_data, mapping = aes(x = date, y = FLOW_OUTcms)) 
   geom_line(color = &amp;quot;blue&amp;quot;) +
   xlab(&amp;quot;Date&amp;quot;) +
   ylab(&amp;quot;Daily Discharge (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat_files/figure-html/plotting%20daily%20data%20part%202-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20daily%20data%20part%202-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;monthly-data&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Monthly Data&lt;/h1&gt;
@@ -260,9 +260,9 @@ head(output_monthly_rch_raw)
 ## 1 SWAT May 20 2015    VER 2015/Rev 637                                    …
 ## 2 General Input/Output section (file.cio):                                 
 ## 3 9/1/2017 12:00:00 AM ARCGIS-SWAT interface AV                            
-## 4 &amp;lt;NA&amp;gt;                                                                     
-## 5 RCH      GIS   MON     AREAkm2  FLOW_INcms FLOW_OUTcms     EVAPcms    TL…
-## 6 REACH    1        0     1  0.8080E+03  0.3818E+01  0.3911E+01  0.1456E-0…&lt;/code&gt;&lt;/pre&gt;
+## 4 RCH      GIS   MON     AREAkm2  FLOW_INcms FLOW_OUTcms     EVAPcms    TL…
+## 5 REACH    1        0     1  0.8080E+03  0.3818E+01  0.3911E+01  0.1456E-0…
+## 6 REACH    2        0     1  0.3187E+04  0.1997E+02  0.2023E+02  0.5534E-0…&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Using the basic &lt;code&gt;read_csv()&lt;/code&gt; and without doing any formatting, we notice a few things:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;These data are being read in as one big column (Like the daily data!)&lt;/li&gt;
@@ -284,7 +284,7 @@ colnames(output_monthly_rch_raw) = montly_rch_col_names
 output_monthly_rch_raw[336:338,]
 ## # A tibble: 3 x 51
 ##   FILE    RCH   GIS    MO AREAkm2 FLOW_INcms FLOW_OUTcms EVAPcms TLOSScms
-##   &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
+##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
 ## 1 REACH    28     0    12   17780     137.        137.    0.0587     5.66
 ## 2 REACH     1     0  1982     808       8.47        8.39  0.0658     3.51
 ## 3 REACH     2     0  1982    3187      42.0        41.7   0.231     12.3 
@@ -339,7 +339,7 @@ for (i in 1:length(simulation_years)) {
 head(output_monthly_rch, n = 5)
 ## # A tibble: 5 x 52
 ##   FILE    RCH   GIS    MO    YR AREAkm2 FLOW_INcms FLOW_OUTcms EVAPcms
-##   &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
+##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
 ## 1 REACH     1     0     1  1982    808        3.82        3.91 1.46e-2
 ## 2 REACH     2     0     1  1982   3187       20.0        20.2  5.53e-2
 ## 3 REACH     3     0     1  1982   2238       15.5        15.9  4.35e-2
@@ -404,7 +404,7 @@ output_monthly_rch_test &amp;lt;- tidy_monthly_rch_file(output_monthly_rch_raw_t
 head(output_monthly_rch_test, n = 5)
 ## # A tibble: 5 x 52
 ##   FILE    RCH   GIS    MO    YR AREAkm2 FLOW_INcms FLOW_OUTcms EVAPcms
-##   &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
+##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
 ## 1 REACH     1     0     1  1982    808        3.82        3.91 1.46e-2
 ## 2 REACH     2     0     1  1982   3187       20.0        20.2  5.53e-2
 ## 3 REACH     3     0     1  1982   2238       15.5        15.9  4.35e-2
@@ -434,7 +434,7 @@ ggplot(data = outlet_monthly_data, mapping = aes(x = as.factor(YR), y = FLOW_OUT
   geom_jitter(alpha = 0.25, width = 0.1) +
   xlab(&amp;quot;Year&amp;quot;) +
   ylab(&amp;quot;Monthly Discharge (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%201-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%201-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Next, let’s plot the monthly discharge all subbasins versus simulation year.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = output_monthly_rch_test,
        mapping = aes(x = as.factor(YR), y = FLOW_OUTcms, color = as.factor(RCH))) +
@@ -444,14 +444,14 @@ ggplot(data = outlet_monthly_data, mapping = aes(x = as.factor(YR), y = FLOW_OUT
   ylab(&amp;quot;Monthly Discharge (cms)&amp;quot;) +
   scale_color_discrete(name = &amp;quot;Subbasin ID&amp;quot;) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%202-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%202-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Last, we’ll plot the range of monthly discharge for all subbasins versus month.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = output_monthly_rch_test, mapping = aes(x = as.factor(MO), y = FLOW_OUTcms)) +
   geom_boxplot() +
   geom_jitter(alpha = 0.25, width = 0.1) +
   xlab(&amp;quot;Month&amp;quot;) +
   ylab(&amp;quot;Monthly Discharge (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%203-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%203-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;I think using R to tidy up SWAT outputs is a great way to introduce principles of reproducible to your hydrology data analysis workflows. You can do this by saving the functions above in scripts. If you want to take it a step further you can save the functions to their own R script; where the name of the script is the same as the function name. For example, the code for the &lt;code&gt;tidy_daily_rch_file()&lt;/code&gt; function should be saved to &lt;code&gt;tidy_daily_rch_file.R&lt;/code&gt;. You can then load this file into your workspace using &lt;code&gt;load(&amp;quot;...tidy_daily_rch_file.R&amp;quot;)&lt;/code&gt; and use it after loading.&lt;/li&gt;
@@ -465,10 +465,10 @@ ggplot(data = outlet_monthly_data, mapping = aes(x = as.factor(YR), y = FLOW_OUT
     
     <item>
       <title>Applying Climate Change Risk Management Tools to Combine Social Vulnerability and Future Streamflow Projections</title>
-      <link>https://sheilasaia.rbind.io/talk/fer-oct2018/</link>
+      <link>/talk/fer-oct2018/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 -0400</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/talk/fer-oct2018/</guid>
+      <guid>/talk/fer-oct2018/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
@@ -479,10 +479,10 @@ ggplot(data = outlet_monthly_data, mapping = aes(x = as.factor(YR), y = FLOW_OUT
     
     <item>
       <title>Using tibbletime::rollify with USGS Streamgage Data</title>
-      <link>https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify/</link>
+      <link>/post/2018-08-04-usgs-rollify/</link>
       <pubDate>Wed, 05 Sep 2018 21:12:00 -0500</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify/</guid>
+      <guid>/post/2018-08-04-usgs-rollify/</guid>
       <description>
 
 
@@ -573,7 +573,7 @@ site_info &amp;lt;- readNWISsite(site_numbers)&lt;/code&gt;&lt;/pre&gt;
         panel.background = element_blank(),
         axis.line = element_line(colour = &amp;quot;black&amp;quot;),
         axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify_files/figure-html/plotting%20daily%20data-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-08-04-usgs-rollify_files/figure-html/plotting%20daily%20data-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;As expected, we see that the two sites mimic one another over this one year time period. Remember, the Eno River at Hillsborough site is upstream of the Eno River at Durham site. We also see that the Eno River at Durham site (top, red line) has some higher peaks than the Eno River at Hillborough site (bottom, teal line). This also makes sense since the Durham site is surrounded by more urbanized land than the Hillsborough site.&lt;/p&gt;
 &lt;p&gt;Ok, so let’s get back to the &lt;code&gt;tibbletime&lt;/code&gt; package. What if we want to compare different time spans? That is, not just daily, but maybe hourly or half day. First we have to define our rolling functions and their associated time spans.&lt;/p&gt;
 &lt;p&gt;For this post, let’s create half hour, hourly, half day, and day rolls.&lt;/p&gt;
@@ -627,7 +627,7 @@ ggplot(data = discharge_roll) +
   ylab(&amp;quot;Aggregated Discharge (cfs)&amp;quot;) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = &amp;quot;black&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify_files/figure-html/plot%20results-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-08-04-usgs-rollify_files/figure-html/plot%20results-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;There are some interesting patterns that (I think) are worth pointing out:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Based on the daily hydrograph we plotted above, the Eno River at Durham (top) data set has higher peak events. This was expected given the daily hydrograph we plotted above. We see that discharge values go up to over 10,000 cfs at the Eno River at Durham site whereas for the Eno River at Hillsborough they only go up to about 5,000 cfs.&lt;/p&gt;&lt;/li&gt;
@@ -641,10 +641,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>My First Post</title>
-      <link>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</link>
+      <link>/post/2018-07-20-my-first-post/</link>
       <pubDate>Mon, 23 Jul 2018 21:13:14 -0500</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</guid>
+      <guid>/post/2018-07-20-my-first-post/</guid>
       <description>
 
 
@@ -662,10 +662,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Modeling Water Quality in a Suburban Watershed</title>
-      <link>https://sheilasaia.rbind.io/project/mrgp-project/</link>
+      <link>/project/mrgp-project/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/project/mrgp-project/</guid>
+      <guid>/project/mrgp-project/</guid>
       <description>
 
 &lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
@@ -692,10 +692,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Phosphorus Cycling in Stream Biofilms</title>
-      <link>https://sheilasaia.rbind.io/project/paos-streams-project/</link>
+      <link>/project/paos-streams-project/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/project/paos-streams-project/</guid>
+      <guid>/project/paos-streams-project/</guid>
       <description>
 
 &lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
@@ -712,8 +712,10 @@ ggplot(data = discharge_roll) +
 
 &lt;h1 id=&#34;project-links&#34;&gt;Project Links&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/sheilasaia/paper-p-cycling-in-stream-biofilms&#34; target=&#34;_blank&#34;&gt;Project GitHub Repository&lt;/a&gt;&lt;br/&gt;
-&lt;a href=&#34;https://www.journals.uchicago.edu/doi/full/10.1086/691439&#34; target=&#34;_blank&#34;&gt;Project Peer-Reviewed Publication&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sheilasaia/paper-p-cycling-in-stream-biofilms&#34; target=&#34;_blank&#34;&gt;Project GitHub Repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.journals.uchicago.edu/doi/full/10.1086/691439&#34; target=&#34;_blank&#34;&gt;Project Peer-Reviewed Publication&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h1&gt;
 
@@ -723,19 +725,19 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Assessment of Hydrologic Vulnerability to Urbanization and Climate Change in a Rapidly Changing Watershed in the Southeast US</title>
-      <link>https://sheilasaia.rbind.io/publication/yadkin-swat/</link>
+      <link>/publication/yadkin-swat/</link>
       <pubDate>Fri, 20 Jul 2018 00:00:00 -0400</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/publication/yadkin-swat/</guid>
+      <guid>/publication/yadkin-swat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ecohydrological Modeling with Stable Isotopes</title>
-      <link>https://sheilasaia.rbind.io/project/stable-isotope-project/</link>
+      <link>/project/stable-isotope-project/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/project/stable-isotope-project/</guid>
+      <guid>/project/stable-isotope-project/</guid>
       <description>
 
 &lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
@@ -752,8 +754,10 @@ ggplot(data = discharge_roll) +
 
 &lt;h1 id=&#34;project-links&#34;&gt;Project Links&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/SoilWaterLab/JoFlow/tree/Isotope&#34; target=&#34;_blank&#34;&gt;IsoJoFlow Ecohydrology Model&lt;/a&gt;
-&lt;a href=&#34;https://onlinelibrary.wiley.com/doi/full/10.1002/hyp.11194&#34; target=&#34;_blank&#34;&gt;Project Peer-Reviewed Publication&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/SoilWaterLab/JoFlow/tree/Isotope&#34; target=&#34;_blank&#34;&gt;IsoJoFlow Ecohydrology Model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://onlinelibrary.wiley.com/doi/full/10.1002/hyp.11194&#34; target=&#34;_blank&#34;&gt;Project Peer-Reviewed Publication&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h1&gt;
 
@@ -763,10 +767,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Preparing for Climate Change: Using Hydrology Models and Census Data to Map Vulnerable Communities</title>
-      <link>https://sheilasaia.rbind.io/talk/ptrc-climate-may2018/</link>
+      <link>/talk/ptrc-climate-may2018/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/talk/ptrc-climate-may2018/</guid>
+      <guid>/talk/ptrc-climate-may2018/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;This talk is being given by me and Kelly M. Suttles.&lt;/em&gt;&lt;/p&gt;
@@ -787,10 +791,10 @@ ggplot(data = discharge_roll) +
     
     <item>
       <title>Sociohydrology in Western North Carolina</title>
-      <link>https://sheilasaia.rbind.io/project/nc-sociohydro-project/</link>
+      <link>/project/nc-sociohydro-project/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
-      <guid>https://sheilasaia.rbind.io/project/nc-sociohydro-project/</guid>
+      <guid>/project/nc-sociohydro-project/</guid>
       <description>
 
 &lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
@@ -807,9 +811,10 @@ ggplot(data = discharge_roll) +
 
 &lt;h1 id=&#34;project-links&#34;&gt;Project Links&lt;/h1&gt;
 
-&lt;p&gt;See publication links below.&lt;br&gt;
-&lt;a href=&#34;https://github.com/sheilasaia/paper-yadkin-swat-study&#34; target=&#34;_blank&#34;&gt;GitHub Repository for Suttles et al. 2018&lt;/a&gt;&lt;br&gt;
-GitHub Repository for Saia et al. 2018&amp;hellip;coming soon!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sheilasaia/paper-yadkin-swat-study&#34; target=&#34;_blank&#34;&gt;GitHub Repository for Suttles et al. 2018&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub Repository for Saia et al. 2018&amp;hellip;coming soon!&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h1&gt;
 

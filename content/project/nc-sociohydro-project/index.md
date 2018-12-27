@@ -1,25 +1,32 @@
 +++
-# Date this page was created.
-date = 2018-05-01T00:00:00
-
 # Project title.
 title = "Sociohydrology in Western North Carolina"
 
-# Project summary to display on homepage.
-summary = "Integrating hydrology models and demographics data to prioritize climate change preparedness and adaptation efforts in North Carolina." 
+# Date this page was created.
+date = 2018-05-01T00:00:00
 
-# Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "sociohydro_fig.png"
+# Project summary to display on homepage.
+summary = "Integrating hydrology models and demographics data to aid climate change adaptation efforts in North Carolina."
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["water-quantity", "climate-change", "modeling", "sociohydrology", "SWAT"]
+tags = ["modeling","water-quantity", "climate change", "sociohydrology"]
 
 # Optional external URL for project (replaces project detail page).
 # external_link = "http://example.org"
 
-# Does the project detail page use math formatting?
-math = false
+# Featured image
+# To use, add an image named `featured.jpg/png` to your project's folder.
+[image]
+# Caption (optional)
+#  caption = "caption here"
+
+# Focal point (optional)
+# Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+  focal_point = "Smart"
+
+# Does the project detail page use math formatting? (old version of hugo site)
+# math = false
 
 +++
 
@@ -33,9 +40,8 @@ B Cutts (NC State), R Emanuel (NC State), K Martin (NC State), KM Suttles (USFS)
 The goal of this project is to combine past and future hydrology model (i.e., [Soil and Water Assessment Tool (SWAT)](https://swat.tamu.edu/)) outputs with demographics data to create maps and prioritize climate change preparation and adaptation strategies for especially vulnerable communities in Western North Carolina's Upper Yadkin-Pee Dee Watershed.
 
 # Project Links
-See publication links below.<br>
-[GitHub Repository for Suttles et al. 2018](https://github.com/sheilasaia/paper-yadkin-swat-study)<br>
-GitHub Repository for Saia et al. 2018...coming soon!
+- [GitHub Repository for Suttles et al. 2018](https://github.com/sheilasaia/paper-yadkin-swat-study)
+- GitHub Repository for Saia et al. 2018...coming soon!
 
 # Acknowledgements
 Special thanks to the [Oak Ridge Institute for Science and Education](https://orise.orau.gov/) for support this work.

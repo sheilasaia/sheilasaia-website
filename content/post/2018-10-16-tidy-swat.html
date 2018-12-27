@@ -3,7 +3,7 @@ title: "Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs"
 author: "Sheila Saia"
 date: '2018-10-15'
 categories: ["R"]
-tags: ["tidyr", "SWAT", "modeling"]
+tags: []
 ---
 
 
@@ -45,9 +45,9 @@ head(output_daily_rch_raw)
 ## 1 SWAT May 20 2015    VER 2015/Rev 637                                    …
 ## 2 General Input/Output section (file.cio):                                 
 ## 3 9/30/2016 12:00:00 AM ARCGIS-SWAT interface AV                           
-## 4 &lt;NA&gt;                                                                     
-## 5 RCH      GIS  MO DA   YR     AREAkm2  FLOW_INcms FLOW_OUTcms     EVAPcms…
-## 6 REACH    1        0   1  1 1982   0.8080E+03  0.1230E+02  0.1260E+02  0.…</code></pre>
+## 4 RCH      GIS  MO DA   YR     AREAkm2  FLOW_INcms FLOW_OUTcms     EVAPcms…
+## 5 REACH    1        0   1  1 1982   0.8080E+03  0.1230E+02  0.1260E+02  0.…
+## 6 REACH    2        0   1  1 1982   0.3187E+04  0.1486E+03  0.1538E+03  0.…</code></pre>
 <p>Using the basic <code>read_csv()</code> and without doing any formatting, we notice a few things:</p>
 <ul>
 <li>These data are being read in as one big column</li>
@@ -60,7 +60,7 @@ head(output_daily_rch_raw)
 head(output_daily_rch_raw, n = 5)
 ## # A tibble: 5 x 53
 ##   X1       X2    X3    X4    X5    X6    X7    X8    X9     X10   X11
-##   &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
+##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
 ## 1 REACH     1     0     1     1  1982  808   12.3  12.6 1.87e-2     0
 ## 2 REACH     2     0     1     1  1982 3187  149.  154.  6.55e-2     0
 ## 3 REACH     3     0     1     1  1982 2238  138.  141.  4.33e-2     0
@@ -87,7 +87,7 @@ colnames(output_daily_rch) &lt;- daily_rch_col_names
 head(output_daily_rch, n = 5)
 ## # A tibble: 5 x 53
 ##   FILE    RCH   GIS    MO    DA    YR AREAkm2 FLOW_INcms FLOW_OUTcms
-##   &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;
+##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;
 ## 1 REACH     1     0     1     1  1982    808        12.3        12.6
 ## 2 REACH     2     0     1     1  1982   3187       149.        154. 
 ## 3 REACH     3     0     1     1  1982   2238       138.        141. 
@@ -129,7 +129,7 @@ output_daily_rch_test &lt;- tidy_daily_rch_file(output_daily_rch_raw_test)
 head(output_daily_rch_test, n = 5)
 ## # A tibble: 5 x 53
 ##   FILE    RCH   GIS    MO    DA    YR AREAkm2 FLOW_INcms FLOW_OUTcms
-##   &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;
+##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;
 ## 1 REACH     1     0     1     1  1982    808        12.3        12.6
 ## 2 REACH     2     0     1     1  1982   3187       149.        154. 
 ## 3 REACH     3     0     1     1  1982   2238       138.        141. 
@@ -190,9 +190,9 @@ head(output_monthly_rch_raw)
 ## 1 SWAT May 20 2015    VER 2015/Rev 637                                    …
 ## 2 General Input/Output section (file.cio):                                 
 ## 3 9/1/2017 12:00:00 AM ARCGIS-SWAT interface AV                            
-## 4 &lt;NA&gt;                                                                     
-## 5 RCH      GIS   MON     AREAkm2  FLOW_INcms FLOW_OUTcms     EVAPcms    TL…
-## 6 REACH    1        0     1  0.8080E+03  0.3818E+01  0.3911E+01  0.1456E-0…</code></pre>
+## 4 RCH      GIS   MON     AREAkm2  FLOW_INcms FLOW_OUTcms     EVAPcms    TL…
+## 5 REACH    1        0     1  0.8080E+03  0.3818E+01  0.3911E+01  0.1456E-0…
+## 6 REACH    2        0     1  0.3187E+04  0.1997E+02  0.2023E+02  0.5534E-0…</code></pre>
 <p>Using the basic <code>read_csv()</code> and without doing any formatting, we notice a few things:</p>
 <ul>
 <li>These data are being read in as one big column (Like the daily data!)</li>
@@ -214,7 +214,7 @@ colnames(output_monthly_rch_raw) = montly_rch_col_names
 output_monthly_rch_raw[336:338,]
 ## # A tibble: 3 x 51
 ##   FILE    RCH   GIS    MO AREAkm2 FLOW_INcms FLOW_OUTcms EVAPcms TLOSScms
-##   &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
 ## 1 REACH    28     0    12   17780     137.        137.    0.0587     5.66
 ## 2 REACH     1     0  1982     808       8.47        8.39  0.0658     3.51
 ## 3 REACH     2     0  1982    3187      42.0        41.7   0.231     12.3 
@@ -269,7 +269,7 @@ for (i in 1:length(simulation_years)) {
 head(output_monthly_rch, n = 5)
 ## # A tibble: 5 x 52
 ##   FILE    RCH   GIS    MO    YR AREAkm2 FLOW_INcms FLOW_OUTcms EVAPcms
-##   &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;
+##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;
 ## 1 REACH     1     0     1  1982    808        3.82        3.91 1.46e-2
 ## 2 REACH     2     0     1  1982   3187       20.0        20.2  5.53e-2
 ## 3 REACH     3     0     1  1982   2238       15.5        15.9  4.35e-2
@@ -334,7 +334,7 @@ output_monthly_rch_test &lt;- tidy_monthly_rch_file(output_monthly_rch_raw_test)
 head(output_monthly_rch_test, n = 5)
 ## # A tibble: 5 x 52
 ##   FILE    RCH   GIS    MO    YR AREAkm2 FLOW_INcms FLOW_OUTcms EVAPcms
-##   &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;
+##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;
 ## 1 REACH     1     0     1  1982    808        3.82        3.91 1.46e-2
 ## 2 REACH     2     0     1  1982   3187       20.0        20.2  5.53e-2
 ## 3 REACH     3     0     1  1982   2238       15.5        15.9  4.35e-2
