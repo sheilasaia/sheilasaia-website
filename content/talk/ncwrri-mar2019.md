@@ -7,7 +7,7 @@ time_end = 2019-03-22T05:00:00
 abstract = ""
 abstract_short = ""
 event = "North Carolina Water Resources Research Institute Annual Conference"
-event_url = ""
+event_url = "https://wrri.ncsu.edu/conference/"
 location = "Raleigh, North Carolina, USA"
 
 # Is this a selected talk? (true/false)
