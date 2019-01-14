@@ -17,8 +17,7 @@ weight = 6
 
 # upcoming workshops:
 
-
-Check back soon for more upcoming workshops.
+- *Data Manipulation, Analysis, and Visualization in R using the Tidyverse* - I'm co-organizing a workshop with Dr. Ashton Drew for [Transmitting Science](https://www.transmittingscience.org/) in Barcelona, Spain from November 4-8, 2019. You can read more about the workshop and sign up [here](https://www.transmittingscience.org/courses/statistics-and-bioinformatics/data-manipulation-analysis-visualization-in-r-using-tidyverse/).
 
 
 # past workshops: 
