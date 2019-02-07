@@ -1,0 +1,37 @@
+---
+title: "R Resources for Water Scientist"
+author: "Sheila Saia"
+date: '2019-02-16'
+categories: ["R"]
+tags: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, message = FALSE, warning = FALSE)
+```
+
+# Background
+
+In thinking about all the different topics I could possibly write about in th cover in the wate`R` blog, 
+
+# Goals of This Post
+
+The main goal of this blog post is to:
+
+- Compile links to `R` resources including: packages, tutorials, books, etc. that might be of interests to water scientists.
+
+Note to self that someday maybe I can update this post to also include `Python` resources. For now, I'm sticking to basicsssss.
+
+Special thanks to all of the people who've worked hard to share their code and insights together to benefit us all. I love the open source programming community!
+
+# R Packages
+
+
+# R Tutorials
+
+
+# R Books
+
+
+# Other Help
+

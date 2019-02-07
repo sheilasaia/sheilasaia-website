@@ -13,6 +13,17 @@
     
     
     <item>
+      <title>R Resources for Water Scientist</title>
+      <link>/post/2019-02-16-water-resources/</link>
+      <pubDate>Sat, 16 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019-02-16-water-resources/</guid>
+      <description>Background In thinking about all the different topics I could possibly write about in th cover in the wateR blog,
+ Goals of This Post The main goal of this blog post is to:
+ Compile links to R resources including: packages, tutorials, books, etc. that might be of interests to water scientists.  Note to self that someday maybe I can update this post to also include Python resources.</description>
+    </item>
+    
+    <item>
       <title>APIs to the Rescue (&amp; the Census of Agriculture)</title>
       <link>/post/2019-01-04-nass-api/</link>
       <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>

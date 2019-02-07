@@ -17,10 +17,14 @@ weight = 6
 
 # upcoming workshops:
 
+- *NC WRRI Introduction to R for Water Resource Managers* - I'm organizing and leading an introductory R workshop for water resource managers in NC at the end of the NC WRRI conference on March 21, 2019.
+
 - *Data Manipulation, Analysis, and Visualization in R using the Tidyverse* - I'm co-organizing a workshop with Dr. Ashton Drew for [Transmitting Science](https://www.transmittingscience.org/) in Barcelona, Spain from November 4-8, 2019. You can read more about the workshop and sign up [here](https://www.transmittingscience.org/courses/statistics-and-bioinformatics/data-manipulation-analysis-visualization-in-r-using-tidyverse/).
 
 
 # past workshops: 
+
+- *Exploring Spatial Data with `sf`* - I organized and lead an workshop introducing to the sf package to NC State BAE 590 students. Code and slides from this class can be found [here](https://github.com/sheilasaia/sf-workshop-bae590).
 
 - *Coding Help Desk* - I co-organized the Coding Help Desk with [Dr. Sam Zipper](https://samzipper.weebly.com/) at the American Geophysical Union (AGU) Fall Meeting 2018 in Washington, DC. AGU attendees were welcome to stop by and ask coding related questions to volunteers well-versed in R, Python, MatLab, etc. programming.
 
