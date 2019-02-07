@@ -13,14 +13,13 @@
     
     
     <item>
-      <title>R Resources for Water Scientist</title>
+      <title>R Resources for Water Scientists</title>
       <link>/post/2019-02-16-water-resources/</link>
-      <pubDate>Sat, 16 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/2019-02-16-water-resources/</guid>
-      <description>Background In thinking about all the different topics I could possibly write about in th cover in the wateR blog,
- Goals of This Post The main goal of this blog post is to:
- Compile links to R resources including: packages, tutorials, books, etc. that might be of interests to water scientists.  Note to self that someday maybe I can update this post to also include Python resources.</description>
+      <description>Background There are lots of resources out there for R users and I thought it might be helpful to compile some that might be especially helpful for water scientists. I’ll also admit that this is a 50% selfish task meant to help me keep track of resources for my own learning.
+ Goals of This Post The main goal of this blog post is to compile links to R resources including: packages, tutorials, books, etc.</description>
     </item>
     
     <item>
