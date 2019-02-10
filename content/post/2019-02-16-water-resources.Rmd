@@ -86,7 +86,7 @@ Special thanks to all of the people who've worked hard to share their code and i
 
 # Other Help
 
-- rstudio::conf 2018 slides & recorded talks [(link)](https://github.com/simecek/RStudioConf2018Slides)
+- rstudio::conf 2018 slides & recorded talks [(link)](https://github.com/simecek/RStudioConf2018Slides) or [(link)](https://resources.rstudio.com/rstudio-conf-2018)
 
 - rstudio::conf 2019 slides & recorded talks (*coming soon*)
 
