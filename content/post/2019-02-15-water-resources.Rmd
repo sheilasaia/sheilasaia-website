@@ -84,6 +84,12 @@ Special thanks to all of the people who've worked hard to share their code and i
 - Other cool books by RStudio staff [(link)](https://www.rstudio.com/resources/training/books/)
 
 
+# Papers
+
+- *Using R in hydrology: a review of recent developments and future directions* by Slater et al. in review at HESS [(link})](https://www.hydrol-earth-syst-sci-discuss.net/hess-2019-50/)
+
+
+
 # Other Help
 
 - rstudio::conf 2018 slides & recorded talks [(link)](https://github.com/simecek/RStudioConf2018Slides) or [(link)](https://resources.rstudio.com/rstudio-conf-2018)
