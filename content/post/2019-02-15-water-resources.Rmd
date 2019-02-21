@@ -33,6 +33,8 @@ Special thanks to all of the people who've worked hard to share their code and i
 
 - Vignettes for the `sf` package [(link)](https://github.com/r-spatial/sf)
 
+- Vignette for `elevatr` package by Jeff Hollister [(link)](https://cran.r-project.org/web/packages/elevatr/vignettes/introduction_to_elevatr.html)
+
 - Vignettes for the `tidycensus` package [(link)](https://github.com/walkerke/tidycensus/tree/master/vignettes)
 
 - USGS introduction to R tutorials [(link)](https://owi.usgs.gov/R/training-curriculum/intro-curriculum/)
@@ -48,6 +50,13 @@ Special thanks to all of the people who've worked hard to share their code and i
 - Software Carpentry introduction to R tutorial [(link)](http://swcarpentry.github.io/r-novice-inflammation/)
 
 - NEON R tutorials [(link)](https://www.neonscience.org/resources/data-tutorials)
+
+
+# Workshops (+ associated code)
+
+- GIS in R Workshop at Society for 2018 Freshwater Science Conference by R. Hill & M. Beck [(link)](https://ryan-hill.github.io/sfs-r-gis-2018/)
+
+- `sf` package tutorial with USGS GAGES-II data for NC State BAE 590 Class by S. Saia [(link)](https://github.com/sheilasaia/sf-workshop-bae590)
 
 
 # Blogs
@@ -86,7 +95,7 @@ Special thanks to all of the people who've worked hard to share their code and i
 
 # Papers
 
-- *Using R in hydrology: a review of recent developments and future directions* by Slater et al. in review at HESS [(link})](https://www.hydrol-earth-syst-sci-discuss.net/hess-2019-50/)
+- *Using R in hydrology: a review of recent developments and future directions* by Slater et al. in review at HESS [(link)](https://www.hydrol-earth-syst-sci-discuss.net/hess-2019-50/)
 
 
 
