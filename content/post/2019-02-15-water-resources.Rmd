@@ -28,7 +28,6 @@ Special thanks to all of the people who've worked hard to share their code and i
 
 - CRAN tasks views for R packages related to [envirometrics](https://cran.r-project.org/web/views/Environmetrics.html), [hyrdrology](https://cran.r-project.org/web/views/Hydrology.html), [spatial analysis](https://cran.r-project.org/web/views/Spatial.html), [time series analysis](https://cran.r-project.org/web/views/TimeSeries.html), and [a number of other topics](https://cran.r-project.org/web/views/).
 
-
 # Tutorials
 
 - Vignettes for the `sf` package [(link)](https://github.com/r-spatial/sf)
@@ -45,19 +44,19 @@ Special thanks to all of the people who've worked hard to share their code and i
 
 - USGS other R training [(link)](https://owi.usgs.gov/R/training-curriculum/course-specific-material/)
 
+- USGS dataRetrieval tutorial [(link)](https://owi.usgs.gov/R/dataRetrieval.html#1)
+
 - SESYNC R tutorials [(link)](https://cyberhelp.sesync.org/lesson/)
 
 - Software Carpentry introduction to R tutorial [(link)](http://swcarpentry.github.io/r-novice-inflammation/)
 
 - NEON R tutorials [(link)](https://www.neonscience.org/resources/data-tutorials)
 
-
 # Workshops (+ associated code)
 
 - GIS in R Workshop at Society for 2018 Freshwater Science Conference by R. Hill & M. Beck [(link)](https://ryan-hill.github.io/sfs-r-gis-2018/)
 
 - `sf` package tutorial with USGS GAGES-II data for NC State BAE 590 Class by S. Saia [(link)](https://github.com/sheilasaia/sf-workshop-bae590)
-
 
 # Blogs
 
@@ -68,7 +67,6 @@ Special thanks to all of the people who've worked hard to share their code and i
 - Rivers & Ranids Blog by Ryan Peek [(link)](https://ryanpeek.github.io/)
 
 - SESYNC Blog by various [(link)](https://cyberhelp.sesync.org/blog/)
-
 
 # Books
 
@@ -92,12 +90,9 @@ Special thanks to all of the people who've worked hard to share their code and i
 
 - Other cool books by RStudio staff [(link)](https://www.rstudio.com/resources/training/books/)
 
-
 # Papers
 
 - *Using R in hydrology: a review of recent developments and future directions* by Slater et al. in review at HESS [(link)](https://www.hydrol-earth-syst-sci-discuss.net/hess-2019-50/)
-
-
 
 # Other Help
 
@@ -107,6 +102,9 @@ Special thanks to all of the people who've worked hard to share their code and i
 
 - Others have created similar summaries of R resources such as [this post by Steph Locke](https://itsalocke.com/blog/r-spatial-resources/) and [this page by R-Spatial Ladies](https://github.com/rspatialladies/rspatial-resources). 
 
+# Python Resources
+
+- Raoul Collenteur's GitHub page on Python tools for hydrologists [(link)](https://github.com/raoulcollenteur/Python-Hydrology-Tools)
 
 If you know of any resources that I may have missed (it's very likely that I missed somehting!) please contact me!
 
