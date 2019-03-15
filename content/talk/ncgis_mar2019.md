@@ -2,8 +2,8 @@
 date = 2018-12-22T00:00:00  # Schedule page publish date.
 
 title = "Applied Data Analysis and Mapping in R: Where in Western NC Do Vulnerable Communities and Future Increases in Streamflow Meet?"
-time_start = 2019-02-27T8:00:00
-time_end = 2019-03-01T17:00:00
+time_start = 2019-03-01T11:30:00
+time_end = 2019-03-01T12:00:00
 abstract = ""
 abstract_short = ""
 event = "North Carolina GIS Conference 2019"
