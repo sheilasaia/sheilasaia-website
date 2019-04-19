@@ -79,7 +79,7 @@ round(co2_emitted, 3)</code></pre>
 </div>
 <div id="carbon-dioxcide-offset-calculations" class="section level1">
 <h1>Carbon Dioxcide Offset Calculations</h1>
-<p>Next, we’ll need to figure out how much to donate given these carbon dioxide emissions. To do this, we can refer to the US Environmental Protection Agency’s (USEPA) <a href="https://19january2017snapshot.epa.gov/sites/production/files/2016-12/documents/sc_co2_tsd_august_2016.pdf">Social Cost of Carbon Technical Report</a>. The information we’ll need is found in Table 2 of this document. We can save this information to a dataframe. The social cost of carbon includes includes the impact of carbon dioxide emissions on: “…changes in net agricultural productivity, human health, property damages from increased flood risk, and changes in energy system costs, such as reduced costs for heating and increased costs for air conditioning” (<a href="https://19january2017snapshot.epa.gov/climatechange/social-cost-carbon_.html">USEPA, 2017</a>).</p>
+<p>Next, we’ll need to figure out how much to donate given these carbon dioxide emissions. To do this, we can refer to the US Environmental Protection Agency’s (USEPA) <a href="https://19january2017snapshot.epa.gov/sites/production/files/2016-12/documents/sc_co2_tsd_august_2016.pdf">Social Cost of Carbon Technical Report</a>. The information we’ll need is found in Table 2 of this document. We can save this information to a dataframe. The social cost of carbon includes the impact of carbon dioxide emissions on: “…changes in net agricultural productivity, human health, property damages from increased flood risk, and changes in energy system costs, such as reduced costs for heating and increased costs for air conditioning.” (<a href="https://19january2017snapshot.epa.gov/climatechange/social-cost-carbon_.html">USEPA, 2017</a>).</p>
 <pre class="r"><code>social_cost_co2 &lt;- data.frame(
   year = seq(2015, 2050, 5),
   avg_5_perc_usd_per_ton_co2 = c(11, 12, 14, 16, 18, 21, 23, 26),
@@ -87,7 +87,7 @@ round(co2_emitted, 3)</code></pre>
   avg_2.5_perc_usd_per_ton_co2 = c(56, 62, 68, 73, 78, 84, 89, 95),
   high_impact_usd_per_ton_co2 = c(105, 123, 138, 152, 168, 183, 197, 212)
 )</code></pre>
-<p>We see there are a few columns here. The first is the year, which ranges from 2015 to 2050. Columns 2 to 5 all represent the cost (in US dollars) of emitting a metric ton of carbon given different future trends. That is, the average (of three models and five climate change scenarios) cost given a 5%, 3%, and 2.5% discount rate for columns 2 through 4, respectively. I’ll admit that I don’t fully understand the discount rate comes but believe it is used as a way to consider whether people are more likely to value short-term or long-term risks associated with climate change. The larger the discount rate, the less they value long-term risk. In a societal context, the larger discount rate suggests that current generations are valued more than future generations. The report also includes a high impact case that instead of the average uses the 95th percentile cost given a 3% discount rate (rather than the average). The USEPA’s <a href="https://19january2017snapshot.epa.gov/sites/production/files/2016-12/documents/sc_co2_tsd_august_2016.pdf">Social Cost of Carbon Technical Report</a> report says, “…there is extensive evidence in the scientific and economic literature of the potential for lower-probability, higher-impact outcomes from climate change, which would be particularly harmful to society and thus relevant to the public and policymakers.” Therefore, for this blog post, we’ll move forward using the high impact case.</p>
+<p>Let’s walk through each of these columns. Column 1 is the year, which ranges from 2015 to 2050. Columns 2 to 5 all represent the cost (in US dollars) of emitting a metric ton of carbon dioxide given different future strategies. That is, the average (of three climate models times five climate change scenarios) cost given a 5%, 3%, and 2.5% discount rate for columns 2 through 4, respectively. I’ll admit that I don’t fully understand the discount rate, but believe it’s used as a way to consider whether people are more likely to value short-term or long-term risks associated with climate change. The larger the discount rate, the less they value long-term risk. In a societal context, the larger discount rate suggests that current generations are valued more than future generations. The report also includes a high impact case that is calculated from the 95th percentile (of three climate models times five climate change scenarios), rather than the average, cost given a 3% discount rate. The USEPA’s <a href="https://19january2017snapshot.epa.gov/sites/production/files/2016-12/documents/sc_co2_tsd_august_2016.pdf">Social Cost of Carbon Technical Report</a> report says, “…there is extensive evidence in the scientific and economic literature of the potential for lower-probability, higher-impact outcomes from climate change, which would be particularly harmful to society and thus relevant to the public and policymakers.” Therefore, for this blog post, we’ll move forward using the high impact case.</p>
 <p>We can fit this linear trend and use it to estimate the cost of a metric ton of carbon dioxide emitted for years not in Table 2 (i.e., for this year, 2019).</p>
 <pre class="r"><code># fit a linear model
 cost_lm &lt;- lm(high_impact_usd_per_ton_co2 ~ year, data = social_cost_co2)
@@ -95,7 +95,7 @@ cost_lm &lt;- lm(high_impact_usd_per_ton_co2 ~ year, data = social_cost_co2)
 # save the model parameters for prediction
 intercept &lt;- cost_lm$coefficients[1]
 slope &lt;- cost_lm$coefficients[2]</code></pre>
-<p>Let’s plot the data (points) and the model (line).</p>
+<p>Let’s plot the data (points) and linear model (line).</p>
 <pre class="r"><code>plot(high_impact_usd_per_ton_co2 ~ year, data = social_cost_co2, pch = 16, xlab = &quot;Year&quot;, ylab = &quot;Cost per Metric Ton CO2 Emitted (USD)&quot;)
 abline(a = intercept, b = slope, col = &quot;red&quot;, lwd = 3)</code></pre>
 <p><img src="/post/2019-04-19-carbon-cost-calcs_files/figure-html/plot%20cost%20model-1.png" width="672" /></p>
@@ -116,6 +116,8 @@ my_year * slope + intercept</code></pre>
   # set to FALSE to avoid using radiative forcing
   # round_trip = FALSE (default) will double the cost calculation if set to TRUE
   # carbon offset result is given in USD
+  
+  # note: you will need to load the airportr package before using this function
   
   # linear coefficients from high impact column of table 2
   # source: https://19january2017snapshot.epa.gov/sites/production/files/2016-12/documents/sc_co2_tsd_august_2016.pdf
@@ -165,7 +167,7 @@ my_year * slope + intercept</code></pre>
   
   return(cost)
 }</code></pre>
-<p>Now let’s test out the function for our round-trip flight from RDU to SFO</p>
+<p>Now let’s test out the function for a round-trip flight from RDU to SFO (for 1 person).</p>
 <pre class="r"><code>carbon_offset_cost(departing_airport_code = &quot;RDU&quot;, 
                    arriving_airport_code = &quot;SFO&quot;,
                    year = 2019,
@@ -173,5 +175,5 @@ my_year * slope + intercept</code></pre>
                    radiative_force = TRUE,
                    round_trip = TRUE)</code></pre>
 <pre><code>## [1] 117.2229</code></pre>
-<p>Looks like we can donate $117 to ofset the carbon dioxide emitted from our round-trip flight from RDU to SFO in 2019. If we want to be more generous we can adjust the year for a future period. For example, if we change the year to the maximum value, 2050, we can donate $210. That is, our emissions will be more expensive the further out in time we go (see the <a href="https://19january2017snapshot.epa.gov/climatechange/social-cost-carbon_.html">USEPA Social Cost of Carbon website</a> for more information).</p>
+<p>Looks like we can donate $117 to ofset the carbon dioxide emitted from our round-trip flight from RDU to SFO in 2019. If we want to be more generous we can adjust the year for a future period. For example, if we change the year to the maximum value, 2050, we can donate $210. Our emissions are more expensive the further out in time we go (see the <a href="https://19january2017snapshot.epa.gov/climatechange/social-cost-carbon_.html">USEPA Social Cost of Carbon website</a> for more information).</p>
 </div>
