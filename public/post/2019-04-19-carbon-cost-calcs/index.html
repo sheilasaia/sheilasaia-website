@@ -378,7 +378,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    9 min read
+    11 min read
   </span>
   
 
@@ -473,9 +473,10 @@
 
 <div id="background" class="section level1">
 <h1>Background</h1>
-<p>Much of my postdoctoral research is focused on studying (and building tools to help decision makers mitigate) the impacts of climate change on communities in North Carolina. I’m also committed to reducing my carbon footprint and have read <a href="https://www.nytimes.com/2017/07/27/climate/airplane-pollution-global-warming.html">over</a> and <a href="https://www.vox.com/energy-and-environment/2019/1/11/18177118/airlines-climate-change-emissions-travel">over</a> that flying makes up the largest fraction of an average person’s carbon dioxide emissions. In early January I decided that I wanted to try to reduce the number of flights I took in 2019. I also wanted to figure out how to offset the cost of my carbon dioxide emissions when it was goingto be tough to avoid flying.</p>
+<p>Much of my postdoctoral research is focused on studying (and building tools to help decision makers mitigate) the impacts of climate change on communities in North Carolina. I’m also committed to reducing my carbon footprint and have read <a href="https://www.nytimes.com/2017/07/27/climate/airplane-pollution-global-warming.html">over</a> and <a href="https://www.vox.com/energy-and-environment/2019/1/11/18177118/airlines-climate-change-emissions-travel">over</a> that flying makes up the largest fraction of an average person’s carbon dioxide emissions. In early January I decided that I wanted to try to reduce the number of flights I took in 2019. I also wanted to figure out how to offset the cost of my carbon dioxide emissions when it was going to be tough to avoid flying.</p>
 <p>I started researching websites to help me figure out how much to offset. I found several tools to calculate carbon dioxide emissions (e.g., <a href="https://www.carbonfootprint.com/calculator.aspx">here</a> and <a href="http://www.carbonify.com/carbon-calculator.htm">here</a>) but couldn’t find any that told me how much to donate based on these emissions. Early on, I decided my offsets would go to a local organization addressing climate change. For me this looked like a non-profit focused on building solar panels in the Raleigh-Durham area, but for you, it might be something different. I was doing these calculations manually and then I realized it would be more fun and more efficient to automate them in <code>R</code>!</p>
 <p>In this post, I’m starting with flights but maybe I’ll branch out to <a href="https://www.yaleclimateconnections.org/2015/09/evolving-climate-math-of-flying-vs-driving/">driving</a> in the future…and maybe someday a shiny app for both.</p>
+<p><strong>NOTE!</strong> If you’re not an R-user but you’d still like to learn how much you should donate to offset the carbon dioxide you emit from flying, <em>please scroll to the bottom of this post</em>. I’ve included step-by-step directions for how to do this without <code>R</code>.</p>
 </div>
 <div id="goals-of-this-post" class="section level1">
 <h1>Goals of This Post</h1>
@@ -485,7 +486,7 @@
 <li><p>Calculate how much to donate based on this carbon footprint</p></li>
 <li><p>Write a function to automate these calculations</p></li>
 </ul>
-<p>Thanks to friends for their encouragement and to the <a href="https://www.fridaysforfuture.org/">#fridaysforthefuture</a> movement for inspirting this post.</p>
+<p>Thanks to friends for their encouragement and to the <a href="https://www.fridaysforfuture.org/">#fridaysforthefuture</a> movement for inspiring this post.</p>
 </div>
 <div id="set-up" class="section level1">
 <h1>Set Up</h1>
@@ -518,7 +519,7 @@
 </div>
 <div id="calculate-the-distance-between-airports" class="section level1">
 <h1>Calculate the Distance Between Airports</h1>
-<p>Now that we know the departure and arrival city IATA codes, we can use them to calcualte the distance between RDU and CLT. The <code>airportr</code> package also has a function for this.</p>
+<p>Now that we know the departure and arrival city IATA codes, we can use them to calculate the distance between RDU and CLT. The <code>airportr</code> package also has a function for this.</p>
 <pre class="r"><code>kilometers &lt;- round(airport_distance(&quot;RDU&quot;, &quot;CLT&quot;))
 miles &lt;- round(airport_distance(&quot;RDU&quot;, &quot;CLT&quot;) * 0.621)
 
@@ -530,9 +531,9 @@ kilometers</code></pre>
 </div>
 <div id="carbon-dioxide-emission-calculations" class="section level1">
 <h1>Carbon Dioxide Emission Calculations</h1>
-<p>To calculate our carbon dioxide emissions we’ll need to know how much carbon dioxide is emitted per mile traveled per person. Thankfully, many people before me have worked out this calculation. One of the most thourough descriptions of this is available at <a href="https://blueskymodel.org/air-mile">blueskymodel.org</a>. After stepping through their calculations, this website recommends that 1 air mile produces 0.24 pounds of carbon dioxide emitted per person.</p>
-<p><a href="https://en.wikipedia.org/wiki/Radiative_forcing">Radiative forcing</a> is important to consider with respect to flight emissions calculations because it allows us to account for the fact that our plane is closer to the top of the atmosphere when it is admitting carbon dioxide. This matters because carbon dioxide emitted higher up in the Earth’s atmosphere has a greater warming potential then carbon dioxide emitted by our cars, etc. on the Earth’s surface. To account for radiative forcing, we can multiply our emission calcuation by a factor. The website <a href="https://carbonfund.org/how-we-calculate/">carbonfund.org</a> recommends this factor be equal to 1.891.</p>
-<p>The full calculation for metric tons of carbon doxide emitted with radiative forcing is given below. The (1/2204.62) helps us convert from pounds to metric tons.</p>
+<p>To calculate our carbon dioxide emissions we’ll need to know how much carbon dioxide is emitted per mile traveled per person. Thankfully, many people before me have worked out this calculation. One of the most thorough descriptions of this is available at <a href="https://blueskymodel.org/air-mile">blueskymodel.org</a>. After stepping through their calculations, this website recommends that 1 air mile produces 0.24 pounds of carbon dioxide emitted per person.</p>
+<p><a href="https://en.wikipedia.org/wiki/Radiative_forcing">Radiative forcing</a> is important to consider with respect to flight emissions calculations because it allows us to account for the fact that our plane is closer to the top of the atmosphere when it is admitting carbon dioxide. This matters because carbon dioxide emitted higher up in the Earth’s atmosphere has a greater warming potential then carbon dioxide emitted by our cars, etc. on the Earth’s surface. To account for radiative forcing, we can multiply our emission calculation by a factor. The website <a href="https://carbonfund.org/how-we-calculate/">carbonfund.org</a> recommends this factor be equal to 1.891.</p>
+<p>The full calculation for metric tons of carbon oxide emitted with radiative forcing is given below. The (1/2204.62) helps us convert from pounds to metric tons.</p>
 <pre class="r"><code>num_people &lt;- 1
 co2_emitted &lt;- miles * num_people * 0.24 * (1 / 2204.62) * 1.891
 
@@ -639,6 +640,14 @@ my_year * slope + intercept</code></pre>
                    round_trip = TRUE)</code></pre>
 <pre><code>## [1] 117.2229</code></pre>
 <p>Looks like we can donate $117 to ofset the carbon dioxide emitted from our round-trip flight from RDU to SFO in 2019. If we want to be more generous we can adjust the year for a future period. For example, if we change the year to the maximum value, 2050, we can donate $210. Our emissions are more expensive the further out in time we go (see the <a href="https://19january2017snapshot.epa.gov/climatechange/social-cost-carbon_.html">USEPA Social Cost of Carbon website</a> for more information).</p>
+<p>Some other thoughts that I wanted to mention before signing off:</p>
+<p>Unless you’re an R user, I recognize that it will take extra work for you to figure out how much you should donate to offset your flight’s carbon dioxide emissions. The first task is for me to start writing a second post for non-R users, and in the mean time, I’ll give an example below to put this all into perspective for <em>non-R users</em>.</p>
+</div>
+<div id="what-if-im-not-an-r-user" class="section level1">
+<h1>What if I’m not an R user?</h1>
+<p>Here are some of the basic calculations you’d need to make if you are not an R user and want to calculate your carbon foot print for a flight you’re taking.</p>
+<p>Steps:<br/> 1. Determine the mileage between your arrival and destination airports in miles (i.e., jot this down as variable <code>miles</code>). Use a website like <a href="https://www.airmilescalculator.com/">this</a>.<br/> 2. Decide how many people (i.e., jot this down as variable <code>num_people</code>) are traveling and whether the trip is a round-trip or one way.<br/> 3. If a one-way trip, use the formula: <code>co2_emitted = miles x num_people x 0.24 x (1 / 2204.62) x 1.891</code> to determine the metric tons of carbon dioxide emitted from your flight. Don’t forget the <a href="https://www.mathsisfun.com/operation-order-pemdas.html">order of operations</a> here. ;) The variable <code>miles</code> comes from step 1 and the variable <code>num_people</code> comes from step 2. If round-trip, calculate <code>co2_emitted</code> as mentioned previously and multiply this by 2 since you’re traveling to your destination and back.<br/> 4. Think about how you value reducing climate change on the short- or long-term continuum. If you value short-term impacts only then choose the current year (i.e., jot this down as variable <code>year</code> = 2019) but if you value long-term impacts you can choose any year up until 2050 (i.e. jot this down as variable <code>year</code> = 2050). The close to 2050 you choose, the larger your donation will be.<br/> 5. Calculate the cost of your offset (i.e., how much you’ll donate) using the formula: <code>cost = co2_emitted x (3.02 x year - 5986.1)</code>. Remember your <a href="https://www.mathsisfun.com/operation-order-pemdas.html">order of operations</a>. The variable <code>co2_emitted</code> comes from step 3 and the variable <code>year</code> comes from step 4.<br/> 6. Donate this amount (in US dollars) to your local organization addressing/fighting climate change.<br/></p>
+<p>If have questions, comments, or ideas related to this post, please let me know!</p>
 </div>
 
     </div>
