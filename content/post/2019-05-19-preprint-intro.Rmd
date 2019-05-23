@@ -1,7 +1,7 @@
 ---
 title: "An Intro to Preprints for Early Career Hydrologists"
 author: "Sheila Saia"
-date: 2019-05-22T21:12:00-05:00
+date: 2019-05-20T21:12:00-05:00
 categories: []
 tags: []
 ---
@@ -12,17 +12,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Background
 
-When I attended the 2019 [American Geophysical Union (AGU)]() this past December in Washington, DC, I had the pleasure of meeting members of an international organization of early career hydrologists called the [Young Hydrologic Society (YHS)](). To clarify, "young" here refers to early career, rather than age. I was interested in getting more involved in the organization and thought writing a blog post for the group's website would be a great way for me to contribute. I had recently lead a discussion on preprints with peers back in North Carolina and thought a blog post on this topic would be a perfect opportunity to continue that discussion. I also had (and still have) a lot of questions reguarding preprints and hoped that preparing the blogpost would give the opportunity to answer these questions.
+When I attended the 2019 [American Geophysical Union (AGU)](https://sites.agu.org/) this past December in Washington, DC, I had the pleasure of meeting members of an international organization of early career hydrologists called the [Young Hydrologic Society (YHS)](https://younghs.com/). To clarify, "young" here refers to early career, rather than age. I was interested in getting more involved in the organization and thought writing a blog post for the group's website would be a great way for me to contribute. I had recently lead a discussion on preprints with peers back in North Carolina and thought a blog post on this topic would be a perfect opportunity to continue that discussion. I also had (and still have) a lot of questions reguarding preprints and hoped that preparing the blogpost would give the opportunity to answer these questions.
 
 # Goals of This Post
 
-The blog post that follows is re-posting of the YHS article I wrote on preprints. You can find the original article [here]().
+The blog post that follows is re-posting of the YHS article I wrote on preprints. You can find the original article [here](https://younghs.com/2019/05/20/an-introduction-to-preprints-for-early-career-hydrologists/).
 
 Thanks to H. Beria, C. Hall, S. Harrigan, C. Jackson, and N. Krell for their helpful feedback on this post.
 
 # Introduction
 
-Growing calls for open and reproducible research across science, technology, engineering, and math (STEM) disciplines have advanced the conversation around preprints (e.g., Schloss, 2017; Narock et al., 2019). Early Career Hydrologists may benefit from considering and discussing the role of preprints in shaping scientific discovery and career trajectories. Here we introduce preprints, offering Early Career Hydrologists with a variety of thoughts on the advantages and disadvantages of using preprints in research workflows, and providing tips and resources for learning more. If we missed an aspect of the preprint discussion that you feel passionate about or still have questions about, please feel free to reach out to Sheila (at [sheilasaia]()) and the Young Hydrology Society (YHS; at [YoungHydrology]()) on Twitter.
+Growing calls for open and reproducible research across science, technology, engineering, and math (STEM) disciplines have advanced the conversation around preprints (e.g., Schloss, 2017; Narock et al., 2019). Early Career Hydrologists may benefit from considering and discussing the role of preprints in shaping scientific discovery and career trajectories. Here we introduce preprints, offering Early Career Hydrologists with a variety of thoughts on the advantages and disadvantages of using preprints in research workflows, and providing tips and resources for learning more. If we missed an aspect of the preprint discussion that you feel passionate about or still have questions about, please feel free to reach out to Sheila (at [sheilasaia](https://twitter.com/sheilasaia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)) and the Young Hydrology Society (YHS; at [YoungHydrology](https://twitter.com/younghydrology?lang=en)) on Twitter.
 
 # What is a preprint?
 
