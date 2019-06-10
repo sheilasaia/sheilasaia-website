@@ -50,20 +50,20 @@ enableGitInfo = false
 
   # Your details.
   name = "sheila m. saia, PhD"
-  role = "Postdoctoral Research Fellow"
+  role = "Postdoctoral Researcher"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "Oak Ridge Institute for Science and Education (ORISE)", url = "https://orise.orau.gov/" }, 
-  { name = "United States Forest Service", url = "https://www.srs.fs.usda.gov/cifss/" },
-  { name = "NC State University", url = "https://cnr.ncsu.edu/fer/" }]
+  organizations = [ { name = "NC State University", url = "https://cnr.ncsu.edu/fer/" },
+  { name = "US Forest Service Affiliate", url = "https://www.srs.fs.usda.gov/cifss/" }
+  ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "sheila_square.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   
   # Details for the Contact Widget
   email = "ssaia@ncsu.edu"
-  address = "US Department of Agriculture Forest Science, Southern Research Station, 3041 East Cornwallis Road, Durham, NC 27709, USA"
+  address = "NC State University, Department of Forestry & Envir. Resources, 2800 Faucette Drive, Raleigh, NC 27607, USA"
   office_hours = ""
   phone = ""
   skype = ""
@@ -92,10 +92,10 @@ enableGitInfo = false
   #   3: OpenStreetMap (Mapbox)
   map = 0
   map_api_key = ""
-  latitude = "35.907020"
-  longitude = "-78.861728"
+  latitude = "35.781745"
+  longitude = "-78.676260"
   zoom = 15
-  
+
   # SITE SETUP
   
   # Color theme.

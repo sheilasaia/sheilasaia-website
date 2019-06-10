@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Content tagged as &#39;Academic&#39;</title>
       <link>/tags/academic/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 -0800</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
       
       <guid>/tags/academic/</guid>
       <description>Here is a list of all the content that has been tagged as academic.</description>
@@ -24,7 +24,7 @@
     <item>
       <title>climate change</title>
       <link>/tags/climate-change/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 -0700</pubDate>
+      <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
       <guid>/tags/climate-change/</guid>
       <description></description>
@@ -33,7 +33,7 @@
     <item>
       <title>modeling</title>
       <link>/tags/modeling/</link>
-      <pubDate>Sun, 22 Jul 2018 00:00:00 -0700</pubDate>
+      <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
       
       <guid>/tags/modeling/</guid>
       <description></description>
@@ -42,7 +42,7 @@
     <item>
       <title>phosphorus</title>
       <link>/tags/phosphorus/</link>
-      <pubDate>Sun, 22 Jul 2018 00:00:00 -0700</pubDate>
+      <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
       
       <guid>/tags/phosphorus/</guid>
       <description></description>
@@ -51,7 +51,7 @@
     <item>
       <title>sociohydrology</title>
       <link>/tags/sociohydrology/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 -0700</pubDate>
+      <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
       <guid>/tags/sociohydrology/</guid>
       <description></description>
@@ -60,7 +60,7 @@
     <item>
       <title>stable-isotopes</title>
       <link>/tags/stable-isotopes/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 -0700</pubDate>
+      <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
       <guid>/tags/stable-isotopes/</guid>
       <description></description>
@@ -69,7 +69,7 @@
     <item>
       <title>water-quality</title>
       <link>/tags/water-quality/</link>
-      <pubDate>Sun, 22 Jul 2018 00:00:00 -0700</pubDate>
+      <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
       
       <guid>/tags/water-quality/</guid>
       <description></description>
@@ -78,7 +78,7 @@
     <item>
       <title>water-quantity</title>
       <link>/tags/water-quantity/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 -0700</pubDate>
+      <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
       
       <guid>/tags/water-quantity/</guid>
       <description></description>
@@ -87,7 +87,7 @@
     <item>
       <title>water-scarcity</title>
       <link>/tags/water-scarcity/</link>
-      <pubDate>Sat, 31 Dec 2011 00:00:00 -0800</pubDate>
+      <pubDate>Sat, 31 Dec 2011 00:00:00 -0500</pubDate>
       
       <guid>/tags/water-scarcity/</guid>
       <description></description>
