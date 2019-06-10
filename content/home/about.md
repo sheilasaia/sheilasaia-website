@@ -38,6 +38,6 @@ weight = 1
 
 # about me
 
-I'm an postdoctoral research fellow with NC State University and a member of the [Ecohydrology & Watershed Science Lab](http://go.ncsu.edu/water). My current research focuses on linking hydrological model results and demographics data to identify vulnerable communities in NC and help them adapt to future climate change (e.g., flooding and drought). I'm broadly interested in research questions related to human impacts on water quantity and quality.
+I'm an postdoctoral researcher at NC State University and a member of the [Ecohydrology & Watershed Science Lab](http://go.ncsu.edu/water). My current research focuses on linking hydrological model results and demographics data to identify vulnerable communities in NC and help them adapt to future climate change (e.g., flooding and drought). I'm broadly interested in research questions related to human impacts on water quantity and quality.
 
 I also like to help organize [R-Ladies RTP](https://www.meetup.com/R-Ladies-RTP/) events, help update the [R-Ladies Global](https://rladies.org/) website, contribute to the [FeminaSci Blog](https://www.feminasci.com/discussions-1), volunteer at the [Durham Farmer's Market](http://www.durhamfarmersmarket.com/), explore the outdoors (hiking, biking, climbing, swimming), maintain my cultures ([kombucha](https://en.wikipedia.org/wiki/Kombucha) and [sourdough](https://en.wikipedia.org/wiki/Sourdough#Starter)), and cook/bake for friends.
