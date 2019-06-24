@@ -261,4 +261,6 @@ I can think of a number of other commodities that might be interesting to look a
 
 # Updates Since Posting
 
-Since first posting this, [Julien Reyes suggested](https://twitter.com/julianjon/status/1082849177917317120) using Nicholas Potter's package called `rnassqs` to help automate the NASS API portion of this post. You can read more about the `rnassqs` package [here](https://github.com/potterzot/rnassqs). Note to self that I need to check it out!
+June 2019: Looks like NASS has officially published a `usdarnass` package to CRAN! You can read the package documentation [here](https://cran.r-project.org/web/packages/usdarnass/usdarnass.pdf). Looks like there are some nice lookup tables which might be very helpful.
+
+January 2019: Since first posting this, [Julian Reyes suggested](https://twitter.com/julianjon/status/1082849177917317120) using Nicholas Potter's package called `rnassqs` to help automate the NASS API portion of this post. You can read more about the `rnassqs` package [here](https://github.com/potterzot/rnassqs). Note to self that I need to check it out!
