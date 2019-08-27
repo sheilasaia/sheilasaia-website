@@ -33,7 +33,7 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-#image = "lost_waterways_2019.jpg"
+#image = "example.jpg"
 #caption = "My caption :smile:"
 
 +++
@@ -43,4 +43,4 @@ The Lost Waterways of Winston-Salem is a free film screening and panel discussio
 
 To read more and RSVP for this free event, visit [this website](https://www.eventbrite.com/e/lost-waterways-of-winston-salem-film-screening-panel-discussion-tickets-65981950791).
 
-![](lost_waterways_2019.jpg)
+![](/img/lost_waterways_2019.png)
