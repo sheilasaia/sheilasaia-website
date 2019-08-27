@@ -7,7 +7,7 @@ tags: []
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(collapse = TRUE, message = FALSE, warning = FALSE, eval = FALSE)
 ```
 
 # Background
@@ -85,6 +85,10 @@ nass_url <- "http://quickstats.nass.usda.gov"
 # commodity description of interest
 my_commodity_desc <- "AG LAND"
 
+# short description of interest (i.e., 'data item' on NASS Quick Stats website)
+my_short_desc1 <- "AG LAND, IRRIGATED - ACRES"
+my_short_desc2 <- "AG LAND - ACRES"
+
 # query start year
 my_year <- "2006"
 
@@ -92,7 +96,7 @@ my_year <- "2006"
 my_state <- "NC"
 
 # final path string
-path_nc_irrig_land <- paste0("api/api_GET/?key=", nass_key, "&commodity_desc=", my_commodity_desc, "&year__GE=", my_year, "&state_alpha=", my_state)
+path_nc_irrig_land <- paste0("api/api_GET/?key=", nass_key, "&commodity_desc=", my_commodity_desc, "&short_desc=", my_short_desc1, "&short_desc=", my_short_desc2, "&year__GE=", my_year, "&state_alpha=", my_state)
 ```
 
 # API Data Query
@@ -150,14 +154,14 @@ nc_irrigated <- nc_irrig_land_raw_data %>%
   # filter to select county level irrigation data where farms/ranches with 2,000+ ac operation
   filter(agg_level_desc == "COUNTY") %>%
   filter(unit_desc == "ACRES") %>%
-  filter(domaincat_desc == "AREA OPERATED: (2,000 OR MORE ACRES)") %>%
+  #filter(domaincat_desc == "AREA OPERATED: (2,000 OR MORE ACRES)") %>%
 
   # trim white space from ends (note: 'Value' is a character here, not a number)
   mutate(value_trim = str_trim(Value)) %>%
   
   # select only the columns we'll need
   select(state_name, state_alpha, state_ansi, county_code, county_name, asd_desc,
-         agg_level_desc, year, prodn_practice_desc_char=prodn_practice_desc,
+         agg_level_desc, year, prodn_practice_desc_char = prodn_practice_desc, domaincat_desc,
          value_ac_per_yr_char=value_trim, unit_desc) %>%
   
   # filter out entries with codes '(D)' and '(Z)'
@@ -172,6 +176,8 @@ nc_irrigated <- nc_irrig_land_raw_data %>%
   
   # remove unnecessary columns
   select(-value_ac_per_yr_char, -prodn_practice_desc_char) %>%
+  #arrange(county_code, year)
+  #irrigated includes 
   
   # we have 2007 and 2012 data and we want irrigated lands and total lands operated
   # (to calculate a percentage of irrigated land) so we use n()>3 to filter out counties
