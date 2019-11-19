@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Source Themes Academic 3.2.0">
-  <meta name="generator" content="Hugo 0.50" />
+  <meta name="generator" content="Hugo 0.55.6" />
   <meta name="author" content="sheila m. saia, PhD">
 
   
@@ -473,7 +473,7 @@
 
 <div id="background" class="section level1">
 <h1>Background</h1>
-<p>While attending rstudio::conf 2018, I heard about the <a href="https://cran.r-project.org/web/packages/tibbletime/tibbletime.pdf">tibbletime package</a> developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his <a href="https://www.rstudio.com/resources/videos/the-future-of-time-series-and-financial-analysis-in-the-tidyverse/">conference talk</a>, Davis Vaughan presented several business/finance examples to showcase <code>tibbletime</code>’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data. I really liked <code>rollify()</code>, which could be used to create and apply custom moving-window functions (e.g., <code>mean()</code>) to time series data; where the size of the window (e.g., 3 days) could also be specified. I was aware of the <code>movingAve()</code> and <code>movingDiff()</code> functions in the <a href="https://pubs.usgs.gov/of/2015/1202/downloads/appendix1.pdf">smwrBase package</a> developed by the U.S. Geological Survey (USGS), which calculate moving average and difference, respectively. However, <code>rollify()</code> has more flexibility; it can be used to take a rolling standard deviation, a rolling ratio of two build in R functions, or a rolling custom function. The possibilities are endless.</p>
+<p>While attending rstudio::conf 2018, I heard about the <a href="https://cran.r-project.org/web/packages/tibbletime/tibbletime.pdf">tibbletime package</a> developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his <a href="https://resources.rstudio.com/rstudio-conf-2018/the-future-of-time-series-and-financial-analysis-in-the-tidyverse-davis-vaughan">conference talk</a>, Davis Vaughan presented several business/finance examples to showcase <code>tibbletime</code>’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data. I really liked <code>rollify()</code>, which could be used to create and apply custom moving-window functions (e.g., <code>mean()</code>) to time series data; where the size of the window (e.g., 3 days) could also be specified. I was aware of the <code>movingAve()</code> and <code>movingDiff()</code> functions in the <a href="https://pubs.usgs.gov/of/2015/1202/downloads/appendix1.pdf">smwrBase package</a> developed by the U.S. Geological Survey (USGS), which calculate moving average and difference, respectively. However, <code>rollify()</code> has more flexibility; it can be used to take a rolling standard deviation, a rolling ratio of two build in R functions, or a rolling custom function. The possibilities are endless.</p>
 <p>Shortly after the conference, I also heard about the <a href="https://cran.r-project.org/web/packages/dataRetrieval/dataRetrieval.pdf">dataRetrieval package</a> developed by the USGS from my friend, Dr. Kristina Hopkins. This package allows users to import USGS streamflow data (and any other data associated with <a href="https://water.usgs.gov/nsip/definition9.html">USGS streamgages</a>) directly into R. Very exciting!</p>
 </div>
 <div id="goals-of-this-post" class="section level1">
@@ -595,7 +595,7 @@ mean_roll_1d &lt;- rollify(mean, window = 96)</code></pre>
 ##  8 eno_rv_h… 2017-01-02 01:30:00          12.1             12.1
 ##  9 eno_rv_h… 2017-01-02 01:45:00          12.1             12.1
 ## 10 eno_rv_h… 2017-01-02 02:00:00          12.5             12.3
-## # ... with 3 more variables: hourly_avg_discharge_cfs &lt;dbl&gt;,
+## # … with 3 more variables: hourly_avg_discharge_cfs &lt;dbl&gt;,
 ## #   twelvehr_avg_discharge_cfs &lt;dbl&gt;, daily_avg_discharge_cfs &lt;dbl&gt;</code></pre>
 <p>The dataframe has maintained it’s length (except for the NA columns at the top we deleted using <code>na.omit()</code>) and there are four new columns with aggregations of discharge at the time scales we specified in our rolling functions.</p>
 <p>We can plot this as a hydrograph as we did above or we can also plot each aggregation period against the original 15-min data to see how they compare. Let’s show the latter.</p>

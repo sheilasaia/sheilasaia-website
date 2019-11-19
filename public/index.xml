@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>  on  </title>
@@ -7,8 +6,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 -0500</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Improved Accuracy of Watershed-Scale General Circulation Model Runoff Using Deep Neural Networks (Poster #GC43D-1361)</title>
+      <link>/talk/agu_dec2019/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/agu_dec2019/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
+
+&lt;p&gt;Projecting future climate change impacts on water resources is a vital research task and general circulation models (GCMs) help researchers achieve this goal. However, the spatial resolution of downscaled GCMs (e.g., 1.4° grid) makes them difficult to apply to non-grid conforming scales relevant to water resources management: individual watersheds. Machine learning techniques such as deep neural networks (DNNs) may address this issue by downscaling GCM data without a priori specification of complex hydrologic processes in a watershed. Here, we use a DNN to predict monthly watershed-scale runoff (i.e., stream discharge divided by watershed area) from monthly, gridded, downscaled, Coupled Model Intercomparison Project Phase 5 GCM hydrologic fluxes (i.e., precipitation, evapotranspiration, and temperature). We trained the DNN on a subset of observed hydrologic fluxes and watershed characteristics from 2,731 watersheds in the continental United States and tested its ability to predict observed runoff using the remaining data. The DNN described 94% of the variability in observed runoff and was spatially and temporally robust. DNN runoff predictions were nearly twice as accurate as raw, monthly, gridded, downscaled GCM runoff and had the lowest mean absolute error of other grid-to-watershed-scale conversion techniques, including: long-term monthly mean climatology, linear least squares, lasso, support vector machine, extreme gradient boosting, and simple artificial neural network approaches. This study serves as a guide to hydrologists interested in implementing machine learning techniques and also demonstrates how DNNs can be used to convert gridded GCM hydrologic fluxes to scales more relevant to water resources research and management.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://agu.confex.com/agu/fm19/meetingapp.cgi/Paper/499522&#34; target=&#34;_blank&#34;&gt;Click here to view my AGU abstract. &lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R-Ladies Global: Promoting Diversity and Inclusion in the R Community (Poster #ED33G-1047)</title>
+      <link>/talk/agu_dec2019_rladies/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/agu_dec2019_rladies/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
+
+&lt;p&gt;R-Ladies Global is a worldwide organization focused on achieving proportionate representation of genders currently underrepresented in the R programming community. To meet this goal, we support a network of local chapters who organize events that encourage, inspire, and empower individuals to meet their programming potential. Since R-Ladies Global was founded in 2016, it has grown to provide training and mentoring to in over 47,000 members, in 159 cities, and 47 countries. Local chapters have held over 1,500 events focused on a wide range of topics from workshops on popular R programming libraries (e.g., ggplot, Shiny) to data science panels on various topics (e.g., Ethics in Data Science, Women in Tech) to hackathons (e.g., #TidyTuesday) to speaking opportunities (e.g., Lightning Talks) to networking events (e.g., dinner meet-ups, book clubs). There are many leadership, training, career development, and mentoring opportunities for early career scientists who join R-Ladies Global. Please stop by our poster or visit our website (&lt;a href=&#34;https://rladies.org/about-us&#34; target=&#34;_blank&#34;&gt;https://rladies.org/about-us&lt;/a&gt;) to learn more about how you can get involved and/or support our mission.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://agu.confex.com/agu/fm19/meetingapp.cgi/Paper/490269&#34; target=&#34;_blank&#34;&gt;Click here to view my AGU abstract. &lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Let&#39;s Talk About Water: Lost Waterways of Winston-Salem</title>
@@ -1075,7 +1106,7 @@ ggplot(data = outlet_monthly_data, mapping = aes(x = as.factor(YR), y = FLOW_OUT
 
 &lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Background&lt;/h1&gt;
-&lt;p&gt;While attending rstudio::conf 2018, I heard about the &lt;a href=&#34;https://cran.r-project.org/web/packages/tibbletime/tibbletime.pdf&#34;&gt;tibbletime package&lt;/a&gt; developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his &lt;a href=&#34;https://www.rstudio.com/resources/videos/the-future-of-time-series-and-financial-analysis-in-the-tidyverse/&#34;&gt;conference talk&lt;/a&gt;, Davis Vaughan presented several business/finance examples to showcase &lt;code&gt;tibbletime&lt;/code&gt;’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data. I really liked &lt;code&gt;rollify()&lt;/code&gt;, which could be used to create and apply custom moving-window functions (e.g., &lt;code&gt;mean()&lt;/code&gt;) to time series data; where the size of the window (e.g., 3 days) could also be specified. I was aware of the &lt;code&gt;movingAve()&lt;/code&gt; and &lt;code&gt;movingDiff()&lt;/code&gt; functions in the &lt;a href=&#34;https://pubs.usgs.gov/of/2015/1202/downloads/appendix1.pdf&#34;&gt;smwrBase package&lt;/a&gt; developed by the U.S. Geological Survey (USGS), which calculate moving average and difference, respectively. However, &lt;code&gt;rollify()&lt;/code&gt; has more flexibility; it can be used to take a rolling standard deviation, a rolling ratio of two build in R functions, or a rolling custom function. The possibilities are endless.&lt;/p&gt;
+&lt;p&gt;While attending rstudio::conf 2018, I heard about the &lt;a href=&#34;https://cran.r-project.org/web/packages/tibbletime/tibbletime.pdf&#34;&gt;tibbletime package&lt;/a&gt; developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his &lt;a href=&#34;https://resources.rstudio.com/rstudio-conf-2018/the-future-of-time-series-and-financial-analysis-in-the-tidyverse-davis-vaughan&#34;&gt;conference talk&lt;/a&gt;, Davis Vaughan presented several business/finance examples to showcase &lt;code&gt;tibbletime&lt;/code&gt;’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data. I really liked &lt;code&gt;rollify()&lt;/code&gt;, which could be used to create and apply custom moving-window functions (e.g., &lt;code&gt;mean()&lt;/code&gt;) to time series data; where the size of the window (e.g., 3 days) could also be specified. I was aware of the &lt;code&gt;movingAve()&lt;/code&gt; and &lt;code&gt;movingDiff()&lt;/code&gt; functions in the &lt;a href=&#34;https://pubs.usgs.gov/of/2015/1202/downloads/appendix1.pdf&#34;&gt;smwrBase package&lt;/a&gt; developed by the U.S. Geological Survey (USGS), which calculate moving average and difference, respectively. However, &lt;code&gt;rollify()&lt;/code&gt; has more flexibility; it can be used to take a rolling standard deviation, a rolling ratio of two build in R functions, or a rolling custom function. The possibilities are endless.&lt;/p&gt;
 &lt;p&gt;Shortly after the conference, I also heard about the &lt;a href=&#34;https://cran.r-project.org/web/packages/dataRetrieval/dataRetrieval.pdf&#34;&gt;dataRetrieval package&lt;/a&gt; developed by the USGS from my friend, Dr. Kristina Hopkins. This package allows users to import USGS streamflow data (and any other data associated with &lt;a href=&#34;https://water.usgs.gov/nsip/definition9.html&#34;&gt;USGS streamgages&lt;/a&gt;) directly into R. Very exciting!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;goals-of-this-post&#34; class=&#34;section level1&#34;&gt;
@@ -1197,7 +1228,7 @@ mean_roll_1d &amp;lt;- rollify(mean, window = 96)&lt;/code&gt;&lt;/pre&gt;
 ##  8 eno_rv_h… 2017-01-02 01:30:00          12.1             12.1
 ##  9 eno_rv_h… 2017-01-02 01:45:00          12.1             12.1
 ## 10 eno_rv_h… 2017-01-02 02:00:00          12.5             12.3
-## # ... with 3 more variables: hourly_avg_discharge_cfs &amp;lt;dbl&amp;gt;,
+## # … with 3 more variables: hourly_avg_discharge_cfs &amp;lt;dbl&amp;gt;,
 ## #   twelvehr_avg_discharge_cfs &amp;lt;dbl&amp;gt;, daily_avg_discharge_cfs &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The dataframe has maintained it’s length (except for the NA columns at the top we deleted using &lt;code&gt;na.omit()&lt;/code&gt;) and there are four new columns with aggregations of discharge at the time scales we specified in our rolling functions.&lt;/p&gt;
 &lt;p&gt;We can plot this as a hydrograph as we did above or we can also plot each aggregation period against the original 15-min data to see how they compare. Let’s show the latter.&lt;/p&gt;
@@ -1223,57 +1254,6 @@ ggplot(data = discharge_roll) +
 &lt;/ul&gt;
 &lt;p&gt;There are still so many questions floating around in my head but figuring out how to integrate the &lt;code&gt;tibbletime&lt;/code&gt; and &lt;code&gt;dataRetrieval&lt;/code&gt; packages has been fun! If you know of any publications that address these questions or just want to say &lt;code&gt;Hi!&lt;/code&gt;, please let me know &lt;a href=&#34;https://twitter.com/sheilasaia?lang=en&#34;&gt;via Twitter&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>/post/2018-07-20-my-first-post/</link>
-      <pubDate>Mon, 23 Jul 2018 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2018-07-20-my-first-post/</guid>
-      <description>
-
-
-&lt;p&gt;Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this blogdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both languages are so useful!).&lt;/p&gt;
-&lt;p&gt;Some of the specific goals of this blog are to (in no special order):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Practice developing my science communication and R skills.&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;Review and demo new packages, data sets, and methods that might be useful to water resources research.&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;Highlight newly published studies that use data science to advance or could be applied to water resources research.&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;Discuss the present and future of water data science.&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;Interview experts about water-related topics.&lt;br&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Modeling Water Quality in a Suburban Watershed</title>
-      <link>/project/mrgp-project/</link>
-      <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
-      
-      <guid>/project/mrgp-project/</guid>
-      <description>
-
-&lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
-
-&lt;p&gt;R Christie (Mianus River Gorge Preserve), C Nagy (Mianus River Gorge Preserve), MT Walter (Cornell University), PJ Sullivan (Cornell University)&lt;/p&gt;
-
-&lt;h1 id=&#34;timeline&#34;&gt;Timeline&lt;/h1&gt;
-
-&lt;p&gt;2012-2015&lt;/p&gt;
-
-&lt;h1 id=&#34;project-goal&#34;&gt;Project Goal&lt;/h1&gt;
-
-&lt;p&gt;The goal of this project was to test two spatial statistics approaches (i.e., kriging based on Euclidian or stream-wise distances) for predicting in-stream waterquality at unsampled locations in the Mianus River near Bedford, NY and Stanford, CT.&lt;/p&gt;
-
-&lt;h1 id=&#34;project-links&#34;&gt;Project Links&lt;/h1&gt;
-
-&lt;p&gt;Results of this project are currently unpublished.&lt;/p&gt;
-
-&lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h1&gt;
-
-&lt;p&gt;Special thanks to the &lt;a href=&#34;http://www.mianus.org/research-and-education/graduate-level/meet-our-raps/&#34; target=&#34;_blank&#34;&gt;Mianus River Gorge Preserve Research Award Program&lt;/a&gt; for supporting this work.&lt;/p&gt;
 </description>
     </item>
     

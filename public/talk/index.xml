@@ -13,6 +13,24 @@
     
     
     <item>
+      <title>Improved Accuracy of Watershed-Scale General Circulation Model Runoff Using Deep Neural Networks (Poster #GC43D-1361)</title>
+      <link>/talk/agu_dec2019/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/agu_dec2019/</guid>
+      <description>Abstract: Projecting future climate change impacts on water resources is a vital research task and general circulation models (GCMs) help researchers achieve this goal. However, the spatial resolution of downscaled GCMs (e.g., 1.4° grid) makes them difficult to apply to non-grid conforming scales relevant to water resources management: individual watersheds. Machine learning techniques such as deep neural networks (DNNs) may address this issue by downscaling GCM data without a priori specification of complex hydrologic processes in a watershed.</description>
+    </item>
+    
+    <item>
+      <title>R-Ladies Global: Promoting Diversity and Inclusion in the R Community (Poster #ED33G-1047)</title>
+      <link>/talk/agu_dec2019_rladies/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/agu_dec2019_rladies/</guid>
+      <description>Abstract: R-Ladies Global is a worldwide organization focused on achieving proportionate representation of genders currently underrepresented in the R programming community. To meet this goal, we support a network of local chapters who organize events that encourage, inspire, and empower individuals to meet their programming potential. Since R-Ladies Global was founded in 2016, it has grown to provide training and mentoring to in over 47,000 members, in 159 cities, and 47 countries.</description>
+    </item>
+    
+    <item>
       <title>Let&#39;s Talk About Water: Lost Waterways of Winston-Salem</title>
       <link>/talk/ltaw_sept2019/</link>
       <pubDate>Tue, 20 Aug 2019 00:00:00 -0400</pubDate>

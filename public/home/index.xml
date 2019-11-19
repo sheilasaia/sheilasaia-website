@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 20 Sep 2017 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
     
@@ -64,7 +64,7 @@ I also like to help organize R-Ladies RTP events, help update the R-Ladies Globa
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>/home/teaching/</guid>
-      <description>upcoming workshops:  Data Manipulation, Analysis, and Visualization in R using the Tidyverse - I&amp;rsquo;m co-organizing a workshop with Dr. Ashton Drew for Transmitting Science in Barcelona, Spain from November 4-8, 2019. You can read more about the workshop and sign up here.  past workshops:  Exploring Spatial Data with sf - I organized and lead an workshop introducing to the sf package to NC State BAE 590 students.</description>
+      <description>upcoming workshops:  American Geophysical Union (AGU) 2019 Coding Help Desk - If you write code for your research and will be attending the AGU 2019 Fall Meeting, consider volunteering at the AGU Coding Help Desk. Find out more about the event and sign-up to volunteer here.  past workshops:  Data Manipulation, Analysis, and Visualization in R using the Tidyverse - I&amp;rsquo;m co-organizing a workshop with Dr. Ashton Drew for Transmitting Science in Barcelona, Spain from November 4-8, 2019.</description>
     </item>
     
     <item>

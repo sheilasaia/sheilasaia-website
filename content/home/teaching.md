@@ -17,10 +17,11 @@ weight = 6
 
 # upcoming workshops:
 
-- *Data Manipulation, Analysis, and Visualization in R using the Tidyverse* - I'm co-organizing a workshop with Dr. Ashton Drew for [Transmitting Science](https://www.transmittingscience.org/) in Barcelona, Spain from November 4-8, 2019. You can read more about the workshop and sign up [here](https://www.transmittingscience.org/courses/statistics-and-bioinformatics/data-manipulation-analysis-visualization-in-r-using-tidyverse/).
-
+- *American Geophysical Union (AGU) 2019 Coding Help Desk* - If you write code for your research and will be attending the AGU 2019 Fall Meeting, consider volunteering at the AGU Coding Help Desk. Find out more about the event and sign-up to volunteer [here](https://github.com/sheilasaia/agu-2019-coding-help-desk).
 
 # past workshops:
+
+- *Data Manipulation, Analysis, and Visualization in R using the Tidyverse* - I'm co-organizing a workshop with Dr. Ashton Drew for [Transmitting Science](https://www.transmittingscience.org/) in Barcelona, Spain from November 4-8, 2019. You can read more about the workshop and sign up [here](https://www.transmittingscience.org/courses/statistics-and-bioinformatics/data-manipulation-analysis-visualization-in-r-using-tidyverse/).
 
 - *Exploring Spatial Data with `sf`* - I organized and lead an workshop introducing to the sf package to NC State BAE 590 students. Code and slides from this class can be found [here](https://github.com/sheilasaia/sf-workshop-bae590).
 
