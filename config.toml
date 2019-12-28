@@ -54,8 +54,7 @@ enableGitInfo = false
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "NC State University", url = "https://cnr.ncsu.edu/fer/" },
-  { name = "US Forest Service Affiliate", url = "https://www.srs.fs.usda.gov/cifss/" }
+  organizations = [ { name = "NC State University", url = "https://www.bae.ncsu.edu/" }
   ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
@@ -63,7 +62,7 @@ enableGitInfo = false
   
   # Details for the Contact Widget
   email = "ssaia@ncsu.edu"
-  address = "NC State University, Department of Forestry & Envir. Resources, 2800 Faucette Drive, Raleigh, NC 27607, USA"
+  address = "NC State University, Department of Biological & Agricultural Engineering, 3100 Faucette Drive, Raleigh, NC 27695-7625, USA"
   office_hours = ""
   phone = ""
   skype = ""
@@ -123,9 +122,9 @@ enableGitInfo = false
 
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "Jan 2, 2006"
+  date_format = "2006-01-02"
   #   Examples: "3:04 pm" or "15:04"
-  time_format = "3:04 PM"
+  time_format = "15:04"
 
   # Show estimated reading time for posts?
   reading_time = true
@@ -217,7 +216,7 @@ enableGitInfo = false
   [params.publications]
     # Date format (refer to Go's date format: http://fuckinggodateformat.com )
     #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-    date_format = "January, 2006"
+    date_format = "2006-01-02"
 
   # Configuration of project pages.
   [params.projects]

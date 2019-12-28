@@ -17,9 +17,11 @@ weight = 6
 
 # upcoming workshops:
 
-- *American Geophysical Union (AGU) 2019 Coding Help Desk* - If you write code for your research and will be attending the AGU 2019 Fall Meeting, consider volunteering at the AGU Coding Help Desk. Find out more about the event and sign-up to volunteer [here](https://github.com/sheilasaia/agu-2019-coding-help-desk).
+- *NC State University Libraries Peer Schoolars Workshop* - I'm teaching a two-hour long workshop titled "Introduction to Data Management Plans" on January 29, 2020 from 12pm-2pm in the D.H. Hill Library ITTC2 Lab. More information and to sign-up, visit [here](https://www.lib.ncsu.edu/events/series/peer-scholars).
 
 # past workshops:
+
+- *American Geophysical Union (AGU) 2019 Coding Help Desk* - If you write code for your research and will be attending the AGU 2019 Fall Meeting, consider volunteering at the AGU Coding Help Desk. Find out more about the event and sign-up to volunteer [here](https://github.com/sheilasaia/agu-2019-coding-help-desk).
 
 - *Data Manipulation, Analysis, and Visualization in R using the Tidyverse* - I'm co-organizing a workshop with Dr. Ashton Drew for [Transmitting Science](https://www.transmittingscience.org/) in Barcelona, Spain from November 4-8, 2019. You can read more about the workshop and sign up [here](https://www.transmittingscience.org/courses/statistics-and-bioinformatics/data-manipulation-analysis-visualization-in-r-using-tidyverse/).
 
