@@ -7,45 +7,54 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 22 Jul 2018 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="/tags/modeling/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Modeling Water Quality in a Suburban Watershed</title>
-      <link>/project/mrgp-project/</link>
-      <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
+      <title>Machine Learning Applications in Hydrology</title>
+      <link>/project/streamflow-ml-project/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 -0500</pubDate>
       
-      <guid>/project/mrgp-project/</guid>
-      <description>Tested two spatial statisics approaches to predict in-stream water quality.</description>
-    </item>
-    
-    <item>
-      <title>Phosphorus Cycling in Stream Biofilms</title>
-      <link>/project/paos-streams-project/</link>
-      <pubDate>Sun, 22 Jul 2018 00:00:00 -0400</pubDate>
-      
-      <guid>/project/paos-streams-project/</guid>
-      <description>Lab study measuring the impact of alternating anaerobic/aerobic conditions on stream biofilms.</description>
+      <guid>/project/streamflow-ml-project/</guid>
+      <description>Used machine learning models for streamflow prediction applications.</description>
     </item>
     
     <item>
       <title>Climate Risk Assessment in Western North Carolina</title>
       <link>/project/nc-sociohydro-project/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
+      <pubDate>Wed, 01 May 2019 00:00:00 -0400</pubDate>
       
       <guid>/project/nc-sociohydro-project/</guid>
       <description>Integrating hydrology model outputs and demographics data to aid risk assessment and climate change adaptation efforts in North Carolina.</description>
     </item>
     
     <item>
+      <title>Phosphorus Cycling in Stream Biofilms</title>
+      <link>/project/paos-streams-project/</link>
+      <pubDate>Wed, 31 May 2017 00:00:00 -0400</pubDate>
+      
+      <guid>/project/paos-streams-project/</guid>
+      <description>Lab study measuring the impact of alternating anaerobic/aerobic conditions on stream biofilms.</description>
+    </item>
+    
+    <item>
       <title>Ecohydrological Modeling with Stable Isotopes</title>
       <link>/project/stable-isotope-project/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 -0400</pubDate>
+      <pubDate>Sat, 31 Dec 2016 00:00:00 -0500</pubDate>
       
       <guid>/project/stable-isotope-project/</guid>
       <description>Created an ecohydrology stable isotope model to test the two-water-world hypothesis.</description>
+    </item>
+    
+    <item>
+      <title>Modeling Water Quality in a Suburban Watershed</title>
+      <link>/project/mrgp-project/</link>
+      <pubDate>Sun, 31 May 2015 00:00:00 -0400</pubDate>
+      
+      <guid>/project/mrgp-project/</guid>
+      <description>Tested two spatial statisics approaches to predict in-stream water quality.</description>
     </item>
     
     <item>

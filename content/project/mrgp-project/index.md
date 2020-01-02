@@ -3,7 +3,7 @@
 title = "Modeling Water Quality in a Suburban Watershed"
 
 # Date this page was created.
-date = 2018-07-22T00:00:00
+date = 2015-05-31T00:00:00
 
 # Project summary to display on homepage.
 summary = "Tested two spatial statisics approaches to predict in-stream water quality."

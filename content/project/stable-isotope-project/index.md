@@ -3,7 +3,7 @@
 title = "Ecohydrological Modeling with Stable Isotopes"
 
 # Date this page was created.
-date = 2018-05-01T00:00:00
+date = 2016-12-31T00:00:00
 
 # Project summary to display on homepage.
 summary = "Created an ecohydrology stable isotope model to test the two-water-world hypothesis."

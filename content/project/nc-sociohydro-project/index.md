@@ -3,7 +3,7 @@
 title = "Climate Risk Assessment in Western North Carolina"
 
 # Date this page was created.
-date = 2018-05-01T00:00:00
+date = 2019-05-01T00:00:00
 
 # Project summary to display on homepage.
 summary = "Integrating hydrology model outputs and demographics data to aid risk assessment and climate change adaptation efforts in North Carolina."

@@ -6,8 +6,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 00:00:00 -0500</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Improved Accuracy of Watershed-Scale General Circulation Model Runoff Using Deep Neural Networks</title>
+      <link>/publication/dnn-validation/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 -0500</pubDate>
+      
+      <guid>/publication/dnn-validation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Applications in Hydrology</title>
+      <link>/project/streamflow-ml-project/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 -0500</pubDate>
+      
+      <guid>/project/streamflow-ml-project/</guid>
+      <description>
+
+&lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
+
+&lt;p&gt;JS Rice, JM Vose, and RE Emanuel&lt;/p&gt;
+
+&lt;h1 id=&#34;timeline&#34;&gt;Timeline&lt;/h1&gt;
+
+&lt;p&gt;2019-2020&lt;/p&gt;
+
+&lt;h1 id=&#34;project-goal&#34;&gt;Project Goal&lt;/h1&gt;
+
+&lt;p&gt;The goal of this project was to use machine learning models for two applications in hydrology. First, we used a hierarchical machine learning ensemble model to predict streamflow and then assessed model sensitivies to learn how changes in the amount and location of land cover at specific places in the watershed would influence (i.e., increase or decrease) streamflow. Second, we used deep neural networks to convert downscaled, gridded General Circulation Model (GCM) hydroclimatic fluxes to watershed-scale runoff for over 2,700 watersheds across the conterminous United States.&lt;/p&gt;
+
+&lt;h1 id=&#34;project-links&#34;&gt;Project Links&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://eartharxiv.org/awqjg/&#34; target=&#34;_blank&#34;&gt;Deep Neural Network preprint&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h1&gt;
+
+&lt;p&gt;Thanks to the National Science Foundation and the US Forest Service for supporting this research.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Improved Accuracy of Watershed-Scale General Circulation Model Runoff Using Deep Neural Networks (Poster #GC43D-1361)</title>
@@ -149,6 +190,39 @@
 &lt;h1&gt;Additional Thoughts&lt;/h1&gt;
 &lt;p&gt;This post is meant to provide introductory information to early career hydrologists interested in sharing their work publicly via preprint. At this time, I’ve only submitted one paper for preprint; therefore, I’m inexperienced. It’d be interesting to hear from other early career scientists about how they’ve negotiated publication of preprints with more established scientists, particularly when it addressing points listed under ‘Disadvantages’ above.&lt;/p&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Climate Risk Assessment in Western North Carolina</title>
+      <link>/project/nc-sociohydro-project/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>/project/nc-sociohydro-project/</guid>
+      <description>
+
+&lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
+
+&lt;p&gt;BB Cutts (NC State), RE Emanuel (NC State), KL Martin (NC State), KM Suttles (USFS), JM Vose (USFS), DN Wear (USFS), JW Coulston (USFS)&lt;/p&gt;
+
+&lt;h1 id=&#34;timeline&#34;&gt;Timeline&lt;/h1&gt;
+
+&lt;p&gt;2017-2019&lt;/p&gt;
+
+&lt;h1 id=&#34;project-goal&#34;&gt;Project Goal&lt;/h1&gt;
+
+&lt;p&gt;The goal of this project is to combine past and future hydrology model (i.e., &lt;a href=&#34;https://swat.tamu.edu/&#34; target=&#34;_blank&#34;&gt;Soil and Water Assessment Tool (SWAT)&lt;/a&gt;) outputs with demographics data to create maps and prioritize climate change adaptation planning for especially vulnerable communities in western North Carolina&amp;rsquo;s Yadkin-Pee Dee River Watershed.&lt;/p&gt;
+
+&lt;h1 id=&#34;project-links&#34;&gt;Project Links&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sheilasaia/paper-yadkin-swat-study&#34; target=&#34;_blank&#34;&gt;GitHub Repository for Suttles et al. 2018&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sheilasaia/paper-yadkin-swat-svi-study&#34; target=&#34;_blank&#34;&gt;GitHub Repository for Saia et al. 2019&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h1&gt;
+
+&lt;p&gt;Special thanks to the &lt;a href=&#34;https://orise.orau.gov/&#34; target=&#34;_blank&#34;&gt;Oak Ridge Institute for Science and Education&lt;/a&gt; for support this work.&lt;/p&gt;
 </description>
     </item>
     
@@ -685,576 +759,6 @@ mapview(nc_irrigated_map_2007, zcol = &amp;quot;percent_irrigated&amp;quot;, leg
       
       <guid>/talk/duke-nov2018/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs</title>
-      <link>/post/2018-10-16-tidy-swat/</link>
-      <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018-10-16-tidy-swat/</guid>
-      <description>
-
-
-&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Background&lt;/h1&gt;
-&lt;p&gt;I recently participated in Thomas Mock’s &lt;a href=&#34;https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/&#34;&gt;Tidy Tuesday&lt;/a&gt; R challenge with other members of the NC State University R Learning Group. It was a lot of fun and after participating, I felt motivated to share what I’ve been doing to tidy up my own data sets.&lt;/p&gt;
-&lt;p&gt;Specifically, I’ve been working with collaborator, &lt;a href=&#34;https://chcs.uncg.edu/about/gis-specialist/&#34;&gt;Kelly Suttles&lt;/a&gt;, to tidy up model outputs from the &lt;a href=&#34;https://swat.tamu.edu/&#34;&gt;Soil and Water Assessment Tool (SWAT)&lt;/a&gt;. SWAT is a hydrologic model used to predict daily and monthly streamflow and water quality at the watershed-scale. It’s pretty widely used and there are even some existing R packages to help researchers calibrate SWAT from the R command line. These include the &lt;a href=&#34;https://cran.r-project.org/web/packages/EcoHydRology/EcoHydRology.pdf&#34;&gt;&lt;code&gt;ecohydRology&lt;/code&gt; package&lt;/a&gt; and the &lt;a href=&#34;https://cran.r-project.org/web/packages/SWATmodel/SWATmodel.pdf&#34;&gt;&lt;code&gt;SWATmodel&lt;/code&gt; package&lt;/a&gt;. Check them out if you work with SWAT and use R.&lt;/p&gt;
-&lt;p&gt;I’m sure there are a lot of researchers out there who have developed their own ways of tidying up SWAT outputs but I thought it would be helpful to share some of the functions I’ve recently created to help Kelly migrate her SWAT output analysis from Excel to R.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;goals-of-this-post&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Goals of This Post&lt;/h1&gt;
-&lt;p&gt;The goals of this blog post are to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Discuss how to tidy up SWAT daily and monthly outputs.&lt;/li&gt;
-&lt;li&gt;Create functions to make tidying up SWAT outputs easier.&lt;/li&gt;
-&lt;li&gt;Share reproducible data analysis workflows.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Special thanks to Kelly Suttles for generating and sharing these SWAT outputs with me.&lt;/p&gt;
-&lt;p&gt;If you’re interested in reading more about what Kelly and I have been doing with SWAT outputs, you can read Kelly’s recently paper published in &lt;em&gt;Science of the Total Environment&lt;/em&gt; &lt;a href=&#34;https://www.fs.usda.gov/treesearch/pubs/56780&#34;&gt;here&lt;/a&gt;. I’m currently working on a second paper that relies on Kelly’s SWAT model outputs and I’ll update this post once that’s published.&lt;/p&gt;
-&lt;p&gt;Please feel free to use the functions below for your own SWAT output tidying and analysis! Please contact me on &lt;a href=&#34;https://twitter.com/sheilasaia?lang=en&#34;&gt;Twitter&lt;/a&gt; or any other method &lt;a href=&#34;https://sheilasaia.rbind.io/&#34;&gt;here&lt;/a&gt; if you find any mistakes, have suggestions, or know of any other SWAT data analysis resources for R.&lt;/p&gt;
-&lt;p&gt;First let’s load the R libraries that we’ll need to run the code in this post.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
-library(lubridate)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;daily-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Daily Data&lt;/h1&gt;
-&lt;p&gt;Next let’s load the daily SWAT outputs first (we’ll work on monthly outputs later). These are generated by SWAT and can be found in the SWAT project &lt;code&gt;Scenarios &amp;gt; Default &amp;gt; TxtInOut&lt;/code&gt; directory. In this post, I’ll just be working with the &lt;code&gt;output.rch&lt;/code&gt; files, which represent the main channel outputs for each subbasin within the larger, SWAT delineated watershed. You can read more about the different SWAT output files &lt;a href=&#34;https://swat.tamu.edu/media/69395/ch32_output.pdf&#34;&gt;here&lt;/a&gt;. In this particular example, I’ll be working with SWAT outputs from the Yadkin-Pee Dee River Watershed (YPD) in North Carolina, USA. The YPD has 28 subbasins as delineated by SWAT.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# define data folder paths
-daily_data_path &amp;lt;- paste0(here::here(), &amp;quot;/static/data/2018-10-16-tidy-swat/daily/output.rch&amp;quot;)
-
-# load daily data
-output_daily_rch_raw &amp;lt;- read_csv(daily_data_path)
-
-head(output_daily_rch_raw)
-## # A tibble: 6 x 1
-##   `1`                                                                      
-##   &amp;lt;chr&amp;gt;                                                                    
-## 1 SWAT May 20 2015    VER 2015/Rev 637                                    …
-## 2 General Input/Output section (file.cio):                                 
-## 3 9/30/2016 12:00:00 AM ARCGIS-SWAT interface AV                           
-## 4 RCH      GIS  MO DA   YR     AREAkm2  FLOW_INcms FLOW_OUTcms     EVAPcms…
-## 5 REACH    1        0   1  1 1982   0.8080E+03  0.1230E+02  0.1260E+02  0.…
-## 6 REACH    2        0   1  1 1982   0.3187E+04  0.1486E+03  0.1538E+03  0.…&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Using the basic &lt;code&gt;read_csv()&lt;/code&gt; and without doing any formatting, we notice a few things:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;These data are being read in as one big column&lt;/li&gt;
-&lt;li&gt;There are several lines of text describing the &lt;code&gt;output.rch&lt;/code&gt; file before the data begins&lt;/li&gt;
-&lt;li&gt;Several of the column names have characters that R might not like (e.g., / and a space)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Let’s skip the first 9 columns and set the header argument to false. We’ll manually add the header names later, and when we do, we can reformat the column names using tidy principles (i.e., no / and no spaces). We can also use &lt;code&gt;read_table2()&lt;/code&gt; instead of &lt;code&gt;read_csv()&lt;/code&gt; to deal with the unequal spacing between columns in the text file. More specifically, if you open the &lt;code&gt;output.rch&lt;/code&gt; file in a text editor, you’ll notice that the month column doesn’t always have the same number of spaces before the month number. If you just use &lt;code&gt;read_table()&lt;/code&gt; you’ll loose the first digit of months 10, 11, and 12, which is not good for downstream data analysis. (I know from personal experience.)&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;output_daily_rch_raw &amp;lt;- read_table2(daily_data_path, skip = 9, col_names = FALSE)
-
-head(output_daily_rch_raw, n = 5)
-## # A tibble: 5 x 53
-##   X1       X2    X3    X4    X5    X6    X7    X8    X9     X10   X11
-##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
-## 1 REACH     1     0     1     1  1982  808   12.3  12.6 1.87e-2     0
-## 2 REACH     2     0     1     1  1982 3187  149.  154.  6.55e-2     0
-## 3 REACH     3     0     1     1  1982 2238  138.  141.  4.33e-2     0
-## 4 REACH     4     0     1     1  1982 4365  170.  170.  5.45e-2     0
-## 5 REACH     5     0     1     1  1982  625. 107.  107.  1.50e-5     0
-## # ... with 42 more variables: X12 &amp;lt;dbl&amp;gt;, X13 &amp;lt;dbl&amp;gt;, X14 &amp;lt;dbl&amp;gt;, X15 &amp;lt;dbl&amp;gt;,
-## #   X16 &amp;lt;dbl&amp;gt;, X17 &amp;lt;dbl&amp;gt;, X18 &amp;lt;dbl&amp;gt;, X19 &amp;lt;dbl&amp;gt;, X20 &amp;lt;dbl&amp;gt;, X21 &amp;lt;dbl&amp;gt;,
-## #   X22 &amp;lt;dbl&amp;gt;, X23 &amp;lt;dbl&amp;gt;, X24 &amp;lt;dbl&amp;gt;, X25 &amp;lt;dbl&amp;gt;, X26 &amp;lt;dbl&amp;gt;, X27 &amp;lt;dbl&amp;gt;,
-## #   X28 &amp;lt;dbl&amp;gt;, X29 &amp;lt;dbl&amp;gt;, X30 &amp;lt;dbl&amp;gt;, X31 &amp;lt;dbl&amp;gt;, X32 &amp;lt;dbl&amp;gt;, X33 &amp;lt;dbl&amp;gt;,
-## #   X34 &amp;lt;dbl&amp;gt;, X35 &amp;lt;dbl&amp;gt;, X36 &amp;lt;dbl&amp;gt;, X37 &amp;lt;dbl&amp;gt;, X38 &amp;lt;dbl&amp;gt;, X39 &amp;lt;dbl&amp;gt;,
-## #   X40 &amp;lt;dbl&amp;gt;, X41 &amp;lt;dbl&amp;gt;, X42 &amp;lt;dbl&amp;gt;, X43 &amp;lt;dbl&amp;gt;, X44 &amp;lt;dbl&amp;gt;, X45 &amp;lt;dbl&amp;gt;,
-## #   X46 &amp;lt;dbl&amp;gt;, X47 &amp;lt;dbl&amp;gt;, X48 &amp;lt;dbl&amp;gt;, X49 &amp;lt;dbl&amp;gt;, X50 &amp;lt;dbl&amp;gt;, X51 &amp;lt;dbl&amp;gt;,
-## #   X52 &amp;lt;dbl&amp;gt;, X53 &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;That looks a lot better but we still need to add header names. You can find additional descriptions on these column names in the &lt;a href=&#34;https://swat.tamu.edu/media/69395/ch32_output.pdf&#34;&gt;SWAT &lt;code&gt;output.rch&lt;/code&gt; documentation&lt;/a&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# create a new dataframe to save final output
-output_daily_rch &amp;lt;- output_daily_rch_raw
-
-# column names list
-daily_rch_col_names &amp;lt;- c(&amp;quot;FILE&amp;quot;,&amp;quot;RCH&amp;quot;,&amp;quot;GIS&amp;quot;,&amp;quot;MO&amp;quot;,&amp;quot;DA&amp;quot;,&amp;quot;YR&amp;quot;,&amp;quot;AREAkm2&amp;quot;,&amp;quot;FLOW_INcms&amp;quot;,&amp;quot;FLOW_OUTcms&amp;quot;,&amp;quot;EVAPcms&amp;quot;,&amp;quot;TLOSScms&amp;quot;,&amp;quot;SED_INtons&amp;quot;,&amp;quot;SED_OUTtons&amp;quot;,&amp;quot;SEDCONCmg_kg&amp;quot;,&amp;quot;ORGN_INkg&amp;quot;,&amp;quot;ORGN_OUTkg&amp;quot;,&amp;quot;ORGP_INkg&amp;quot;,&amp;quot;ORGP_OUTkg&amp;quot;,&amp;quot;NO3_INkg&amp;quot;,&amp;quot;NO3_OUTkg&amp;quot;,&amp;quot;NH4_INkg&amp;quot;,&amp;quot;NH4_OUTkg&amp;quot;,&amp;quot;NO2_INkg&amp;quot;,&amp;quot;NO2_OUTkg&amp;quot;,&amp;quot;MINP_INkg&amp;quot;,&amp;quot;MINP_OUTkg&amp;quot;,&amp;quot;CHLA_INkg&amp;quot;,&amp;quot;CHLA_OUTkg&amp;quot;,&amp;quot;CBOD_INkg&amp;quot;,&amp;quot;CBOD_OU/.Tkg&amp;quot;,&amp;quot;DISOX_INkg&amp;quot;,&amp;quot;DISOX_OUTkg&amp;quot;,&amp;quot;SOLPST_INmg&amp;quot;,&amp;quot;SOLPST_OUTmg&amp;quot;,&amp;quot;SORPST_INmg&amp;quot;,&amp;quot;SORPST_OUTmg&amp;quot;,&amp;quot;REACTPSTmg&amp;quot;,&amp;quot;VOLPSTmg&amp;quot;,&amp;quot;SETTLPSTmg&amp;quot;,&amp;quot;RESUSP_PSTmg&amp;quot;,&amp;quot;DIFFUSEPSTmg&amp;quot;,&amp;quot;REACBEDPSTmg&amp;quot;,&amp;quot;BURYPSTmg&amp;quot;,&amp;quot;BED_PSTmg&amp;quot;,&amp;quot;BACTP_OUTct&amp;quot;,&amp;quot;BACTLP_OUTct&amp;quot;,&amp;quot;CMETAL_1kg&amp;quot;,&amp;quot;CMETAL_2kg&amp;quot;,&amp;quot;CMETAL_3kg&amp;quot;,&amp;quot;TOTNkg&amp;quot;,&amp;quot;TOTPkg&amp;quot;,&amp;quot;NO3_mg_l&amp;quot;,&amp;quot;WTMPdegc&amp;quot;)
-
-# reassign column names
-colnames(output_daily_rch) &amp;lt;- daily_rch_col_names
-
-head(output_daily_rch, n = 5)
-## # A tibble: 5 x 53
-##   FILE    RCH   GIS    MO    DA    YR AREAkm2 FLOW_INcms FLOW_OUTcms
-##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
-## 1 REACH     1     0     1     1  1982    808        12.3        12.6
-## 2 REACH     2     0     1     1  1982   3187       149.        154. 
-## 3 REACH     3     0     1     1  1982   2238       138.        141. 
-## 4 REACH     4     0     1     1  1982   4365       170.        170. 
-## 5 REACH     5     0     1     1  1982    625.      107.        107. 
-## # ... with 44 more variables: EVAPcms &amp;lt;dbl&amp;gt;, TLOSScms &amp;lt;dbl&amp;gt;,
-## #   SED_INtons &amp;lt;dbl&amp;gt;, SED_OUTtons &amp;lt;dbl&amp;gt;, SEDCONCmg_kg &amp;lt;dbl&amp;gt;,
-## #   ORGN_INkg &amp;lt;dbl&amp;gt;, ORGN_OUTkg &amp;lt;dbl&amp;gt;, ORGP_INkg &amp;lt;dbl&amp;gt;, ORGP_OUTkg &amp;lt;dbl&amp;gt;,
-## #   NO3_INkg &amp;lt;dbl&amp;gt;, NO3_OUTkg &amp;lt;dbl&amp;gt;, NH4_INkg &amp;lt;dbl&amp;gt;, NH4_OUTkg &amp;lt;dbl&amp;gt;,
-## #   NO2_INkg &amp;lt;dbl&amp;gt;, NO2_OUTkg &amp;lt;dbl&amp;gt;, MINP_INkg &amp;lt;dbl&amp;gt;, MINP_OUTkg &amp;lt;dbl&amp;gt;,
-## #   CHLA_INkg &amp;lt;dbl&amp;gt;, CHLA_OUTkg &amp;lt;dbl&amp;gt;, CBOD_INkg &amp;lt;dbl&amp;gt;,
-## #   `CBOD_OU/.Tkg` &amp;lt;dbl&amp;gt;, DISOX_INkg &amp;lt;dbl&amp;gt;, DISOX_OUTkg &amp;lt;dbl&amp;gt;,
-## #   SOLPST_INmg &amp;lt;dbl&amp;gt;, SOLPST_OUTmg &amp;lt;dbl&amp;gt;, SORPST_INmg &amp;lt;dbl&amp;gt;,
-## #   SORPST_OUTmg &amp;lt;dbl&amp;gt;, REACTPSTmg &amp;lt;dbl&amp;gt;, VOLPSTmg &amp;lt;dbl&amp;gt;,
-## #   SETTLPSTmg &amp;lt;dbl&amp;gt;, RESUSP_PSTmg &amp;lt;dbl&amp;gt;, DIFFUSEPSTmg &amp;lt;dbl&amp;gt;,
-## #   REACBEDPSTmg &amp;lt;dbl&amp;gt;, BURYPSTmg &amp;lt;dbl&amp;gt;, BED_PSTmg &amp;lt;dbl&amp;gt;,
-## #   BACTP_OUTct &amp;lt;dbl&amp;gt;, BACTLP_OUTct &amp;lt;dbl&amp;gt;, CMETAL_1kg &amp;lt;dbl&amp;gt;,
-## #   CMETAL_2kg &amp;lt;dbl&amp;gt;, CMETAL_3kg &amp;lt;dbl&amp;gt;, TOTNkg &amp;lt;dbl&amp;gt;, TOTPkg &amp;lt;dbl&amp;gt;,
-## #   NO3_mg_l &amp;lt;dbl&amp;gt;, WTMPdegc &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;That’s so tidy! We can summarize all those steps into one function that we’ll call &lt;code&gt;tidy_daily_rch_file()&lt;/code&gt; that takes the raw input that we’ve read in (using &lt;code&gt;read_table2(&amp;quot;output.rch&amp;quot;, col_names=FALSE, skip=9)&lt;/code&gt;) and outputs a formatted daily SWAT output table.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tidy_daily_rch_file &amp;lt;- function(daily_rch_raw_data) {
-  # import daily_rch_raw_data into R session using: 
-  # daily_rch_raw_data &amp;lt;- read_table2(&amp;quot;output.rch&amp;quot;, col_names=FALSE, skip=9)
-  
-  # column names
-  daily_rch_col_names &amp;lt;- c(&amp;quot;FILE&amp;quot;,&amp;quot;RCH&amp;quot;,&amp;quot;GIS&amp;quot;,&amp;quot;MO&amp;quot;,&amp;quot;DA&amp;quot;,&amp;quot;YR&amp;quot;,&amp;quot;AREAkm2&amp;quot;,&amp;quot;FLOW_INcms&amp;quot;,&amp;quot;FLOW_OUTcms&amp;quot;,&amp;quot;EVAPcms&amp;quot;,&amp;quot;TLOSScms&amp;quot;,&amp;quot;SED_INtons&amp;quot;,&amp;quot;SED_OUTtons&amp;quot;,&amp;quot;SEDCONCmg_kg&amp;quot;,&amp;quot;ORGN_INkg&amp;quot;,&amp;quot;ORGN_OUTkg&amp;quot;,&amp;quot;ORGP_INkg&amp;quot;,&amp;quot;ORGP_OUTkg&amp;quot;,&amp;quot;NO3_INkg&amp;quot;,&amp;quot;NO3_OUTkg&amp;quot;,&amp;quot;NH4_INkg&amp;quot;,&amp;quot;NH4_OUTkg&amp;quot;,&amp;quot;NO2_INkg&amp;quot;,&amp;quot;NO2_OUTkg&amp;quot;,&amp;quot;MINP_INkg&amp;quot;,&amp;quot;MINP_OUTkg&amp;quot;,&amp;quot;CHLA_INkg&amp;quot;,&amp;quot;CHLA_OUTkg&amp;quot;,&amp;quot;CBOD_INkg&amp;quot;,&amp;quot;CBOD_OU/.Tkg&amp;quot;,&amp;quot;DISOX_INkg&amp;quot;,&amp;quot;DISOX_OUTkg&amp;quot;,&amp;quot;SOLPST_INmg&amp;quot;,&amp;quot;SOLPST_OUTmg&amp;quot;,&amp;quot;SORPST_INmg&amp;quot;,&amp;quot;SORPST_OUTmg&amp;quot;,&amp;quot;REACTPSTmg&amp;quot;,&amp;quot;VOLPSTmg&amp;quot;,&amp;quot;SETTLPSTmg&amp;quot;,&amp;quot;RESUSP_PSTmg&amp;quot;,&amp;quot;DIFFUSEPSTmg&amp;quot;,&amp;quot;REACBEDPSTmg&amp;quot;,&amp;quot;BURYPSTmg&amp;quot;,&amp;quot;BED_PSTmg&amp;quot;,&amp;quot;BACTP_OUTct&amp;quot;,&amp;quot;BACTLP_OUTct&amp;quot;,&amp;quot;CMETAL_1kg&amp;quot;,&amp;quot;CMETAL_2kg&amp;quot;,&amp;quot;CMETAL_3kg&amp;quot;,&amp;quot;TOTNkg&amp;quot;,&amp;quot;TOTPkg&amp;quot;,&amp;quot;NO3_mg_l&amp;quot;,&amp;quot;WTMPdegc&amp;quot;)
-  
-  # reassign column names
-  colnames(daily_rch_raw_data) &amp;lt;- daily_rch_col_names
-  
-  # return output
-  return(daily_rch_raw_data)
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;So now it will just take two lines of code to read in our daily SWAT &lt;code&gt;output.rch&lt;/code&gt; file and tidy it up!&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;output_daily_rch_raw_test &amp;lt;- read_table2(daily_data_path, skip = 9, col_names = FALSE)
-
-output_daily_rch_test &amp;lt;- tidy_daily_rch_file(output_daily_rch_raw_test)
-
-head(output_daily_rch_test, n = 5)
-## # A tibble: 5 x 53
-##   FILE    RCH   GIS    MO    DA    YR AREAkm2 FLOW_INcms FLOW_OUTcms
-##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
-## 1 REACH     1     0     1     1  1982    808        12.3        12.6
-## 2 REACH     2     0     1     1  1982   3187       149.        154. 
-## 3 REACH     3     0     1     1  1982   2238       138.        141. 
-## 4 REACH     4     0     1     1  1982   4365       170.        170. 
-## 5 REACH     5     0     1     1  1982    625.      107.        107. 
-## # ... with 44 more variables: EVAPcms &amp;lt;dbl&amp;gt;, TLOSScms &amp;lt;dbl&amp;gt;,
-## #   SED_INtons &amp;lt;dbl&amp;gt;, SED_OUTtons &amp;lt;dbl&amp;gt;, SEDCONCmg_kg &amp;lt;dbl&amp;gt;,
-## #   ORGN_INkg &amp;lt;dbl&amp;gt;, ORGN_OUTkg &amp;lt;dbl&amp;gt;, ORGP_INkg &amp;lt;dbl&amp;gt;, ORGP_OUTkg &amp;lt;dbl&amp;gt;,
-## #   NO3_INkg &amp;lt;dbl&amp;gt;, NO3_OUTkg &amp;lt;dbl&amp;gt;, NH4_INkg &amp;lt;dbl&amp;gt;, NH4_OUTkg &amp;lt;dbl&amp;gt;,
-## #   NO2_INkg &amp;lt;dbl&amp;gt;, NO2_OUTkg &amp;lt;dbl&amp;gt;, MINP_INkg &amp;lt;dbl&amp;gt;, MINP_OUTkg &amp;lt;dbl&amp;gt;,
-## #   CHLA_INkg &amp;lt;dbl&amp;gt;, CHLA_OUTkg &amp;lt;dbl&amp;gt;, CBOD_INkg &amp;lt;dbl&amp;gt;,
-## #   `CBOD_OU/.Tkg` &amp;lt;dbl&amp;gt;, DISOX_INkg &amp;lt;dbl&amp;gt;, DISOX_OUTkg &amp;lt;dbl&amp;gt;,
-## #   SOLPST_INmg &amp;lt;dbl&amp;gt;, SOLPST_OUTmg &amp;lt;dbl&amp;gt;, SORPST_INmg &amp;lt;dbl&amp;gt;,
-## #   SORPST_OUTmg &amp;lt;dbl&amp;gt;, REACTPSTmg &amp;lt;dbl&amp;gt;, VOLPSTmg &amp;lt;dbl&amp;gt;,
-## #   SETTLPSTmg &amp;lt;dbl&amp;gt;, RESUSP_PSTmg &amp;lt;dbl&amp;gt;, DIFFUSEPSTmg &amp;lt;dbl&amp;gt;,
-## #   REACBEDPSTmg &amp;lt;dbl&amp;gt;, BURYPSTmg &amp;lt;dbl&amp;gt;, BED_PSTmg &amp;lt;dbl&amp;gt;,
-## #   BACTP_OUTct &amp;lt;dbl&amp;gt;, BACTLP_OUTct &amp;lt;dbl&amp;gt;, CMETAL_1kg &amp;lt;dbl&amp;gt;,
-## #   CMETAL_2kg &amp;lt;dbl&amp;gt;, CMETAL_3kg &amp;lt;dbl&amp;gt;, TOTNkg &amp;lt;dbl&amp;gt;, TOTPkg &amp;lt;dbl&amp;gt;,
-## #   NO3_mg_l &amp;lt;dbl&amp;gt;, WTMPdegc &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now can use &lt;code&gt;output_daily_rch_test&lt;/code&gt; for some downstream data analysis. Let’s first plot the range in monthly discharge (as predicted by SWAT) just at the outlet (i.e., subbasin number 28) versus the simulation year.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# select outlet data
-outlet_daily_data &amp;lt;- output_daily_rch_test %&amp;gt;% 
-  filter(RCH == 28)
-
-# plot
-ggplot(data = outlet_daily_data, mapping = aes(x = as.factor(YR), y = FLOW_OUTcms)) +
-  geom_boxplot() +
-  geom_jitter(alpha = 0.1, width = 0.1) +
-  xlab(&amp;quot;Year&amp;quot;) +
-  ylab(&amp;quot;Daily Discharge (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20daily%20data%20part%201-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Next, let’s plot the hydrograph of discharge at the the outlet (i.e., subbasin number 28) for 1982.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# select outlet data for 1982
-outlet_daily_1982_data &amp;lt;- output_daily_rch_test %&amp;gt;% 
-  filter(RCH == 28) %&amp;gt;%
-  filter(YR == 1982) %&amp;gt;%
-  mutate(date = as.Date(paste0(YR,&amp;quot;-&amp;quot;,MO,&amp;quot;-&amp;quot;,DA)))
-
-ggplot(data = outlet_daily_1982_data, mapping = aes(x = date, y = FLOW_OUTcms)) +
-  geom_line(color = &amp;quot;blue&amp;quot;) +
-  xlab(&amp;quot;Date&amp;quot;) +
-  ylab(&amp;quot;Daily Discharge (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20daily%20data%20part%202-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;monthly-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Monthly Data&lt;/h1&gt;
-&lt;p&gt;You can also run SWAT at a monthly time-step. This might happen if you are trying to predict sediment or nutrient loads when you only have these measurements at the monthly time-step. The SWAT &lt;code&gt;output.rch&lt;/code&gt; file is slightly different if you use the monthly time-step. More on this later.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# define data folder paths
-monthly_data_path &amp;lt;- paste0(here::here(), &amp;quot;/static/data/2018-10-16-tidy-swat/monthly/output.rch&amp;quot;)
-
-# load daily data
-output_monthly_rch_raw &amp;lt;- read_csv(monthly_data_path)
-
-head(output_monthly_rch_raw)
-## # A tibble: 6 x 1
-##   `1`                                                                      
-##   &amp;lt;chr&amp;gt;                                                                    
-## 1 SWAT May 20 2015    VER 2015/Rev 637                                    …
-## 2 General Input/Output section (file.cio):                                 
-## 3 9/1/2017 12:00:00 AM ARCGIS-SWAT interface AV                            
-## 4 RCH      GIS   MON     AREAkm2  FLOW_INcms FLOW_OUTcms     EVAPcms    TL…
-## 5 REACH    1        0     1  0.8080E+03  0.3818E+01  0.3911E+01  0.1456E-0…
-## 6 REACH    2        0     1  0.3187E+04  0.1997E+02  0.2023E+02  0.5534E-0…&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Using the basic &lt;code&gt;read_csv()&lt;/code&gt; and without doing any formatting, we notice a few things:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;These data are being read in as one big column (Like the daily data!)&lt;/li&gt;
-&lt;li&gt;There are several lines of text describing the &lt;code&gt;output.rch&lt;/code&gt; file before the data begins (Like the daily data!)&lt;/li&gt;
-&lt;li&gt;Several of the column names have characters that R might not like (e.g., / and a space) (Like the daily data!)&lt;/li&gt;
-&lt;li&gt;The year of the simulation is included in the MO (i.e., month) and represents a summary of the data for that year (This is new to the month file.)&lt;/li&gt;
-&lt;li&gt;There is no YR column (This is new to the month file.)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If we use the same formatting we used before with the daily data and skip down to the 336 row, the fourth point above becomes more clear.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# read in monthly data
-output_monthly_rch_raw &amp;lt;- read_table2(monthly_data_path, skip = 9, col_names = FALSE)
-
-# column names
-montly_rch_col_names=c(&amp;quot;FILE&amp;quot;,&amp;quot;RCH&amp;quot;,&amp;quot;GIS&amp;quot;,&amp;quot;MO&amp;quot;,&amp;quot;AREAkm2&amp;quot;,&amp;quot;FLOW_INcms&amp;quot;,&amp;quot;FLOW_OUTcms&amp;quot;,&amp;quot;EVAPcms&amp;quot;,&amp;quot;TLOSScms&amp;quot;,&amp;quot;SED_INtons&amp;quot;,&amp;quot;SED_OUTtons&amp;quot;,&amp;quot;SEDCONCmg_kg&amp;quot;,&amp;quot;ORGN_INkg&amp;quot;,&amp;quot;ORGN_OUTkg&amp;quot;,&amp;quot;ORGP_INkg&amp;quot;,&amp;quot;ORGP_OUTkg&amp;quot;,&amp;quot;NO3_INkg&amp;quot;,&amp;quot;NO3_OUTkg&amp;quot;,&amp;quot;NH4_INkg&amp;quot;,&amp;quot;NH4_OUTkg&amp;quot;,&amp;quot;NO2_INkg&amp;quot;,&amp;quot;NO2_OUTkg&amp;quot;,&amp;quot;MINP_INkg&amp;quot;,&amp;quot;MINP_OUTkg&amp;quot;,&amp;quot;CHLA_INkg&amp;quot;,&amp;quot;CHLA_OUTkg&amp;quot;,&amp;quot;CBOD_INkg&amp;quot;,&amp;quot;CBOD_OUTkg&amp;quot;,&amp;quot;DISOX_INkg&amp;quot;,&amp;quot;DISOX_OUTkg&amp;quot;,&amp;quot;SOLPST_INmg&amp;quot;,&amp;quot;SOLPST_OUTmg&amp;quot;,&amp;quot;SORPST_INmg&amp;quot;,&amp;quot;SORPST_OUTmg&amp;quot;,&amp;quot;REACTPSTmg&amp;quot;,&amp;quot;VOLPSTmg&amp;quot;,&amp;quot;SETTLPSTmg&amp;quot;,&amp;quot;RESUSP_PSTmg&amp;quot;,&amp;quot;DIFFUSEPSTmg&amp;quot;,&amp;quot;REACBEDPSTmg&amp;quot;,&amp;quot;BURYPSTmg&amp;quot;,&amp;quot;BED_PSTmg&amp;quot;,&amp;quot;BACTP_OUTct&amp;quot;,&amp;quot;BACTLP_OUTct&amp;quot;,&amp;quot;CMETALnumkg&amp;quot;,&amp;quot;CMETALnum2kg&amp;quot;,&amp;quot;CMETALnum3kg&amp;quot;,&amp;quot;TOTNkg&amp;quot;,&amp;quot;TOTPkg&amp;quot;,&amp;quot;NO3ConcMg_l&amp;quot;,&amp;quot;WTMPdegc&amp;quot;)
-
-# reassign column names
-colnames(output_monthly_rch_raw) = montly_rch_col_names
-
-output_monthly_rch_raw[336:338,]
-## # A tibble: 3 x 51
-##   FILE    RCH   GIS    MO AREAkm2 FLOW_INcms FLOW_OUTcms EVAPcms TLOSScms
-##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
-## 1 REACH    28     0    12   17780     137.        137.    0.0587     5.66
-## 2 REACH     1     0  1982     808       8.47        8.39  0.0658     3.51
-## 3 REACH     2     0  1982    3187      42.0        41.7   0.231     12.3 
-## # ... with 42 more variables: SED_INtons &amp;lt;dbl&amp;gt;, SED_OUTtons &amp;lt;dbl&amp;gt;,
-## #   SEDCONCmg_kg &amp;lt;dbl&amp;gt;, ORGN_INkg &amp;lt;dbl&amp;gt;, ORGN_OUTkg &amp;lt;dbl&amp;gt;,
-## #   ORGP_INkg &amp;lt;dbl&amp;gt;, ORGP_OUTkg &amp;lt;dbl&amp;gt;, NO3_INkg &amp;lt;dbl&amp;gt;, NO3_OUTkg &amp;lt;dbl&amp;gt;,
-## #   NH4_INkg &amp;lt;dbl&amp;gt;, NH4_OUTkg &amp;lt;dbl&amp;gt;, NO2_INkg &amp;lt;dbl&amp;gt;, NO2_OUTkg &amp;lt;dbl&amp;gt;,
-## #   MINP_INkg &amp;lt;dbl&amp;gt;, MINP_OUTkg &amp;lt;dbl&amp;gt;, CHLA_INkg &amp;lt;dbl&amp;gt;, CHLA_OUTkg &amp;lt;dbl&amp;gt;,
-## #   CBOD_INkg &amp;lt;dbl&amp;gt;, CBOD_OUTkg &amp;lt;dbl&amp;gt;, DISOX_INkg &amp;lt;dbl&amp;gt;,
-## #   DISOX_OUTkg &amp;lt;dbl&amp;gt;, SOLPST_INmg &amp;lt;dbl&amp;gt;, SOLPST_OUTmg &amp;lt;dbl&amp;gt;,
-## #   SORPST_INmg &amp;lt;dbl&amp;gt;, SORPST_OUTmg &amp;lt;dbl&amp;gt;, REACTPSTmg &amp;lt;dbl&amp;gt;,
-## #   VOLPSTmg &amp;lt;dbl&amp;gt;, SETTLPSTmg &amp;lt;dbl&amp;gt;, RESUSP_PSTmg &amp;lt;dbl&amp;gt;,
-## #   DIFFUSEPSTmg &amp;lt;dbl&amp;gt;, REACBEDPSTmg &amp;lt;dbl&amp;gt;, BURYPSTmg &amp;lt;dbl&amp;gt;,
-## #   BED_PSTmg &amp;lt;dbl&amp;gt;, BACTP_OUTct &amp;lt;dbl&amp;gt;, BACTLP_OUTct &amp;lt;dbl&amp;gt;,
-## #   CMETALnumkg &amp;lt;dbl&amp;gt;, CMETALnum2kg &amp;lt;dbl&amp;gt;, CMETALnum3kg &amp;lt;dbl&amp;gt;,
-## #   TOTNkg &amp;lt;dbl&amp;gt;, TOTPkg &amp;lt;dbl&amp;gt;, NO3ConcMg_l &amp;lt;dbl&amp;gt;, WTMPdegc &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We see that the month column goes from 12 to 1982; 1982 is the first year of the simulation.&lt;/p&gt;
-&lt;p&gt;Overall, the monthly SWAT output in combining &lt;strong&gt;two types of data&lt;/strong&gt; (i.e., month number and year number) in one column. Likewise, the data associated with the corresponding rows of these yearly summary columns is lumped together with the monthly SWAT outputs. This is definitely not &lt;em&gt;tidy&lt;/em&gt;; tidy data consists of unique variables in each column and unique observations in each row. The easiest way tidy this up is to identify and delete the yearly summary rows. If you want, you can save them for later QA/QC. That is, you can compare the yearly average summaries interspersed within the monthly SWAT output to yearly averages that you manually calculate from the monthly SWAT outputs. In this post, we’ll delete the yearly summary rows.&lt;/p&gt;
-&lt;p&gt;We’ll keep track of the simulation years, take out the summary rows, and add a column called &lt;code&gt;YR&lt;/code&gt; that we’ll fill in the next step.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# record the simulation years for later
-simulation_years &amp;lt;- unique(output_monthly_rch_raw$MO)[unique(output_monthly_rch_raw$MO) &amp;gt; 12]
-num_years &amp;lt;- length(simulation_years)
-    
-# remove summary rows but make YR column to hold these data              
-output_monthly_rch &amp;lt;- output_monthly_rch_raw %&amp;gt;%
-  mutate(notes = ifelse(MO &amp;gt; 12, &amp;quot;summary&amp;quot;, &amp;quot;not_summary&amp;quot;)) %&amp;gt;% # note whether summary or not
-  mutate(YR = as.numeric(&amp;quot;NA&amp;quot;)) %&amp;gt;% # make an empty column to fill later
-  filter(notes == &amp;quot;not_summary&amp;quot;) %&amp;gt;% # remove annual summary for each subbasin
-  select(-notes) %&amp;gt;% # remove it to keep it tidy
-  select(FILE:MO, YR, AREAkm2:WTMPdegc) # rearrange columns
-
-dim(output_monthly_rch_raw)
-## [1] 1456   51
-dim(output_monthly_rch)
-## [1] 1344   52&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We see &lt;code&gt;output_monthly_rch_raw&lt;/code&gt; had 1456 rows and the &lt;code&gt;output_monthly_rch&lt;/code&gt; now has 1344. That’s 112 less rows, which checks out because 4 years times 28 subbasins is 112. That is, there was one summary row for each subbasin for each year that we just deleted.&lt;/p&gt;
-&lt;p&gt;Now let’s loop through the data and fill in the year column.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# define some parameters we&amp;#39;ll need
-num_subs &amp;lt;- max(unique(output_monthly_rch$RCH))
-num_months &amp;lt;- 12
-num_per_month &amp;lt;- num_subs * num_months
-
-# for loop
-str=1
-end=num_per_month
-for (i in 1:length(simulation_years)) {
-  output_monthly_rch$YR[str:end] = rep(simulation_years[i], num_per_month)
-  str=end+1
-  end=str+num_per_month-1
-}
-
-head(output_monthly_rch, n = 5)
-## # A tibble: 5 x 52
-##   FILE    RCH   GIS    MO    YR AREAkm2 FLOW_INcms FLOW_OUTcms EVAPcms
-##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
-## 1 REACH     1     0     1  1982    808        3.82        3.91 1.46e-2
-## 2 REACH     2     0     1  1982   3187       20.0        20.2  5.53e-2
-## 3 REACH     3     0     1  1982   2238       15.5        15.9  4.35e-2
-## 4 REACH     4     0     1  1982   4365       25.5        25.4  8.00e-2
-## 5 REACH     5     0     1  1982    625.       8.99        8.99 3.74e-5
-## # ... with 43 more variables: TLOSScms &amp;lt;dbl&amp;gt;, SED_INtons &amp;lt;dbl&amp;gt;,
-## #   SED_OUTtons &amp;lt;dbl&amp;gt;, SEDCONCmg_kg &amp;lt;dbl&amp;gt;, ORGN_INkg &amp;lt;dbl&amp;gt;,
-## #   ORGN_OUTkg &amp;lt;dbl&amp;gt;, ORGP_INkg &amp;lt;dbl&amp;gt;, ORGP_OUTkg &amp;lt;dbl&amp;gt;, NO3_INkg &amp;lt;dbl&amp;gt;,
-## #   NO3_OUTkg &amp;lt;dbl&amp;gt;, NH4_INkg &amp;lt;dbl&amp;gt;, NH4_OUTkg &amp;lt;dbl&amp;gt;, NO2_INkg &amp;lt;dbl&amp;gt;,
-## #   NO2_OUTkg &amp;lt;dbl&amp;gt;, MINP_INkg &amp;lt;dbl&amp;gt;, MINP_OUTkg &amp;lt;dbl&amp;gt;, CHLA_INkg &amp;lt;dbl&amp;gt;,
-## #   CHLA_OUTkg &amp;lt;dbl&amp;gt;, CBOD_INkg &amp;lt;dbl&amp;gt;, CBOD_OUTkg &amp;lt;dbl&amp;gt;, DISOX_INkg &amp;lt;dbl&amp;gt;,
-## #   DISOX_OUTkg &amp;lt;dbl&amp;gt;, SOLPST_INmg &amp;lt;dbl&amp;gt;, SOLPST_OUTmg &amp;lt;dbl&amp;gt;,
-## #   SORPST_INmg &amp;lt;dbl&amp;gt;, SORPST_OUTmg &amp;lt;dbl&amp;gt;, REACTPSTmg &amp;lt;dbl&amp;gt;,
-## #   VOLPSTmg &amp;lt;dbl&amp;gt;, SETTLPSTmg &amp;lt;dbl&amp;gt;, RESUSP_PSTmg &amp;lt;dbl&amp;gt;,
-## #   DIFFUSEPSTmg &amp;lt;dbl&amp;gt;, REACBEDPSTmg &amp;lt;dbl&amp;gt;, BURYPSTmg &amp;lt;dbl&amp;gt;,
-## #   BED_PSTmg &amp;lt;dbl&amp;gt;, BACTP_OUTct &amp;lt;dbl&amp;gt;, BACTLP_OUTct &amp;lt;dbl&amp;gt;,
-## #   CMETALnumkg &amp;lt;dbl&amp;gt;, CMETALnum2kg &amp;lt;dbl&amp;gt;, CMETALnum3kg &amp;lt;dbl&amp;gt;,
-## #   TOTNkg &amp;lt;dbl&amp;gt;, TOTPkg &amp;lt;dbl&amp;gt;, NO3ConcMg_l &amp;lt;dbl&amp;gt;, WTMPdegc &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;That’s way more tidy! We can summarize all those steps into one function that called &lt;code&gt;tidy_monthly_rch_file()&lt;/code&gt;. This function takes the raw input that we’ve read into our R session (using &lt;code&gt;read_table2(&amp;quot;output.rch&amp;quot;, col_names=FALSE, skip=9)&lt;/code&gt;) and outputs a formatted monthly SWAT output table.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tidy_monthly_rch_file &amp;lt;- function(monthly_rch_raw_data) {
-  # import monthly_rch_raw_data into R session using: 
-  # monthly_rch_raw_data &amp;lt;- read_table2(&amp;quot;output.rch&amp;quot;, col_names=FALSE, skip=9)
-  
-  # column names
-  montly_rch_col_names=c(&amp;quot;FILE&amp;quot;,&amp;quot;RCH&amp;quot;,&amp;quot;GIS&amp;quot;,&amp;quot;MO&amp;quot;,&amp;quot;AREAkm2&amp;quot;,&amp;quot;FLOW_INcms&amp;quot;,&amp;quot;FLOW_OUTcms&amp;quot;,&amp;quot;EVAPcms&amp;quot;,&amp;quot;TLOSScms&amp;quot;,&amp;quot;SED_INtons&amp;quot;,&amp;quot;SED_OUTtons&amp;quot;,&amp;quot;SEDCONCmg_kg&amp;quot;,&amp;quot;ORGN_INkg&amp;quot;,&amp;quot;ORGN_OUTkg&amp;quot;,&amp;quot;ORGP_INkg&amp;quot;,&amp;quot;ORGP_OUTkg&amp;quot;,&amp;quot;NO3_INkg&amp;quot;,&amp;quot;NO3_OUTkg&amp;quot;,&amp;quot;NH4_INkg&amp;quot;,&amp;quot;NH4_OUTkg&amp;quot;,&amp;quot;NO2_INkg&amp;quot;,&amp;quot;NO2_OUTkg&amp;quot;,&amp;quot;MINP_INkg&amp;quot;,&amp;quot;MINP_OUTkg&amp;quot;,&amp;quot;CHLA_INkg&amp;quot;,&amp;quot;CHLA_OUTkg&amp;quot;,&amp;quot;CBOD_INkg&amp;quot;,&amp;quot;CBOD_OUTkg&amp;quot;,&amp;quot;DISOX_INkg&amp;quot;,&amp;quot;DISOX_OUTkg&amp;quot;,&amp;quot;SOLPST_INmg&amp;quot;,&amp;quot;SOLPST_OUTmg&amp;quot;,&amp;quot;SORPST_INmg&amp;quot;,&amp;quot;SORPST_OUTmg&amp;quot;,&amp;quot;REACTPSTmg&amp;quot;,&amp;quot;VOLPSTmg&amp;quot;,&amp;quot;SETTLPSTmg&amp;quot;,&amp;quot;RESUSP_PSTmg&amp;quot;,&amp;quot;DIFFUSEPSTmg&amp;quot;,&amp;quot;REACBEDPSTmg&amp;quot;,&amp;quot;BURYPSTmg&amp;quot;,&amp;quot;BED_PSTmg&amp;quot;,&amp;quot;BACTP_OUTct&amp;quot;,&amp;quot;BACTLP_OUTct&amp;quot;,&amp;quot;CMETALnumkg&amp;quot;,&amp;quot;CMETALnum2kg&amp;quot;,&amp;quot;CMETALnum3kg&amp;quot;,&amp;quot;TOTNkg&amp;quot;,&amp;quot;TOTPkg&amp;quot;,&amp;quot;NO3ConcMg_l&amp;quot;,&amp;quot;WTMPdegc&amp;quot;)
-  
-  # reassign column names
-  colnames(monthly_rch_raw_data) = montly_rch_col_names
-  
-  # dataset parameters
-  simulation_years &amp;lt;- unique(monthly_rch_raw_data$MO)[unique(monthly_rch_raw_data$MO) &amp;gt; 12]
-  num_years &amp;lt;- length(simulation_years)
-  num_subs &amp;lt;- max(unique(monthly_rch_raw_data$RCH))
-  num_months &amp;lt;- 12
-  num_per_month &amp;lt;- num_subs * num_months
-  
-  # remove summary rows from raw data              
-  monthly_rch_raw_data_temp &amp;lt;- monthly_rch_raw_data %&amp;gt;%
-    mutate(notes = ifelse(MO &amp;gt; 12, &amp;quot;summary&amp;quot;, &amp;quot;not_summary&amp;quot;)) %&amp;gt;% # note whether summary or not
-    mutate(YR = ifelse(MO &amp;gt; 12, MO,as.numeric(&amp;quot;NA&amp;quot;))) %&amp;gt;% # make an empty column to fill later
-    filter(notes == &amp;quot;not_summary&amp;quot;) %&amp;gt;% # remove annual summary for each subbasin
-    select(-notes) %&amp;gt;% # remove it to keep it tidy
-    select(FILE:MO, YR, AREAkm2:WTMPdegc) # rearrange columns
-  
-  # for loop to set year
-  str=1
-  end=num_per_month
-  for (i in 1:length(simulation_years)) {
-    monthly_rch_raw_data_temp$YR[str:end] = rep(simulation_years[i], num_per_month)
-    str=end+1
-    end=str+num_per_month-1
-  }
-  
-  # return output
-  return(monthly_rch_raw_data_temp)
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;So now it will just take two lines of code to read in our monthly SWAT &lt;code&gt;output.rch&lt;/code&gt; file and tidy it up!&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;output_monthly_rch_raw_test &amp;lt;- read_table2(monthly_data_path, skip = 9, col_names = FALSE)
-
-output_monthly_rch_test &amp;lt;- tidy_monthly_rch_file(output_monthly_rch_raw_test)
-
-head(output_monthly_rch_test, n = 5)
-## # A tibble: 5 x 52
-##   FILE    RCH   GIS    MO    YR AREAkm2 FLOW_INcms FLOW_OUTcms EVAPcms
-##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
-## 1 REACH     1     0     1  1982    808        3.82        3.91 1.46e-2
-## 2 REACH     2     0     1  1982   3187       20.0        20.2  5.53e-2
-## 3 REACH     3     0     1  1982   2238       15.5        15.9  4.35e-2
-## 4 REACH     4     0     1  1982   4365       25.5        25.4  8.00e-2
-## 5 REACH     5     0     1  1982    625.       8.99        8.99 3.74e-5
-## # ... with 43 more variables: TLOSScms &amp;lt;dbl&amp;gt;, SED_INtons &amp;lt;dbl&amp;gt;,
-## #   SED_OUTtons &amp;lt;dbl&amp;gt;, SEDCONCmg_kg &amp;lt;dbl&amp;gt;, ORGN_INkg &amp;lt;dbl&amp;gt;,
-## #   ORGN_OUTkg &amp;lt;dbl&amp;gt;, ORGP_INkg &amp;lt;dbl&amp;gt;, ORGP_OUTkg &amp;lt;dbl&amp;gt;, NO3_INkg &amp;lt;dbl&amp;gt;,
-## #   NO3_OUTkg &amp;lt;dbl&amp;gt;, NH4_INkg &amp;lt;dbl&amp;gt;, NH4_OUTkg &amp;lt;dbl&amp;gt;, NO2_INkg &amp;lt;dbl&amp;gt;,
-## #   NO2_OUTkg &amp;lt;dbl&amp;gt;, MINP_INkg &amp;lt;dbl&amp;gt;, MINP_OUTkg &amp;lt;dbl&amp;gt;, CHLA_INkg &amp;lt;dbl&amp;gt;,
-## #   CHLA_OUTkg &amp;lt;dbl&amp;gt;, CBOD_INkg &amp;lt;dbl&amp;gt;, CBOD_OUTkg &amp;lt;dbl&amp;gt;, DISOX_INkg &amp;lt;dbl&amp;gt;,
-## #   DISOX_OUTkg &amp;lt;dbl&amp;gt;, SOLPST_INmg &amp;lt;dbl&amp;gt;, SOLPST_OUTmg &amp;lt;dbl&amp;gt;,
-## #   SORPST_INmg &amp;lt;dbl&amp;gt;, SORPST_OUTmg &amp;lt;dbl&amp;gt;, REACTPSTmg &amp;lt;dbl&amp;gt;,
-## #   VOLPSTmg &amp;lt;dbl&amp;gt;, SETTLPSTmg &amp;lt;dbl&amp;gt;, RESUSP_PSTmg &amp;lt;dbl&amp;gt;,
-## #   DIFFUSEPSTmg &amp;lt;dbl&amp;gt;, REACBEDPSTmg &amp;lt;dbl&amp;gt;, BURYPSTmg &amp;lt;dbl&amp;gt;,
-## #   BED_PSTmg &amp;lt;dbl&amp;gt;, BACTP_OUTct &amp;lt;dbl&amp;gt;, BACTLP_OUTct &amp;lt;dbl&amp;gt;,
-## #   CMETALnumkg &amp;lt;dbl&amp;gt;, CMETALnum2kg &amp;lt;dbl&amp;gt;, CMETALnum3kg &amp;lt;dbl&amp;gt;,
-## #   TOTNkg &amp;lt;dbl&amp;gt;, TOTPkg &amp;lt;dbl&amp;gt;, NO3ConcMg_l &amp;lt;dbl&amp;gt;, WTMPdegc &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now can use &lt;code&gt;output_monthly_rch_test&lt;/code&gt; for some downstream data analysis. Let’s first plot the range in SWAT predicted monthly discharge just at the outlet (i.e., subbasin number 28) versus the simulation year.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# select outlet data
-outlet_monthly_data &amp;lt;- output_monthly_rch_test %&amp;gt;% 
-  filter(RCH == 28)
-
-# plot
-ggplot(data = outlet_monthly_data, mapping = aes(x = as.factor(YR), y = FLOW_OUTcms)) +
-  geom_boxplot() +
-  geom_jitter(alpha = 0.25, width = 0.1) +
-  xlab(&amp;quot;Year&amp;quot;) +
-  ylab(&amp;quot;Monthly Discharge (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%201-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Next, let’s plot the monthly discharge all subbasins versus simulation year.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = output_monthly_rch_test,
-       mapping = aes(x = as.factor(YR), y = FLOW_OUTcms, color = as.factor(RCH))) +
-  geom_jitter(alpha = 0.25, width = 0.1) +
-  facet_wrap(~RCH, ncol = 7) +
-  xlab(&amp;quot;Year&amp;quot;) +
-  ylab(&amp;quot;Monthly Discharge (cms)&amp;quot;) +
-  scale_color_discrete(name = &amp;quot;Subbasin ID&amp;quot;) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%202-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Last, we’ll plot the range of monthly discharge for all subbasins versus month.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = output_monthly_rch_test, mapping = aes(x = as.factor(MO), y = FLOW_OUTcms)) +
-  geom_boxplot() +
-  geom_jitter(alpha = 0.25, width = 0.1) +
-  xlab(&amp;quot;Month&amp;quot;) +
-  ylab(&amp;quot;Monthly Discharge (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%203-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;I think using R to tidy up SWAT outputs is a great way to introduce principles of reproducible to your hydrology data analysis workflows. You can do this by saving the functions above in scripts. If you want to take it a step further you can save the functions to their own R script; where the name of the script is the same as the function name. For example, the code for the &lt;code&gt;tidy_daily_rch_file()&lt;/code&gt; function should be saved to &lt;code&gt;tidy_daily_rch_file.R&lt;/code&gt;. You can then load this file into your workspace using &lt;code&gt;load(&amp;quot;...tidy_daily_rch_file.R&amp;quot;)&lt;/code&gt; and use it after loading.&lt;/li&gt;
-&lt;li&gt;When tidying up the monthly SWAT outputs, I used a for loop but I’m sure there are other more efficient ways of doing this. Maybe using &lt;code&gt;tidyr::fill()&lt;/code&gt; or &lt;code&gt;purrr::map()&lt;/code&gt;? I’ll keep working on this.&lt;/li&gt;
-&lt;li&gt;Above, I mentioned saving the yearly summary data in a separate data frame and running QA/QC on this with the newly tidied monthly data. This is something I’d like to do eventually.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;P.S.&lt;/strong&gt; Please feel free to use the functions above for your own SWAT output tidying and analysis! Please contact me on &lt;a href=&#34;https://twitter.com/sheilasaia?lang=en&#34;&gt;Twitter&lt;/a&gt; or any other method &lt;a href=&#34;https://sheilasaia.rbind.io/&#34;&gt;here&lt;/a&gt; if you find any mistakes, have suggestions, or know of any other SWAT data analysis resources for R.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Applying Climate Change Risk Management Tools to Combine Social Vulnerability and Future Streamflow Projections</title>
-      <link>/talk/fer-oct2018/</link>
-      <pubDate>Mon, 08 Oct 2018 00:00:00 -0400</pubDate>
-      
-      <guid>/talk/fer-oct2018/</guid>
-      <description>
-
-&lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
-
-&lt;p&gt;General Circulation Models (GCMs) project an increase in the frequency and magnitude of storm events in the Southeastern United States over the next several decades. Additionally, urban development in this region is expected to double by 2060. Communities unable to mitigate and adapt to climate- and land use-change induced impacts on water resources may experience adverse social and economic impacts. Hydrologic model outputs, such as those from the Soil and Water Assessment Tool (SWAT), are helpful at predicting changing hydrologic processes but do not directly incorporate community demographics that are required to assess vulnerability. Therefore, there is a need to couple hydrologic model outputs with socioeconomic data to identify vulnerable communities and support associated climate change adaptation planning efforts. To address these needs, we use a risk matrix framework to couple changes in SWAT simulated streamflow from 1992-2002 (baseline) to 2050-2070 (GCM scenario projections) with census tract social vulnerability index (SoVI) estimates derived from 2010-2014 American Community Survey (ACS) data for the Upper Yadkin-Pee Dee (UYPD) Watershed in North Carolina, USA. To evaluate our results, we compare the spatial distribution of subbasins in urgent need of climate change adaptation planning based on three approaches using: SWAT results only, SoVI results only, and the spatial intersection of SWAT and SoVI results using the risk matrix framework. 10-yr and extreme events increased and were more variable between the baseline and projection SWAT streamflow datasets with especially large increases in the middle and lower parts of the YPD. Socially vulnerable communities were heterogeneously distributed throughout the YPD. The spatial intersection of SWAT and SoVI results integrated biophysical and socioeconomic factors and can be used to inform the first of several steps (i.e., community surveying, stakeholder visioning, and action taking) associated with effective climate change adaptation planning.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Using tibbletime::rollify with USGS Streamgage Data</title>
-      <link>/post/2018-08-04-usgs-rollify/</link>
-      <pubDate>Wed, 05 Sep 2018 21:12:00 -0500</pubDate>
-      
-      <guid>/post/2018-08-04-usgs-rollify/</guid>
-      <description>
-
-
-&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Background&lt;/h1&gt;
-&lt;p&gt;While attending rstudio::conf 2018, I heard about the &lt;a href=&#34;https://cran.r-project.org/web/packages/tibbletime/tibbletime.pdf&#34;&gt;tibbletime package&lt;/a&gt; developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his &lt;a href=&#34;https://resources.rstudio.com/rstudio-conf-2018/the-future-of-time-series-and-financial-analysis-in-the-tidyverse-davis-vaughan&#34;&gt;conference talk&lt;/a&gt;, Davis Vaughan presented several business/finance examples to showcase &lt;code&gt;tibbletime&lt;/code&gt;’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data. I really liked &lt;code&gt;rollify()&lt;/code&gt;, which could be used to create and apply custom moving-window functions (e.g., &lt;code&gt;mean()&lt;/code&gt;) to time series data; where the size of the window (e.g., 3 days) could also be specified. I was aware of the &lt;code&gt;movingAve()&lt;/code&gt; and &lt;code&gt;movingDiff()&lt;/code&gt; functions in the &lt;a href=&#34;https://pubs.usgs.gov/of/2015/1202/downloads/appendix1.pdf&#34;&gt;smwrBase package&lt;/a&gt; developed by the U.S. Geological Survey (USGS), which calculate moving average and difference, respectively. However, &lt;code&gt;rollify()&lt;/code&gt; has more flexibility; it can be used to take a rolling standard deviation, a rolling ratio of two build in R functions, or a rolling custom function. The possibilities are endless.&lt;/p&gt;
-&lt;p&gt;Shortly after the conference, I also heard about the &lt;a href=&#34;https://cran.r-project.org/web/packages/dataRetrieval/dataRetrieval.pdf&#34;&gt;dataRetrieval package&lt;/a&gt; developed by the USGS from my friend, Dr. Kristina Hopkins. This package allows users to import USGS streamflow data (and any other data associated with &lt;a href=&#34;https://water.usgs.gov/nsip/definition9.html&#34;&gt;USGS streamgages&lt;/a&gt;) directly into R. Very exciting!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;goals-of-this-post&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Goals of this Post&lt;/h1&gt;
-&lt;p&gt;This all sounded so amazing and I had to try it out, which brings me to the goals of this blog post:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Use the &lt;code&gt;dataRetrieval&lt;/code&gt; package to download streamflow data into R for two USGS streamgages&lt;/li&gt;
-&lt;li&gt;Use the &lt;code&gt;tibbletime&lt;/code&gt; package (along with other &lt;code&gt;tidyverse&lt;/code&gt; packages) to aggregate and plot these data for different time periods&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Special thanks to &lt;a href=&#34;https://twitter.com/kghopkin?lang=en&#34;&gt;Dr. Kristina Hopkins&lt;/a&gt; at the USGS in Raleigh, NC for sharing her &lt;code&gt;dataRetrieval&lt;/code&gt; code and to &lt;a href=&#34;https://www.usgs.gov/staff-profiles/laura-decicco?qt-staff_profile_science_products=3#qt-staff_profile_science_products&#34;&gt;Dr. Laura DeCicco&lt;/a&gt; at the USGS in Middleton, WI for pointing out key features of the &lt;code&gt;dataRetrieval&lt;/code&gt; package!&lt;/p&gt;
-&lt;p&gt;First let’s load the R libraries that we’ll need to run the code in this post.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
-library(lubridate)
-library(tibbletime)
-library(dataRetrieval)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Before downloading data, you’ll have to specify a desired date range and look up the USGS streamgage identification number(s) for streamgage(s) of interest.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# define start and end dates
-start_date &amp;lt;- &amp;quot;2017-01-01&amp;quot;
-end_date &amp;lt;- &amp;quot;2018-01-01&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You’ll also need to specify the parameter code for the data you want to download (e.g., discharge, stage height, etc.). But how do we know what the parameter code is for our favorite data? The USFS have included a look-up table for that! To figure this out, we can save &lt;code&gt;parameterCdFile&lt;/code&gt; to a variable named &lt;code&gt;parameter_code_metadata&lt;/code&gt; and &lt;code&gt;View(parameter_code_metadata)&lt;/code&gt; it to see the parameter code look-up table in RStudio. We can even search through different columns of these data by clicking on the ‘Filter’ funnel icon in the RStudio &lt;code&gt;View()&lt;/code&gt; window.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# look for parameters you want
-parameter_code_metadata &amp;lt;- parameterCdFile
-
-# after some looking around, we see that we want code &amp;quot;00060&amp;quot; for discharge in cubic feet per second (cfs)
-my_parameter_code &amp;lt;- &amp;quot;00060&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;After looking through the table, I figured out that 00060 is the code for discharge in cubic feet per second (cfs). We can save this to the variable &lt;code&gt;my_parameter_code&lt;/code&gt;, which leaves one last step…&lt;/p&gt;
-&lt;p&gt;We have to decide which streamgage to choose! If you’d rather do this manually/look at a map, you can you can go to the USGS &lt;a href=&#34;https://waterdata.usgs.gov/nwis/inventory&#34;&gt;Water of the Nation website&lt;/a&gt; and use their mapping tool to look up sites visually. Alternatively, you can use the look-up tables in the &lt;code&gt;dataRetrieval&lt;/code&gt; package to do this in R.&lt;/p&gt;
-&lt;p&gt;Let’s say we want to see all the sites in North Carolina. We can save the output from the &lt;code&gt;whatNWISsites()&lt;/code&gt; function to the variable &lt;code&gt;nc_sites&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nc_sites &amp;lt;- whatNWISsites(stateCd = &amp;quot;NC&amp;quot;, parameterCD = &amp;quot;00060&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Just like we did for the parameter code, we can use ‘Filter’ funnel icon in the RStudio &lt;code&gt;View()&lt;/code&gt; window to look for sites that might be interesting to us. I looked for ‘Eno River’ sites and discovered two that I’ll use here: Eno River at Hillsborough, NC (#02085000) and Eno River at Durham, NC (#02085070). The Hillsborough site is upstream of Durham and is surrounded by less urban development.&lt;/p&gt;
-&lt;p&gt;Note: If you want to search what data is available (e.g., period of record, available parameters, etc.) you can use &lt;code&gt;whatNWISdata()&lt;/code&gt;. See &lt;code&gt;?whatNWISdata&lt;/code&gt; for help on how to use this. For ease of use (and because Dr. Kristina Hopkins shared them with me! Thank you!), the service codes include: “dv” for daily data, “iv” for instantaneuos data, “qw” for water quality data, “sv” for site visit data, “pk” for peak measurement data, and “gw” for groundwater data.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# define sites (you can also just use one site here)
-site_numbers &amp;lt;- c(&amp;quot;02085070&amp;quot;, &amp;quot;02085000&amp;quot;)
-
-# save site info to a variable so we can look at it later
-site_info &amp;lt;- readNWISsite(site_numbers)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now we’re ready to download discharge data for these two sites!&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;discharge_raw &amp;lt;- readNWISuv(site_numbers, 
-                            my_parameter_code, 
-                            tz=&amp;#39;America/Jamaica&amp;#39;, 
-                            start_date, end_date)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let’s tidy thse data up a bit. We’ll change some of the column names so they make more sense later to us, add a column with the site name, and select only the most important columns. If you are using this for something more formal, you will want to do some QA/QC by checking out the discharge_code column. You can read more about what these codes mean &lt;a href=&#34;https://help.waterdata.usgs.gov/output-formats&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;discharge = discharge_raw %&amp;gt;%
-  select(site_number = site_no, 
-         date_time = dateTime,
-         discharge_cfs = X_00060_00000,
-         discharge_code = X_00060_00000_cd,
-         time_zone = tz_cd) %&amp;gt;%
-  mutate(site_name = case_when(
-    site_number == &amp;quot;02085000&amp;quot; ~ &amp;quot;eno_rv_hillsb&amp;quot;,
-    site_number == &amp;quot;02085070&amp;quot; ~ &amp;quot;eno_rv_durham&amp;quot;)) %&amp;gt;%
-  select(site_name, date_time, discharge_cfs)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Using &lt;code&gt;head()&lt;/code&gt;, we see that we’ve downloaded 15-min intervals of streamflow data for both sites.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(discharge, n = 10)
-##        site_name           date_time discharge_cfs
-## 1  eno_rv_hillsb 2017-01-01 00:00:00          9.68
-## 2  eno_rv_hillsb 2017-01-01 00:15:00          9.68
-## 3  eno_rv_hillsb 2017-01-01 00:30:00          9.68
-## 4  eno_rv_hillsb 2017-01-01 00:45:00          9.68
-## 5  eno_rv_hillsb 2017-01-01 01:00:00          9.68
-## 6  eno_rv_hillsb 2017-01-01 01:15:00          9.68
-## 7  eno_rv_hillsb 2017-01-01 01:30:00          9.32
-## 8  eno_rv_hillsb 2017-01-01 01:45:00          9.32
-## 9  eno_rv_hillsb 2017-01-01 02:00:00          9.32
-## 10 eno_rv_hillsb 2017-01-01 02:15:00          9.32&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let’s say we need daily discharge data to calibrate a hydrology model. We can aggregate the 15-min data to daily data pretty easily using &lt;code&gt;tidyverse&lt;/code&gt; functions.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;discharge_daily &amp;lt;- discharge %&amp;gt;%
-  mutate(year = year(date_time), 
-         month = month(date_time),
-         day = day(date_time)) %&amp;gt;%
-  mutate(date = ymd(paste0(year, &amp;quot;-&amp;quot;, month, &amp;quot;-&amp;quot;, day))) %&amp;gt;%
-  select(site_name, date, discharge_cfs) %&amp;gt;%
-  group_by(site_name, date) %&amp;gt;%
-  summarize(avg_daily_discharge_cfs = mean(discharge_cfs))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now let’s try plotting the daily hydrograph (i.e., average daily discharge vs time) for both sites.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = discharge_daily) +
-  geom_line(aes(x = date, y = avg_daily_discharge_cfs, color = site_name)) +
-  facet_wrap(~site_name, nrow = 2, ncol = 1) +
-  ylab(&amp;quot;Average Daily Discharge (cfs)&amp;quot;) +
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.line = element_line(colour = &amp;quot;black&amp;quot;),
-        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-08-04-usgs-rollify_files/figure-html/plotting%20daily%20data-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;As expected, we see that the two sites mimic one another over this one year time period. Remember, the Eno River at Hillsborough site is upstream of the Eno River at Durham site. We also see that the Eno River at Durham site (top, red line) has some higher peaks than the Eno River at Hillborough site (bottom, teal line). This also makes sense since the Durham site is surrounded by more urbanized land than the Hillsborough site.&lt;/p&gt;
-&lt;p&gt;Ok, so let’s get back to the &lt;code&gt;tibbletime&lt;/code&gt; package. What if we want to compare different time spans? That is, not just daily, but maybe hourly or half day. First we have to define our rolling functions and their associated time spans.&lt;/p&gt;
-&lt;p&gt;For this post, let’s create half hour, hourly, half day, and day rolls.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean_roll_30min &amp;lt;- rollify(mean, window = 2)
-mean_roll_1hr &amp;lt;- rollify(mean, window = 4)
-mean_roll_12hr &amp;lt;- rollify(mean, window = 48)
-mean_roll_1d &amp;lt;- rollify(mean, window = 96)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In this post we’ll focus on using the mean in our rolling functions but I can think of several other functions that might be useful for streamgage data lovers: difference, standard deviation, or maybe even the ratio between two calculations. You could even write your own function and roll that. Pretty flexible, right?&lt;/p&gt;
-&lt;p&gt;After you you write the function &lt;code&gt;my_roll_function &amp;lt;- rollify(&amp;lt;function&amp;gt;, window = &amp;lt;row span&amp;gt;)&lt;/code&gt; then you can call &lt;code&gt;my_roll_function(&amp;lt;original data column&amp;gt;)&lt;/code&gt; in &lt;code&gt;mutate()&lt;/code&gt; to create a new column. Depending on the function you’re using, you could maybe even do a nested roll based on a previous column you created. This seems helpful if you’re taking differences or summations across different time scales.&lt;/p&gt;
-&lt;p&gt;Let’s roll (our data)! :D&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;discharge_roll &amp;lt;- discharge %&amp;gt;%
-  group_by(site_name) %&amp;gt;%
-  mutate(
-    halfhr_avg_discharge_cfs = mean_roll_30min(discharge_cfs),
-    hourly_avg_discharge_cfs = mean_roll_1hr(discharge_cfs),
-    twelvehr_avg_discharge_cfs = mean_roll_12hr(discharge_cfs), 
-    daily_avg_discharge_cfs = mean_roll_1d(discharge_cfs)) %&amp;gt;%
-  na.omit()
-
-# use na.omit() to delete some of the first cells in the dataframe that are NA&amp;#39;s due to rolling&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let’s look at these data.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(discharge_roll, n = 10) 
-## # A tibble: 10 x 7
-## # Groups:   site_name [1]
-##    site_name date_time           discharge_cfs halfhr_avg_disc…
-##    &amp;lt;chr&amp;gt;     &amp;lt;dttm&amp;gt;                      &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
-##  1 eno_rv_h… 2017-01-01 23:45:00          12.1             12.1
-##  2 eno_rv_h… 2017-01-02 00:00:00          12.1             12.1
-##  3 eno_rv_h… 2017-01-02 00:15:00          11.6             11.8
-##  4 eno_rv_h… 2017-01-02 00:30:00          11.6             11.6
-##  5 eno_rv_h… 2017-01-02 00:45:00          11.6             11.6
-##  6 eno_rv_h… 2017-01-02 01:00:00          12.1             11.8
-##  7 eno_rv_h… 2017-01-02 01:15:00          12.1             12.1
-##  8 eno_rv_h… 2017-01-02 01:30:00          12.1             12.1
-##  9 eno_rv_h… 2017-01-02 01:45:00          12.1             12.1
-## 10 eno_rv_h… 2017-01-02 02:00:00          12.5             12.3
-## # … with 3 more variables: hourly_avg_discharge_cfs &amp;lt;dbl&amp;gt;,
-## #   twelvehr_avg_discharge_cfs &amp;lt;dbl&amp;gt;, daily_avg_discharge_cfs &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The dataframe has maintained it’s length (except for the NA columns at the top we deleted using &lt;code&gt;na.omit()&lt;/code&gt;) and there are four new columns with aggregations of discharge at the time scales we specified in our rolling functions.&lt;/p&gt;
-&lt;p&gt;We can plot this as a hydrograph as we did above or we can also plot each aggregation period against the original 15-min data to see how they compare. Let’s show the latter.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;my_colors &amp;lt;- c(&amp;quot;a_half_hour&amp;quot; = &amp;quot;grey20&amp;quot;, &amp;quot;b_hour&amp;quot; = &amp;quot;grey40&amp;quot;, &amp;quot;c_half_day&amp;quot; = &amp;quot;grey60&amp;quot;, &amp;quot;d_day&amp;quot; = &amp;quot;grey80&amp;quot;)
-
-ggplot(data = discharge_roll) +
-  geom_point(aes(x = discharge_cfs,y = halfhr_avg_discharge_cfs, color = &amp;quot;a_half_hour&amp;quot;), size = 1) +
-  geom_point(aes(x = discharge_cfs, y = hourly_avg_discharge_cfs, color = &amp;quot;b_hour&amp;quot;), size = 1) +
-  geom_point(aes(x = discharge_cfs, y = twelvehr_avg_discharge_cfs, color = &amp;quot;c_half_day&amp;quot;), size = 1) +
-  geom_point(aes(x = discharge_cfs, y = daily_avg_discharge_cfs, color = &amp;quot;d_day&amp;quot;), size = 1) +
-  facet_wrap(~ site_name, ncol = 1, nrow = 2) +
-  scale_color_manual(name = &amp;quot;Time Scale&amp;quot;, values = my_colors) +
-  xlab(&amp;quot;15-min Dicharge (cfs)&amp;quot;) +
-  ylab(&amp;quot;Aggregated Discharge (cfs)&amp;quot;) +
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        panel.background = element_blank(), axis.line = element_line(colour = &amp;quot;black&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-08-04-usgs-rollify_files/figure-html/plot%20results-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;There are some interesting patterns that (I think) are worth pointing out:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Based on the daily hydrograph we plotted above, the Eno River at Durham (top) data set has higher peak events. This was expected given the daily hydrograph we plotted above. We see that discharge values go up to over 10,000 cfs at the Eno River at Durham site whereas for the Eno River at Hillsborough they only go up to about 5,000 cfs.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;I thought it was interesting that the half hour and hourly data sets match the 15-min time scale closely; we see the points follow the 1:1 line for both. However, the half day and daily data show dampened responses with lower peaks and skew away from the 1:1 line. This dampening wasn’t completely surprising to me but it made me wonder how this would impact downstream applications of daily streamflow data. Is this dampening represented by a linear or non-linear relationship? Is this relationship a function of watershed properties or near gage properties. Lot’s of questions like this come to mind. Most of which deal with being able to account for and maybe even predict this dampening.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The last thing that I wanted to point out was the spiraling nature of these figures. The more we aggregate these data, the more it seems to spiral into the origin at zero. Also, it’s interesting to compare the overlap of time scale spirals (i.e., half day and daily) between the two gages. More specifically, we see that one ring of the half day and daily spirals overlap for the Eno River at Hillsborough site but we don’t see this overlap at the Eno River at Durham site. I wonder why? Is it because urban development has caused a little more disconnection between water stored in the landscape for the Eno River at Durham site? Do antecedent moisture conditions play a larger role in future stream response in the less developed Eno River at Hillsborough site?&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;There are still so many questions floating around in my head but figuring out how to integrate the &lt;code&gt;tibbletime&lt;/code&gt; and &lt;code&gt;dataRetrieval&lt;/code&gt; packages has been fun! If you know of any publications that address these questions or just want to say &lt;code&gt;Hi!&lt;/code&gt;, please let me know &lt;a href=&#34;https://twitter.com/sheilasaia?lang=en&#34;&gt;via Twitter&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-</description>
     </item>
     
   </channel>

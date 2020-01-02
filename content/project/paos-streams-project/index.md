@@ -3,7 +3,7 @@
 title = "Phosphorus Cycling in Stream Biofilms"
 
 # Date this page was created.
-date = 2018-07-22T00:00:00
+date = 2017-05-31T00:00:00
 
 # Project summary to display on homepage.
 summary = "Lab study measuring the impact of alternating anaerobic/aerobic conditions on stream biofilms."
