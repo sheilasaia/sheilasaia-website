@@ -34,7 +34,7 @@ JS Rice, JM Vose, and RE Emanuel
 2019-2020
 
 # Project Goal
-The goal of this project was to use machine learning models for two applications in hydrology. First, we used a hierarchical machine learning ensemble model to predict streamflow and then assessed model sensitivies to learn how changes in the amount and location of land cover at specific places in the watershed would influence (i.e., increase or decrease) streamflow. Second, we used deep neural networks to convert downscaled, gridded General Circulation Model (GCM) hydroclimatic fluxes to watershed-scale runoff for over 2,700 watersheds across the conterminous United States.
+The goal of this project was to use machine learning models for two applications in hydrology. First, we used a hierarchical machine learning ensemble model to predict streamflow. Then, we assessed model sensitivies to learn how changes in the percentage of different types of land cover in specific places in the watershed influenced (i.e., increase or decrease) streamflow. Second, we trained and tested a deep neural network (DNN) to convert downscaled, gridded General Circulation Model (GCM) hydroclimatic fluxes to watershed-scale runoff for over 2,700 watersheds across the conterminous United States. We also compared DNN performance to several other emperical grid-to-watershed-scale conversion methods.
 
 # Project Links
 - [Deep Neural Network preprint](https://eartharxiv.org/awqjg/)
