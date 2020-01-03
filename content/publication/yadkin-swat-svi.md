@@ -36,7 +36,7 @@ selected = false
 projects = ["nc-sociohydro-project"]
 
 # Links (optional).
-url_pdf = "https://link.springer.com/article/10.1007/s10021-019-00387-5"
+url_pdf = "https://www.fs.usda.gov/treesearch/pubs/58292"
 url_preprint = ""
 url_code = ""
 url_dataset = "https://github.com/sheilasaia/paper-yadkin-swat-svi-study"
