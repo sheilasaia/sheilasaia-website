@@ -30,11 +30,11 @@ A preprint refers to a research product (typically a research article) that is m
 
 Some preprint servers such as European Geophysical Union (EGU) sponsored [Hydrology and Earth Systems Science (HESS) Discussions](https://www.hydrol-earth-syst-sci-discuss.net/discussion_papers.html) is affiliated with EGU’s HESS journal. Additionally, the American Geophysical Union (AGU) sponsored Earth and Space Science Open Archive (ESSOAr) preprint server is associated with AGU-affiliated journals. These journal-supported preprint servers offer a convenient publishing pipeline should the author’s work be accepted after peer review. 
 
-Other preprint servers are not affiliated with a particular journal (e.g., [EarthArXiv](https://eartharxiv.org/), and [bioRxiv](https://www.biorxiv.org/). If an authors’ article is accepted for publication to a partner journal, these servers may offer transfer services for authors. For example, the bioRxiv offers transfer services to several journals including Applied and Environmental Microbiology (see details [here](https://www.biorxiv.org/about-biorxiv)). Preprint servers are typically not-for-profit (e.g., arXiv, bioRxiv, EarthArXiv); it is always good to check a preprint server’s not-for-profit status before submitting a preprint. See the ‘Things to Consider before Sharing a Preprint’ discussion below for more information.
+Other preprint servers are not affiliated with a particular journal (e.g., [EarthArXiv](https://eartharxiv.org/), and [bioRxiv](https://www.biorxiv.org/)). If an authors’ article is accepted for publication to a partner journal, these servers may offer transfer services for authors. For example, the bioRxiv offers transfer services to several journals including Applied and Environmental Microbiology (see details [here](https://www.biorxiv.org/about-biorxiv)). Preprint servers are typically not-for-profit (e.g., arXiv, bioRxiv, EarthArXiv); it is always good to check a preprint server’s not-for-profit status before submitting a preprint. See the ‘Things to Consider before Sharing a Preprint’ discussion below for more information.
 
 # Advantages:
 
-- Depending on the preprints server, authors may be given a digital object identifier (DOI) number that can be used to cite their work. Also, the preprint server manages the storage and versions of the preprint free of charge. The DOI allows others to cite, and ultimately, give authors credit for their ideas and work.
+- Depending on the preprint server, authors may be given a digital object identifier (DOI) number that can be used to cite their work. Also, the preprint server manages the storage and versions of the preprint free of charge. The DOI allows others to cite, and ultimately, give authors credit for their ideas and work.
 
 - The preprint (and eventually a postprint, if accepted by a journal) can be shared more broadly. This is especially true of the final publication, since a journal subscription is not required.
 
@@ -42,7 +42,7 @@ Other preprint servers are not affiliated with a particular journal (e.g., [Eart
 
 - Preprint servers enable discussions between authors and interested parties. Readers can contribute to and look through these discussions via preprint server commenting features and direct communication with authors.
 
-- Posting a preprint allows author share so-called ‘negative results’, which may improve future studies and conserving future time and funding resources (van Emmerik et al. 2018)
+- Posting a preprint allows author to share so-called ‘negative results’, which may improve future studies and conserve future time and funding resources (van Emmerik et al. 2018)
 
 - Preprints may help streamline collaborations by avoiding or improving studies in different locations that address similar research goals.
 
@@ -56,11 +56,11 @@ Other preprint servers are not affiliated with a particular journal (e.g., [Eart
 
 # Disadvantages:
 
-- The discussion of preprint disadvantages largely centers around the fact that preprints are not validated by peer review (Kaiser 2017b). Researchers can make claims, that may be cited by others, without valid data supporting those claims. This may become especially problematic at the interface of science and the general public, especially if the general public and media representatives do not understand that the preprint is not peer reviewed.
+- The discussion of preprint disadvantages largely centers around the fact that preprints are not validated by peer review (Kaiser 2017b). Researchers can make claims, which may be cited by others, without valid data supporting those claims. This may become especially problematic at the interface of science and the general public, especially if the general public and media representatives do not understand that the preprint is not peer reviewed.
 
 - Another common criticism of preprints centers around fear of being “scooped”—when an author’s work is stolen before it can be published. [On the other hand, authors of preprints have a DOI. Also, some journals have announced “scooping protection” (Kaiser 2017b).]
 
-- Researchers that post preprints need to do their homework before making their work public. See the ‘Things to Consider before Sharing a Preprint’ discussion below. Most notably, it is important that authors know what their journal-of-choice’s preprint policies are in terms of accepting preprints, type of preprint licenses, and preprint server funding structures (i.e., non-for-profit) that are allowed.
+- Researchers that post preprints need to do their homework before making their work public. See the ‘Things to Consider before Sharing a Preprint’ discussion below. Most notably, it is important that authors know what their journal-of-choice’s preprint policies are in terms of accepting preprints, type of preprint licenses, and preprint server funding structures (i.e., not-for-profit) that are allowed.
 
 # Things to Consider Before Sharing a Preprint
 
