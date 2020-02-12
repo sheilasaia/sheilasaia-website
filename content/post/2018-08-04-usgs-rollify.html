@@ -120,20 +120,20 @@ mean_roll_1d &lt;- rollify(mean, window = 96)</code></pre>
 <pre class="r"><code>head(discharge_roll, n = 10) 
 ## # A tibble: 10 x 7
 ## # Groups:   site_name [1]
-##    site_name date_time           discharge_cfs halfhr_avg_disc…
-##    &lt;chr&gt;     &lt;dttm&gt;                      &lt;dbl&gt;            &lt;dbl&gt;
-##  1 eno_rv_h… 2017-01-01 23:45:00          12.1             12.1
-##  2 eno_rv_h… 2017-01-02 00:00:00          12.1             12.1
-##  3 eno_rv_h… 2017-01-02 00:15:00          11.6             11.8
-##  4 eno_rv_h… 2017-01-02 00:30:00          11.6             11.6
-##  5 eno_rv_h… 2017-01-02 00:45:00          11.6             11.6
-##  6 eno_rv_h… 2017-01-02 01:00:00          12.1             11.8
-##  7 eno_rv_h… 2017-01-02 01:15:00          12.1             12.1
-##  8 eno_rv_h… 2017-01-02 01:30:00          12.1             12.1
-##  9 eno_rv_h… 2017-01-02 01:45:00          12.1             12.1
-## 10 eno_rv_h… 2017-01-02 02:00:00          12.5             12.3
-## # … with 3 more variables: hourly_avg_discharge_cfs &lt;dbl&gt;,
-## #   twelvehr_avg_discharge_cfs &lt;dbl&gt;, daily_avg_discharge_cfs &lt;dbl&gt;</code></pre>
+##    site_name date_time           discharge_cfs halfhr_avg_disc… hourly_avg_disc…
+##    &lt;chr&gt;     &lt;dttm&gt;                      &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+##  1 eno_rv_h… 2017-01-01 23:45:00          12.1             12.1             12.1
+##  2 eno_rv_h… 2017-01-02 00:00:00          12.1             12.1             12.1
+##  3 eno_rv_h… 2017-01-02 00:15:00          11.6             11.8             12.0
+##  4 eno_rv_h… 2017-01-02 00:30:00          11.6             11.6             11.8
+##  5 eno_rv_h… 2017-01-02 00:45:00          11.6             11.6             11.7
+##  6 eno_rv_h… 2017-01-02 01:00:00          12.1             11.8             11.7
+##  7 eno_rv_h… 2017-01-02 01:15:00          12.1             12.1             11.8
+##  8 eno_rv_h… 2017-01-02 01:30:00          12.1             12.1             12.0
+##  9 eno_rv_h… 2017-01-02 01:45:00          12.1             12.1             12.1
+## 10 eno_rv_h… 2017-01-02 02:00:00          12.5             12.3             12.2
+## # … with 2 more variables: twelvehr_avg_discharge_cfs &lt;dbl&gt;,
+## #   daily_avg_discharge_cfs &lt;dbl&gt;</code></pre>
 <p>The dataframe has maintained it’s length (except for the NA columns at the top we deleted using <code>na.omit()</code>) and there are four new columns with aggregations of discharge at the time scales we specified in our rolling functions.</p>
 <p>We can plot this as a hydrograph as we did above or we can also plot each aggregation period against the original 15-min data to see how they compare. Let’s show the latter.</p>
 <pre class="r"><code>my_colors &lt;- c(&quot;a_half_hour&quot; = &quot;grey20&quot;, &quot;b_hour&quot; = &quot;grey40&quot;, &quot;c_half_day&quot; = &quot;grey60&quot;, &quot;d_day&quot; = &quot;grey80&quot;)

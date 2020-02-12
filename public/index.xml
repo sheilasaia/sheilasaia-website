@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>  on  </title>
@@ -6,8 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Tue, 31 Dec 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0400</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Introduction to Data Management Plans for Researchers</title>
+      <link>/talk/ncsu_feb2020/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/ncsu_feb2020/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
+
+&lt;p&gt;Data management is an overlooked yet important research skill, especially since nearly all major federal funding agencies in the United States require researchers to include a data management plan along with their grant application. If you’re preparing a data management plan, looking for ways to improve an existing data management plan, or want to learn more about data management plans, this workshop is for you. Postdoctoral researcher, Sheila Saia, will lead workshop attendees through the basics of data management plans including: what they are, why they’re important, and their major components. Attendees will also gain hands-on experience in building a data management plan for their own research using the DMPTool (&lt;a href=&#34;https://dmptool.org/&#34; target=&#34;_blank&#34;&gt;https://dmptool.org/&lt;/a&gt;). At the end of the workshop, attendees will learn about general data management best practices that may help them take additional steps to more efficient and more reproducible research. Bring along your laptop or use one of the laptops available at the Libraries!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.lib.ncsu.edu/workshops/introduction-data-management-plans-researchers&#34; target=&#34;_blank&#34;&gt;Click here to view event information. &lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using R and Python to Map Vulnerable Communities and Future Streamflow</title>
+      <link>/talk/duke_feb2020/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/duke_feb2020/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
+
+&lt;p&gt;In this guest lecture for Geospatial Analysis for Conservation Management (ENV 761) at Duke University, I gave an overview of how and why I use R and Python for geospatial analysis. I highlighted my how I&amp;rsquo;ve used R and Python in some &lt;a href=&#34;https://sheilasaia.rbind.io/project/nc-sociohydro-project/&#34; target=&#34;_blank&#34;&gt;recent work&lt;/a&gt; in western North Carolina. Last, I led a discussion of a &lt;a href=&#34;https://www.fs.usda.gov/treesearch/pubs/58292&#34; target=&#34;_blank&#34;&gt;recenlty published paper&lt;/a&gt; associated with this work.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://nicholas.duke.edu/academics/courses/geospatial-analysis-conservation-management&#34; target=&#34;_blank&#34;&gt;Click here for background on the Geospatial Analysis for Conservation Management (ENV 761) course.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Improved Accuracy of Watershed-Scale General Circulation Model Runoff Using Deep Neural Networks</title>
@@ -263,9 +296,8 @@
 &lt;p&gt;In this example, let’s calculate the amount we can donate to offset the carbon dioxide emissions for a flight from Raleigh/Durham, NC (departure city) to Charlotte, NC (arrival city).&lt;/p&gt;
 &lt;p&gt;Let’s start by looking up airports with “Raleigh” in their name.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;airport_lookup(input = &amp;quot;Raleigh&amp;quot;, input_type = &amp;quot;name&amp;quot;, output_type = &amp;quot;IATA&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning in airport_lookup(input = &amp;quot;Raleigh&amp;quot;, input_type = &amp;quot;name&amp;quot;,
-## output_type = &amp;quot;IATA&amp;quot;): No exact matches but some similar names in the
-## database include:&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in airport_lookup(input = &amp;quot;Raleigh&amp;quot;, input_type = &amp;quot;name&amp;quot;, output_type =
+## &amp;quot;IATA&amp;quot;): No exact matches but some similar names in the database include:&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## General Ignacio P. Garcia International Airport
 ## Licenciado y General Ignacio Lopez Rayon Airport
 ## Rabigh Airport
@@ -410,7 +442,13 @@ my_year * slope + intercept&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;what-if-im-not-an-r-user&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;What if I’m not an R user?&lt;/h1&gt;
 &lt;p&gt;Here are some of the basic calculations you’d need to make if you are not an R user and want to calculate your carbon foot print for a flight you’re taking.&lt;/p&gt;
-&lt;p&gt;Steps:&lt;br/&gt; 1. Determine the mileage between your arrival and destination airports in miles (i.e., jot this down as variable &lt;code&gt;miles&lt;/code&gt;). Use a website like &lt;a href=&#34;https://www.airmilescalculator.com/&#34;&gt;this&lt;/a&gt;.&lt;br/&gt; 2. Decide how many people (i.e., jot this down as variable &lt;code&gt;num_people&lt;/code&gt;) are traveling and whether the trip is a round-trip or one way.&lt;br/&gt; 3. If a one-way trip, use the formula: &lt;code&gt;co2_emitted = miles x num_people x 0.24 x (1 / 2204.62) x 1.891&lt;/code&gt; to determine the metric tons of carbon dioxide emitted from your flight. Don’t forget the &lt;a href=&#34;https://www.mathsisfun.com/operation-order-pemdas.html&#34;&gt;order of operations&lt;/a&gt; here. ;) The variable &lt;code&gt;miles&lt;/code&gt; comes from step 1 and the variable &lt;code&gt;num_people&lt;/code&gt; comes from step 2. If round-trip, calculate &lt;code&gt;co2_emitted&lt;/code&gt; as mentioned previously and multiply this by 2 since you’re traveling to your destination and back.&lt;br/&gt; 4. Think about whether you view climate change as a short- or long-term goal. If you think of it based on short-term impacts only then choose the current year (i.e., jot this down as variable &lt;code&gt;year&lt;/code&gt; = 2019). However, if you are commited to addressing its more long-term impacts, you can choose any year up until 2050 (i.e. jot this down as variable &lt;code&gt;year&lt;/code&gt; = 2050). The closer to 2050 you choose, the larger your donation will be.&lt;br/&gt; 5. Calculate the cost of your offset (i.e., how much you’ll donate) using the formula: &lt;code&gt;cost = co2_emitted x (3.02 x year - 5986.1)&lt;/code&gt;. Remember your &lt;a href=&#34;https://www.mathsisfun.com/operation-order-pemdas.html&#34;&gt;order of operations&lt;/a&gt;. The variable &lt;code&gt;co2_emitted&lt;/code&gt; comes from step 3 and the variable &lt;code&gt;year&lt;/code&gt; comes from step 4.&lt;br/&gt; 6. Donate this amount (in US dollars) to your local climate change organization (e.g., one building solar panels, planting trees, or advocating for bicycle lanes).&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;Steps:&lt;br/&gt;
+1. Determine the mileage between your arrival and destination airports in miles (i.e., jot this down as variable &lt;code&gt;miles&lt;/code&gt;). Use a website like &lt;a href=&#34;https://www.airmilescalculator.com/&#34;&gt;this&lt;/a&gt;.&lt;br/&gt;
+2. Decide how many people (i.e., jot this down as variable &lt;code&gt;num_people&lt;/code&gt;) are traveling and whether the trip is a round-trip or one way.&lt;br/&gt;
+3. If a one-way trip, use the formula: &lt;code&gt;co2_emitted = miles x num_people x 0.24 x (1 / 2204.62) x 1.891&lt;/code&gt; to determine the metric tons of carbon dioxide emitted from your flight. Don’t forget the &lt;a href=&#34;https://www.mathsisfun.com/operation-order-pemdas.html&#34;&gt;order of operations&lt;/a&gt; here. ;) The variable &lt;code&gt;miles&lt;/code&gt; comes from step 1 and the variable &lt;code&gt;num_people&lt;/code&gt; comes from step 2. If round-trip, calculate &lt;code&gt;co2_emitted&lt;/code&gt; as mentioned previously and multiply this by 2 since you’re traveling to your destination and back.&lt;br/&gt;
+4. Think about whether you view climate change as a short- or long-term goal. If you think of it based on short-term impacts only then choose the current year (i.e., jot this down as variable &lt;code&gt;year&lt;/code&gt; = 2019). However, if you are commited to addressing its more long-term impacts, you can choose any year up until 2050 (i.e. jot this down as variable &lt;code&gt;year&lt;/code&gt; = 2050). The closer to 2050 you choose, the larger your donation will be.&lt;br/&gt;
+5. Calculate the cost of your offset (i.e., how much you’ll donate) using the formula: &lt;code&gt;cost = co2_emitted x (3.02 x year - 5986.1)&lt;/code&gt;. Remember your &lt;a href=&#34;https://www.mathsisfun.com/operation-order-pemdas.html&#34;&gt;order of operations&lt;/a&gt;. The variable &lt;code&gt;co2_emitted&lt;/code&gt; comes from step 3 and the variable &lt;code&gt;year&lt;/code&gt; comes from step 4.&lt;br/&gt;
+6. Donate this amount (in US dollars) to your local climate change organization (e.g., one building solar panels, planting trees, or advocating for bicycle lanes).&lt;br/&gt;&lt;/p&gt;
 &lt;p&gt;If have questions, comments, or ideas related to this post, please let me know!&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -501,7 +539,7 @@ my_year * slope + intercept&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;papers&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Papers&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Using R in hydrology: a review of recent developments and future directions&lt;/em&gt; by Slater et al. in review at HESS &lt;a href=&#34;https://www.hydrol-earth-syst-sci-discuss.net/hess-2019-50/&#34;&gt;(link)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Using R in hydrology: a review of recent developments and future directions&lt;/em&gt; by Slater et al. in review at HESS &lt;a href=&#34;https://www.hydrol-earth-syst-sci-discuss.net/hess-2019-50/&#34;&gt;(link)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;other-help&#34; class=&#34;section level1&#34;&gt;
@@ -567,7 +605,7 @@ library(mapview)&lt;/code&gt;&lt;/pre&gt;
 census_api_key(&amp;quot;YOUR API KEY GOES HERE&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You’ll have to also apply for a NASS API key. We’ll use this later but will definite it here as a string. You can apply for a NASS API key &lt;a href=&#34;https://quickstats.nass.usda.gov/api&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nass_key &amp;lt;- &amp;quot;ADD YOUR NASS API KEY HERE&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now, we’ll define the NASS url and path. In the path you’ll have to specify what type of data you want to query. To specify these you can go to &lt;a href=&#34;https://quickstats.nass.usda.gov/&#34; class=&#34;uri&#34;&gt;https://quickstats.nass.usda.gov/&lt;/a&gt; to see all your commodity options. I haven’t figured out another way to do this but please &lt;a href=&#34;mailto:ssaia@ncsu.edu&#34;&gt;contact me&lt;/a&gt; if you find an alternative.&lt;/p&gt;
+&lt;p&gt;Now, we’ll define the NASS url and path. In the path you’ll have to specify what type of data you want to query. To specify these you can go to &lt;a href=&#34;https://quickstats.nass.usda.gov/&#34;&gt;https://quickstats.nass.usda.gov/&lt;/a&gt; to see all your commodity options. I haven’t figured out another way to do this but please &lt;a href=&#34;mailto:ssaia@ncsu.edu&#34;&gt;contact me&lt;/a&gt; if you find an alternative.&lt;/p&gt;
 &lt;p&gt;For this post I’m selecting the “AG_LAND” commodity, which includes information on the acreage of irrigated farm and ranch lands, because this is the wateR blog after all. Other commodities might include specific crops, etc. I’m also selecting the state of North Carolina (NC) because it seems to always be the subject of spatial mapping &lt;a href=&#34;https://r-spatial.github.io/sf/reference/geos_combine.html&#34;&gt;(e.g., see this post)&lt;/a&gt; in R and is also where I live. ;) You can also leave off the last “&amp;amp;state_alpha=NC” part of the string to get data from all states.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# NASS url
 nass_url &amp;lt;- &amp;quot;http://quickstats.nass.usda.gov&amp;quot;
@@ -592,7 +630,7 @@ path_nc_irrig_land &amp;lt;- paste0(&amp;quot;api/api_GET/?key=&amp;quot;, nass_
 &lt;h1&gt;API Data Query&lt;/h1&gt;
 &lt;p&gt;Let’s query the NASS API.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;raw_result_nc_irrig_land &amp;lt;- GET(url = nass_url, path = path_nc_irrig_land)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can check to see if it worked by looking at &lt;code&gt;status_code&lt;/code&gt;. To read more about the different status codes and their meaning you can visit &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_HTTP_status_codes&#34; class=&#34;uri&#34;&gt;https://en.wikipedia.org/wiki/List_of_HTTP_status_codes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We can check to see if it worked by looking at &lt;code&gt;status_code&lt;/code&gt;. To read more about the different status codes and their meaning you can visit &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_HTTP_status_codes&#34;&gt;https://en.wikipedia.org/wiki/List_of_HTTP_status_codes&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;raw_result_nc_irrig_land$status_code&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Great! We’re wanting to see status code 200 here. It means our query was received and responded to.&lt;/p&gt;
 &lt;/div&gt;
@@ -696,7 +734,8 @@ nc_irrigated_summary&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now we’ll use &lt;code&gt;mapview()&lt;/code&gt; to make an interactive plot where counties are colored based on the percentage of irrigated land. You can hover your mouse over the counties to see the actual percentages.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mapviewOptions(vector.palette = colorRampPalette(c(&amp;quot;snow&amp;quot;, &amp;quot;darkblue&amp;quot;, &amp;quot;grey10&amp;quot;)))
 mapview(nc_irrigated_map_2007, zcol = &amp;quot;percent_irrigated&amp;quot;, legend = FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br/&gt; Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;
+Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Querying the NASS API was fairly straightforward, and despite needing to do some considerable data wrangling with the output, the &lt;code&gt;tidyverse&lt;/code&gt; packages (i.e., &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt;) helped a lot. I should note that I spent some time figuring out what the query outputs would look like for different commodities and what aspects of the query outputs I needed.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;It was interesting to see that a higher percentage of acres were irrigated in NC in 2007 compared to 2012. I can’t say what caused these differences based on these data alone, but it would be interesting to look into whether this finding was linked to the 2007 drought. According to other scientists who lived and researched water resources at the time, &lt;a href=&#34;http://climate.ncsu.edu/climateblog?id=161&#34;&gt;the 2007 drought affected millions of people in NC&lt;/a&gt;. A longer time series of irrigated land might help with this as would overlapping these county level results with drought reports and crop losses.&lt;/p&gt;&lt;/li&gt;
@@ -733,31 +772,6 @@ mapview(nc_irrigated_map_2007, zcol = &amp;quot;percent_irrigated&amp;quot;, leg
       <pubDate>Sat, 01 Dec 2018 00:00:00 -0500</pubDate>
       
       <guid>/publication/pao_review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Coupling Hydrologic Model Outputs and Demographics Data to Inform Climate Change Planning (Poster)</title>
-      <link>/talk/agu_dec2018/</link>
-      <pubDate>Mon, 05 Nov 2018 00:00:00 -0500</pubDate>
-      
-      <guid>/talk/agu_dec2018/</guid>
-      <description>
-
-&lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
-
-&lt;p&gt;General Circulation Models (GCMs) project an increase in the frequency and magnitude of storm events in the Southeastern United States over the next several decades. Additionally, urban development in this region is expected to double by 2060. Communities unable to mitigate or adapt to climate- and land use-change induced impacts on water resources may experience adverse social and economic impacts. Hydrologic model outputs, such as those from the Soil and Water Assessment Tool (SWAT), are helpful at predicting changing hydrologic processes but do not directly incorporate community demographics that are required to assess vulnerability. Therefore, there is a need to couple hydrologic model outputs with demographics data to identify vulnerable communities and support associated climate change adaptation planning efforts. To address these needs, we use a risk matrix framework to couple changes in SWAT simulated streamflow from 1992-2002 (baseline) to 2050-2070 (GCM scenario projections) with census tract social vulnerability index (SoVI) estimates derived from 2010-2014 American Community Survey (ACS) data for the Upper Yadkin-Pee Dee (UYPD) Watershed in North Carolina, USA. We present case studies for select subbasins in the UYPD where especially vulnerable communities overlap with areas projected to experience the highest increases in 10-yr and extreme flows. Compared to using either alone, our results show that coupling SWAT outputs and ACS data provides integrated sociohydrological information that can better inform climate change adaptation planning.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://fallmeeting.agu.org/2018/abstract/coupling-hydrologic-model-outputs-and-demographics-data-to-inform-climate-change-planning/&#34; target=&#34;_blank&#34;&gt;Click here to view my AGU abstract. &lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Developing Climate Change Risk Management Tools Using R &amp; Python</title>
-      <link>/talk/duke-nov2018/</link>
-      <pubDate>Thu, 01 Nov 2018 00:00:00 -0400</pubDate>
-      
-      <guid>/talk/duke-nov2018/</guid>
       <description></description>
     </item>
     

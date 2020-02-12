@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Source Themes Academic 3.2.0">
-  <meta name="generator" content="Hugo 0.55.6" />
+  <meta name="generator" content="Hugo 0.50" />
   <meta name="author" content="sheila m. saia, PhD">
 
   
@@ -509,7 +509,7 @@ library(mapview)</code></pre>
 census_api_key(&quot;YOUR API KEY GOES HERE&quot;)</code></pre>
 <p>You’ll have to also apply for a NASS API key. We’ll use this later but will definite it here as a string. You can apply for a NASS API key <a href="https://quickstats.nass.usda.gov/api">here</a></p>
 <pre class="r"><code>nass_key &lt;- &quot;ADD YOUR NASS API KEY HERE&quot;</code></pre>
-<p>Now, we’ll define the NASS url and path. In the path you’ll have to specify what type of data you want to query. To specify these you can go to <a href="https://quickstats.nass.usda.gov/" class="uri">https://quickstats.nass.usda.gov/</a> to see all your commodity options. I haven’t figured out another way to do this but please <a href="mailto:ssaia@ncsu.edu">contact me</a> if you find an alternative.</p>
+<p>Now, we’ll define the NASS url and path. In the path you’ll have to specify what type of data you want to query. To specify these you can go to <a href="https://quickstats.nass.usda.gov/">https://quickstats.nass.usda.gov/</a> to see all your commodity options. I haven’t figured out another way to do this but please <a href="mailto:ssaia@ncsu.edu">contact me</a> if you find an alternative.</p>
 <p>For this post I’m selecting the “AG_LAND” commodity, which includes information on the acreage of irrigated farm and ranch lands, because this is the wateR blog after all. Other commodities might include specific crops, etc. I’m also selecting the state of North Carolina (NC) because it seems to always be the subject of spatial mapping <a href="https://r-spatial.github.io/sf/reference/geos_combine.html">(e.g., see this post)</a> in R and is also where I live. ;) You can also leave off the last “&amp;state_alpha=NC” part of the string to get data from all states.</p>
 <pre class="r"><code># NASS url
 nass_url &lt;- &quot;http://quickstats.nass.usda.gov&quot;
@@ -534,7 +534,7 @@ path_nc_irrig_land &lt;- paste0(&quot;api/api_GET/?key=&quot;, nass_key, &quot;&
 <h1>API Data Query</h1>
 <p>Let’s query the NASS API.</p>
 <pre class="r"><code>raw_result_nc_irrig_land &lt;- GET(url = nass_url, path = path_nc_irrig_land)</code></pre>
-<p>We can check to see if it worked by looking at <code>status_code</code>. To read more about the different status codes and their meaning you can visit <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" class="uri">https://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a>.</p>
+<p>We can check to see if it worked by looking at <code>status_code</code>. To read more about the different status codes and their meaning you can visit <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">https://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a>.</p>
 <pre class="r"><code>raw_result_nc_irrig_land$status_code</code></pre>
 <p>Great! We’re wanting to see status code 200 here. It means our query was received and responded to.</p>
 </div>
@@ -638,7 +638,8 @@ nc_irrigated_summary</code></pre>
 <p>Now we’ll use <code>mapview()</code> to make an interactive plot where counties are colored based on the percentage of irrigated land. You can hover your mouse over the counties to see the actual percentages.</p>
 <pre class="r"><code>mapviewOptions(vector.palette = colorRampPalette(c(&quot;snow&quot;, &quot;darkblue&quot;, &quot;grey10&quot;)))
 mapview(nc_irrigated_map_2007, zcol = &quot;percent_irrigated&quot;, legend = FALSE)</code></pre>
-<p><br/> Some other thoughts that I wanted to mention before signing off:</p>
+<p><br/>
+Some other thoughts that I wanted to mention before signing off:</p>
 <ul>
 <li><p>Querying the NASS API was fairly straightforward, and despite needing to do some considerable data wrangling with the output, the <code>tidyverse</code> packages (i.e., <code>dplyr</code> and <code>tidyr</code>) helped a lot. I should note that I spent some time figuring out what the query outputs would look like for different commodities and what aspects of the query outputs I needed.</p></li>
 <li><p>It was interesting to see that a higher percentage of acres were irrigated in NC in 2007 compared to 2012. I can’t say what caused these differences based on these data alone, but it would be interesting to look into whether this finding was linked to the 2007 drought. According to other scientists who lived and researched water resources at the time, <a href="http://climate.ncsu.edu/climateblog?id=161">the 2007 drought affected millions of people in NC</a>. A longer time series of irrigated land might help with this as would overlapping these county level results with drought reports and crop losses.</p></li>

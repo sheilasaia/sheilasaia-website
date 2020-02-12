@@ -18,7 +18,9 @@
       <pubDate>Tue, 31 Dec 2019 00:00:00 -0500</pubDate>
       
       <guid>/project/streamflow-ml-project/</guid>
-      <description>Used machine learning models for streamflow prediction applications.</description>
+      <description>Collaborators JS Rice, JM Vose, and RE Emanuel
+Timeline 2019-2020
+Project Goal The goal of this project was to use machine learning models for two applications in hydrology. First, we used a hierarchical machine learning ensemble model to predict streamflow. Then, we assessed model sensitivies to learn how changes in the percentage of different types of land cover in specific places in the watershed influenced (i.e., increase or decrease) streamflow.</description>
     </item>
     
     <item>
@@ -27,7 +29,9 @@
       <pubDate>Wed, 01 May 2019 00:00:00 -0400</pubDate>
       
       <guid>/project/nc-sociohydro-project/</guid>
-      <description>Integrating hydrology model outputs and demographics data to aid risk assessment and climate change adaptation efforts in North Carolina.</description>
+      <description>Collaborators BB Cutts (NC State), RE Emanuel (NC State), KL Martin (NC State), KM Suttles (USFS), JM Vose (USFS), DN Wear (USFS), JW Coulston (USFS)
+Timeline 2017-2019
+Project Goal The goal of this project is to combine past and future hydrology model (i.e., Soil and Water Assessment Tool (SWAT)) outputs with demographics data to create maps and prioritize climate change adaptation planning for especially vulnerable communities in western North Carolina&amp;rsquo;s Yadkin-Pee Dee River Watershed.</description>
     </item>
     
     <item>
@@ -36,7 +40,10 @@
       <pubDate>Wed, 31 May 2017 00:00:00 -0400</pubDate>
       
       <guid>/project/paos-streams-project/</guid>
-      <description>Lab study measuring the impact of alternating anaerobic/aerobic conditions on stream biofilms.</description>
+      <description>Collaborators PJ Sullivan (Cornell University), JM Regan (Penn State), HJ Carrick (Central Michigan University), AR Buda (USDA-ARS), NA Locke (Penn State), MT Walter (Cornell University)
+Timeline 2014-2015
+Project Goal The goal of this project was to test (1) the impact of alternating anaerobic/aerobic conditions on phosphorus cycling in stream biofilms and (2) whether observed patterns mimicked those of polyphosphate accumulating organisms (PAOs) in specialized waste-water treatment plants.
+Project Links  Project GitHub Repository Project Peer-Reviewed Publication  Acknowledgements Special thanks to the Mianus River Gorge Preserve Research Award Program and the EPA STAR Program for supporting this work.</description>
     </item>
     
     <item>
@@ -45,7 +52,10 @@
       <pubDate>Sat, 31 Dec 2016 00:00:00 -0500</pubDate>
       
       <guid>/project/stable-isotope-project/</guid>
-      <description>Created an ecohydrology stable isotope model to test the two-water-world hypothesis.</description>
+      <description>Collaborators J Archibald, JO Knighton, CK Morris, MT Walter (all at Cornell University)
+Timeline 2016-2017
+Project Goal The goal of this project was to develop an ecohydrological model that could be used to test the two-water-world hypothesis presented here.
+Project Links  IsoJoFlow Ecohydrology Model Project Peer-Reviewed Publication  Acknowledgements Thanks to J. Evaristo, S Jasechko, and J. McDonnell for their paper that stoked our lab group conversations around this work.</description>
     </item>
     
     <item>
@@ -54,7 +64,10 @@
       <pubDate>Sun, 31 May 2015 00:00:00 -0400</pubDate>
       
       <guid>/project/mrgp-project/</guid>
-      <description>Tested two spatial statisics approaches to predict in-stream water quality.</description>
+      <description>Collaborators R Christie (Mianus River Gorge Preserve), C Nagy (Mianus River Gorge Preserve), MT Walter (Cornell University), PJ Sullivan (Cornell University)
+Timeline 2012-2015
+Project Goal The goal of this project was to test two spatial statistics approaches (i.e., kriging based on Euclidian or stream-wise distances) for predicting in-stream waterquality at unsampled locations in the Mianus River near Bedford, NY and Stanford, CT.
+Project Links Results of this project are currently unpublished.</description>
     </item>
     
     <item>
@@ -63,7 +76,9 @@
       <pubDate>Sat, 31 Dec 2011 00:00:00 -0500</pubDate>
       
       <guid>/project/hct-project/</guid>
-      <description>Developing a web-based application to evaluate agricultural best management practices.</description>
+      <description>Collaborators J Boll (Washington State University Pullman), ES Brooks (University of Idaho), Z Easton (Virginia Tech), L Kurkalova (North Carolina Ag &amp;amp; Tech), B Rittenburg (Univesrity of Idaho), A Squires (University of Idaho), TS Steenhuis (Cornell University), G Vellidis (University of Georgia), JD Wulfhorst (University of Idaho)
+Timeline 2007-2011
+Project Goal The goal of this project was to use an exisiting process-based model (i.e., the USDA WEPP model to develop a web-based hydrologic characterization tool (HCT) that could be used by water resources managers to evaluate the impact of agricultural best management practices on water quality (i.</description>
     </item>
     
   </channel>

@@ -7,15 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Tue, 31 Dec 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Content tagged as &#39;Academic&#39;</title>
+      <link>/tags/academic/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>/tags/academic/</guid>
+      <description>Here is a list of all the content that has been tagged as academic.</description>
+    </item>
+    
+    <item>
       <title>climate change</title>
       <link>/tags/climate-change/</link>
-      <pubDate>Tue, 31 Dec 2019 00:00:00 -0500</pubDate>
+      <pubDate>Wed, 01 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>/tags/climate-change/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>climate-change</title>
+      <link>/tags/climate-change/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 -0400</pubDate>
       
       <guid>/tags/climate-change/</guid>
       <description></description>
@@ -31,11 +49,11 @@
     </item>
     
     <item>
-      <title>streamflow</title>
-      <link>/tags/streamflow/</link>
-      <pubDate>Tue, 31 Dec 2019 00:00:00 -0500</pubDate>
+      <title>phosphorus</title>
+      <link>/tags/phosphorus/</link>
+      <pubDate>Wed, 31 May 2017 00:00:00 -0400</pubDate>
       
-      <guid>/tags/streamflow/</guid>
+      <guid>/tags/phosphorus/</guid>
       <description></description>
     </item>
     
@@ -49,20 +67,20 @@
     </item>
     
     <item>
-      <title>water-quantity</title>
-      <link>/tags/water-quantity/</link>
-      <pubDate>Wed, 01 May 2019 00:00:00 -0400</pubDate>
+      <title>stable-isotopes</title>
+      <link>/tags/stable-isotopes/</link>
+      <pubDate>Sat, 31 Dec 2016 00:00:00 -0500</pubDate>
       
-      <guid>/tags/water-quantity/</guid>
+      <guid>/tags/stable-isotopes/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>phosphorus</title>
-      <link>/tags/phosphorus/</link>
-      <pubDate>Wed, 31 May 2017 00:00:00 -0400</pubDate>
+      <title>streamflow</title>
+      <link>/tags/streamflow/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 -0500</pubDate>
       
-      <guid>/tags/phosphorus/</guid>
+      <guid>/tags/streamflow/</guid>
       <description></description>
     </item>
     
@@ -76,20 +94,11 @@
     </item>
     
     <item>
-      <title>Content tagged as &#39;Academic&#39;</title>
-      <link>/tags/academic/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
+      <title>water-quantity</title>
+      <link>/tags/water-quantity/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 -0400</pubDate>
       
-      <guid>/tags/academic/</guid>
-      <description>Here is a list of all the content that has been tagged as academic.</description>
-    </item>
-    
-    <item>
-      <title>stable-isotopes</title>
-      <link>/tags/stable-isotopes/</link>
-      <pubDate>Sat, 31 Dec 2016 00:00:00 -0500</pubDate>
-      
-      <guid>/tags/stable-isotopes/</guid>
+      <guid>/tags/water-quantity/</guid>
       <description></description>
     </item>
     

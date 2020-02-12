@@ -13,6 +13,25 @@
     
     
     <item>
+      <title>Introduction to Data Management Plans for Researchers</title>
+      <link>/talk/ncsu_feb2020/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/ncsu_feb2020/</guid>
+      <description>Abstract: Data management is an overlooked yet important research skill, especially since nearly all major federal funding agencies in the United States require researchers to include a data management plan along with their grant application. If you’re preparing a data management plan, looking for ways to improve an existing data management plan, or want to learn more about data management plans, this workshop is for you. Postdoctoral researcher, Sheila Saia, will lead workshop attendees through the basics of data management plans including: what they are, why they’re important, and their major components.</description>
+    </item>
+    
+    <item>
+      <title>Using R and Python to Map Vulnerable Communities and Future Streamflow</title>
+      <link>/talk/duke_feb2020/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/duke_feb2020/</guid>
+      <description>Abstract: In this guest lecture for Geospatial Analysis for Conservation Management (ENV 761) at Duke University, I gave an overview of how and why I use R and Python for geospatial analysis. I highlighted my how I&amp;rsquo;ve used R and Python in some recent work in western North Carolina. Last, I led a discussion of a recenlty published paper associated with this work.
+Click here for background on the Geospatial Analysis for Conservation Management (ENV 761) course.</description>
+    </item>
+    
+    <item>
       <title>Improved Accuracy of Watershed-Scale General Circulation Model Runoff Using Deep Neural Networks (Poster #GC43D-1361)</title>
       <link>/talk/agu_dec2019/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 -0500</pubDate>
