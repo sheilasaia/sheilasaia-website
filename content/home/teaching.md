@@ -17,9 +17,12 @@ weight = 6
 
 # upcoming workshops:
 
-- *NC State University Libraries Peer Schoolars Workshop* - I'm teaching a two-hour long workshop titled "Introduction to Data Management Plans" on January 29, 2020 from 12pm-2pm in the D.H. Hill Library ITTC2 Lab. More information and to sign-up, visit [here](https://www.lib.ncsu.edu/events/series/peer-scholars).
+- *Introduction to R for Water Resources Management* - I'm teaching a two-hour long workshop at the [North Carolina Water Resources Research Institute (NC WRRI) Annual Confernece](https://wrri.ncsu.edu/conference/) on March 18, 2020 from 1:30-3:30pm. Find out more info and sign up [here](https://ncsu.qualtrics.com/jfe/form/SV_4NhZNhQVcyM8Cu9).
+
 
 # past workshops:
+
+- *NC State University Libraries Peer Schoolars Workshop* - I'm teaching a two-hour long workshop titled "Introduction to Data Management Plans" on February 12, 2020 from 12pm-2pm in the D.H. Hill Library ITTC2 Lab. More information and to sign-up, visit [here](https://www.lib.ncsu.edu/workshops/introduction-data-management-plans-researchers).
 
 - *American Geophysical Union (AGU) 2019 Coding Help Desk* - If you write code for your research and will be attending the AGU 2019 Fall Meeting, consider volunteering at the AGU Coding Help Desk. Find out more about the event and sign-up to volunteer [here](https://github.com/sheilasaia/agu-2019-coding-help-desk).
 
