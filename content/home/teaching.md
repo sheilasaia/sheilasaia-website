@@ -17,7 +17,7 @@ weight = 6
 
 # upcoming workshops:
 
-- *Introduction to R for Water Resources Management* - I'm teaching a two-hour long workshop at the [North Carolina Water Resources Research Institute (NC WRRI) Annual Confernece](https://wrri.ncsu.edu/conference/) on March 18, 2020 from 1:30-3:30pm. Find out more info and sign up [here](https://ncsu.qualtrics.com/jfe/form/SV_4NhZNhQVcyM8Cu9).
+- *Introduction to R for Water Resources Management* - I'm teaching a two-hour long workshop at the [North Carolina Water Resources Research Institute (NC WRRI) Annual Confernece](https://wrri.ncsu.edu/conference/) on March 18, 2020 from 1:30-3:30pm. Find out more info and sign up [here](https://ncsu.qualtrics.com/jfe/form/SV_4NhZNhQVcyM8Cu9). **This event has been postponed due to COVID-19 measures taken by NC State University.** You can read more [here](https://wrri.ncsu.edu/conference/wp-content/uploads/sites/3/2020/03/WRRI_postponement_notice_3-11-20.pdf).
 
 
 # past workshops:
