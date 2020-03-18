@@ -11,6 +11,24 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tidy Spatial Data in R</title>
+      <link>/talk/duke_mar2020/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/duke_mar2020/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
+
+&lt;p&gt;In this guest lecture for Environmental Data Analytics (ENV 872) at Duke University, I covered the basics of using the sf package in R. Dr. Kateri Salk taught the first day (March 3, 2020) of my lesson and I finished up by teaching the second day (March 5, 2020).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://nicholas.duke.edu/academics/courses/environmental-data-analytics&#34; target=&#34;_blank&#34;&gt;Click here for background on the Environmental Data Analytics (ENV 872) course.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/KateriSalk/Environmental_Data_Analytics_2020&#34; target=&#34;_blank&#34;&gt;Click here for the course GitHub repository.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Introduction to Data Management Plans for Researchers</title>
       <link>/talk/ncsu_feb2020/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
@@ -764,15 +782,6 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
 
 &lt;p&gt;To read more, visit &lt;a href=&#34;https://ncgisconference.com/&#34; target=&#34;_blank&#34;&gt;the conference website&lt;/a&gt;.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Preprint: An Interdisciplinary Review of Polyphosphate Accumulating Organism (PAO)-Mediated Phosphorus Cycling for Landscape-Scale Water Quality Management</title>
-      <link>/publication/pao_review/</link>
-      <pubDate>Sat, 01 Dec 2018 00:00:00 -0500</pubDate>
-      
-      <guid>/publication/pao_review/</guid>
-      <description></description>
     </item>
     
   </channel>
