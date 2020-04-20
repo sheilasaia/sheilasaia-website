@@ -15,12 +15,21 @@
     <item>
       <title>Tidy Spatial Data in R</title>
       <link>/talk/duke_mar2020/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 -0500</pubDate>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 -0500</pubDate>
       
       <guid>/talk/duke_mar2020/</guid>
-      <description>Abstract: In this guest lecture for Environmental Data Analytics (ENV 872) at Duke University, I covered the basics of using the sf package in R. Dr. Kateri Salk taught the first day (March 3, 2020) of my lesson and I finished up by teaching the second day (March 5, 2020).
+      <description>Description: In this guest lecture for Environmental Data Analytics (ENV 872) at Duke University, I covered the basics of using the sf package in R. Dr. Kateri Salk taught the first day (March 3, 2020) of my lesson and I finished up by teaching the second day (March 5, 2020).
 Click here for background on the Environmental Data Analytics (ENV 872) course.
 Click here for the course GitHub repository.</description>
+    </item>
+    
+    <item>
+      <title>Environmental Data Science Panel</title>
+      <link>/talk/duke_apr2020/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/duke_apr2020/</guid>
+      <description>Description: In this remote panel event for Geospatial Analysis for Conservation Management (ENV 761) at Duke University, I was one of three invited environmental data science panelists. We discussed how we use data science in our current position and also responded to questions from the class.</description>
     </item>
     
     <item>
@@ -29,7 +38,7 @@ Click here for the course GitHub repository.</description>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>/talk/ncsu_feb2020/</guid>
-      <description>Abstract: Data management is an overlooked yet important research skill, especially since nearly all major federal funding agencies in the United States require researchers to include a data management plan along with their grant application. If you’re preparing a data management plan, looking for ways to improve an existing data management plan, or want to learn more about data management plans, this workshop is for you. Postdoctoral researcher, Sheila Saia, will lead workshop attendees through the basics of data management plans including: what they are, why they’re important, and their major components.</description>
+      <description>Description: Data management is an overlooked yet important research skill, especially since nearly all major federal funding agencies in the United States require researchers to include a data management plan along with their grant application. If you’re preparing a data management plan, looking for ways to improve an existing data management plan, or want to learn more about data management plans, this workshop is for you. Postdoctoral researcher, Sheila Saia, will lead workshop attendees through the basics of data management plans including: what they are, why they’re important, and their major components.</description>
     </item>
     
     <item>
@@ -38,7 +47,7 @@ Click here for the course GitHub repository.</description>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>/talk/duke_feb2020/</guid>
-      <description>Abstract: In this guest lecture for Geospatial Analysis for Conservation Management (ENV 761) at Duke University, I gave an overview of how and why I use R and Python for geospatial analysis. I highlighted my how I&amp;rsquo;ve used R and Python in some recent work in western North Carolina. Last, I led a discussion of a recenlty published paper associated with this work.
+      <description>Description: In this guest lecture for Geospatial Analysis for Conservation Management (ENV 761) at Duke University, I gave an overview of how and why I use R and Python for geospatial analysis. I highlighted my how I&amp;rsquo;ve used R and Python in some recent work in western North Carolina. Last, I led a discussion of a recenlty published paper associated with this work.
 Click here for background on the Geospatial Analysis for Conservation Management (ENV 761) course.</description>
     </item>
     
@@ -58,6 +67,15 @@ Click here for background on the Geospatial Analysis for Conservation Management
       
       <guid>/talk/agu_dec2019_rladies/</guid>
       <description>Abstract: R-Ladies Global is a worldwide organization focused on achieving proportionate representation of genders currently underrepresented in the R programming community. To meet this goal, we support a network of local chapters who organize events that encourage, inspire, and empower individuals to meet their programming potential. Since R-Ladies Global was founded in 2016, it has grown to provide training and mentoring to in over 47,000 members, in 159 cities, and 47 countries.</description>
+    </item>
+    
+    <item>
+      <title>Mapping Vulnerable Communities and Streamflow Projections to Aid Climate Change Adaptation Planning</title>
+      <link>/talk/meas-oct2019/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>/talk/meas-oct2019/</guid>
+      <description>Bio: Sheila Saia received her BS in Bioengineering from Binghamton University and her MS and PhD degrees in Biological and Environmental Engineering at Cornell University. She is a postdoctoral researcher in NC State University’s Department of Forestry and Environmental Resources and an affiliate of the USDA Forest Service Southern Research Station in RTP. Her current postdoctoral research links hydrologic model (i.e., Soil and Water Assessment Tool; SWAT) results and United States Census data to aid climate change adaptation planning in North Carolina.</description>
     </item>
     
     <item>

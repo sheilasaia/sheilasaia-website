@@ -1,5 +1,5 @@
 +++
-date = 2020-03-02T00:00:00  # Schedule page publish date.
+date = 2020-03-05T00:00:00  # Schedule page publish date.
 
 title = "Tidy Spatial Data in R"
 time_start = 2020-03-05T11:45:00
@@ -38,9 +38,9 @@ highlight = true
 
 +++
 
-## Abstract:</br>
+## Description:</br>
 In this guest lecture for Environmental Data Analytics (ENV 872) at Duke University, I covered the basics of using the sf package in R. Dr. Kateri Salk taught the first day (March 3, 2020) of my lesson and I finished up by teaching the second day (March 5, 2020).
 
 [Click here for background on the Environmental Data Analytics (ENV 872) course.](https://nicholas.duke.edu/academics/courses/environmental-data-analytics)
 
-[Click here for the course GitHub repository.](https://github.com/KateriSalk/Environmental_Data_Analytics_2020)
+[Click here for the course GitHub repository.](Click here for the course GitHub repository.)

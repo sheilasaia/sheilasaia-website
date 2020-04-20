@@ -6,7 +6,7 @@ time_start = 2018-10-08T12:50:00
 time_end = 2018-10-08T13:50:00
 abstract = ""
 abstract_short = ""
-event = "North Carolina State University Forestry and Environmental Resources Department Seminar"
+event = "North Carolina State University Forestry and Environmental Resources (FER) Department Seminar"
 event_url = ""
 location = "Raleigh, North Carolina, USA"
 

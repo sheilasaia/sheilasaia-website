@@ -1,12 +1,12 @@
 +++
 date = 2020-02-11T00:00:00  # Schedule page publish date.
 
-title = "Using R and Python to Map Vulnerable Communities and Future Streamflow"
-time_start = 2020-02-13T10:05:00
-time_end = 2020-02-13T11:30:00
+title = "Environmental Data Science Panel"
+time_start = 2020-04-14T11:45:00
+time_end = 2020-04-14T13:00:00
 abstract = ""
 abstract_short = ""
-event = "Duke University Guest Lecture"
+event = "Duke University Guest Panel"
 event_url = ""
 location = "Durham, North Carolina, USA"
 
@@ -39,6 +39,4 @@ highlight = true
 +++
 
 ## Description:</br>
-In this guest lecture for Geospatial Analysis for Conservation Management (ENV 761) at Duke University, I gave an overview of how and why I use R and Python for geospatial analysis. I highlighted my how I've used R and Python in some [recent work](https://sheilasaia.rbind.io/project/nc-sociohydro-project/) in western North Carolina. Last, I led a discussion of a [recenlty published paper](https://www.fs.usda.gov/treesearch/pubs/58292) associated with this work.
-
-[Click here for background on the Geospatial Analysis for Conservation Management (ENV 761) course.](https://nicholas.duke.edu/academics/courses/geospatial-analysis-conservation-management)
+In this remote panel event for Geospatial Analysis for Conservation Management (ENV 761) at Duke University, I was one of three invited environmental data science panelists. We discussed how we use data science in our current position and also responded to questions from the class.
