@@ -68,6 +68,8 @@ Special thanks to all of the people who've worked hard to share their code and i
 
 - SESYNC Blog by various [(link)](https://cyberhelp.sesync.org/blog/)
 
+- Water Programming blog by various [(link)](https://waterprogramming.wordpress.com/)
+
 # Books
 
 - *R for Data Science* by Hadley Wickham & Garrett Grolemund [(link)](https://r4ds.had.co.nz/)
@@ -105,6 +107,9 @@ Special thanks to all of the people who've worked hard to share their code and i
 # Python Resources
 
 - Raoul Collenteur's GitHub page on Python tools for hydrologists [(link)](https://github.com/raoulcollenteur/Python-Hydrology-Tools)
+
+- John Herman's Python for Water Resources Engineering tutorial [(link)](http://jdherman.github.io/python-tutorial/)
+
 
 If you know of any resources that I may have missed (it's very likely that I missed somehting!) please contact me!
 
