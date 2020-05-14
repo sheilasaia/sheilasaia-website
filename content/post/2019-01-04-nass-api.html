@@ -81,7 +81,7 @@ census_api_key(CENSUS_API_KEY, install = TRUE)
 Sys.getenv(&quot;NASS_API_KEY&quot;)</code></pre>
 <p>To use your NASS API in code later on call it and assign it to a variable.</p>
 <pre class="r"><code>NASS_API_KEY &lt;- Sys.getenv(&quot;NASS_API_KEY&quot;)</code></pre>
-<p>If you want to be very organized and secure you can add your NASS API key to your .Renvir file. You will only need to do this once and then R will automatically load the key into your working environment whenever you start a new R session. If you’re interested in doing this and not too afraid of the command line, checkout <a href="https://stackoverflow.com/questions/40788645/how-to-create-renviron-file">this stackoverflow post</a>. Note, that if you have already run <code>census_api_key()</code> you will not need to make a new .Renviron file. It will already exist in your HOME directory.</p>
+<p>If you want to be very organized and secure you can add your NASS API key to your .Renviron file. You will only need to do this once and then R will automatically load the key into your working environment whenever you start a new R session. If you’re interested in doing this and not too afraid of the command line, checkout <a href="https://stackoverflow.com/questions/40788645/how-to-create-renviron-file">this stackoverflow post</a>. Note, that if you have already run <code>census_api_key()</code> you will not need to make a new .Renviron file. It will already exist in your HOME directory.</p>
 </div>
 </div>
 <div id="api-data-query" class="section level1">
@@ -115,7 +115,7 @@ path_nc_irrig_land &lt;- paste0(&quot;api/api_GET/?key=&quot;, NASS_API_KEY, &qu
 </div>
 <div id="reformatting-api-query-output" class="section level1">
 <h1>Reformatting API Query Output</h1>
-<p>If we look at this in your RStudio session it will come in as a ‘Large response’ or in other words as a JSON object. For simplicity sake, we can think of this as a list of lists (i.e., nested lists). We’ll ultimately convert this to a data frame because it’s a little easier to view in R.</p>
+<p>If we look at this in your R session it will come in as a ‘Large response’ or in other words as a JSON object. For simplicity sake, we can think of this as a list of lists (i.e., nested lists). We’ll ultimately convert this to a data frame because it’s a little easier to view in R.</p>
 <p>We’ll start unpacking the JSON object using <code>rawToChar()</code>. We can check the size and look at the first few characters.</p>
 <pre class="r"><code>char_raw_nc_irrig_land &lt;- rawToChar(raw_result_nc_irrig_land$content)
 
@@ -125,7 +125,7 @@ nchar(char_raw_nc_irrig_land)
 
 # view first 50 characthers
 substr(char_raw_nc_irrig_land, 1, 50)
-## [1] &quot;{\&quot;data\&quot;:[{\&quot;reference_period_desc\&quot;:\&quot;YEAR\&quot;,\&quot;county_a&quot;</code></pre>
+## [1] &quot;{\&quot;data\&quot;:[{\&quot;CV (%)\&quot;:\&quot;2.9\&quot;,\&quot;state_name\&quot;:\&quot;NORTH CAROL&quot;</code></pre>
 <p>This is still a little hard to work with so let’s use <code>fromJSON()</code> and convert the raw character strings to a large list. Next, we’ll use <code>pmap_dfr</code> from the <code>purrr</code> package to loop over each list and bind it by row to make a data frame.</p>
 <pre class="r"><code>list_raw_nc_irrig_land &lt;- fromJSON(char_raw_nc_irrig_land)
 
@@ -138,25 +138,25 @@ nc_irrig_land_raw_data &lt;- pmap_dfr(list_raw_nc_irrig_land, rbind)
 # look at the data frame
 head(nc_irrig_land_raw_data)
 ## # A tibble: 6 x 39
-##   reference_perio… county_ansi location_desc country_name domaincat_desc
-##   &lt;chr&gt;            &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;         
-## 1 YEAR             &quot;&quot;          NORTH CAROLI… UNITED STAT… OPERATORS: (1…
-## 2 YEAR             &quot;&quot;          NORTH CAROLI… UNITED STAT… OPERATORS: (2…
-## 3 YEAR             &quot;&quot;          NORTH CAROLI… UNITED STAT… OPERATORS, PR…
-## 4 YEAR             &quot;&quot;          NORTH CAROLI… UNITED STAT… OPERATORS, PR…
-## 5 YEAR             &quot;&quot;          NORTH CAROLI… UNITED STAT… OPERATORS, PR…
-## 6 YEAR             &quot;&quot;          NORTH CAROLI… UNITED STAT… OPERATORS, PR…
-## # … with 34 more variables: sector_desc &lt;chr&gt;, source_desc &lt;chr&gt;,
-## #   class_desc &lt;chr&gt;, asd_desc &lt;chr&gt;, year &lt;int&gt;, group_desc &lt;chr&gt;,
-## #   week_ending &lt;chr&gt;, congr_district_code &lt;chr&gt;, zip_5 &lt;chr&gt;,
-## #   commodity_desc &lt;chr&gt;, agg_level_desc &lt;chr&gt;, state_alpha &lt;chr&gt;, Value &lt;chr&gt;,
-## #   end_code &lt;chr&gt;, short_desc &lt;chr&gt;, country_code &lt;chr&gt;, watershed_code &lt;chr&gt;,
-## #   domain_desc &lt;chr&gt;, county_code &lt;chr&gt;, watershed_desc &lt;chr&gt;,
-## #   begin_code &lt;chr&gt;, load_time &lt;chr&gt;, prodn_practice_desc &lt;chr&gt;,
-## #   freq_desc &lt;chr&gt;, state_ansi &lt;chr&gt;, statisticcat_desc &lt;chr&gt;,
-## #   region_desc &lt;chr&gt;, util_practice_desc &lt;chr&gt;, unit_desc &lt;chr&gt;,
-## #   asd_code &lt;chr&gt;, state_fips_code &lt;chr&gt;, `CV (%)` &lt;chr&gt;, state_name &lt;chr&gt;,
-## #   county_name &lt;chr&gt;</code></pre>
+##   `CV (%)` state_name county_name region_desc util_practice_d… unit_desc
+##   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;    
+## 1 2.9      NORTH CAR… &quot;&quot;          &quot;&quot;          ALL UTILIZATION… ACRES    
+## 2 6.2      NORTH CAR… &quot;&quot;          &quot;&quot;          ALL UTILIZATION… ACRES    
+## 3 9.0      NORTH CAR… &quot;&quot;          &quot;&quot;          ALL UTILIZATION… ACRES    
+## 4 74.2     NORTH CAR… &quot;&quot;          &quot;&quot;          ALL UTILIZATION… ACRES    
+## 5 12.0     NORTH CAR… &quot;&quot;          &quot;&quot;          ALL UTILIZATION… ACRES    
+## 6 15.6     NORTH CAR… &quot;&quot;          &quot;&quot;          ALL UTILIZATION… ACRES    
+## # … with 33 more variables: asd_code &lt;chr&gt;, state_fips_code &lt;chr&gt;,
+## #   state_ansi &lt;chr&gt;, statisticcat_desc &lt;chr&gt;, freq_desc &lt;chr&gt;,
+## #   prodn_practice_desc &lt;chr&gt;, load_time &lt;chr&gt;, begin_code &lt;chr&gt;,
+## #   watershed_desc &lt;chr&gt;, county_code &lt;chr&gt;, watershed_code &lt;chr&gt;,
+## #   domain_desc &lt;chr&gt;, country_code &lt;chr&gt;, Value &lt;chr&gt;, short_desc &lt;chr&gt;,
+## #   end_code &lt;chr&gt;, state_alpha &lt;chr&gt;, agg_level_desc &lt;chr&gt;,
+## #   commodity_desc &lt;chr&gt;, zip_5 &lt;chr&gt;, congr_district_code &lt;chr&gt;,
+## #   week_ending &lt;chr&gt;, group_desc &lt;chr&gt;, year &lt;int&gt;, class_desc &lt;chr&gt;,
+## #   asd_desc &lt;chr&gt;, source_desc &lt;chr&gt;, country_name &lt;chr&gt;, sector_desc &lt;chr&gt;,
+## #   domaincat_desc &lt;chr&gt;, county_ansi &lt;chr&gt;, location_desc &lt;chr&gt;,
+## #   reference_period_desc &lt;chr&gt;</code></pre>
 <p>This looks ok but there are still some things that would be nice to clean up. As mentioned above, we want to focus on the acres of irrigated lands in NC. For simplicity, we’ll just look at farms/ranches with 2,000 ac or more under operation. Let’s step through each line in the piped (i.e., <code>%&gt;%</code>) code below. See the in-line comments for the details.</p>
 <pre class="r"><code>nc_irrigated &lt;- nc_irrig_land_raw_data %&gt;%
   
@@ -249,16 +249,17 @@ ggplot(nc_irrigated_mult_years) +
 <pre class="r"><code>nc_irrigated_summary &lt;- nc_irrigated_mult_years %&gt;%
   group_by(year) %&gt;%
   summarize(sum_irrigated_ac = sum(irrigated),
-            sum_all_production_ac = sum(all_production_practices))
+            sum_all_production_ac = sum(all_production_practices)) %&gt;%
+  mutate(percent_irrigated = (sum_irrigated_ac/sum_all_production_ac) * 100)
 
 nc_irrigated_summary
-## # A tibble: 3 x 3
-##    year sum_irrigated_ac sum_all_production_ac
-##   &lt;int&gt;            &lt;dbl&gt;                 &lt;dbl&gt;
-## 1  2007            46882                700190
-## 2  2012            36687                590884
-## 3  2017            30410                454276</code></pre>
-<p>We see that 2007 had the largest (i.e., 46,882) acreage of irrigated land for these 13 counties while 2017 had the smallest (i.e., 30,410) acreage of irrigated land.</p>
+## # A tibble: 3 x 4
+##    year sum_irrigated_ac sum_all_production_ac percent_irrigated
+##   &lt;int&gt;            &lt;dbl&gt;                 &lt;dbl&gt;             &lt;dbl&gt;
+## 1  2007            46882                700190              6.70
+## 2  2012            36687                590884              6.21
+## 3  2017            30410                454276              6.69</code></pre>
+<p>We see that these 13 counties irrigated about 7% of their land in production for 2007 and 2017.</p>
 <p>Besides making some bar charts we can also map the irrigation percentages by county. For now, we’ll just filter out the 2017 data for this visualization.</p>
 <pre class="r"><code>nc_irrigated_2017 &lt;- nc_irrigated %&gt;%
   filter(year == 2017)</code></pre>
@@ -275,12 +276,12 @@ mapview(nc_irrigated_map_2017, zcol = &quot;percent_irrigated&quot;, legend = FA
 Some other thoughts that I wanted to mention before signing off:</p>
 <ul>
 <li><p>Querying the NASS API was fairly straightforward, and despite needing to do some considerable data wrangling with the output, the <code>tidyverse</code> packages (i.e., <code>dplyr</code> and <code>tidyr</code>) helped a lot. I should note that I spent some time figuring out what the query outputs would look like for different commodities and what aspects of the query outputs I needed.</p></li>
-<li><p>It was interesting to see that a higher percentage of acres were irrigated in NC in 2007 compared to 2012 and 2017. I can’t say what caused these differences based on these data alone, but it would be interesting to look into whether this finding was linked to the 2007 drought. According to other scientists who lived and researched water resources at the time, <a href="http://climate.ncsu.edu/climateblog?id=161">the 2007 drought affected millions of people in NC</a>. A longer time series of irrigated land might help with this as would overlapping these county level results with drought reports and crop losses.</p></li>
+<li><p>It was interesting to see that a higher percentage of acres were irrigated in NC in 2007 compared to 2012. I can’t say what caused these differences based on these data alone, but it would be interesting to look into whether this finding was linked to the 2007 drought. According to other scientists who lived and researched water resources at the time, <a href="http://climate.ncsu.edu/climateblog?id=161">the 2007 drought affected millions of people in NC</a>. A longer time series of irrigated land might help with this as would overlapping these county level results with drought reports and crop losses.</p></li>
 </ul>
 <p>I can think of a number of other commodities that might be interesting to look at in the NASS Quick Stats data set. I’m assuming that some commonly farmed commodities (i.e., corn) might have more years and locations available. If you’ve used the NASS API for other applications or have any other questions/ideas please let me know!</p>
 </div>
 <div id="updates-since-posting" class="section level1">
 <h1>Updates Since Posting</h1>
-<p>June 2019: Looks like NASS has officially published a <code>usdarnass</code> package to CRAN! You can read the package documentation <a href="https://cran.r-project.org/web/packages/usdarnass/usdarnass.pdf">here</a>. Looks like there are some nice lookup tables which might be very helpful.</p>
+<p>June 2019: Looks like NASS has officially published a <code>usdarnass</code> package to CRAN! You can read the package documentation <a href="https://cran.r-project.org/web/packages/usdarnass/usdarnass.pdf">here</a>. Looks like there are some nice look-up tables which might be very helpful.</p>
 <p>January 2019: Since first posting this, <a href="https://twitter.com/julianjon/status/1082849177917317120">Julian Reyes suggested</a> using Nicholas Potter’s package called <code>rnassqs</code> to help automate the NASS API portion of this post. You can read more about the <code>rnassqs</code> package <a href="https://github.com/potterzot/rnassqs">here</a>. Note to self that I need to check it out!</p>
 </div>
