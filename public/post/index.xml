@@ -46,8 +46,8 @@
       <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/2019-01-04-nass-api/</guid>
-      <description>Background Application program interfaces (APIs) help users access (“API request”) and retrieve (“API response”) data from web-based, data servers via programs like R, Python, etc. If you’re interested in more details, several others before me have done a great job writing about API’s and R: this post by C. Waldhauser and this post by T. Clavelle.
-I recently learned about a few R packages that help users interface directly with APIs and a few of these are especially interesting for water-minded, data loving people like me.</description>
+      <description>Background This post was originally posted on Jan. 4, 2019 but was revised on May 14, 2020.
+Application program interfaces (APIs) help users access (“API request”) and retrieve (“API response”) data from web-based, data servers via programs like R, Python, etc. If you’re interested in more details, several others before me have done a great job writing about API’s and R: this post by C.</description>
     </item>
     
     <item>

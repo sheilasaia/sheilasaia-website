@@ -7,10 +7,12 @@ tags: []
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE, message = FALSE, warning = FALSE, eval = FALSE)
+knitr::opts_chunk$set(collapse = TRUE, message = FALSE, warning = FALSE, eval = TRUE)
 ```
 
 # Background
+
+This post was originally posted on Jan. 4, 2019 but was revised on May 14, 2020.
 
 Application program interfaces (APIs) help users access ("API request") and retrieve ("API response") data from web-based, data servers via programs like R, Python, etc. If you're interested in more details, several others before me have done a great job writing about API's and R: [this post by C. Waldhauser](https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/) and [this post by T. Clavelle](https://tclavelle.github.io/blog/r_and_apis/).
 
@@ -54,25 +56,57 @@ The `tidyverse` and `mapview` packages will help us wrangle and visualize the AP
 
 The `purrr` package will help us repetitively apply the same function to each row of the API outputs.
 
+## Census API Set Up
+
+As I mentioned above, many APIs require that you have a personal API key to access the data stored within them. To run the code in this post you'll need to make sure you request a Census API key (see instructions above) and a NASS API key (see instructions below). Once you have your API keys, keep them all in one safe spot. I recommend a text file somewhere rememberable on your (password protected) computer.
+
+If you've never installed your Census API key in your R session, you'll want to install your API key for later use.
+
 ```{r first time census key, eval=FALSE}
-# If you've never used your tidycensus API key in your R session, run this:
-census_api_key("YOUR API KEY GOES HERE")
+CENSUS_API_KEY <- "YOUR API KEY GOES HERE"
+census_api_key(CENSUS_API_KEY, install = TRUE)
+
+# The second line of code above will make an entry in your .Renviron file called "CENSUS_API_KEY".
 ```
 
-```{r not first time census key, include=FALSE}
-# If you've used your tidycensus API key in a previous R session, run this:
+If you've already installed your Census API key, you should be good to go, but you can always check to make sure it's in your R environment using the code below.
+
+```{r not first time census key, eval=FALSE}
+Sys.getenv("CENSUS_API_KEY")
+```
+
+If you want to get tabular *and* spatial census data using the `tidycensus` package, you will need to run the code below each time you start a new R session. Spatial census data includes, for example, census tract boundaries.
+
+```{r setting tigris options}
 options(tigris_use_cache = TRUE)
 ```
 
-You'll have to also apply for a NASS API key. We'll use this later but will definite it here as a string. You can apply for a NASS API key [here](https://quickstats.nass.usda.gov/api)
+## NASS API Set Up
 
-```{r define NASS api fake, eval=FALSE}
-nass_key <- "ADD YOUR NASS API KEY HERE"
+Be sure to also apply for a NASS API key. We'll use this later but will define it here as a string called `NASS_API_KEY`. You can apply for a NASS API key [here](https://quickstats.nass.usda.gov/api)
+
+```{r define NASS api, eval=FALSE}
+NASS_API_KEY <- "ADD YOUR NASS API KEY HERE"
 ```
 
-```{r define NASS api real, include=FALSE}
-nass_key <- Sys.getenv("nass_key")
+If you want to save your NASS API key to your R environment, you can use the code below. Setting the NASS API key in your R environment will keep it hidden and accessible only to you. This might be important if you're planning to pass along your script to someone else...or post it on your blog. ;) Note, you would have to do this each time you open R.
+
+```{r define NASS api from env, eval=FALSE}
+Sys.setenv(NASS_API_KEY = NASS_API_KEY)
+
+# To check that it is there, use this code:
+Sys.getenv("NASS_API_KEY")
 ```
+
+To use your NASS API in code later on call it and assign it to a variable.
+
+```{r use NASS key from env}
+NASS_API_KEY <- Sys.getenv("NASS_API_KEY")
+```
+
+If you want to be very organized and secure you can add your NASS API key to your .Renvir file. You will only need to do this once and then R will automatically load the key into your working environment whenever you start a new R session. If you're interested in doing this and not too afraid of the command line, checkout [this stackoverflow post](https://stackoverflow.com/questions/40788645/how-to-create-renviron-file). Note, that if you have already run `census_api_key()` you will not need to make a new .Renviron file. It will already exist in your HOME directory.
+
+# API Data Query
 
 Now, we'll define the NASS url and path. In the path you'll have to specify what type of data you want to query. To specify these you can go to [https://quickstats.nass.usda.gov/](https://quickstats.nass.usda.gov/) to see all your commodity options. I haven't figured out another way to do this but please [contact me](mailto:ssaia@ncsu.edu) if you find an alternative.
 
@@ -96,10 +130,8 @@ my_year <- "2006"
 my_state <- "NC"
 
 # final path string
-path_nc_irrig_land <- paste0("api/api_GET/?key=", nass_key, "&commodity_desc=", my_commodity_desc, "&short_desc=", my_short_desc1, "&short_desc=", my_short_desc2, "&year__GE=", my_year, "&state_alpha=", my_state)
+path_nc_irrig_land <- paste0("api/api_GET/?key=", NASS_API_KEY, "&commodity_desc=", my_commodity_desc, "&short_desc=", my_short_desc1, "&short_desc=", my_short_desc2, "&year__GE=", my_year, "&state_alpha=", my_state)
 ```
-
-# API Data Query
 
 Let's query the NASS API.
 
@@ -151,18 +183,18 @@ This looks ok but there are still some things that would be nice to clean up. As
 ```{r wrangle data}
 nc_irrigated <- nc_irrig_land_raw_data %>%
   
-  # filter to select county level irrigation data where farms/ranches with 2,000+ ac operation
+  # filter to select county level irrigation data where farms/ranches with 2,000+ ac operation and irrigation status to get total acres of ag land in county
   filter(agg_level_desc == "COUNTY") %>%
   filter(unit_desc == "ACRES") %>%
-  #filter(domaincat_desc == "AREA OPERATED: (2,000 OR MORE ACRES)") %>%
+  filter(domaincat_desc == "AREA OPERATED: (2,000 OR MORE ACRES)" | domaincat_desc == "IRRIGATION STATUS: (ANY ON OPERATION)") %>%
 
   # trim white space from ends (note: 'Value' is a character here, not a number)
   mutate(value_trim = str_trim(Value)) %>%
   
   # select only the columns we'll need
   select(state_name, state_alpha, state_ansi, county_code, county_name, asd_desc,
-         agg_level_desc, year, prodn_practice_desc_char = prodn_practice_desc, domaincat_desc,
-         value_ac_per_yr_char=value_trim, unit_desc) %>%
+         agg_level_desc, year, prodn_practice_desc_char = prodn_practice_desc, domaincat_desc, 
+         short_desc, value_ac_per_yr_char=value_trim, unit_desc) %>%
   
   # filter out entries with codes '(D)' and '(Z)'
   filter(value_ac_per_yr_char != "(D)" & value_ac_per_yr_char != "(Z)") %>% 
@@ -176,28 +208,30 @@ nc_irrigated <- nc_irrig_land_raw_data %>%
   
   # remove unnecessary columns
   select(-value_ac_per_yr_char, -prodn_practice_desc_char) %>%
-  #arrange(county_code, year)
-  #irrigated includes 
+  #arrange(county_code, year) 
   
-  # we have 2007 and 2012 data and we want irrigated lands and total lands operated
-  # (to calculate a percentage of irrigated land) so we use n()>3 to filter out counties
-  # that do have both years and info on both irrigated and total lands operated
-  group_by(county_code) %>%
-  filter(n()>3) %>%
-  
-  # spread irrigated and total lands operated data and calculate percent irrigated
+  # we have 2007, 2012, and 2017 data and we want irrigated land acreage and total land acreage
+  # (to calculate a percentage of irrigated land) so we use n()>1 to filter out counties
+  # that have both types of acreage for each year
   group_by(county_code, year) %>%
-  spread(prodn_practice_desc, value_ac_per_yr) %>%
+  filter(n()>1) %>%
+  
+  # drop columns we don't need
+  select(-domaincat_desc, -short_desc) %>%
+  
+  # pivot wide irrigated and total lands operated data and calculate percent irrigated
+  pivot_wider(names_from = prodn_practice_desc, values_from = value_ac_per_yr) %>%
   mutate(percent_irrigated = round(irrigated/all_production_practices*100, 1)) %>%
   
   # make a column with the county name and year (we'll need this for plotting)
   mutate(county_year = paste0(str_to_lower(county_name), "_", year)) %>%
   
   # make GEOID column to match up with county level spatial data (we'll need this for mapping)
-  mutate(GEOID = paste0(state_ansi, county_code))
+  mutate(GEOID = paste0(state_ansi, county_code)) %>%
+  ungroup()
 ```
 
-Let's look at the first few rows of the final reformatted NASS data showing the amount of irrigated acres in NC for 2007 and 2012.
+Let's look at the first few rows of the final reformatted NASS data showing the amount of irrigated acres in NC for 2007, 2012, and 2017.
 
 ```{r check data}
 head(nc_irrigated)
@@ -205,7 +239,7 @@ head(nc_irrigated)
 
 # Plotting NASS Data
 
-Now that we have this nicely formatted data, we can make some figures! Let's start by making some bar charts comparing the percentage of irrigated land in NC counties where data with available data for 2007 and 2012.
+Now that we have this nicely formatted data, we can make some figures! Let's start by making some bar charts comparing the percentage of irrigated land in NC counties where data with available data for 2007, 2012, and 2017.
 
 ```{r bar chart}
 ggplot(nc_irrigated) +
@@ -216,10 +250,28 @@ ggplot(nc_irrigated) +
   theme_bw()
 ```
 
-Looking at this figure, we can see that there was a higher percentage of irrigated land in 2007 for 9 out of 17 (i.e., ~53%) NC counties with available NASS data. We can summarize the total number of acres irrigated for all 17 counties for both 2007 and 2012 to verify this directly using `summarize()`.
+We can plot just the counties that have all three years of data available.
+
+```{r bar chart select}
+# select counties that have all three years
+nc_irrigated_mult_years <- nc_irrigated %>%
+  group_by(county_name) %>%
+  filter(n()>2)
+
+# plot
+ggplot(nc_irrigated_mult_years) +
+  geom_col(aes(x = year, y = percent_irrigated), fill = "grey50") +
+  facet_wrap(~county_name) +
+  xlab("Year") +
+  ylab("Percent of Total Acres Irrigated (%)") +
+  theme_bw()
+```
+
+
+Looking at this figure, it's hard to see any big patterns in the NASS irrigation data. We can summarize the total number of acres irrigated for all 13 counties using `summarize()`.
 
 ```{r irrigated summary}
-nc_irrigated_summary <- nc_irrigated %>%
+nc_irrigated_summary <- nc_irrigated_mult_years %>%
   group_by(year) %>%
   summarize(sum_irrigated_ac = sum(irrigated),
             sum_all_production_ac = sum(all_production_practices))
@@ -227,33 +279,32 @@ nc_irrigated_summary <- nc_irrigated %>%
 nc_irrigated_summary
 ```
 
-We see that 9,379 more acres were irrigated in 2007 compared to 2012 despite more acres of land being under production in 2012.
+We see that 2007 had the largest (i.e., 46,882) acreage of irrigated land for these 13 counties while 2017 had the smallest (i.e., 30,410) acreage of irrigated land.
 
-Besides making some bar charts we can also map the irrigation percentages by county. For now, we'll just filter out the 2007 data for this visualization.
+Besides making some bar charts we can also map the irrigation percentages by county. For now, we'll just filter out the 2017 data for this visualization.
 
-```{r filter 2007 data}
-nc_irrigated_2007 <- nc_irrigated %>%
-  filter(year == 2007)
+```{r filter 2017 data}
+nc_irrigated_2017 <- nc_irrigated %>%
+  filter(year == 2017)
 ```
 
 Next we'll use the `get_acs()` function in the `tidycensus` package with `geometry = TRUE` to download the [TIGER](https://www.census.gov/geo/maps-data/data/tiger.html) county boundaries shape (.shp) file for NC. The variable used here (i.e., "B19013_001") represents median income but you can use any variable you wish. We're mostly just interested in the spatial data associated with this and will ignore the tabular (i.e., median income) data.
 
 ```{r get acs shp}
-nc_counties <- get_acs(geography = "county", state = "NC", variables = "B19013_001", 
-                       year = 2012, geometry = TRUE, survey = "acs5")
+nc_counties <- get_acs(geography = "county", state = "NC", variables = "B19013_001", year = 2017, geometry = TRUE, survey = "acs5")
 ```
 
-The second last step is to join `nc_irrigated_2007` to the county boundary spatial data.
+The second last step is to join `nc_irrigated_2017` to the county boundary spatial data.
 
 ```{r join tab data to acs}
-nc_irrigated_map_2007 <- left_join(nc_counties, nc_irrigated_2007, by = "GEOID")
+nc_irrigated_map_2017 <- left_join(nc_counties, nc_irrigated_2017, by = "GEOID")
 ```
 
 Now we'll use `mapview()` to make an interactive plot where counties are colored based on the percentage of irrigated land. You can hover your mouse over the counties to see the actual percentages.
 
 ```{r}
 mapviewOptions(vector.palette = colorRampPalette(c("snow", "darkblue", "grey10")))
-mapview(nc_irrigated_map_2007, zcol = "percent_irrigated", legend = FALSE)
+mapview(nc_irrigated_map_2017, zcol = "percent_irrigated", legend = FALSE)
 ```
 
 <br/>
@@ -261,7 +312,7 @@ Some other thoughts that I wanted to mention before signing off:
 
 - Querying the NASS API was fairly straightforward, and despite needing to do some considerable data wrangling with the output, the `tidyverse` packages (i.e., `dplyr` and `tidyr`) helped a lot. I should note that I spent some time figuring out what the query outputs would look like for different commodities and what aspects of the query outputs I needed.
 
-- It was interesting to see that a higher percentage of acres were irrigated in NC in 2007 compared to 2012. I can't say what caused these differences based on these data alone, but it would be interesting to look into whether this finding was linked to the 2007 drought. According to other scientists who lived and researched water resources at the time, [the 2007 drought affected millions of people in NC](http://climate.ncsu.edu/climateblog?id=161). A longer time series of irrigated land might help with this as would overlapping these county level results with drought reports and crop losses.
+- It was interesting to see that a higher percentage of acres were irrigated in NC in 2007 compared to 2012 and 2017. I can't say what caused these differences based on these data alone, but it would be interesting to look into whether this finding was linked to the 2007 drought. According to other scientists who lived and researched water resources at the time, [the 2007 drought affected millions of people in NC](http://climate.ncsu.edu/climateblog?id=161). A longer time series of irrigated land might help with this as would overlapping these county level results with drought reports and crop losses.
 
 I can think of a number of other commodities that might be interesting to look at in the NASS Quick Stats data set. I'm assuming that some commonly farmed commodities (i.e., corn) might have more years and locations available. If you've used the NASS API for other applications or have any other questions/ideas please let me know!
 
