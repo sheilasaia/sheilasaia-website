@@ -1,6 +1,6 @@
 +++
-title = "Preprint: An Interdisciplinary Review of Polyphosphate Accumulating Organism (PAO)-Mediated Phosphorus Cycling for Landscape-Scale Water Quality Management"
-date = 2018-12-01T00:00:00
+title = "A Critical Review of Polyphosphate and Polyphosphate Accumulating Organisms for Agricultural Water Quality Management"
+date = 2020-06-02T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["**SM Saia**", "HJ Carrick", "AR Buda", "JM Regan", "MT Walter"]
@@ -17,11 +17,11 @@ authors = ["**SM Saia**", "HJ Carrick", "AR Buda", "JM Regan", "MT Walter"]
 publication_types = ["3"]
 
 # Publication name and optional abbreviated version.
-publication = "Non-Peer Reviewed Preprint in the *EarthArXiv*"
-publication_short = "In *EarthArXiv* (preprint)"
+publication = "*Environmental Science & Technology (in review) EarthArXiv (preprint)*"
+publication_short = "*ES&T (in review) EarthArxiv (preprint)*"
 
 # Abstract and optional shortened version.
-abstract = "Despite ongoing management efforts, phosphorus (P) loading from agricultural landscapes continues to impair water quality. Concurrent, established research in engineered systems (e.g., wastewater treatments plants) and natural systems (e.g., stream, lakes, sediments, and marine waters) has enhanced our understanding of microbial mechanisms influencing P cycling. However, there is limited application of this research to reducing P loading and improving water quality in agricultural systems (e.g., field soils and downstream waterbodies). Herein, we review microbial-mediated P cycling in engineered and natural systems—focusing on the role of polyphosphate accumulating organisms (PAOs). We discuss emerging technologies and frameworks to evaluate the diversity, structure, and function of PAO communities while highlighting opportunities to apply PAO-focused research in agricultural systems. The overall goal of this review is to motivate interdisciplinary collaborations that consider both biotic (here microbial) and abiotic P cycling mechanisms across the landscape. We argue that these collaborations and considerations are needed to reduce P loading and improve water quality."
+abstract = "Despite ongoing management efforts, phosphorus (P) loading from agricultural landscapes continues to impair water quality. Wastewater treatment plant research has enhanced our knowledge of microbial mechanisms influencing P cycling, especially related to microbes known as polyphosphate accumulating organisms (PAOs) that store P as polyphosphate (polyP) under aerobic conditions and release P under anaerobic conditions. However, there is limited application of PAO research to reduce agricultural P loading and improve water quality. Herein, we conducted a meta-analysis to identifying articles in Web of Science on polyP and its use by PAOs. We grouped our meta-analysis by discipline—wastewater treatment, soils and sediments (terrestrial), freshwater, marine, and agriculture—and discussed whether PAO behavior in wastewater treatment plants can be extended to natural habitats, including agricultural settings like soils, undergoing alternating anaerobic/aerobic conditions. We also synthesized knowledge gaps and research opportunities. Terrestrial, freshwater, and marine disciplines had fewer polyP and PAO articles compared to wastewater treatment and there was limited article overlap between disciplines. There is an urgent need for interdisciplinary research linking PAOs, polyP, and oxygen availability with existing knowledge of P forms and cycling mechanisms in natural and agricultural environments to improve agricultural P management strategies and achieve water quality goals."
 abstract_short = ""
 
 # Featured image thumbnail (optional)

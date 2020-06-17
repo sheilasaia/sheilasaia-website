@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>A Critical Review of Polyphosphate and Polyphosphate Accumulating Organisms for Agricultural Water Quality Management</title>
+      <link>/publication/pao_review/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 -0400</pubDate>
+      
+      <guid>/publication/pao_review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Tidy Spatial Data in R</title>
       <link>/talk/duke_mar2020/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 -0500</pubDate>
@@ -507,105 +516,6 @@ my_year * slope + intercept&lt;/code&gt;&lt;/pre&gt;
       
       <guid>/publication/yadkin-swat-svi/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>R Resources for Water Scientists</title>
-      <link>/post/2019-02-15-water-resources/</link>
-      <pubDate>Fri, 15 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-02-15-water-resources/</guid>
-      <description>
-
-
-&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Background&lt;/h1&gt;
-&lt;p&gt;There are lots of resources out there for R users and I thought it might be helpful to compile some that might be especially helpful for &lt;strong&gt;water scientists&lt;/strong&gt;. I’ll also admit that this is a 50% selfish task meant to help me keep track of resources for my own learning.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;goals-of-this-post&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Goals of This Post&lt;/h1&gt;
-&lt;p&gt;The main goal of this blog post is to compile links to &lt;code&gt;R&lt;/code&gt; resources including: packages, tutorials, books, etc. that might be of interests to water scientists.&lt;/p&gt;
-&lt;p&gt;Note to self that someday maybe I can update this post to also include &lt;code&gt;Python&lt;/code&gt; resources. For now, I’m sticking to &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Special thanks to all of the people who’ve worked hard to share their code and insights together to benefit us all. I love the open source programming community!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;r-packages&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Packages&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Water-related packages currated by &lt;a href=&#34;https://samzipper.weebly.com/&#34;&gt;Sam Zipper&lt;/a&gt; at this Google Sheet document &lt;a href=&#34;https://docs.google.com/document/d/1XM3KuWdMgVrh92zE-CGIFNC7jYd_DGD8CokAVLkItz0/edit&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;CRAN tasks views for R packages related to &lt;a href=&#34;https://cran.r-project.org/web/views/Environmetrics.html&#34;&gt;envirometrics&lt;/a&gt;, &lt;a href=&#34;https://cran.r-project.org/web/views/Hydrology.html&#34;&gt;hyrdrology&lt;/a&gt;, &lt;a href=&#34;https://cran.r-project.org/web/views/Spatial.html&#34;&gt;spatial analysis&lt;/a&gt;, &lt;a href=&#34;https://cran.r-project.org/web/views/TimeSeries.html&#34;&gt;time series analysis&lt;/a&gt;, and &lt;a href=&#34;https://cran.r-project.org/web/views/&#34;&gt;a number of other topics&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tutorials&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Tutorials&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Vignettes for the &lt;code&gt;sf&lt;/code&gt; package &lt;a href=&#34;https://github.com/r-spatial/sf&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Vignette for &lt;code&gt;elevatr&lt;/code&gt; package by Jeff Hollister &lt;a href=&#34;https://cran.r-project.org/web/packages/elevatr/vignettes/introduction_to_elevatr.html&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Vignettes for the &lt;code&gt;tidycensus&lt;/code&gt; package &lt;a href=&#34;https://github.com/walkerke/tidycensus/tree/master/vignettes&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;USGS introduction to R tutorials &lt;a href=&#34;https://owi.usgs.gov/R/training-curriculum/intro-curriculum/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;USGS R package use tutorials &lt;a href=&#34;https://owi.usgs.gov/R/training-curriculum/usgs-packages/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;USGS R package development tutorial &lt;a href=&#34;https://owi.usgs.gov/R/training-curriculum/r-package-dev/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;USGS other R training &lt;a href=&#34;https://owi.usgs.gov/R/training-curriculum/course-specific-material/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;USGS dataRetrieval tutorial &lt;a href=&#34;https://owi.usgs.gov/R/dataRetrieval.html#1&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;SESYNC R tutorials &lt;a href=&#34;https://cyberhelp.sesync.org/lesson/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Software Carpentry introduction to R tutorial &lt;a href=&#34;http://swcarpentry.github.io/r-novice-inflammation/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;NEON R tutorials &lt;a href=&#34;https://www.neonscience.org/resources/data-tutorials&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;workshops-associated-code&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Workshops (+ associated code)&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;GIS in R Workshop at Society for 2018 Freshwater Science Conference by R. Hill &amp;amp; M. Beck &lt;a href=&#34;https://ryan-hill.github.io/sfs-r-gis-2018/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;sf&lt;/code&gt; package tutorial with USGS GAGES-II data for NC State BAE 590 Class by S. Saia &lt;a href=&#34;https://github.com/sheilasaia/sf-workshop-bae590&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;blogs&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Blogs&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Blog by Jesse Sadler &lt;a href=&#34;https://www.jessesadler.com/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;RGeo Blog by Matt Strimas-Mackey &lt;a href=&#34;http://strimas.com/#posts&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Rivers &amp;amp; Ranids Blog by Ryan Peek &lt;a href=&#34;https://ryanpeek.github.io/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;SESYNC Blog by various &lt;a href=&#34;https://cyberhelp.sesync.org/blog/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Water Programming blog by various &lt;a href=&#34;https://waterprogramming.wordpress.com/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;books&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Books&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;R for Data Science&lt;/em&gt; by Hadley Wickham &amp;amp; Garrett Grolemund &lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Spatial Data Science with R&lt;/em&gt; by various &lt;a href=&#34;https://www.rspatial.org/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Spatial Data Science&lt;/em&gt; by Edzer Pebesma &amp;amp; Roger Bivand &lt;a href=&#34;https://keen-swartz-3146c4.netlify.com/index.html&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Geocomputation with R&lt;/em&gt; by Robin Lovelace, Jakub Nowosad, and Jannes Muenchow &lt;a href=&#34;https://geocompr.robinlovelace.net/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Applied Spatial Data Analysis with R&lt;/em&gt; by Roger Bivand, Edzer Pebesma, and Virgilio Gómez-Rubio &lt;a href=&#34;http://gis.humboldt.edu/OLM/r/Spatial%20Analysis%20With%20R.pdf&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Fundamentals of Data Visualization&lt;/em&gt; by Claus O. Wilke &lt;a href=&#34;https://serialmentor.com/dataviz/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Happy Git and GitHub for the useR&lt;/em&gt; by Jenny Bryan &lt;a href=&#34;https://happygitwithr.com/index.html&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Blogdown&lt;/em&gt; by Yihui Xie, Amber Thomas, and Alison Presmanes Hill &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;rOpenSci Package Development, Maintenance, and Peer Review&lt;/em&gt; by Brooke Anderson, Scott Chamberlain, Anna Krystalli, Lincoln Mullen, Karthik Ram, Noam Ross, Maëlle Salmon, and Melina Vidoni &lt;a href=&#34;https://ropensci.github.io/dev_guide/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Other cool books by RStudio staff &lt;a href=&#34;https://www.rstudio.com/resources/training/books/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;papers&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Papers&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Using R in hydrology: a review of recent developments and future directions&lt;/em&gt; by Slater et al. in review at HESS &lt;a href=&#34;https://www.hydrol-earth-syst-sci-discuss.net/hess-2019-50/&#34;&gt;(link)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;other-help&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Other Help&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;rstudio::conf 2018 slides &amp;amp; recorded talks &lt;a href=&#34;https://github.com/simecek/RStudioConf2018Slides&#34;&gt;(link)&lt;/a&gt; or &lt;a href=&#34;https://resources.rstudio.com/rstudio-conf-2018&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;rstudio::conf 2019 slides &amp;amp; recorded talks (&lt;em&gt;coming soon&lt;/em&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Others have created similar summaries of R resources such as &lt;a href=&#34;https://itsalocke.com/blog/r-spatial-resources/&#34;&gt;this post by Steph Locke&lt;/a&gt; and &lt;a href=&#34;https://github.com/rspatialladies/rspatial-resources&#34;&gt;this page by R-Spatial Ladies&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;python-resources&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Python Resources&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Raoul Collenteur’s GitHub page on Python tools for hydrologists &lt;a href=&#34;https://github.com/raoulcollenteur/Python-Hydrology-Tools&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;John Herman’s Python for Water Resources Engineering tutorial &lt;a href=&#34;http://jdherman.github.io/python-tutorial/&#34;&gt;(link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you know of any resources that I may have missed (it’s very likely that I missed somehting!) please contact me!&lt;/p&gt;
-&lt;/div&gt;
-</description>
     </item>
     
   </channel>
