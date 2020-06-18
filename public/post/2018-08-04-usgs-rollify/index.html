@@ -547,7 +547,8 @@ site_info &lt;- readNWISsite(site_numbers)</code></pre>
   mutate(date = ymd(paste0(year, &quot;-&quot;, month, &quot;-&quot;, day))) %&gt;%
   select(site_name, date, discharge_cfs) %&gt;%
   group_by(site_name, date) %&gt;%
-  summarize(avg_daily_discharge_cfs = mean(discharge_cfs))</code></pre>
+  summarize(avg_daily_discharge_cfs = mean(discharge_cfs))
+## `summarise()` regrouping output by &#39;site_name&#39; (override with `.groups` argument)</code></pre>
 <p>Now let’s try plotting the daily hydrograph (i.e., average daily discharge vs time) for both sites.</p>
 <pre class="r"><code>ggplot(data = discharge_daily) +
   geom_line(aes(x = date, y = avg_daily_discharge_cfs, color = site_name)) +
