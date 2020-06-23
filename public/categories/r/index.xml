@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 18 Apr 2019 21:12:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>APIs to the Rescue (&amp; the Census of Agriculture) Part 2</title>
+      <link>/post/2020-06-30-nass-api-part2/</link>
+      <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-06-30-nass-api-part2/</guid>
+      <description>Background In a previous blog post, I discussed the use of application program interfaces (APIs) in R. Specifically, I focused on accessing data from the US Department of Agriculture’s National Agricultural Statistics Survey (NASS) Quick Stats API. Since I wrote that previous blog post in January 2019, several R packages that aid access to the NASS Quick Stats API have come to my attention. With these packages, it’s much easier to access NASS Quick Stats data using R!</description>
+    </item>
     
     <item>
       <title>Calculating the Cost of My Flight&#39;s Carbon Footprint in R</title>

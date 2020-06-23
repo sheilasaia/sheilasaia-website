@@ -53,11 +53,11 @@ Let's use the `tidycensus` package to get some county boundaries. This will prov
 
 The `tidyverse` and `mapview` packages will help us wrangle and visualize the API outputs.
 
-The `purrr` package will help us repetitively apply the same function to each row of the API outputs.
-
 ## Census API Set Up
 
-As I mentioned above, many APIs require that you have a personal API key to access the data stored within them. To run the code in this post you'll need to make sure you request a Census API key (see instructions above) and a NASS API key (see instructions below). Once you have your API keys, keep them all in one safe spot. I recommend a text file somewhere rememberable on your (password protected) computer.
+As I mentioned above, many APIs require that you have a personal API key to access the data stored within them. To run the code in this post you'll need to make sure you request a Census API key (see instructions below) and a NASS API key (see instructions below). Once you have your API keys, keep them all in one safe spot. I recommend a text file somewhere rememberable on your (password protected) computer.
+
+To request a Census API key, you'll have to go [here](https://api.census.gov/data/key_signup.html) and fill in your name and organization. Once you submit the key request, the US Census Bureau will email you a Census API key. This key is unique to the name and email you provided so be sure to keep it in a save place.
 
 If you've never installed your Census API key in your R session, you'll want to install your API key for later use.
 
@@ -86,7 +86,7 @@ options(tigris_use_cache = TRUE)
 
 ## NASS API Set Up
 
-Be sure to also apply for a NASS API key. We'll use this later but will define it here as a string called `NASS_API_KEY`. You can apply for a NASS API key [here](https://quickstats.nass.usda.gov/api)
+Be sure to also apply for a NASS API key. We'll use this later but will define it here as a string called `NASS_API_KEY`. You can apply for a NASS API key [here](https://quickstats.nass.usda.gov/api). As with the Census API key, this is unique you so be sure to keep it in a save place.
 
 ```{r define NASS api, eval=FALSE}
 NASS_API_KEY <- "ADD YOUR NASS API KEY HERE"
