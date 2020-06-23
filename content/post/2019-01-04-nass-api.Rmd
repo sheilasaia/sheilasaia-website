@@ -1,5 +1,5 @@
 ---
-title: "APIs to the Rescue (& the Census of Agriculture)"
+title: "APIs to the Rescue (& the Census of Agriculture) Part 1"
 author: "Sheila Saia"
 date: '2019-01-04'
 categories: ["R"]
@@ -71,11 +71,8 @@ census_api_key(CENSUS_API_KEY, install = TRUE)
 If you've already installed your Census API key, you should be good to go, but you can always check to make sure it's in your R environment using the code below.
 
 ```{r not first time census key, eval=FALSE}
-# set it in your .Renviron file
-Sys.setenv(CENSUS_API_KEY = CENSUS_API_KEY)
-
 # check that it's there
-Sys.setenv("CENSUS_API_KEY")
+Sys.getenv("CENSUS_API_KEY")
 ```
 
 If you want to get tabular *and* spatial census data using the `tidycensus` package, you will need to run the code below each time you start a new R session. Spatial census data includes, for example, census tract boundaries.
@@ -92,16 +89,21 @@ Be sure to also apply for a NASS API key. We'll use this later but will define i
 NASS_API_KEY <- "ADD YOUR NASS API KEY HERE"
 ```
 
-If you want to save your NASS API key to your R environment, you can use the code below. Setting the NASS API key in your R environment will keep it hidden and accessible only to you. This might be important if you're planning to pass along your script to someone else...or post it on your blog. ;) Note, you would have to do this each time you open R.
+If you want to save your NASS API key to your R environment, you can use the code below. Setting the NASS API key in your R environment will keep it hidden and accessible only to you. This might be important if you're planning to pass along your script to someone else...or post it on your blog. ;)
+
+To set the NASS API key your R environment you will have to navigate to the (hidden) .Renviron file on your computer. Then you will have to add `NASS_API_KEY <- "ADD YOUR NASS API KEY HERE"` to that text file. Alternatively, you could also use `sys.setenv()` as indicated below. See [this tutorial](https://rstats.wtf/r-startup.html#renviron) and [this tutorial](https://community.rstudio.com/t/how-to-set-a-variable-in-renviron/5029). You only need to do this once on your computer and will have to readd it if you reformat your computer or reinstall/update R..
+
+Once you've added the NASS API key to your computer's .Renviron file. You will have to run the following code each time you start a new R session because you need to remind R that it has this information available in the .Renviron file.
 
 ```{r define NASS api from env, eval=FALSE}
-Sys.setenv(NASS_API_KEY = NASS_API_KEY)
+# To add NASS_API_KEY to  your .Renviron file
+sys.setenv(NASS_API_KEY <- "ADD YOUR NASS API KEY HERE")
 
-# To check that it is there, use this code:
-Sys.getenv("NASS_API_KEY")
+# To check that it is there and load it into your current R session, use this code:
+NASS_API_KEY <- Sys.getenv("NASS_API_KEY")
 ```
 
-To use your NASS API in code later on call it and assign it to a variable.
+To use your NASS API in code later on, call it and assign it to a variable.
 
 ```{r use NASS key from env}
 NASS_API_KEY <- Sys.getenv("NASS_API_KEY")

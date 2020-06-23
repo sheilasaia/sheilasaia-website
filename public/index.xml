@@ -46,13 +46,15 @@
 &lt;p&gt;First let’s load the R libraries that we’ll need to run the code in this blog post.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidycensus)
 library(tidyverse)
-library(mapview)
-library(rnassqs)&lt;/code&gt;&lt;/pre&gt;
+library(mapview)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The &lt;code&gt;tidycensus&lt;/code&gt;, &lt;code&gt;tidyverse&lt;/code&gt;, &lt;code&gt;mapview&lt;/code&gt; packages should all be familiar from my &lt;a href=&#34;https://sheilasaia.rbind.io/post/2019-01-04-nass-api/&#34;&gt;previous blog post&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;rnassqs&lt;/code&gt; package is new to this blog post. It will help us look up available data on the NASS Quick Stats API and access it.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;rnassqs&lt;/code&gt; package is new to this blog post. It will help us look up available data on the NASS Quick Stats API and access it. We’re going to install this from GitHub because we want to use the &lt;code&gt;nassqs_param_values()&lt;/code&gt; function which is only available via GitHub; if you install through CRAN using &lt;code&gt;install.packages(&amp;quot;rnassqs&amp;quot;)&lt;/code&gt; this function will not be included. Remember you only need to install this once but then must call it every time you start a new session.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;devtools::install_github(&amp;quot;ropensci/rnassqs&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s load the library now.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rnassqs)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;census-api-set-up&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Census API Set Up&lt;/h2&gt;
-&lt;p&gt;As I mentioned in my &lt;a href=&#34;https://sheilasaia.rbind.io/post/2019-01-04-nass-api/&#34;&gt;previous blog post&lt;/a&gt;, many APIs require that you have a personal API key to access the data stored within them. To run the code in this post you’ll need to make sure you request a Census API key (see instructions below) and a NASS API key (see instructions also below). Once you have your API keys, keep them all in one safe spot. I recommend a text file somewhere rememberable on your (password protected) computer.&lt;/p&gt;
+&lt;p&gt;As I mentioned in my &lt;a href=&#34;https://sheilasaia.rbind.io/post/2019-01-04-nass-api/&#34;&gt;previous blog post&lt;/a&gt;, many APIs require that you have a personal API key to access the data stored within them. To run the code in this post you’ll need to make sure you request a Census API key (see instructions below) and a NASS API key (see instructions below). Once you have your API keys, keep them all in one safe spot. I recommend a text file somewhere rememberable on your (password protected) computer.&lt;/p&gt;
 &lt;p&gt;To request a Census API key, you’ll have to go &lt;a href=&#34;https://api.census.gov/data/key_signup.html&#34;&gt;here&lt;/a&gt; and fill in your name and organization. Once you submit the key request, the US Census Bureau will email you a Census API key. This key is unique to the name and email you provided so be sure to keep it in a save place.&lt;/p&gt;
 &lt;p&gt;If you’ve never installed your Census API key in your R session, you’ll want to install your API key for later use.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;CENSUS_API_KEY &amp;lt;- &amp;quot;YOUR API KEY GOES HERE&amp;quot;
@@ -60,11 +62,8 @@ census_api_key(CENSUS_API_KEY, install = TRUE)
 
 # The second line of code above will make an entry in your .Renviron file called &amp;quot;CENSUS_API_KEY&amp;quot;.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you’ve already installed your Census API key, you should be good to go, but you can always check to make sure it’s in your R environment using the code below.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# set it in your .Renviron file
-Sys.setenv(CENSUS_API_KEY = CENSUS_API_KEY)
-
-# check that it&amp;#39;s there
-Sys.setenv(&amp;quot;CENSUS_API_KEY&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# check that it&amp;#39;s there
+Sys.getenv(&amp;quot;CENSUS_API_KEY&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you want to get tabular &lt;em&gt;and&lt;/em&gt; spatial census data using the &lt;code&gt;tidycensus&lt;/code&gt; package, you will need to run the code below each time you start a new R session. Spatial census data includes, for example, census tract boundaries.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;options(tigris_use_cache = TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -72,18 +71,22 @@ Sys.setenv(&amp;quot;CENSUS_API_KEY&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;NASS API Set Up&lt;/h2&gt;
 &lt;p&gt;Be sure to also apply for a NASS API key. We’ll use this later but will define it here as a string called &lt;code&gt;NASS_API_KEY&lt;/code&gt;. You can apply for a NASS API key &lt;a href=&#34;https://quickstats.nass.usda.gov/api&#34;&gt;here&lt;/a&gt;. As with the Census API key, this is unique you so be sure to keep it in a save place.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;NASS_API_KEY &amp;lt;- &amp;quot;ADD YOUR NASS API KEY HERE&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you want to save your NASS API key to your R environment, you can use the code below. Setting the NASS API key in your R environment will keep it hidden and accessible only to you. This might be important if you’re planning to pass along your script to someone else…or post it on your blog. ;) Note, you would have to do this each time you open R.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Sys.setenv(NASS_API_KEY = NASS_API_KEY)
+&lt;p&gt;If you want to save your NASS API key to your R environment, you can use the code below. Setting the NASS API key in your R environment will keep it hidden and accessible only to you. This might be important if you’re planning to pass along your script to someone else…or post it on your blog. ;)&lt;/p&gt;
+&lt;p&gt;To set the NASS API key your R environment you will have to navigate to the (hidden) .Renviron file on your computer. Then you will have to add &lt;code&gt;NASS_API_KEY &amp;lt;- &amp;quot;ADD YOUR NASS API KEY HERE&amp;quot;&lt;/code&gt; to that text file. Alternatively, you could also use &lt;code&gt;sys.setenv()&lt;/code&gt; as indicated below. See &lt;a href=&#34;https://rstats.wtf/r-startup.html#renviron&#34;&gt;this tutorial&lt;/a&gt; and &lt;a href=&#34;https://community.rstudio.com/t/how-to-set-a-variable-in-renviron/5029&#34;&gt;this tutorial&lt;/a&gt;. You only need to do this once on your computer and will have to readd it if you reformat your computer or reinstall/update R.&lt;/p&gt;
+&lt;p&gt;Once you’ve added the NASS API key to your computer’s .Renviron file. You will have to run the following code each time you start a new R session because you need to remind R that it has this information available in the .Renviron file.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# add NASS_API_KEY to  your .Renviron file
+sys.setenv(NASS_API_KEY &amp;lt;- &amp;quot;ADD YOUR NASS API KEY HERE&amp;quot;)
 
-# To check that it is there, use this code:
-Sys.getenv(&amp;quot;NASS_API_KEY&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;To use your NASS API in code later on call it and assign it to a variable.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;NASS_API_KEY &amp;lt;- Sys.getenv(&amp;quot;NASS_API_KEY&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+# check that it is there and load it into your current R session, use this code:
+NASS_API_KEY &amp;lt;- Sys.getenv(&amp;quot;NASS_API_KEY&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To use your NASS API with the &lt;code&gt;rnassqs&lt;/code&gt; package, be sure to run the following function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nassqs_auth(key = Sys.getenv(&amp;quot;NASS_API_KEY&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you want to be very organized and secure you can add your NASS API key to your .Renviron file. You will only need to do this once and then R will automatically load the key into your working environment whenever you start a new R session. If you’re interested in doing this and not too afraid of the command line, checkout &lt;a href=&#34;https://stackoverflow.com/questions/40788645/how-to-create-renviron-file&#34;&gt;this stackoverflow post&lt;/a&gt;. Note, that if you have already run &lt;code&gt;census_api_key()&lt;/code&gt; you will not need to make a new .Renviron file. It will already exist in your HOME directory.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;api-data-query&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;API Data Query&lt;/h1&gt;
+&lt;p&gt;STOPPED HERE!!!!!!!&lt;/p&gt;
 &lt;p&gt;Now, we’ll define the NASS url and path. In the path you’ll have to specify what type of data you want to query. To specify these you can go to &lt;a href=&#34;https://quickstats.nass.usda.gov/&#34;&gt;https://quickstats.nass.usda.gov/&lt;/a&gt; to see all your commodity options. I haven’t figured out another way to do this but please &lt;a href=&#34;mailto:ssaia@ncsu.edu&#34;&gt;contact me&lt;/a&gt; if you find an alternative.&lt;/p&gt;
 &lt;p&gt;For this post I’m selecting the “AG_LAND” commodity, which includes information on the acreage of irrigated farm and ranch lands, because this is the wateR blog after all. Other commodities might include specific crops, etc. I’m also selecting the state of North Carolina (NC) because it seems to always be the subject of spatial mapping &lt;a href=&#34;https://r-spatial.github.io/sf/reference/geos_combine.html&#34;&gt;(e.g., see this post)&lt;/a&gt; in R and is also where I live. ;) You can also leave off the last “&amp;amp;state_alpha=NC” part of the string to get data from all states.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# NASS url
