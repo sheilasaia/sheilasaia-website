@@ -1,0 +1,406 @@
+---
+title: "APIs to the Rescue (& the Census of Agriculture) Part 2"
+author: "Sheila Saia"
+date: '2020-07-15'
+categories: ["R"]
+tags: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, message = FALSE, warning = FALSE, eval = FALSE)
+```
+
+# Background
+
+In a [previous blog post](https://sheilasaia.rbind.io/post/2019-01-04-nass-api/), I discussed the use of application program interfaces (APIs) in R. Specifically, I focused on accessing data from the US Department of Agriculture's National Agricultural Statistics Survey (NASS) Quick Stats API. Since I wrote that previous blog post in January 2019, several R packages that aid access to the NASS Quick Stats API have come to my attention. With these packages, it's much easier to access NASS Quick Stats data using R! Specifically, you don't have to manually explore data availability or manually tidy the data you've retrieved, which is what I had to do when determining how to download Quick Stats irrigation data for North Carolina (NC) and when defining variables like `nc_irrigated`, respectively, in that blog post back in January 2019.
+
+# Goals of This Post
+
+The main goal of this blog post is to:
+
+- Use an R package to download and plot Census of Agriculture data from the NASS Quick Stats API.
+
+In addition to [Natalie Nelson](http://nelson.rbind.io/) and Andrew Dau, who I thanked in my [previous blog post](https://sheilasaia.rbind.io/post/2019-01-04-nass-api/), I would also like to thank [Nicholas Potter](https://potterzot.com/) at Washington State University for developing the `rnassqs` package and responding to my questions. I'd also like to thank my collaborator [Nitin Singh](https://nksingh01.wixsite.com/nitinsingh) for developing interesting research questions that inspired me to streamline my R code.
+
+# Available NASS API Packages
+
+As of the posting date of this blog, there are three main packages to help R users interface with the NASS Quick Stats API:
+
+- `rnassqs` - This package was developed in 2015 by [Nicholas Potter](https://potterzot.com/) at Washington State University and is supported by [rOpenSci](https://ropensci.org/). To read more about this package, see examples, submit issues/bugs, and contribute to development see [here](https://github.com/ropensci/rnassqs). This package is available on CRAN and you can read the manual [here](https://cran.r-project.org/web/packages/rnassqs/rnassqs.pdf).
+
+- `usdarnass` - This package was developed in 2018 by [Robert Dinterman](https://www.robertdinterman.com/) at The Ohio State University. To read more about this package, see examples, submit issues/bugs, and contribute to development see [here](https://github.com/rdinter/usdarnass). This package is available on CRAN and you can read the manual [here](https://cran.r-project.org/web/packages/usdarnass/usdarnass.pdf).
+
+- `rnass` - This package was developed in 2015 by [Emrah Er](http://eremrah.com/) at Ankara University. To read more about this package, see examples, submit issues/bugs, and contribute to development see [here](https://github.com/emraher/rnass). This package is not available on CRAN, so it would have to be installed via GitHub.
+
+**Note:** In this post, I'll present code that uses the `rnassqs` package only. However, I think it would be interesting to write a third blog post that compares all three R packages!
+
+# Set Up
+
+First let's load the R libraries that we'll need to run the code in this blog post.
+
+```{r load libraries}
+library(tidycensus)
+library(tidyverse)
+library(mapview)
+```
+
+The `tidycensus`, `tidyverse`, `mapview` packages should all be familiar from my [previous blog post](https://sheilasaia.rbind.io/post/2019-01-04-nass-api/).
+
+The `rnassqs` package is new to this blog post. You can use it to look up available data on the NASS Quick Stats API and access it. I recommend installing this package from GitHub because you'll want to use the `nassqs_param_values()` function which is only available via the package version on GitHub. If you install the package through CRAN using `install.packages("rnassqs")` this function will not be included. Remember you only need to install this once but then must call it every time you start a new session.
+
+```{r install rnassqs, eval=FALSE}
+devtools::install_github("ropensci/rnassqs")
+```
+
+Load the library.
+
+```{r load rnassqs}
+library(rnassqs)
+```
+
+## Census API Set Up
+
+As I mentioned in my [previous blog post](https://sheilasaia.rbind.io/post/2019-01-04-nass-api/), many APIs require that you have a personal API key to access the data stored within them. To run the code in this post you'll need to make sure you request a Census API key (see instructions below) and a NASS API key (see instructions below). Once you have your API keys, keep them all in one safe spot. I recommend a text file somewhere rememberable on your (password protected) computer.
+
+To request a Census API key, you'll have to go [here](https://api.census.gov/data/key_signup.html) and fill in your name and organization. Once you submit the key request, the US Census Bureau will email you a Census API key. This key is unique to the name and email you provided so be sure to keep it in a save place.
+
+If you've never installed your Census API key in your R session, you'll want to install your API key for later use.
+
+```{r first time census key, eval=FALSE}
+CENSUS_API_KEY <- "YOUR API KEY GOES HERE"
+census_api_key(CENSUS_API_KEY, install = TRUE)
+
+# The second line of code above will make an entry in your .Renviron file called "CENSUS_API_KEY".
+```
+
+If you've already installed your Census API key, you should be good to go, but you can always check to make sure it's in your R environment using the code below.
+
+```{r not first time census key, eval=FALSE}
+# check that it's there
+Sys.getenv("CENSUS_API_KEY")
+```
+
+If you want to get tabular *and* spatial census data using the `tidycensus` package, you'll need to run the code below each time you start a new R session. Spatial census data includes, for example, census tract boundaries.
+
+```{r setting tigris options}
+options(tigris_use_cache = TRUE)
+```
+
+## NASS API Set Up
+
+Be sure to also apply for a NASS API key, which I'll define in a string called `NASS_API_KEY`. You can apply for a NASS API key [here](https://quickstats.nass.usda.gov/api). As with the Census API key, this is unique to you so be sure to keep it in a safe place.
+
+```{r define NASS api, eval=FALSE}
+NASS_API_KEY <- "ADD YOUR NASS API KEY HERE"
+```
+
+If you want to save your NASS API key to your R environment, you can use the code below. Setting the NASS API key in your R environment will keep it hidden and accessible only to you. This might be important if you're planning to pass along your script to someone else...or post it on your blog. ;)
+
+To set the NASS API key your R environment you'll have to navigate to the (hidden) .Renviron file on your computer. Then you will have to add `NASS_API_KEY <- "ADD YOUR NASS API KEY HERE"` to that text file. Alternatively, you can also use `sys.setenv()` as indicated below. See [this tutorial](https://rstats.wtf/r-startup.html#renviron) and [this tutorial](https://community.rstudio.com/t/how-to-set-a-variable-in-renviron/5029). You only need to do this once on your computer.
+
+```{r set NASS api in your env, eval=FALSE}
+# add NASS_API_KEY to  your .Renviron file
+sys.setenv(NASS_API_KEY <- "ADD YOUR NASS API KEY HERE")
+```
+
+Once you've added the NASS API key to your computer's .Renviron file. You'll have to run the following code each time you start a new R session. This is because you'll need to remind R that it has this information available in the .Renviron file.
+
+```{r use NASS api from your env}
+# load your stored NASS_API_KEY it into your current R session
+NASS_API_KEY <- Sys.getenv("NASS_API_KEY")
+```
+
+Before you can make any queries, the `rnassqs` package requires that you to set your NASS API key using the `nassqs_auth()` function.
+
+```{r use NASS key from env}
+# use your NASS_API_KEY variable (see previous code chunk) to set this as your key
+nassqs_auth(key = NASS_API_KEY)
+
+# alternatively if you don't want to store a variable called NASS_API_KEY in your current session, you can run:
+# nassqs_auth(key = Sys.getenv("NASS_API_KEY"))
+```
+
+# Looking Up Available Data
+
+The first thing to do when building a API query is understanding what parameters you have the ability to request. You can look at a complete list of available parameters using the `nassqs_params()` function. By saving the output of this to a variable named `params_list`, you can click on the variable in our RStudio envnironment and check it out.
+
+```{r see params}
+params_list <- nassqs_params()
+
+# print out the parameters
+params_list
+```
+
+There are 40 parameters that can be specified in a query. Looking back at my [previous blog post](https://sheilasaia.rbind.io/post/2019-01-04-nass-api/), **I was interested in exploring the fraction of irrigated acres of agricultural land in the state of North Carolina over time**. To replicate this work using the `rnassqs` package, I'll pay attention to 7 NASS API parameters: commodity description ("commodity_desc"), the short description ("short_desc"), the year ("year"), the state ("state_alpha"), the aggregation level ("agg_level_desc"), unit description ("unit_desc"), and the domain category description ("domaincat_desc").
+
+Knowing what parameters to pay attention to takes some experience working with NASS Quick Stats data. If you're really confused, I recommend going through the NASS Quick Stats web interface [here](https://quickstats.nass.usda.gov/). It helped me to click through the selections to see what parameters and sub-parameters are availble. Otherwise, you can use the `nassqs_param_values()` function, which I describe in further detail below, to get a better idea of what data is available to you. The `nassqs_param_values()` function can help you make a broad query to the NASS API that returns unique paramter values (I call these sub-parameters, here) within each of the 40 parameters listed above.
+
+For a very general example, say you wanted to know what states grew olives in 2017 and have county aggregated data available.
+
+```{r olives search}
+rnassqs::nassqs_param_values(param = "state_alpha", 
+                             commodity_desc = "OLIVES",
+                             year = 2017,
+                             agg_level_desc = "COUNTY")
+```
+
+Interesting! Looks like 12 states have counties that grew olives in 2017.
+
+For an example that's more relevant to the goals of this post, I can check (1) if irrigation data is available at a county-scale in North Carolina and (2) what wording and text formatting will be needed to access it. To do this, I set `param = "short_desc"` because I'm interested in knowing the options avaiable for the "short_desc" paramter. I also used other variables would further filter the result.
+
+```{r short desc search}
+rnassqs::nassqs_param_values(param = "short_desc", 
+                             commodity_desc = "AG LAND",
+                             agg_level_desc = "COUNTY",
+                             state_alpha = "NC")
+```
+
+**Warning** In some cases you'll submit a parameter query (or full query, more on this in the next section) that's too large. This will result in an error message like the one above.
+
+If this happens, you'll need to need to further filter the request by adding another parameter. In this case I added `unit_desc = "ACRES"` to produce a smaller request. This resulted in a smaller result listing all the commodities available with acre units. It takes a little patience and fiddling to understand the structure of the NASS Quick Stats database, but with a little practice, you'll get it!
+
+```{r short desc search again}
+rnassqs::nassqs_param_values(param = "short_desc", 
+                             commodity_desc = "AG LAND",
+                             agg_level_desc = "COUNTY",
+                             unit_desc = "ACRES",
+                             state_alpha = "NC")
+```
+
+Great! This is more helpful than an error message. :) Ok, I'll keep an eye on two short descriptions moving forward: "AG LAND, IRRIGATED - ACRES" and "AG LAND - ACRES" because I'll need these to explore the fraction of irrigated acres of agricultural land in the state of North Carolina over time. I will also need to know more about the domain category description ("domaincat_desc"); please see my discussion of that paramter in my [previous blog post](https://sheilasaia.rbind.io/post/2019-01-04-nass-api/).
+
+As another example, I looked up the years with irrigation data available at the county level in North Carolina. To do this I set `param = "year"` because I was interested in seeing what years are available. I used the short description from above and set the other parameters to values I knew would further filter the result.
+
+```{r year search}
+rnassqs::nassqs_param_values(param = "year", 
+                             short_desc = "AG LAND, IRRIGATED - ACRES",
+                             agg_level_desc = "COUNTY",
+                             state_alpha = "NC")
+```
+
+By running this we see county-wide irrigation data for NC are available for 1997, 2002, 2007, 2012, and 2017. Once we know what years are availble, we can specify that in our query by setting `year = 2017`. Alternatively, if we want all the years, we can leave the year parameter undefined to get all the years available or use special operators defined [here](https://github.com/ropensci/rnassqs) to ask for a range of years. For example, `year__GE = 2000` would give you all years greater than or equal to 2000.
+
+# API Data Query
+
+Ok, I think it's about time to build some full queries with the information learned above. In this case I built two lists of parameters defining: (1) irrigated acreage and (2) total acreage of agricultural lands in North Carolina.
+
+It took me a little trial and error to find combinations of parameters that didn't result in a 400 error from the NASS API. This will require a little more tidying up later on, but that's ok. For example, including the commodity description ("commodity_desc") and the dominant category description ("domaincat_desc") along with the short description ("short_desc") kept resulting in an error, so I got ride of both parameters (see below).
+
+```{r define params}
+
+# irrigated acreage query
+nc_irrig_acres_params <- list(short_desc = "AG LAND, IRRIGATED - ACRES",
+                              unit_desc = "ACRES",
+                              state_alpha = "NC",
+                              agg_level_desc = "COUNTY",
+                              year__GE = 2007)
+# total acreage query
+nc_total_acres_params <- list(short_desc = "AG LAND - ACRES",
+                              unit_desc = "ACRES",
+                              state_alpha = "NC",
+                              agg_level_desc = "COUNTY",
+                              year__GE = 2007)
+```
+
+
+```{r rnassqs manual functions, echo=FALSE}
+expand_list <- function(...){
+  x <- list(...)
+  if(length(x) == 0) { stop("No parameters were supplied.")}
+  listx <- if(is.null(names(x))) x[[1]] else x
+  res <- stack(listx)  
+  as.list(setNames(res$values, res$ind))
+}
+
+parameter_is_valid <- function(param) {
+  valid_params <- toupper(nassqs_params())
+  param2 <- gsub("__LE|__LT|__GT|__GE|__LIKE|__NOT_LIKE|__NE", "", toupper(param))
+  
+  if(!param2 %in% valid_params) {
+    stop("Parameter '", param, "' is not a valid parameter. Use `nassqs_params()`
+    for a list of valid parameters.")
+  }
+  return(TRUE)
+}
+```
+
+Now I'll use the parameter lists inside the `nassqs()` function to make an official NASS API request.
+
+```{r irrigation request}
+# irrigated acreage query
+nc_irrig_acres <- nassqs(nc_irrig_acres_params)
+
+# look at the result
+head(nc_irrig_acres)
+```
+
+I can do the same thing for the total acreage query.
+
+```{r total acreage request}
+# irrigated acreage query
+nc_total_acres <- nassqs(nc_total_acres_params)
+
+# look at the result
+head(nc_total_acres)
+```
+
+If you don't want to do each separately, you can also list multiple parameter values using `c()`. If I wanted the results of irrigated and total acreage together, that would require the code below.
+
+```{r one big query}
+# define parameters
+nc_irrigated_params <- list(short_desc = c("AG LAND, IRRIGATED - ACRES", "AG LAND - ACRES"),
+                            unit_desc = "ACRES",
+                            state_alpha = "NC",
+                            agg_level_desc = "COUNTY",
+                            year__GE = 2007)
+
+# request the data from the NASS API
+nc_irrigated_raw <- nassqs(nc_irrigated_params)
+
+# look at the result
+head(nc_irrigated_raw)
+```
+
+That worked! Now, I want to check out the data.
+
+# Reformatting API Query Output
+
+In my [previous blog post](https://sheilasaia.rbind.io/post/2019-01-04-nass-api/), I had to do quite a bit of reformatting of the output because it all came in as strings of characters. The `rnassqs` packages is great because it takes care of a lot of that initial tidying up. However, I'll still need to do some tidying of the various columns (e.g., the "Value" column is being treated as a character with commas and some text values to note unavailable or missing data).
+
+```{r}
+
+```
+
+This looks ok but there are still some things that would be nice to clean up. As mentioned above, we want to focus on the acres of irrigated lands in NC. For simplicity, we'll just look at farms/ranches with 2,000 ac or more under operation. Let's step through each line in the piped (i.e., `%>%`) code below. See the in-line comments for the details.
+
+```{r wrangle data}
+nc_irrigated <- nc_irrigated_raw %>%
+  
+  # filter to select county level irrigation data where farms/ranches with 2,000+ ac operation and irrigation status to get total acres of ag land in county
+  filter(agg_level_desc == "COUNTY") %>%
+  filter(unit_desc == "ACRES") %>%
+  filter(domaincat_desc == "AREA OPERATED: (2,000 OR MORE ACRES)" | domaincat_desc == "IRRIGATION STATUS: (ANY ON OPERATION)") %>%
+
+  # trim white space from ends (note: 'Value' is a character here, not a number)
+  mutate(value_trim = str_trim(Value)) %>%
+  
+  # select only the columns we'll need
+  select(state_name, state_alpha, state_ansi, county_code, county_name, asd_desc,
+         agg_level_desc, year, prodn_practice_desc_char = prodn_practice_desc, domaincat_desc, 
+         short_desc, value_ac_per_yr_char=value_trim, unit_desc) %>%
+  
+  # filter out entries with codes '(D)' and '(Z)'
+  filter(value_ac_per_yr_char != "(D)" & value_ac_per_yr_char != "(Z)") %>% 
+  
+  # remove commas from number values and convert to R numeric class
+  mutate(value_ac_per_yr = as.numeric(str_remove(value_ac_per_yr_char, ","))) %>%
+  
+  # change blanks to underscores in prodn_practice_desc_char for latter processing
+  mutate(prodn_practice_desc = str_replace_all(str_to_lower(prodn_practice_desc_char),
+                                               "[ ]", "_")) %>%
+  
+  # remove unnecessary columns
+  select(-value_ac_per_yr_char, -prodn_practice_desc_char) %>%
+  #arrange(county_code, year) 
+  
+  # we have 2007, 2012, and 2017 data and we want irrigated land acreage and total land acreage
+  # (to calculate a percentage of irrigated land) so we use n()>1 to filter out counties
+  # that have both types of acreage for each year
+  group_by(county_code, year) %>%
+  filter(n()>1) %>%
+  
+  # drop columns we don't need
+  select(-domaincat_desc, -short_desc) %>%
+  
+  # pivot wide irrigated and total lands operated data and calculate percent irrigated
+  pivot_wider(names_from = prodn_practice_desc, values_from = value_ac_per_yr) %>%
+  mutate(percent_irrigated = round(irrigated/all_production_practices*100, 1)) %>%
+  
+  # make a column with the county name and year (we'll need this for plotting)
+  mutate(county_year = paste0(str_to_lower(county_name), "_", year)) %>%
+  
+  # make GEOID column to match up with county level spatial data (we'll need this for mapping)
+  mutate(GEOID = paste0(state_ansi, county_code)) %>%
+  ungroup()
+```
+
+Let's look at the first few rows of the final reformatted NASS data showing the amount of irrigated acres in NC for 2007, 2012, and 2017.
+
+```{r check data}
+head(nc_irrigated)
+```
+
+# Plotting NASS Data
+
+Now that we have this nicely formatted data, we can make some figures! Let's start by making some bar charts comparing the percentage of irrigated land in NC counties where data with available data for 2007, 2012, and 2017.
+
+```{r bar chart}
+ggplot(nc_irrigated) +
+  geom_col(aes(x = factor(year), y = percent_irrigated), fill = "grey50") +
+  facet_wrap(~county_name) +
+  xlab("Year") +
+  ylab("Percent of Total Acres Irrigated (%)") +
+  theme_bw()
+```
+
+We can plot just the counties that have all three years of data available.
+
+```{r bar chart select}
+# select counties that have all three years
+nc_irrigated_mult_years <- nc_irrigated %>%
+  group_by(county_name) %>%
+  filter(n()>2)
+
+# plot
+ggplot(nc_irrigated_mult_years) +
+  geom_col(aes(x = factor(year), y = percent_irrigated), fill = "grey50") +
+  facet_wrap(~county_name) +
+  xlab("Year") +
+  ylab("Percent of Total Acres Irrigated (%)") +
+  theme_bw()
+```
+
+
+Looking at this figure, it's hard to see any big patterns in the NASS irrigation data. We can summarize the total number of acres irrigated for all 13 counties using `summarize()`.
+
+```{r irrigated summary}
+nc_irrigated_summary <- nc_irrigated_mult_years %>%
+  group_by(year) %>%
+  summarize(sum_irrigated_ac = sum(irrigated),
+            sum_all_production_ac = sum(all_production_practices)) %>%
+  mutate(percent_irrigated = (sum_irrigated_ac/sum_all_production_ac) * 100)
+
+nc_irrigated_summary
+```
+
+We see that these 13 counties irrigated about 6.7% of their land in production for 2007 and 2017.
+
+Besides making some bar charts we can also map the irrigation percentages by county. For now, we'll just filter out the 2017 data for this visualization.
+
+```{r filter 2017 data}
+nc_irrigated_2017 <- nc_irrigated %>%
+  filter(year == 2017)
+```
+
+Next we'll use the `get_acs()` function in the `tidycensus` package with `geometry = TRUE` to download the [TIGER](https://www.census.gov/geo/maps-data/data/tiger.html) county boundaries shape (.shp) file for NC. The variable used here (i.e., "B19013_001") represents median income but you can use any variable you wish. We're mostly just interested in the spatial data associated with this and will ignore the tabular (i.e., median income) data.
+
+```{r get acs shp}
+nc_counties <- get_acs(geography = "county", state = "NC", variables = "B19013_001", year = 2017, geometry = TRUE, survey = "acs5")
+```
+
+The second last step is to join `nc_irrigated_2017` to the county boundary spatial data.
+
+```{r join tab data to acs}
+nc_irrigated_map_2017 <- left_join(nc_counties, nc_irrigated_2017, by = "GEOID")
+```
+
+Now we'll use `mapview()` to make an interactive plot where counties are colored based on the percentage of irrigated land. You can hover your mouse over the counties to see the actual percentages.
+
+```{r}
+# mapviewOptions(vector.palette = colorRampPalette(c("snow", "darkblue", "grey10")))
+# mapview(nc_irrigated_map_2017, zcol = "percent_irrigated", legend = FALSE)
+```
+
+<br/>
+Some other thoughts that I wanted to mention before signing off:
+
