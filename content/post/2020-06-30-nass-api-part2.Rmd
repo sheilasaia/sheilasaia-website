@@ -223,7 +223,6 @@ Ok, I think it's about time to build some full queries with the information lear
 It took me a little trial and error to find combinations of parameters that didn't result in a 400 error from the NASS API. This will require a little more tidying up later on, but that's ok. For example, including the commodity description ("commodity_desc") and the dominant category description ("domaincat_desc") along with the short description ("short_desc") kept resulting in an error, so I got ride of both parameters (see below).
 
 ```{r define params, eval=FALSE}
-
 # irrigated acreage query
 nc_irrig_acres_params <- list(short_desc = "AG LAND, IRRIGATED - ACRES",
                               unit_desc = "ACRES",
@@ -239,7 +238,7 @@ nc_total_acres_params <- list(short_desc = "AG LAND - ACRES",
 ```
 
 
-```{r rnassqs manual functions, include=FALSE}
+```{r rnassqs manual functions, echo=FALSE}
 # these are the raw functions from the rnassqs package because not including them gave an error (submitted an issue on 20200701)
 expand_list <- function(...){
   x <- list(...)
@@ -446,8 +445,8 @@ nc_irrigated_map_2017 <- left_join(nc_counties, nc_irrigated_2017, by = "GEOID")
 Now I used `mapview()` to make an interactive plot where counties are colored based on the percentage of irrigated land. You can hover your mouse over the counties to see the actual percentages.
 
 ```{r}
-# mapviewOptions(vector.palette = colorRampPalette(c("snow", "darkblue", "grey10")))
-# mapview(nc_irrigated_map_2017, zcol = "percent_irrigated", legend = FALSE)
+mapviewOptions(vector.palette = colorRampPalette(c("snow", "darkblue", "grey10")))
+mapview(nc_irrigated_map_2017, zcol = "percent_irrigated", legend = FALSE)
 ```
 
 <br/>
