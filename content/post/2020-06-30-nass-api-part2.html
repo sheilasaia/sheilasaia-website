@@ -43,7 +43,7 @@ library(mapview)</code></pre>
 <pre class="r"><code>library(rnassqs)</code></pre>
 <div id="census-api-set-up" class="section level2">
 <h2>Census API Set Up</h2>
-<p>As I mentioned in my <a href="https://sheilasaia.rbind.io/post/2019-01-04-nass-api/">previous blog post</a>, many APIs require that you have a personal API key to access the data stored within them. To run the code in this post you’ll need to request a Census API key (see instructions below) and a NASS API key (see instructions below). Once you have your own personal API key, you should keep them both in safe and central location. I recommend a text file somewhere rememberable on your (password protected) computer.</p>
+<p>As I mentioned in my <a href="https://sheilasaia.rbind.io/post/2019-01-04-nass-api/">previous blog post</a>, many APIs require that you have a personal API key to access the data stored within them. To run the code in this post you’ll need to request a Census API key (see instructions below) and a NASS API key (see instructions below). Once you have your own personal API key, you should keep them both in safe and central location. I recommend a text file somewhere memorable on your (password protected) computer.</p>
 <p>To request a Census API key, you can go to <a href="https://api.census.gov/data/key_signup.html">here</a> and fill in your name and organization. Once you submit the key request, the US Census Bureau will email a Census API key. This key is unique to the name and email you provided, so as I mentioned in the previous paragraph, be sure to keep it in a safe place.</p>
 <p>If you’ve never installed your Census API key, you’ll want to install your API key for later using the code below.</p>
 <pre class="r"><code>CENSUS_API_KEY &lt;- &quot;YOUR API KEY GOES HERE&quot;
@@ -77,7 +77,7 @@ nassqs_auth(key = NASS_API_KEY)
 </div>
 <div id="looking-up-available-data" class="section level1">
 <h1>Looking Up Available Data</h1>
-<p>The first step to building a API query is understanding what parameters you have the ability to request. You can look at a complete list of available parameters using the <code>nassqs_params()</code> function. By saving the output of this to a variable named <code>params_list</code>, you can click on the variable in our RStudio envnironment and check it out.</p>
+<p>The first step to building a API query is understanding what parameters you have the ability to request. You can look at a complete list of available parameters using the <code>nassqs_params()</code> function. By saving the output of this to a variable named <code>params_list</code>, you can click on the variable in our RStudio environment and check it out.</p>
 <pre class="r"><code>params_list &lt;- nassqs_params()
 
 # print out the parameters
@@ -97,7 +97,7 @@ params_list
 ## [37] &quot;week_ending&quot;           &quot;year&quot;                  &quot;zip_5&quot;                
 ## [40] &quot;format&quot;</code></pre>
 <p>There are 40 parameters that can be specified in a query. Looking back at my <a href="https://sheilasaia.rbind.io/post/2019-01-04-nass-api/">previous blog post</a>, <strong>I was interested in exploring the fraction of irrigated acres of agricultural land in the state of North Carolina over time</strong>. To replicate this work using the <code>rnassqs</code> package, I’ll pay attention to 7 NASS API parameters: commodity description (“commodity_desc”), the short description (“short_desc”), the year (“year”), the state (“state_alpha”), the aggregation level (“agg_level_desc”), unit description (“unit_desc”), and the domain category description (“domaincat_desc”).</p>
-<p>Knowing what parameters to pay attention to takes some experience while working with NASS Quick Stats data. If you’re really confused, I recommend clicking through the NASS Quick Stats web interface <a href="https://quickstats.nass.usda.gov/">here</a>. When I first started working with the NASS API (and even now) looking through the web interfact helped me to see what parameters and sub-parameters were availble for different selections I was interested in. You can also use the <code>nassqs_param_values()</code> function, which I describe in further detail below, to get a better idea of what data is available. The <code>nassqs_param_values()</code> function can help you make a broad query to the NASS API that returns unique paramter values (I call these sub-parameters, here) within each of the 40 parameters listed above.</p>
+<p>Knowing what parameters to pay attention to takes some experience while working with NASS Quick Stats data. If you’re really confused, I recommend clicking through the NASS Quick Stats web interface <a href="https://quickstats.nass.usda.gov/">here</a>. When I first started working with the NASS API (and even now) looking through the web interface helped me to see what parameters and sub-parameters were available for different selections I was interested in. You can also use the <code>nassqs_param_values()</code> function, which I describe in further detail below, to get a better idea of what data is available. The <code>nassqs_param_values()</code> function can help you make a broad query to the NASS API that returns unique parameter values (I call these sub-parameters, here) within each of the 40 parameters listed above.</p>
 <p>For a very general example, say you wanted to know what states grew olives in 2017 and have county aggregated data available.</p>
 <pre class="r"><code>rnassqs::nassqs_param_values(param = &quot;state_alpha&quot;, 
                              commodity_desc = &quot;OLIVES&quot;,
@@ -106,12 +106,12 @@ params_list
 
 ##  [1] &quot;AL&quot; &quot;AZ&quot; &quot;CA&quot; &quot;FL&quot; &quot;GA&quot; &quot;IL&quot; &quot;LA&quot; &quot;MS&quot; &quot;NJ&quot; &quot;OR&quot; &quot;TN&quot; &quot;TX&quot;</code></pre>
 <p>Interesting! Looks like 12 states have counties that grew olives in 2017.</p>
-<p>For an example that’s more relevant to the goals of this post, I checked (1) if irrigation data is available at a county-scale in North Carolina and (2) what wording and text formatting will be needed to access it. To do this, I set <code>param = &quot;short_desc&quot;</code> because I’m interested in knowing the options avaiable for the “short_desc” paramter. I also used other parameters (e.g., “state_alpha”) to filter the results down even further.</p>
+<p>For an example that’s more relevant to the goals of this post, I checked (1) if irrigation data is available at a county-scale in North Carolina and (2) what wording and text formatting will be needed to access it. To do this, I set <code>param = &quot;short_desc&quot;</code> because I’m interested in knowing the options available for the “short_desc” parameter. I also used other parameters (e.g., “state_alpha”) to filter the results down even further.</p>
 <pre class="r"><code>rnassqs::nassqs_param_values(param = &quot;short_desc&quot;, 
                              commodity_desc = &quot;AG LAND&quot;,
                              agg_level_desc = &quot;COUNTY&quot;,
                              state_alpha = &quot;NC&quot;)</code></pre>
-<p><em>“Error: Request was too large. NASS requires that an API call returns a maximum of 50,000 records. Consider subsetting your request by geography or year to reduce the size of your query.”</em></p>
+<p><em>“Error: Request was too large. NASS requires that an API call returns a maximum of 50,000 records. Consider sub-setting your request by geography or year to reduce the size of your query.”</em></p>
 <p><strong>Warning:</strong> In some cases you might submit a parameter query (or full query, more on this in the next section) that’s too large. This will result in an error message like the one above.</p>
 <p>If this happens, you’ll need to need to further filter the request by adding another parameter. In this case I added <code>unit_desc = &quot;ACRES&quot;</code> to produce a smaller request. This resulted in a smaller result listing all the commodities available with acre units. It takes a little patience and fiddling to understand the structure of the NASS Quick Stats database, but with a little practice, you’ll get it!</p>
 <pre class="r"><code>rnassqs::nassqs_param_values(param = &quot;short_desc&quot;, 
@@ -149,7 +149,7 @@ params_list
 ## [27] &quot;AG LAND, WOODLAND - ACRES&quot;                                                       
 ## [28] &quot;AG LAND, WOODLAND, (EXCL PASTURED) - ACRES&quot;                                      
 ## [29] &quot;AG LAND, WOODLAND, PASTURED - ACRES&quot;</code></pre>
-<p>Great! This is more helpful than an error message. :) Ok, I’ll keep an eye on two short descriptions moving forward: “AG LAND, IRRIGATED - ACRES” and “AG LAND - ACRES” because I’ll need these to explore the fraction of irrigated acres of agricultural land in the state of North Carolina over time. I will also need to know more about the domain category description (“domaincat_desc”); please see my discussion of that paramter in my <a href="https://sheilasaia.rbind.io/post/2019-01-04-nass-api/">previous blog post</a>.</p>
+<p>Great! This is more helpful than an error message. :) Ok, I’ll keep an eye on two short descriptions moving forward: “AG LAND, IRRIGATED - ACRES” and “AG LAND - ACRES” because I’ll need these to explore the fraction of irrigated acres of agricultural land in the state of North Carolina over time. I will also need to know more about the domain category description (“domaincat_desc”); please see my discussion of that parameter in my <a href="https://sheilasaia.rbind.io/post/2019-01-04-nass-api/">previous blog post</a>.</p>
 <p>As another example, I looked up the years with irrigation data available at the county level in North Carolina. To do this I set <code>param = &quot;year&quot;</code> because I was interested in seeing what years are available. I used the short description from above and set the other parameters to values I knew would further filter the result.</p>
 <pre class="r"><code>rnassqs::nassqs_param_values(param = &quot;year&quot;, 
                              short_desc = &quot;AG LAND, IRRIGATED - ACRES&quot;,
@@ -157,7 +157,7 @@ params_list
                              state_alpha = &quot;NC&quot;)
 
 ## [1] 1997 2002 2007 2012 2017</code></pre>
-<p>By running this code, it looks like county-wide irrigation data for NC are available for 1997, 2002, 2007, 2012, and 2017. Once you know what years are availble, you can specify that in your query by setting <code>year = 2017</code>. Alternatively, if you want all the years, you can leave the year parameter undefined to get all the years available or use special operators defined <a href="https://github.com/ropensci/rnassqs">here</a> to ask for a range of years. For example, <code>year__GE = 2000</code> would give you all years greater than or equal to 2000.</p>
+<p>By running this code, it looks like county-wide irrigation data for NC are available for 1997, 2002, 2007, 2012, and 2017. Once you know what years are available, you can specify that in your query by setting <code>year = 2017</code>. Alternatively, if you want all the years, you can leave the year parameter undefined to get all the years available or use special operators defined <a href="https://github.com/ropensci/rnassqs">here</a> to ask for a range of years. For example, <code>year__GE = 2000</code> would give you all years greater than or equal to 2000.</p>
 </div>
 <div id="api-data-query" class="section level1">
 <h1>API Data Query</h1>
@@ -195,69 +195,69 @@ nc_irrigated_raw &lt;- nassqs(nc_irrigated_params)</code></pre>
 <p><strong>Note:</strong> Apologies, there is currently no way to suppress the status of the <code>nassqs()</code> function.</p>
 <pre class="r"><code># look at the result
 head(nc_irrigated_raw)
-##   watershed_desc country_code unit_desc                Value     state_name
-## 1                        9000     ACRES                  (D) NORTH CAROLINA
-## 2                        9000     ACRES                  (D) NORTH CAROLINA
-## 3                        9000     ACRES                9,630 NORTH CAROLINA
-## 4                        9000     ACRES                4,493 NORTH CAROLINA
-## 5                        9000     ACRES                5,633 NORTH CAROLINA
-## 6                        9000     ACRES                8,248 NORTH CAROLINA
-##   congr_district_code      prodn_practice_desc county_name commodity_desc
-## 1                     ALL PRODUCTION PRACTICES   ALLEGHANY        AG LAND
-## 2                     ALL PRODUCTION PRACTICES   ALLEGHANY        AG LAND
-## 3                     ALL PRODUCTION PRACTICES   ALLEGHANY        AG LAND
-## 4                     ALL PRODUCTION PRACTICES        ASHE        AG LAND
-## 5                     ALL PRODUCTION PRACTICES        ASHE        AG LAND
-## 6                     ALL PRODUCTION PRACTICES        ASHE        AG LAND
-##   agg_level_desc state_alpha county_ansi                        domaincat_desc
-## 1         COUNTY          NC         005 IRRIGATION STATUS: (ANY ON OPERATION)
-## 2         COUNTY          NC         005 IRRIGATION STATUS: (ANY ON OPERATION)
-## 3         COUNTY          NC         005 IRRIGATION STATUS: (ANY ON OPERATION)
-## 4         COUNTY          NC         009 IRRIGATION STATUS: (ANY ON OPERATION)
-## 5         COUNTY          NC         009 IRRIGATION STATUS: (ANY ON OPERATION)
-## 6         COUNTY          NC         009 IRRIGATION STATUS: (ANY ON OPERATION)
-##             load_time       domain_desc week_ending county_code freq_desc zip_5
-## 1 2018-02-01 00:00:00 IRRIGATION STATUS                     005    ANNUAL      
-## 2 2012-12-31 00:00:00 IRRIGATION STATUS                     005    ANNUAL      
-## 3 2012-01-01 00:00:00 IRRIGATION STATUS                     005    ANNUAL      
-## 4 2018-02-01 00:00:00 IRRIGATION STATUS                     009    ANNUAL      
-## 5 2012-12-31 00:00:00 IRRIGATION STATUS                     009    ANNUAL      
-## 6 2012-01-01 00:00:00 IRRIGATION STATUS                     009    ANNUAL      
-##   reference_period_desc state_ansi        util_practice_desc  country_name
-## 1                  YEAR         37 ALL UTILIZATION PRACTICES UNITED STATES
-## 2                  YEAR         37 ALL UTILIZATION PRACTICES UNITED STATES
-## 3                  YEAR         37 ALL UTILIZATION PRACTICES UNITED STATES
-## 4                  YEAR         37 ALL UTILIZATION PRACTICES UNITED STATES
-## 5                  YEAR         37 ALL UTILIZATION PRACTICES UNITED STATES
-## 6                  YEAR         37 ALL UTILIZATION PRACTICES UNITED STATES
-##                                  location_desc  class_desc
-## 1 NORTH CAROLINA, NORTHERN MOUNTAIN, ALLEGHANY ALL CLASSES
-## 2 NORTH CAROLINA, NORTHERN MOUNTAIN, ALLEGHANY ALL CLASSES
-## 3 NORTH CAROLINA, NORTHERN MOUNTAIN, ALLEGHANY ALL CLASSES
-## 4      NORTH CAROLINA, NORTHERN MOUNTAIN, ASHE ALL CLASSES
-## 5      NORTH CAROLINA, NORTHERN MOUNTAIN, ASHE ALL CLASSES
-## 6      NORTH CAROLINA, NORTHERN MOUNTAIN, ASHE ALL CLASSES
-##              group_desc statisticcat_desc state_fips_code      short_desc
-## 1 FARMS &amp; LAND &amp; ASSETS              AREA              37 AG LAND - ACRES
-## 2 FARMS &amp; LAND &amp; ASSETS              AREA              37 AG LAND - ACRES
-## 3 FARMS &amp; LAND &amp; ASSETS              AREA              37 AG LAND - ACRES
-## 4 FARMS &amp; LAND &amp; ASSETS              AREA              37 AG LAND - ACRES
-## 5 FARMS &amp; LAND &amp; ASSETS              AREA              37 AG LAND - ACRES
-## 6 FARMS &amp; LAND &amp; ASSETS              AREA              37 AG LAND - ACRES
-##   end_code sector_desc year begin_code          asd_desc source_desc
-## 1       00   ECONOMICS 2017         00 NORTHERN MOUNTAIN      CENSUS
-## 2       00   ECONOMICS 2012         00 NORTHERN MOUNTAIN      CENSUS
-## 3       00   ECONOMICS 2007         00 NORTHERN MOUNTAIN      CENSUS
-## 4       00   ECONOMICS 2017         00 NORTHERN MOUNTAIN      CENSUS
-## 5       00   ECONOMICS 2012         00 NORTHERN MOUNTAIN      CENSUS
-## 6       00   ECONOMICS 2007         00 NORTHERN MOUNTAIN      CENSUS
-##   watershed_code asd_code region_desc CV (%)
-## 1       00000000       10                (D)
-## 2       00000000       10                (D)
-## 3       00000000       10                   
-## 4       00000000       10               20.1
-## 5       00000000       10               11.2
-## 6       00000000       10</code></pre>
+##                          domaincat_desc state_alpha county_ansi agg_level_desc
+## 1 IRRIGATION STATUS: (ANY ON OPERATION)          NC         005         COUNTY
+## 2 IRRIGATION STATUS: (ANY ON OPERATION)          NC         005         COUNTY
+## 3 IRRIGATION STATUS: (ANY ON OPERATION)          NC         005         COUNTY
+## 4 IRRIGATION STATUS: (ANY ON OPERATION)          NC         009         COUNTY
+## 5 IRRIGATION STATUS: (ANY ON OPERATION)          NC         009         COUNTY
+## 6 IRRIGATION STATUS: (ANY ON OPERATION)          NC         009         COUNTY
+##   commodity_desc week_ending       domain_desc           load_time state_ansi
+## 1        AG LAND             IRRIGATION STATUS 2018-02-01 00:00:00         37
+## 2        AG LAND             IRRIGATION STATUS 2012-12-31 00:00:00         37
+## 3        AG LAND             IRRIGATION STATUS 2012-01-01 00:00:00         37
+## 4        AG LAND             IRRIGATION STATUS 2018-02-01 00:00:00         37
+## 5        AG LAND             IRRIGATION STATUS 2012-12-31 00:00:00         37
+## 6        AG LAND             IRRIGATION STATUS 2012-01-01 00:00:00         37
+##   reference_period_desc zip_5 freq_desc county_code watershed_desc country_code
+## 1                  YEAR          ANNUAL         005                        9000
+## 2                  YEAR          ANNUAL         005                        9000
+## 3                  YEAR          ANNUAL         005                        9000
+## 4                  YEAR          ANNUAL         009                        9000
+## 5                  YEAR          ANNUAL         009                        9000
+## 6                  YEAR          ANNUAL         009                        9000
+##                  Value unit_desc     state_name county_name congr_district_code
+## 1                  (D)     ACRES NORTH CAROLINA   ALLEGHANY                    
+## 2                  (D)     ACRES NORTH CAROLINA   ALLEGHANY                    
+## 3                9,630     ACRES NORTH CAROLINA   ALLEGHANY                    
+## 4                4,493     ACRES NORTH CAROLINA        ASHE                    
+## 5                5,633     ACRES NORTH CAROLINA        ASHE                    
+## 6                8,248     ACRES NORTH CAROLINA        ASHE                    
+##        prodn_practice_desc year sector_desc source_desc          asd_desc
+## 1 ALL PRODUCTION PRACTICES 2017   ECONOMICS      CENSUS NORTHERN MOUNTAIN
+## 2 ALL PRODUCTION PRACTICES 2012   ECONOMICS      CENSUS NORTHERN MOUNTAIN
+## 3 ALL PRODUCTION PRACTICES 2007   ECONOMICS      CENSUS NORTHERN MOUNTAIN
+## 4 ALL PRODUCTION PRACTICES 2017   ECONOMICS      CENSUS NORTHERN MOUNTAIN
+## 5 ALL PRODUCTION PRACTICES 2012   ECONOMICS      CENSUS NORTHERN MOUNTAIN
+## 6 ALL PRODUCTION PRACTICES 2007   ECONOMICS      CENSUS NORTHERN MOUNTAIN
+##   begin_code watershed_code CV (%) region_desc asd_code  country_name
+## 1         00       00000000    (D)                   10 UNITED STATES
+## 2         00       00000000    (D)                   10 UNITED STATES
+## 3         00       00000000                          10 UNITED STATES
+## 4         00       00000000   20.1                   10 UNITED STATES
+## 5         00       00000000   11.2                   10 UNITED STATES
+## 6         00       00000000                          10 UNITED STATES
+##          util_practice_desc state_fips_code statisticcat_desc
+## 1 ALL UTILIZATION PRACTICES              37              AREA
+## 2 ALL UTILIZATION PRACTICES              37              AREA
+## 3 ALL UTILIZATION PRACTICES              37              AREA
+## 4 ALL UTILIZATION PRACTICES              37              AREA
+## 5 ALL UTILIZATION PRACTICES              37              AREA
+## 6 ALL UTILIZATION PRACTICES              37              AREA
+##              group_desc  class_desc
+## 1 FARMS &amp; LAND &amp; ASSETS ALL CLASSES
+## 2 FARMS &amp; LAND &amp; ASSETS ALL CLASSES
+## 3 FARMS &amp; LAND &amp; ASSETS ALL CLASSES
+## 4 FARMS &amp; LAND &amp; ASSETS ALL CLASSES
+## 5 FARMS &amp; LAND &amp; ASSETS ALL CLASSES
+## 6 FARMS &amp; LAND &amp; ASSETS ALL CLASSES
+##                                  location_desc end_code      short_desc
+## 1 NORTH CAROLINA, NORTHERN MOUNTAIN, ALLEGHANY       00 AG LAND - ACRES
+## 2 NORTH CAROLINA, NORTHERN MOUNTAIN, ALLEGHANY       00 AG LAND - ACRES
+## 3 NORTH CAROLINA, NORTHERN MOUNTAIN, ALLEGHANY       00 AG LAND - ACRES
+## 4      NORTH CAROLINA, NORTHERN MOUNTAIN, ASHE       00 AG LAND - ACRES
+## 5      NORTH CAROLINA, NORTHERN MOUNTAIN, ASHE       00 AG LAND - ACRES
+## 6      NORTH CAROLINA, NORTHERN MOUNTAIN, ASHE       00 AG LAND - ACRES</code></pre>
 <p>That worked! Now, let’s check out the NASS data.</p>
 </div>
 <div id="reformatting-api-query-output" class="section level1">

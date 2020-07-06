@@ -60,7 +60,7 @@ library(rnassqs)
 
 ## Census API Set Up
 
-As I mentioned in my [previous blog post](https://sheilasaia.rbind.io/post/2019-01-04-nass-api/), many APIs require that you have a personal API key to access the data stored within them. To run the code in this post you'll need to request a Census API key (see instructions below) and a NASS API key (see instructions below). Once you have your own personal API key, you should keep them both in safe and central location. I recommend a text file somewhere rememberable on your (password protected) computer.
+As I mentioned in my [previous blog post](https://sheilasaia.rbind.io/post/2019-01-04-nass-api/), many APIs require that you have a personal API key to access the data stored within them. To run the code in this post you'll need to request a Census API key (see instructions below) and a NASS API key (see instructions below). Once you have your own personal API key, you should keep them both in safe and central location. I recommend a text file somewhere memorable on your (password protected) computer.
 
 To request a Census API key, you can go to [here](https://api.census.gov/data/key_signup.html) and fill in your name and organization. Once you submit the key request, the US Census Bureau will email a Census API key. This key is unique to the name and email you provided, so as I mentioned in the previous paragraph, be sure to keep it in a safe place.
 
@@ -122,7 +122,7 @@ nassqs_auth(key = NASS_API_KEY)
 
 # Looking Up Available Data
 
-The first step to building a API query is understanding what parameters you have the ability to request. You can look at a complete list of available parameters using the `nassqs_params()` function. By saving the output of this to a variable named `params_list`, you can click on the variable in our RStudio envnironment and check it out.
+The first step to building a API query is understanding what parameters you have the ability to request. You can look at a complete list of available parameters using the `nassqs_params()` function. By saving the output of this to a variable named `params_list`, you can click on the variable in our RStudio environment and check it out.
 
 ```{r see params}
 params_list <- nassqs_params()
@@ -133,7 +133,7 @@ params_list
 
 There are 40 parameters that can be specified in a query. Looking back at my [previous blog post](https://sheilasaia.rbind.io/post/2019-01-04-nass-api/), **I was interested in exploring the fraction of irrigated acres of agricultural land in the state of North Carolina over time**. To replicate this work using the `rnassqs` package, I'll pay attention to 7 NASS API parameters: commodity description ("commodity_desc"), the short description ("short_desc"), the year ("year"), the state ("state_alpha"), the aggregation level ("agg_level_desc"), unit description ("unit_desc"), and the domain category description ("domaincat_desc").
 
-Knowing what parameters to pay attention to takes some experience while working with NASS Quick Stats data. If you're really confused, I recommend clicking through the NASS Quick Stats web interface [here](https://quickstats.nass.usda.gov/). When I first started working with the NASS API (and even now) looking through the web interfact helped me to see what parameters and sub-parameters were availble for different selections I was interested in. You can also use the `nassqs_param_values()` function, which I describe in further detail below, to get a better idea of what data is available. The `nassqs_param_values()` function can help you make a broad query to the NASS API that returns unique paramter values (I call these sub-parameters, here) within each of the 40 parameters listed above.
+Knowing what parameters to pay attention to takes some experience while working with NASS Quick Stats data. If you're really confused, I recommend clicking through the NASS Quick Stats web interface [here](https://quickstats.nass.usda.gov/). When I first started working with the NASS API (and even now) looking through the web interface helped me to see what parameters and sub-parameters were available for different selections I was interested in. You can also use the `nassqs_param_values()` function, which I describe in further detail below, to get a better idea of what data is available. The `nassqs_param_values()` function can help you make a broad query to the NASS API that returns unique parameter values (I call these sub-parameters, here) within each of the 40 parameters listed above.
 
 For a very general example, say you wanted to know what states grew olives in 2017 and have county aggregated data available.
 
@@ -148,7 +148,7 @@ rnassqs::nassqs_param_values(param = "state_alpha",
 
 Interesting! Looks like 12 states have counties that grew olives in 2017.
 
-For an example that's more relevant to the goals of this post, I checked (1) if irrigation data is available at a county-scale in North Carolina and (2) what wording and text formatting will be needed to access it. To do this, I set `param = "short_desc"` because I'm interested in knowing the options avaiable for the "short_desc" paramter. I also used other parameters (e.g., "state_alpha") to filter the results down even further.
+For an example that's more relevant to the goals of this post, I checked (1) if irrigation data is available at a county-scale in North Carolina and (2) what wording and text formatting will be needed to access it. To do this, I set `param = "short_desc"` because I'm interested in knowing the options available for the "short_desc" parameter. I also used other parameters (e.g., "state_alpha") to filter the results down even further.
 
 ```{r short desc search, eval=FALSE}
 rnassqs::nassqs_param_values(param = "short_desc", 
@@ -157,7 +157,7 @@ rnassqs::nassqs_param_values(param = "short_desc",
                              state_alpha = "NC")
 ```
 
-*"Error: Request was too large. NASS requires that an API call returns a maximum of 50,000 records. Consider subsetting your request by geography or year to reduce the size of your query."*
+*"Error: Request was too large. NASS requires that an API call returns a maximum of 50,000 records. Consider sub-setting your request by geography or year to reduce the size of your query."*
 
 **Warning:** In some cases you might submit a parameter query (or full query, more on this in the next section) that's too large. This will result in an error message like the one above.
 
@@ -201,7 +201,7 @@ rnassqs::nassqs_param_values(param = "short_desc",
 ## [29] "AG LAND, WOODLAND, PASTURED - ACRES"
 ```
 
-Great! This is more helpful than an error message. :) Ok, I'll keep an eye on two short descriptions moving forward: "AG LAND, IRRIGATED - ACRES" and "AG LAND - ACRES" because I'll need these to explore the fraction of irrigated acres of agricultural land in the state of North Carolina over time. I will also need to know more about the domain category description ("domaincat_desc"); please see my discussion of that paramter in my [previous blog post](https://sheilasaia.rbind.io/post/2019-01-04-nass-api/).
+Great! This is more helpful than an error message. :) Ok, I'll keep an eye on two short descriptions moving forward: "AG LAND, IRRIGATED - ACRES" and "AG LAND - ACRES" because I'll need these to explore the fraction of irrigated acres of agricultural land in the state of North Carolina over time. I will also need to know more about the domain category description ("domaincat_desc"); please see my discussion of that parameter in my [previous blog post](https://sheilasaia.rbind.io/post/2019-01-04-nass-api/).
 
 As another example, I looked up the years with irrigation data available at the county level in North Carolina. To do this I set `param = "year"` because I was interested in seeing what years are available. I used the short description from above and set the other parameters to values I knew would further filter the result.
 
@@ -214,7 +214,7 @@ rnassqs::nassqs_param_values(param = "year",
 ## [1] 1997 2002 2007 2012 2017
 ```
 
-By running this code, it looks like county-wide irrigation data for NC are available for 1997, 2002, 2007, 2012, and 2017. Once you know what years are availble, you can specify that in your query by setting `year = 2017`. Alternatively, if you want all the years, you can leave the year parameter undefined to get all the years available or use special operators defined [here](https://github.com/ropensci/rnassqs) to ask for a range of years. For example, `year__GE = 2000` would give you all years greater than or equal to 2000.
+By running this code, it looks like county-wide irrigation data for NC are available for 1997, 2002, 2007, 2012, and 2017. Once you know what years are available, you can specify that in your query by setting `year = 2017`. Alternatively, if you want all the years, you can leave the year parameter undefined to get all the years available or use special operators defined [here](https://github.com/ropensci/rnassqs) to ask for a range of years. For example, `year__GE = 2000` would give you all years greater than or equal to 2000.
 
 # API Data Query
 
