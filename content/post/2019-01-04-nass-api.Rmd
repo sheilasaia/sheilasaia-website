@@ -75,7 +75,7 @@ If you've already installed your Census API key, you should be good to go, but y
 Sys.getenv("CENSUS_API_KEY")
 ```
 
-If you want to get tabular *and* spatial census data using the `tidycensus` package, you will need to run the code below each time you start a new R session. Spatial census data includes, for example, census tract boundaries.
+If you want to get tabular *and* spatial census data using the `tidycensus` package, you'll need to run the code below each time you start a new R session. Spatial census data includes, for example, census tract boundaries.
 
 ```{r setting tigris options}
 options(tigris_use_cache = TRUE)
@@ -83,7 +83,7 @@ options(tigris_use_cache = TRUE)
 
 ## NASS API Set Up
 
-Be sure to also apply for a NASS API key. We'll use this later but will define it here as a string called `NASS_API_KEY`. You can apply for a NASS API key [here](https://quickstats.nass.usda.gov/api). As with the Census API key, this is unique you so be sure to keep it in a save place.
+Be sure to also apply for a NASS API key, which I'll define in a string called `NASS_API_KEY`. You can apply for a NASS API key [here](https://quickstats.nass.usda.gov/api). As with the Census API key, this is unique to you so be sure to keep it in a safe place.
 
 ```{r define NASS api, eval=FALSE}
 NASS_API_KEY <- "ADD YOUR NASS API KEY HERE"
@@ -91,31 +91,27 @@ NASS_API_KEY <- "ADD YOUR NASS API KEY HERE"
 
 If you want to save your NASS API key to your R environment, you can use the code below. Setting the NASS API key in your R environment will keep it hidden and accessible only to you. This might be important if you're planning to pass along your script to someone else...or post it on your blog. ;)
 
-To set the NASS API key your R environment you will have to navigate to the (hidden) .Renviron file on your computer. Then you will have to add `NASS_API_KEY <- "ADD YOUR NASS API KEY HERE"` to that text file. Alternatively, you could also use `sys.setenv()` as indicated below. See [this tutorial](https://rstats.wtf/r-startup.html#renviron) and [this tutorial](https://community.rstudio.com/t/how-to-set-a-variable-in-renviron/5029). You only need to do this once on your computer and will have to readd it if you reformat your computer or reinstall/update R..
+To set the NASS API key your R environment you'll have to navigate to the (hidden) .Renviron file on your computer. Then you will have to add `NASS_API_KEY <- "ADD YOUR NASS API KEY HERE"` to that text file. Alternatively, you can also use `sys.setenv()` as indicated below. See [this tutorial](https://rstats.wtf/r-startup.html#renviron) and [this tutorial](https://community.rstudio.com/t/how-to-set-a-variable-in-renviron/5029). You only need to do this once on your computer.
 
-Once you've added the NASS API key to your computer's .Renviron file. You will have to run the following code each time you start a new R session because you need to remind R that it has this information available in the .Renviron file.
-
-```{r define NASS api from env, eval=FALSE}
-# To add NASS_API_KEY to  your .Renviron file
+```{r set NASS api in your env, eval=FALSE}
+# add NASS_API_KEY to  your .Renviron file
 sys.setenv(NASS_API_KEY <- "ADD YOUR NASS API KEY HERE")
-
-# To check that it is there and load it into your current R session, use this code:
-NASS_API_KEY <- Sys.getenv("NASS_API_KEY")
 ```
 
-To use your NASS API in code later on, call it and assign it to a variable.
+Once you've added the NASS API key to your computer's .Renviron file. You'll have to run the following code each time you start a new R session. This is because you'll need to remind R that it has this information available in the .Renviron file.
 
-```{r use NASS key from env}
+```{r use NASS api from your env}
+# load your stored NASS_API_KEY it into your current R session
 NASS_API_KEY <- Sys.getenv("NASS_API_KEY")
 ```
-
-If you want to be very organized and secure you can add your NASS API key to your .Renviron file. You will only need to do this once and then R will automatically load the key into your working environment whenever you start a new R session. If you're interested in doing this and not too afraid of the command line, checkout [this stackoverflow post](https://stackoverflow.com/questions/40788645/how-to-create-renviron-file). Note, that if you have already run `census_api_key()` you will not need to make a new .Renviron file. It will already exist in your HOME directory.
 
 # API Data Query
 
-Now, we'll define the NASS url and path. In the path you'll have to specify what type of data you want to query. To specify these you can go to [https://quickstats.nass.usda.gov/](https://quickstats.nass.usda.gov/) to see all your commodity options. I haven't figured out another way to do this but please [contact me](mailto:ssaia@ncsu.edu) if you find an alternative.
+Now, let's define the NASS url and path.
 
-For this post I'm selecting the "AG_LAND" commodity, which includes information on the acreage of irrigated farm and ranch lands, because this is the wateR blog after all. Other commodities might include specific crops, etc. I'm also selecting the state of North Carolina (NC) because it seems to always be the subject of spatial mapping [(e.g., see this post)](https://r-spatial.github.io/sf/reference/geos_combine.html) in R and is also where I live. ;) You can also leave off the last "&state_alpha=NC" part of the string to get data from all states.
+In the path you'll have to specify what type of data you want to query. To specify these you can go to [https://quickstats.nass.usda.gov/](https://quickstats.nass.usda.gov/) to see all your commodity options. I haven't figured out another way to do this but please [contact me](mailto:ssaia@ncsu.edu) if you find an alternative.
+
+For this post I selected the "AG_LAND" commodity, which includes information on the acreage of irrigated farm and ranch lands, because this is the wateR blog after all. Other commodities might include specific crops, etc. I also selected the state of North Carolina because it seems to always be the subject of spatial mapping [(e.g., see this post)](https://r-spatial.github.io/sf/reference/geos_combine.html) in R and is also where I live. ;) You can also leave off the last "&state_alpha=NC" part of the string to get data from all states.
 
 ```{r define strings}
 # NASS url
@@ -144,17 +140,17 @@ Let's query the NASS API.
 raw_result_nc_irrig_land <- GET(url = nass_url, path = path_nc_irrig_land)
 ```
 
-We can check to see if it worked by looking at `status_code`. To read more about the different status codes and their meaning you can visit [https://en.wikipedia.org/wiki/List_of_HTTP_status_codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+You can check to see if it worked by looking at `status_code`. To read more about the different status codes and their meaning you can visit [https://en.wikipedia.org/wiki/List_of_HTTP_status_codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
 
 ```{r check status}
 raw_result_nc_irrig_land$status_code
 ```
 
-Great! We're wanting to see status code 200 here. It means our query was received and responded to.
+Great! We want to see status code 200 here. It means our query was received and responded to.
 
 # Reformatting API Query Output
 
-If we look at this in your R session it will come in as a 'Large response' or in other words as a JSON object. For simplicity sake, we can think of this as a list of lists (i.e., nested lists). We'll ultimately convert this to a data frame because it's a little easier to view in R.
+If you look at this in your R session, it will come in as a 'Large response' or in other words as a JSON object. For simplicity sake, you can think of this as a list of lists (i.e., nested lists). Let's convert this to a data frame because it's a little easier to view in R.
 
 We'll start unpacking the JSON object using `rawToChar()`. We can check the size and look at the first few characters.
 
@@ -167,9 +163,9 @@ nchar(char_raw_nc_irrig_land)
 # view first 50 characthers
 substr(char_raw_nc_irrig_land, 1, 50)
 ```
- 
+
 This is still a little hard to work with so let's use `fromJSON()` and convert the raw character strings to a large list. Due to recent (early 2020) updates to NASS, they now have the data saved in a "data" element of the JSON output.
- 
+
 ```{r to df}
 list_raw_nc_irrig_land <- fromJSON(char_raw_nc_irrig_land)
 
@@ -180,11 +176,11 @@ nc_irrig_land_raw_data <- list_raw_nc_irrig_land$data
 head(nc_irrig_land_raw_data)
 ```
 
-This looks ok but there are still some things that would be nice to clean up. As mentioned above, we want to focus on the acres of irrigated lands in NC. For simplicity, we'll just look at farms/ranches with 2,000 ac or more under operation. Let's step through each line in the piped (i.e., `%>%`) code below. See the in-line comments for the details.
+This looks ok but there are still some things that would be nice to clean up. As mentioned above, I wanted to focus on the acres of irrigated lands in NC. For simplicity, I'll only look at farms/ranches with 2,000 ac or more under operation. Let's step through each line in the piped (i.e., `%>%`) code below. See the in-line comments for the details.
 
 ```{r wrangle data}
 nc_irrigated <- nc_irrig_land_raw_data %>%
-  
+
   # filter to select county level irrigation data where farms/ranches with 2,000+ ac operation and irrigation status to get total acres of ag land in county
   filter(agg_level_desc == "COUNTY") %>%
   filter(unit_desc == "ACRES") %>%
@@ -192,42 +188,42 @@ nc_irrigated <- nc_irrig_land_raw_data %>%
 
   # trim white space from ends (note: 'Value' is a character here, not a number)
   mutate(value_trim = str_trim(Value)) %>%
-  
+
   # select only the columns we'll need
   select(state_name, state_alpha, state_ansi, county_code, county_name, asd_desc,
-         agg_level_desc, year, prodn_practice_desc_char = prodn_practice_desc, domaincat_desc, 
+         agg_level_desc, year, prodn_practice_desc_char = prodn_practice_desc, domaincat_desc,
          short_desc, value_ac_per_yr_char=value_trim, unit_desc) %>%
-  
+
   # filter out entries with codes '(D)' and '(Z)'
-  filter(value_ac_per_yr_char != "(D)" & value_ac_per_yr_char != "(Z)") %>% 
-  
+  filter(value_ac_per_yr_char != "(D)" & value_ac_per_yr_char != "(Z)") %>%
+
   # remove commas from number values and convert to R numeric class
   mutate(value_ac_per_yr = as.numeric(str_remove(value_ac_per_yr_char, ","))) %>%
-  
+
   # change blanks to underscores in prodn_practice_desc_char for latter processing
   mutate(prodn_practice_desc = str_replace_all(str_to_lower(prodn_practice_desc_char),
                                                "[ ]", "_")) %>%
-  
+
   # remove unnecessary columns
   select(-value_ac_per_yr_char, -prodn_practice_desc_char) %>%
-  #arrange(county_code, year) 
-  
+  #arrange(county_code, year)
+
   # we have 2007, 2012, and 2017 data and we want irrigated land acreage and total land acreage
   # (to calculate a percentage of irrigated land) so we use n()>1 to filter out counties
   # that have both types of acreage for each year
   group_by(county_code, year) %>%
   filter(n()>1) %>%
-  
+
   # drop columns we don't need
   select(-domaincat_desc, -short_desc) %>%
-  
+
   # pivot wide irrigated and total lands operated data and calculate percent irrigated
   pivot_wider(names_from = prodn_practice_desc, values_from = value_ac_per_yr) %>%
   mutate(percent_irrigated = round(irrigated/all_production_practices*100, 1)) %>%
-  
+
   # make a column with the county name and year (we'll need this for plotting)
   mutate(county_year = paste0(str_to_lower(county_name), "_", year)) %>%
-  
+
   # make GEOID column to match up with county level spatial data (we'll need this for mapping)
   mutate(GEOID = paste0(state_ansi, county_code)) %>%
   ungroup()
@@ -241,7 +237,9 @@ head(nc_irrigated)
 
 # Plotting NASS Data
 
-Now that we have this nicely formatted data, we can make some figures! Let's start by making some bar charts comparing the percentage of irrigated land in NC counties where data with available data for 2007, 2012, and 2017.
+Now that we have this nicely formatted data, let's make some figures!
+
+I started by making bar charts comparing the percentage of irrigated land in NC counties where data with available data for 2007, 2012, and 2017.
 
 ```{r bar chart}
 ggplot(nc_irrigated) +
@@ -252,7 +250,7 @@ ggplot(nc_irrigated) +
   theme_bw()
 ```
 
-We can plot just the counties that have all three years of data available.
+Let's plot just the counties that have all three years of data available.
 
 ```{r bar chart select}
 # select counties that have all three years
@@ -269,8 +267,7 @@ ggplot(nc_irrigated_mult_years) +
   theme_bw()
 ```
 
-
-Looking at this figure, it's hard to see any big patterns in the NASS irrigation data. We can summarize the total number of acres irrigated for all 13 counties using `summarize()`.
+Looking at this figure, it's hard to see any big patterns in the NASS irrigation data so I summarized the total number of acres irrigated for all 13 counties using `summarize()`.
 
 ```{r irrigated summary}
 nc_irrigated_summary <- nc_irrigated_mult_years %>%
@@ -282,16 +279,16 @@ nc_irrigated_summary <- nc_irrigated_mult_years %>%
 nc_irrigated_summary
 ```
 
-We see that these 13 counties irrigated about 6.7% of their land in production for 2007 and 2017.
+For this it looks like these 13 counties irrigated about 6.7% of their land in production for 2007 and 2017.
 
-Besides making some bar charts we can also map the irrigation percentages by county. For now, we'll just filter out the 2017 data for this visualization.
+Besides making some bar charts I also mapped the irrigation percentages by county. For this visualization, first, I wanted to keep only 2017 data.
 
 ```{r filter 2017 data}
 nc_irrigated_2017 <- nc_irrigated %>%
   filter(year == 2017)
 ```
 
-Next we'll use the `get_acs()` function in the `tidycensus` package with `geometry = TRUE` to download the [TIGER](https://www.census.gov/geo/maps-data/data/tiger.html) county boundaries shape (.shp) file for NC. The variable used here (i.e., "B19013_001") represents median income but you can use any variable you wish. We're mostly just interested in the spatial data associated with this and will ignore the tabular (i.e., median income) data.
+Next I used the `get_acs()` function in the `tidycensus` package with `geometry = TRUE` to download the [TIGER](https://www.census.gov/geo/maps-data/data/tiger.html) county boundaries shape (.shp) file for NC. The variable used here (i.e., "B19013_001") represents median income but you can use any variable you wish. I was interested in the spatial data associated with this and will ignore the tabular (i.e., median income) data.
 
 ```{r get acs shp}
 nc_counties <- get_acs(geography = "county", state = "NC", variables = "B19013_001", year = 2017, geometry = TRUE, survey = "acs5")
@@ -303,9 +300,9 @@ The second last step is to join `nc_irrigated_2017` to the county boundary spati
 nc_irrigated_map_2017 <- left_join(nc_counties, nc_irrigated_2017, by = "GEOID")
 ```
 
-Now we'll use `mapview()` to make an interactive plot where counties are colored based on the percentage of irrigated land. You can hover your mouse over the counties to see the actual percentages.
+Now I used `mapview()` to make an interactive plot where counties are colored based on the percentage of irrigated land. You can hover your mouse over the counties to see the actual percentages.
 
-```{r}
+```{r view map}
 mapviewOptions(vector.palette = colorRampPalette(c("snow", "darkblue", "grey10")))
 mapview(nc_irrigated_map_2017, zcol = "percent_irrigated", legend = FALSE)
 ```

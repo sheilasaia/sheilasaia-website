@@ -67,30 +67,27 @@ census_api_key(CENSUS_API_KEY, install = TRUE)
 <p>If you’ve already installed your Census API key, you should be good to go, but you can always check to make sure it’s in your R environment using the code below.</p>
 <pre class="r"><code># check that it&#39;s there
 Sys.getenv(&quot;CENSUS_API_KEY&quot;)</code></pre>
-<p>If you want to get tabular <em>and</em> spatial census data using the <code>tidycensus</code> package, you will need to run the code below each time you start a new R session. Spatial census data includes, for example, census tract boundaries.</p>
+<p>If you want to get tabular <em>and</em> spatial census data using the <code>tidycensus</code> package, you’ll need to run the code below each time you start a new R session. Spatial census data includes, for example, census tract boundaries.</p>
 <pre class="r"><code>options(tigris_use_cache = TRUE)</code></pre>
 </div>
 <div id="nass-api-set-up" class="section level2">
 <h2>NASS API Set Up</h2>
-<p>Be sure to also apply for a NASS API key. We’ll use this later but will define it here as a string called <code>NASS_API_KEY</code>. You can apply for a NASS API key <a href="https://quickstats.nass.usda.gov/api">here</a>. As with the Census API key, this is unique you so be sure to keep it in a save place.</p>
+<p>Be sure to also apply for a NASS API key, which I’ll define in a string called <code>NASS_API_KEY</code>. You can apply for a NASS API key <a href="https://quickstats.nass.usda.gov/api">here</a>. As with the Census API key, this is unique to you so be sure to keep it in a safe place.</p>
 <pre class="r"><code>NASS_API_KEY &lt;- &quot;ADD YOUR NASS API KEY HERE&quot;</code></pre>
 <p>If you want to save your NASS API key to your R environment, you can use the code below. Setting the NASS API key in your R environment will keep it hidden and accessible only to you. This might be important if you’re planning to pass along your script to someone else…or post it on your blog. ;)</p>
-<p>To set the NASS API key your R environment you will have to navigate to the (hidden) .Renviron file on your computer. Then you will have to add <code>NASS_API_KEY &lt;- &quot;ADD YOUR NASS API KEY HERE&quot;</code> to that text file. Alternatively, you could also use <code>sys.setenv()</code> as indicated below. See <a href="https://rstats.wtf/r-startup.html#renviron">this tutorial</a> and <a href="https://community.rstudio.com/t/how-to-set-a-variable-in-renviron/5029">this tutorial</a>. You only need to do this once on your computer and will have to readd it if you reformat your computer or reinstall/update R..</p>
-<p>Once you’ve added the NASS API key to your computer’s .Renviron file. You will have to run the following code each time you start a new R session because you need to remind R that it has this information available in the .Renviron file.</p>
-<pre class="r"><code># To add NASS_API_KEY to  your .Renviron file
-sys.setenv(NASS_API_KEY &lt;- &quot;ADD YOUR NASS API KEY HERE&quot;)
-
-# To check that it is there and load it into your current R session, use this code:
+<p>To set the NASS API key your R environment you’ll have to navigate to the (hidden) .Renviron file on your computer. Then you will have to add <code>NASS_API_KEY &lt;- &quot;ADD YOUR NASS API KEY HERE&quot;</code> to that text file. Alternatively, you can also use <code>sys.setenv()</code> as indicated below. See <a href="https://rstats.wtf/r-startup.html#renviron">this tutorial</a> and <a href="https://community.rstudio.com/t/how-to-set-a-variable-in-renviron/5029">this tutorial</a>. You only need to do this once on your computer.</p>
+<pre class="r"><code># add NASS_API_KEY to  your .Renviron file
+sys.setenv(NASS_API_KEY &lt;- &quot;ADD YOUR NASS API KEY HERE&quot;)</code></pre>
+<p>Once you’ve added the NASS API key to your computer’s .Renviron file. You’ll have to run the following code each time you start a new R session. This is because you’ll need to remind R that it has this information available in the .Renviron file.</p>
+<pre class="r"><code># load your stored NASS_API_KEY it into your current R session
 NASS_API_KEY &lt;- Sys.getenv(&quot;NASS_API_KEY&quot;)</code></pre>
-<p>To use your NASS API in code later on, call it and assign it to a variable.</p>
-<pre class="r"><code>NASS_API_KEY &lt;- Sys.getenv(&quot;NASS_API_KEY&quot;)</code></pre>
-<p>If you want to be very organized and secure you can add your NASS API key to your .Renviron file. You will only need to do this once and then R will automatically load the key into your working environment whenever you start a new R session. If you’re interested in doing this and not too afraid of the command line, checkout <a href="https://stackoverflow.com/questions/40788645/how-to-create-renviron-file">this stackoverflow post</a>. Note, that if you have already run <code>census_api_key()</code> you will not need to make a new .Renviron file. It will already exist in your HOME directory.</p>
 </div>
 </div>
 <div id="api-data-query" class="section level1">
 <h1>API Data Query</h1>
-<p>Now, we’ll define the NASS url and path. In the path you’ll have to specify what type of data you want to query. To specify these you can go to <a href="https://quickstats.nass.usda.gov/">https://quickstats.nass.usda.gov/</a> to see all your commodity options. I haven’t figured out another way to do this but please <a href="mailto:ssaia@ncsu.edu">contact me</a> if you find an alternative.</p>
-<p>For this post I’m selecting the “AG_LAND” commodity, which includes information on the acreage of irrigated farm and ranch lands, because this is the wateR blog after all. Other commodities might include specific crops, etc. I’m also selecting the state of North Carolina (NC) because it seems to always be the subject of spatial mapping <a href="https://r-spatial.github.io/sf/reference/geos_combine.html">(e.g., see this post)</a> in R and is also where I live. ;) You can also leave off the last “&amp;state_alpha=NC” part of the string to get data from all states.</p>
+<p>Now, let’s define the NASS url and path.</p>
+<p>In the path you’ll have to specify what type of data you want to query. To specify these you can go to <a href="https://quickstats.nass.usda.gov/">https://quickstats.nass.usda.gov/</a> to see all your commodity options. I haven’t figured out another way to do this but please <a href="mailto:ssaia@ncsu.edu">contact me</a> if you find an alternative.</p>
+<p>For this post I selected the “AG_LAND” commodity, which includes information on the acreage of irrigated farm and ranch lands, because this is the wateR blog after all. Other commodities might include specific crops, etc. I also selected the state of North Carolina because it seems to always be the subject of spatial mapping <a href="https://r-spatial.github.io/sf/reference/geos_combine.html">(e.g., see this post)</a> in R and is also where I live. ;) You can also leave off the last “&amp;state_alpha=NC” part of the string to get data from all states.</p>
 <pre class="r"><code># NASS url
 nass_url &lt;- &quot;http://quickstats.nass.usda.gov&quot;
 
@@ -111,14 +108,14 @@ my_state &lt;- &quot;NC&quot;
 path_nc_irrig_land &lt;- paste0(&quot;api/api_GET/?key=&quot;, NASS_API_KEY, &quot;&amp;commodity_desc=&quot;, my_commodity_desc, &quot;&amp;short_desc=&quot;, my_short_desc1, &quot;&amp;short_desc=&quot;, my_short_desc2, &quot;&amp;year__GE=&quot;, my_year, &quot;&amp;state_alpha=&quot;, my_state)</code></pre>
 <p>Let’s query the NASS API.</p>
 <pre class="r"><code>raw_result_nc_irrig_land &lt;- GET(url = nass_url, path = path_nc_irrig_land)</code></pre>
-<p>We can check to see if it worked by looking at <code>status_code</code>. To read more about the different status codes and their meaning you can visit <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">https://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a>.</p>
+<p>You can check to see if it worked by looking at <code>status_code</code>. To read more about the different status codes and their meaning you can visit <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">https://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a>.</p>
 <pre class="r"><code>raw_result_nc_irrig_land$status_code
 ## [1] 200</code></pre>
-<p>Great! We’re wanting to see status code 200 here. It means our query was received and responded to.</p>
+<p>Great! We want to see status code 200 here. It means our query was received and responded to.</p>
 </div>
 <div id="reformatting-api-query-output" class="section level1">
 <h1>Reformatting API Query Output</h1>
-<p>If we look at this in your R session it will come in as a ‘Large response’ or in other words as a JSON object. For simplicity sake, we can think of this as a list of lists (i.e., nested lists). We’ll ultimately convert this to a data frame because it’s a little easier to view in R.</p>
+<p>If you look at this in your R session, it will come in as a ‘Large response’ or in other words as a JSON object. For simplicity sake, you can think of this as a list of lists (i.e., nested lists). Let’s convert this to a data frame because it’s a little easier to view in R.</p>
 <p>We’ll start unpacking the JSON object using <code>rawToChar()</code>. We can check the size and look at the first few characters.</p>
 <pre class="r"><code>char_raw_nc_irrig_land &lt;- rawToChar(raw_result_nc_irrig_land$content)
 
@@ -128,7 +125,7 @@ nchar(char_raw_nc_irrig_land)
 
 # view first 50 characthers
 substr(char_raw_nc_irrig_land, 1, 50)
-## [1] &quot;{\&quot;data\&quot;:[{\&quot;reference_period_desc\&quot;:\&quot;YEAR\&quot;,\&quot;asd_desc&quot;</code></pre>
+## [1] &quot;{\&quot;data\&quot;:[{\&quot;domaincat_desc\&quot;:\&quot;OPERATORS: (1 OPERATOR&quot;</code></pre>
 <p>This is still a little hard to work with so let’s use <code>fromJSON()</code> and convert the raw character strings to a large list. Due to recent (early 2020) updates to NASS, they now have the data saved in a “data” element of the JSON output.</p>
 <pre class="r"><code>list_raw_nc_irrig_land &lt;- fromJSON(char_raw_nc_irrig_land)
 
@@ -137,55 +134,6 @@ nc_irrig_land_raw_data &lt;- list_raw_nc_irrig_land$data
 
 # look at the data frame
 head(nc_irrig_land_raw_data)
-##   reference_period_desc asd_desc unit_desc watershed_code end_code
-## 1                  YEAR              ACRES       00000000       00
-## 2                  YEAR              ACRES       00000000       00
-## 3                  YEAR              ACRES       00000000       00
-## 4                  YEAR              ACRES       00000000       00
-## 5                  YEAR              ACRES       00000000       00
-## 6                  YEAR              ACRES       00000000       00
-##                   short_desc  location_desc region_desc county_ansi
-## 1 AG LAND, IRRIGATED - ACRES NORTH CAROLINA                        
-## 2 AG LAND, IRRIGATED - ACRES NORTH CAROLINA                        
-## 3 AG LAND, IRRIGATED - ACRES NORTH CAROLINA                        
-## 4 AG LAND, IRRIGATED - ACRES NORTH CAROLINA                        
-## 5 AG LAND, IRRIGATED - ACRES NORTH CAROLINA                        
-## 6 AG LAND, IRRIGATED - ACRES NORTH CAROLINA                        
-##   country_code source_desc CV (%) county_code watershed_desc begin_code
-## 1         9000      CENSUS    2.9                                    00
-## 2         9000      CENSUS    6.2                                    00
-## 3         9000      CENSUS    9.0                                    00
-## 4         9000      CENSUS   74.2                                    00
-## 5         9000      CENSUS   12.0                                    00
-## 6         9000      CENSUS   15.6                                    00
-##   congr_district_code state_ansi freq_desc county_name commodity_desc
-## 1                             37    ANNUAL                    AG LAND
-## 2                             37    ANNUAL                    AG LAND
-## 3                             37    ANNUAL                    AG LAND
-## 4                             37    ANNUAL                    AG LAND
-## 5                             37    ANNUAL                    AG LAND
-## 6                             37    ANNUAL                    AG LAND
-##   agg_level_desc week_ending asd_code  class_desc state_fips_code
-## 1          STATE                      ALL CLASSES              37
-## 2          STATE                      ALL CLASSES              37
-## 3          STATE                      ALL CLASSES              37
-## 4          STATE                      ALL CLASSES              37
-## 5          STATE                      ALL CLASSES              37
-## 6          STATE                      ALL CLASSES              37
-##              group_desc  country_name statisticcat_desc zip_5
-## 1 FARMS &amp; LAND &amp; ASSETS UNITED STATES              AREA      
-## 2 FARMS &amp; LAND &amp; ASSETS UNITED STATES              AREA      
-## 3 FARMS &amp; LAND &amp; ASSETS UNITED STATES              AREA      
-## 4 FARMS &amp; LAND &amp; ASSETS UNITED STATES              AREA      
-## 5 FARMS &amp; LAND &amp; ASSETS UNITED STATES              AREA      
-## 6 FARMS &amp; LAND &amp; ASSETS UNITED STATES              AREA      
-##             load_time  Value state_alpha  sector_desc
-## 1 2012-12-31 00:00:00 76,221          NC DEMOGRAPHICS
-## 2 2012-12-31 00:00:00 98,305          NC DEMOGRAPHICS
-## 3 2012-12-31 00:00:00 21,912          NC DEMOGRAPHICS
-## 4 2012-12-31 00:00:00    669          NC DEMOGRAPHICS
-## 5 2012-12-31 00:00:00  2,131          NC DEMOGRAPHICS
-## 6 2012-12-31 00:00:00  7,379          NC DEMOGRAPHICS
 ##                                                             domaincat_desc
 ## 1                                                 OPERATORS: (1 OPERATORS)
 ## 2                                         OPERATORS: (2 OR MORE OPERATORS)
@@ -193,23 +141,65 @@ head(nc_irrig_land_raw_data)
 ## 4 OPERATORS, PRINCIPAL: (PRIMARY OCCUPATION, (EXCL FARMING), AGE 25 TO 34)
 ## 5 OPERATORS, PRINCIPAL: (PRIMARY OCCUPATION, (EXCL FARMING), AGE 35 TO 44)
 ## 6 OPERATORS, PRINCIPAL: (PRIMARY OCCUPATION, (EXCL FARMING), AGE 45 TO 54)
-##   prodn_practice_desc        util_practice_desc     state_name year
-## 1           IRRIGATED ALL UTILIZATION PRACTICES NORTH CAROLINA 2012
-## 2           IRRIGATED ALL UTILIZATION PRACTICES NORTH CAROLINA 2012
-## 3           IRRIGATED ALL UTILIZATION PRACTICES NORTH CAROLINA 2012
-## 4           IRRIGATED ALL UTILIZATION PRACTICES NORTH CAROLINA 2012
-## 5           IRRIGATED ALL UTILIZATION PRACTICES NORTH CAROLINA 2012
-## 6           IRRIGATED ALL UTILIZATION PRACTICES NORTH CAROLINA 2012
-##            domain_desc
-## 1            OPERATORS
-## 2            OPERATORS
-## 3 OPERATORS, PRINCIPAL
-## 4 OPERATORS, PRINCIPAL
-## 5 OPERATORS, PRINCIPAL
-## 6 OPERATORS, PRINCIPAL</code></pre>
-<p>This looks ok but there are still some things that would be nice to clean up. As mentioned above, we want to focus on the acres of irrigated lands in NC. For simplicity, we’ll just look at farms/ranches with 2,000 ac or more under operation. Let’s step through each line in the piped (i.e., <code>%&gt;%</code>) code below. See the in-line comments for the details.</p>
+##   state_alpha county_ansi agg_level_desc commodity_desc          domain_desc
+## 1          NC                      STATE        AG LAND            OPERATORS
+## 2          NC                      STATE        AG LAND            OPERATORS
+## 3          NC                      STATE        AG LAND OPERATORS, PRINCIPAL
+## 4          NC                      STATE        AG LAND OPERATORS, PRINCIPAL
+## 5          NC                      STATE        AG LAND OPERATORS, PRINCIPAL
+## 6          NC                      STATE        AG LAND OPERATORS, PRINCIPAL
+##   week_ending           load_time state_ansi reference_period_desc zip_5
+## 1             2012-12-31 00:00:00         37                  YEAR      
+## 2             2012-12-31 00:00:00         37                  YEAR      
+## 3             2012-12-31 00:00:00         37                  YEAR      
+## 4             2012-12-31 00:00:00         37                  YEAR      
+## 5             2012-12-31 00:00:00         37                  YEAR      
+## 6             2012-12-31 00:00:00         37                  YEAR      
+##   county_code freq_desc watershed_desc country_code unit_desc     state_name
+## 1                ANNUAL                        9000     ACRES NORTH CAROLINA
+## 2                ANNUAL                        9000     ACRES NORTH CAROLINA
+## 3                ANNUAL                        9000     ACRES NORTH CAROLINA
+## 4                ANNUAL                        9000     ACRES NORTH CAROLINA
+## 5                ANNUAL                        9000     ACRES NORTH CAROLINA
+## 6                ANNUAL                        9000     ACRES NORTH CAROLINA
+##    Value county_name prodn_practice_desc congr_district_code year  sector_desc
+## 1 76,221                       IRRIGATED                     2012 DEMOGRAPHICS
+## 2 98,305                       IRRIGATED                     2012 DEMOGRAPHICS
+## 3 21,912                       IRRIGATED                     2012 DEMOGRAPHICS
+## 4    669                       IRRIGATED                     2012 DEMOGRAPHICS
+## 5  2,131                       IRRIGATED                     2012 DEMOGRAPHICS
+## 6  7,379                       IRRIGATED                     2012 DEMOGRAPHICS
+##   source_desc asd_desc begin_code watershed_code CV (%) region_desc asd_code
+## 1      CENSUS                  00       00000000    2.9                     
+## 2      CENSUS                  00       00000000    6.2                     
+## 3      CENSUS                  00       00000000    9.0                     
+## 4      CENSUS                  00       00000000   74.2                     
+## 5      CENSUS                  00       00000000   12.0                     
+## 6      CENSUS                  00       00000000   15.6                     
+##    country_name        util_practice_desc state_fips_code statisticcat_desc
+## 1 UNITED STATES ALL UTILIZATION PRACTICES              37              AREA
+## 2 UNITED STATES ALL UTILIZATION PRACTICES              37              AREA
+## 3 UNITED STATES ALL UTILIZATION PRACTICES              37              AREA
+## 4 UNITED STATES ALL UTILIZATION PRACTICES              37              AREA
+## 5 UNITED STATES ALL UTILIZATION PRACTICES              37              AREA
+## 6 UNITED STATES ALL UTILIZATION PRACTICES              37              AREA
+##              group_desc  class_desc  location_desc end_code
+## 1 FARMS &amp; LAND &amp; ASSETS ALL CLASSES NORTH CAROLINA       00
+## 2 FARMS &amp; LAND &amp; ASSETS ALL CLASSES NORTH CAROLINA       00
+## 3 FARMS &amp; LAND &amp; ASSETS ALL CLASSES NORTH CAROLINA       00
+## 4 FARMS &amp; LAND &amp; ASSETS ALL CLASSES NORTH CAROLINA       00
+## 5 FARMS &amp; LAND &amp; ASSETS ALL CLASSES NORTH CAROLINA       00
+## 6 FARMS &amp; LAND &amp; ASSETS ALL CLASSES NORTH CAROLINA       00
+##                   short_desc
+## 1 AG LAND, IRRIGATED - ACRES
+## 2 AG LAND, IRRIGATED - ACRES
+## 3 AG LAND, IRRIGATED - ACRES
+## 4 AG LAND, IRRIGATED - ACRES
+## 5 AG LAND, IRRIGATED - ACRES
+## 6 AG LAND, IRRIGATED - ACRES</code></pre>
+<p>This looks ok but there are still some things that would be nice to clean up. As mentioned above, I wanted to focus on the acres of irrigated lands in NC. For simplicity, I’ll only look at farms/ranches with 2,000 ac or more under operation. Let’s step through each line in the piped (i.e., <code>%&gt;%</code>) code below. See the in-line comments for the details.</p>
 <pre class="r"><code>nc_irrigated &lt;- nc_irrig_land_raw_data %&gt;%
-  
+
   # filter to select county level irrigation data where farms/ranches with 2,000+ ac operation and irrigation status to get total acres of ag land in county
   filter(agg_level_desc == &quot;COUNTY&quot;) %&gt;%
   filter(unit_desc == &quot;ACRES&quot;) %&gt;%
@@ -217,42 +207,42 @@ head(nc_irrig_land_raw_data)
 
   # trim white space from ends (note: &#39;Value&#39; is a character here, not a number)
   mutate(value_trim = str_trim(Value)) %&gt;%
-  
+
   # select only the columns we&#39;ll need
   select(state_name, state_alpha, state_ansi, county_code, county_name, asd_desc,
-         agg_level_desc, year, prodn_practice_desc_char = prodn_practice_desc, domaincat_desc, 
+         agg_level_desc, year, prodn_practice_desc_char = prodn_practice_desc, domaincat_desc,
          short_desc, value_ac_per_yr_char=value_trim, unit_desc) %&gt;%
-  
+
   # filter out entries with codes &#39;(D)&#39; and &#39;(Z)&#39;
-  filter(value_ac_per_yr_char != &quot;(D)&quot; &amp; value_ac_per_yr_char != &quot;(Z)&quot;) %&gt;% 
-  
+  filter(value_ac_per_yr_char != &quot;(D)&quot; &amp; value_ac_per_yr_char != &quot;(Z)&quot;) %&gt;%
+
   # remove commas from number values and convert to R numeric class
   mutate(value_ac_per_yr = as.numeric(str_remove(value_ac_per_yr_char, &quot;,&quot;))) %&gt;%
-  
+
   # change blanks to underscores in prodn_practice_desc_char for latter processing
   mutate(prodn_practice_desc = str_replace_all(str_to_lower(prodn_practice_desc_char),
                                                &quot;[ ]&quot;, &quot;_&quot;)) %&gt;%
-  
+
   # remove unnecessary columns
   select(-value_ac_per_yr_char, -prodn_practice_desc_char) %&gt;%
-  #arrange(county_code, year) 
-  
+  #arrange(county_code, year)
+
   # we have 2007, 2012, and 2017 data and we want irrigated land acreage and total land acreage
   # (to calculate a percentage of irrigated land) so we use n()&gt;1 to filter out counties
   # that have both types of acreage for each year
   group_by(county_code, year) %&gt;%
   filter(n()&gt;1) %&gt;%
-  
+
   # drop columns we don&#39;t need
   select(-domaincat_desc, -short_desc) %&gt;%
-  
+
   # pivot wide irrigated and total lands operated data and calculate percent irrigated
   pivot_wider(names_from = prodn_practice_desc, values_from = value_ac_per_yr) %&gt;%
   mutate(percent_irrigated = round(irrigated/all_production_practices*100, 1)) %&gt;%
-  
+
   # make a column with the county name and year (we&#39;ll need this for plotting)
   mutate(county_year = paste0(str_to_lower(county_name), &quot;_&quot;, year)) %&gt;%
-  
+
   # make GEOID column to match up with county level spatial data (we&#39;ll need this for mapping)
   mutate(GEOID = paste0(state_ansi, county_code)) %&gt;%
   ungroup()</code></pre>
@@ -273,7 +263,8 @@ head(nc_irrig_land_raw_data)
 </div>
 <div id="plotting-nass-data" class="section level1">
 <h1>Plotting NASS Data</h1>
-<p>Now that we have this nicely formatted data, we can make some figures! Let’s start by making some bar charts comparing the percentage of irrigated land in NC counties where data with available data for 2007, 2012, and 2017.</p>
+<p>Now that we have this nicely formatted data, let’s make some figures!</p>
+<p>I started by making bar charts comparing the percentage of irrigated land in NC counties where data with available data for 2007, 2012, and 2017.</p>
 <pre class="r"><code>ggplot(nc_irrigated) +
   geom_col(aes(x = factor(year), y = percent_irrigated), fill = &quot;grey50&quot;) +
   facet_wrap(~county_name) +
@@ -281,7 +272,7 @@ head(nc_irrig_land_raw_data)
   ylab(&quot;Percent of Total Acres Irrigated (%)&quot;) +
   theme_bw()</code></pre>
 <p><img src="/post/2019-01-04-nass-api_files/figure-html/bar%20chart-1.png" width="672" /></p>
-<p>We can plot just the counties that have all three years of data available.</p>
+<p>Let’s plot just the counties that have all three years of data available.</p>
 <pre class="r"><code># select counties that have all three years
 nc_irrigated_mult_years &lt;- nc_irrigated %&gt;%
   group_by(county_name) %&gt;%
@@ -295,7 +286,7 @@ ggplot(nc_irrigated_mult_years) +
   ylab(&quot;Percent of Total Acres Irrigated (%)&quot;) +
   theme_bw()</code></pre>
 <p><img src="/post/2019-01-04-nass-api_files/figure-html/bar%20chart%20select-1.png" width="672" /></p>
-<p>Looking at this figure, it’s hard to see any big patterns in the NASS irrigation data. We can summarize the total number of acres irrigated for all 13 counties using <code>summarize()</code>.</p>
+<p>Looking at this figure, it’s hard to see any big patterns in the NASS irrigation data so I summarized the total number of acres irrigated for all 13 counties using <code>summarize()</code>.</p>
 <pre class="r"><code>nc_irrigated_summary &lt;- nc_irrigated_mult_years %&gt;%
   group_by(year) %&gt;%
   summarize(sum_irrigated_ac = sum(irrigated),
@@ -309,15 +300,15 @@ nc_irrigated_summary
 ## 1  2007            46882                700190              6.70
 ## 2  2012            36687                590884              6.21
 ## 3  2017            30410                454276              6.69</code></pre>
-<p>We see that these 13 counties irrigated about 6.7% of their land in production for 2007 and 2017.</p>
-<p>Besides making some bar charts we can also map the irrigation percentages by county. For now, we’ll just filter out the 2017 data for this visualization.</p>
+<p>For this it looks like these 13 counties irrigated about 6.7% of their land in production for 2007 and 2017.</p>
+<p>Besides making some bar charts I also mapped the irrigation percentages by county. For this visualization, first, I wanted to keep only 2017 data.</p>
 <pre class="r"><code>nc_irrigated_2017 &lt;- nc_irrigated %&gt;%
   filter(year == 2017)</code></pre>
-<p>Next we’ll use the <code>get_acs()</code> function in the <code>tidycensus</code> package with <code>geometry = TRUE</code> to download the <a href="https://www.census.gov/geo/maps-data/data/tiger.html">TIGER</a> county boundaries shape (.shp) file for NC. The variable used here (i.e., “B19013_001”) represents median income but you can use any variable you wish. We’re mostly just interested in the spatial data associated with this and will ignore the tabular (i.e., median income) data.</p>
+<p>Next I used the <code>get_acs()</code> function in the <code>tidycensus</code> package with <code>geometry = TRUE</code> to download the <a href="https://www.census.gov/geo/maps-data/data/tiger.html">TIGER</a> county boundaries shape (.shp) file for NC. The variable used here (i.e., “B19013_001”) represents median income but you can use any variable you wish. I was interested in the spatial data associated with this and will ignore the tabular (i.e., median income) data.</p>
 <pre class="r"><code>nc_counties &lt;- get_acs(geography = &quot;county&quot;, state = &quot;NC&quot;, variables = &quot;B19013_001&quot;, year = 2017, geometry = TRUE, survey = &quot;acs5&quot;)</code></pre>
 <p>The second last step is to join <code>nc_irrigated_2017</code> to the county boundary spatial data.</p>
 <pre class="r"><code>nc_irrigated_map_2017 &lt;- left_join(nc_counties, nc_irrigated_2017, by = &quot;GEOID&quot;)</code></pre>
-<p>Now we’ll use <code>mapview()</code> to make an interactive plot where counties are colored based on the percentage of irrigated land. You can hover your mouse over the counties to see the actual percentages.</p>
+<p>Now I used <code>mapview()</code> to make an interactive plot where counties are colored based on the percentage of irrigated land. You can hover your mouse over the counties to see the actual percentages.</p>
 <pre class="r"><code>mapviewOptions(vector.palette = colorRampPalette(c(&quot;snow&quot;, &quot;darkblue&quot;, &quot;grey10&quot;)))
 mapview(nc_irrigated_map_2017, zcol = &quot;percent_irrigated&quot;, legend = FALSE)</code></pre>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
