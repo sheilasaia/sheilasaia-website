@@ -74,6 +74,8 @@ Special thanks to all of the people who've worked hard to share their code and i
 
 - *R for Data Science* by Hadley Wickham & Garrett Grolemund [(link)](https://r4ds.had.co.nz/)
 
+- *Statistical Inference via Data Science A ModernDive into R and the Tidyverse* by Chester Ismay and Albert Kim [(link)](https://moderndive.com/index.html)
+
 - *Spatial Data Science with R* by various [(link)](https://www.rspatial.org/)
 
 - *Spatial Data Science* by Edzer Pebesma & Roger Bivand [(link)](https://keen-swartz-3146c4.netlify.com/index.html)
