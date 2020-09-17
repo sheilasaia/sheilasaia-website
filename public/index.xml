@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Transitioning machine learning from theory to practicein natural resources management</title>
+      <link>/publication/ml_stakeholder_meeting/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>/publication/ml_stakeholder_meeting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>APIs to the Rescue (&amp; the Census of Agriculture) Part 2</title>
       <link>/post/2020-06-30-nass-api-part2/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
@@ -710,206 +719,12 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/sheilasaia/paper-yadkin-swat-study&#34; target=&#34;_blank&#34;&gt;GitHub Repository for Suttles et al. 2018&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/sheilasaia/paper-yadkin-swat-svi-study&#34; target=&#34;_blank&#34;&gt;GitHub Repository for Saia et al. 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.srs.fs.usda.gov/compass/2020/09/17/climate-change-streamflow-and-social-vulnerability-locating-increased-risks/&#34; target=&#34;_blank&#34;&gt;USFS SRS Compass Live Article&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h1&gt;
 
 &lt;p&gt;Special thanks to the &lt;a href=&#34;https://orise.orau.gov/&#34; target=&#34;_blank&#34;&gt;Oak Ridge Institute for Science and Education&lt;/a&gt; for support this work.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Calculating the Cost of My Flight&#39;s Carbon Footprint in R</title>
-      <link>/post/2019-04-19-carbon-cost-calcs/</link>
-      <pubDate>Thu, 18 Apr 2019 21:12:00 -0500</pubDate>
-      
-      <guid>/post/2019-04-19-carbon-cost-calcs/</guid>
-      <description>
-
-
-&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Background&lt;/h1&gt;
-&lt;p&gt;Much of my postdoctoral research is focused on studying (and building tools to help decision makers mitigate) the impacts of climate change on communities in North Carolina. I’m also committed to reducing my carbon footprint and have read &lt;a href=&#34;https://www.nytimes.com/2017/07/27/climate/airplane-pollution-global-warming.html&#34;&gt;over&lt;/a&gt; and &lt;a href=&#34;https://www.vox.com/energy-and-environment/2019/1/11/18177118/airlines-climate-change-emissions-travel&#34;&gt;over&lt;/a&gt; that flying makes up the largest fraction of an average person’s carbon dioxide emissions. In early January I decided that I wanted to try to reduce the number of flights I took in 2019. I also wanted to figure out how to offset the cost of my carbon dioxide emissions when it was going to be tough to avoid flying.&lt;/p&gt;
-&lt;p&gt;I started researching websites to help me figure out how much to offset. I found several tools to calculate carbon dioxide emissions (e.g., &lt;a href=&#34;https://www.carbonfootprint.com/calculator.aspx&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;http://www.carbonify.com/carbon-calculator.htm&#34;&gt;here&lt;/a&gt;) but couldn’t find any that told me how much to donate based on these emissions. Early on, I decided my offsets would go to a local organization addressing climate change. For me this looked like a non-profit focused on building solar panels in the Raleigh-Durham area, but for you, it might be something different. I was doing these calculations manually and then I realized it would be more fun and more efficient to automate them in &lt;code&gt;R&lt;/code&gt;!&lt;/p&gt;
-&lt;p&gt;In this post, I’m starting with flights but maybe I’ll branch out to &lt;a href=&#34;https://www.yaleclimateconnections.org/2015/09/evolving-climate-math-of-flying-vs-driving/&#34;&gt;driving&lt;/a&gt; in the future…and maybe someday a shiny app for both.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;NOTE!&lt;/strong&gt; If you’re not an R-user but you’d still like to learn how much you should donate to offset the carbon dioxide you emit from flying, &lt;em&gt;please scroll to the bottom of this post&lt;/em&gt;. I’ve included step-by-step directions for how to do this without &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;goals-of-this-post&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Goals of This Post&lt;/h1&gt;
-&lt;p&gt;The main goals of this post are to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Calculate how much carbon dioxide is emitted for flights&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Calculate how much to donate based on this carbon footprint&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Write a function to automate these calculations&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Thanks to friends for their encouragement and to the &lt;a href=&#34;https://www.fridaysforfuture.org/&#34;&gt;#fridaysforthefuture&lt;/a&gt; movement for inspiring this post.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;set-up&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Set Up&lt;/h1&gt;
-&lt;p&gt;Let’s load the library we’ll need for this post. We’ll use the &lt;a href=&#34;https://cran.r-project.org/web/packages/airportr/vignettes/Introduction_to_Airportr.html&#34;&gt;&lt;code&gt;airportr&lt;/code&gt; package&lt;/a&gt;, which has helpful functions for looking up airport codes and calculating the distances between airports.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(airportr)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;all-the-airports&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;All the Airports&lt;/h1&gt;
-&lt;p&gt;There are many airports around the world and you might not know the 3-letter International Air Transport Association (IATA) code for the airports. Luckily, the &lt;a href=&#34;https://cran.r-project.org/web/packages/airportr/vignettes/Introduction_to_Airportr.html&#34;&gt;&lt;code&gt;airportr&lt;/code&gt; package&lt;/a&gt; has a look-up table function to help with this.&lt;/p&gt;
-&lt;p&gt;In this example, let’s calculate the amount we can donate to offset the carbon dioxide emissions for a flight from Raleigh/Durham, NC (departure city) to Charlotte, NC (arrival city).&lt;/p&gt;
-&lt;p&gt;Let’s start by looking up airports with “Raleigh” in their name.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;airport_lookup(input = &amp;quot;Raleigh&amp;quot;, input_type = &amp;quot;name&amp;quot;, output_type = &amp;quot;IATA&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning in airport_lookup(input = &amp;quot;Raleigh&amp;quot;, input_type = &amp;quot;name&amp;quot;, output_type =
-## &amp;quot;IATA&amp;quot;): No exact matches but some similar names in the database include:&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## General Ignacio P. Garcia International Airport
-## Licenciado y General Ignacio Lopez Rayon Airport
-## Rabigh Airport
-## Raleigh Durham International Airport
-## Raleigh County Memorial Airport
-## Leigh Creek Airport&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;There were several results but the Raleigh Durham International Airport is the one we want. Let’s use that as the new look-up function input.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;airport_lookup(input = &amp;quot;Raleigh Durham International Airport&amp;quot;, input_type = &amp;quot;name&amp;quot;, output_type = &amp;quot;IATA&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;RDU&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This time we get get the 3-digit IATA code for our departure city: RDU.&lt;/p&gt;
-&lt;p&gt;If you think you know the 3-digit IATA code for your airport of interests, you can also use the look-up functions to double check. Let’s do this for the arrival city, which I’m pretty sure is CLT.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;airport_lookup(input = &amp;quot;CLT&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Charlotte Douglas International Airport&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Great! Looks like CLT was a good guess for for the Charlotte, NC airport.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;calculate-the-distance-between-airports&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Calculate the Distance Between Airports&lt;/h1&gt;
-&lt;p&gt;Now that we know the departure and arrival city IATA codes, we can use them to calculate the distance between RDU and CLT. The &lt;code&gt;airportr&lt;/code&gt; package also has a function for this.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;kilometers &amp;lt;- round(airport_distance(&amp;quot;RDU&amp;quot;, &amp;quot;CLT&amp;quot;))
-miles &amp;lt;- round(airport_distance(&amp;quot;RDU&amp;quot;, &amp;quot;CLT&amp;quot;) * 0.621)
-
-kilometers&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 209&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;miles&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 130&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;There are 209 km (or 130 mi) between the RDU and CLT airports (as a crow flies).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;carbon-dioxide-emission-calculations&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Carbon Dioxide Emission Calculations&lt;/h1&gt;
-&lt;p&gt;To calculate our carbon dioxide emissions we’ll need to know how much carbon dioxide is emitted per mile traveled per person. Thankfully, many people before me have worked out this calculation. One of the most thorough descriptions of this is available at &lt;a href=&#34;https://blueskymodel.org/air-mile&#34;&gt;blueskymodel.org&lt;/a&gt;. After stepping through their calculations, this website recommends that 1 air mile produces 0.24 pounds of carbon dioxide emitted per person.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Radiative_forcing&#34;&gt;Radiative forcing&lt;/a&gt; is important to consider with respect to flight emissions calculations because it allows us to account for the fact that our plane is closer to the top of the atmosphere when it is admitting carbon dioxide. This matters because carbon dioxide emitted higher up in the Earth’s atmosphere has a greater warming potential then carbon dioxide emitted by our cars, etc. on the Earth’s surface. To account for radiative forcing, we can multiply our emission calculation by a factor. The website &lt;a href=&#34;https://carbonfund.org/how-we-calculate/&#34;&gt;carbonfund.org&lt;/a&gt; recommends this factor be equal to 1.891.&lt;/p&gt;
-&lt;p&gt;The full calculation for metric tons of carbon oxide emitted with radiative forcing is given below. The (1/2204.62) helps us convert from pounds to metric tons.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;num_people &amp;lt;- 1
-co2_emitted &amp;lt;- miles * num_people * 0.24 * (1 / 2204.62) * 1.891
-
-round(co2_emitted, 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.027&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;When one person travels one-way from RDU to CLT, they emit 0.027 metric tons (or 59 pounds) of carbon dioxide.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;carbon-dioxcide-offset-calculations&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Carbon Dioxcide Offset Calculations&lt;/h1&gt;
-&lt;p&gt;Next, we’ll need to figure out how much to donate given these carbon dioxide emissions. To do this, we can refer to the US Environmental Protection Agency’s (USEPA) &lt;a href=&#34;https://19january2017snapshot.epa.gov/sites/production/files/2016-12/documents/sc_co2_tsd_august_2016.pdf&#34;&gt;Social Cost of Carbon Technical Report&lt;/a&gt;. The information we’ll need is found in Table 2 of this document. We can save this information to a dataframe. The social cost of carbon includes the impact of carbon dioxide emissions on: “…changes in net agricultural productivity, human health, property damages from increased flood risk, and changes in energy system costs, such as reduced costs for heating and increased costs for air conditioning.” (&lt;a href=&#34;https://19january2017snapshot.epa.gov/climatechange/social-cost-carbon_.html&#34;&gt;USEPA, 2017&lt;/a&gt;).&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;social_cost_co2 &amp;lt;- data.frame(
-  year = seq(2015, 2050, 5),
-  avg_5_perc_usd_per_ton_co2 = c(11, 12, 14, 16, 18, 21, 23, 26),
-  avg_3_perc_usd_per_ton_co2 = c(36, 42, 46, 50, 55, 60, 64, 69),
-  avg_2.5_perc_usd_per_ton_co2 = c(56, 62, 68, 73, 78, 84, 89, 95),
-  high_impact_usd_per_ton_co2 = c(105, 123, 138, 152, 168, 183, 197, 212)
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let’s walk through each of these columns. Column 1 is the year, which ranges from 2015 to 2050. Columns 2 to 5 all represent the cost (in US dollars) of emitting a metric ton of carbon dioxide given different future strategies. That is, the average (of three climate models times five climate change scenarios) cost given a 5%, 3%, and 2.5% discount rate for columns 2 through 4, respectively. I’ll admit that I don’t fully understand the discount rate, but believe it’s used as a way to consider whether people are more likely to value short-term or long-term risks associated with climate change. The larger the discount rate, the less they value long-term risk. In a societal context, the larger discount rate suggests that current generations are valued more than future generations. The report also includes a high impact case that is calculated from the 95th percentile (of three climate models times five climate change scenarios), rather than the average, cost given a 3% discount rate. The USEPA’s &lt;a href=&#34;https://19january2017snapshot.epa.gov/sites/production/files/2016-12/documents/sc_co2_tsd_august_2016.pdf&#34;&gt;Social Cost of Carbon Technical Report&lt;/a&gt; report says, “…there is extensive evidence in the scientific and economic literature of the potential for lower-probability, higher-impact outcomes from climate change, which would be particularly harmful to society and thus relevant to the public and policymakers.” Therefore, for this blog post, we’ll move forward using the high impact case.&lt;/p&gt;
-&lt;p&gt;We can fit this linear trend and use it to estimate the cost of a metric ton of carbon dioxide emitted for years not in Table 2 (i.e., for this year, 2019).&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# fit a linear model
-cost_lm &amp;lt;- lm(high_impact_usd_per_ton_co2 ~ year, data = social_cost_co2)
-
-# save the model parameters for prediction
-intercept &amp;lt;- cost_lm$coefficients[1]
-slope &amp;lt;- cost_lm$coefficients[2]&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let’s plot the data (points) and linear model (line).&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(high_impact_usd_per_ton_co2 ~ year, data = social_cost_co2, pch = 16, xlab = &amp;quot;Year&amp;quot;, ylab = &amp;quot;Cost per Metric Ton CO2 Emitted (USD)&amp;quot;)
-abline(a = intercept, b = slope, col = &amp;quot;red&amp;quot;, lwd = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-04-19-carbon-cost-calcs_files/figure-html/plot%20cost%20model-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Ok, now we can use the model parameters to predict the cost for a given year. Let’s try this for 2019.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;my_year &amp;lt;- 2019
-my_year * slope + intercept&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##     year 
-## 118.9286&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The social cost of a metric ton of carbon dioxide emitted in 2019 is $119.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;putting-it-all-together-aka-making-an-r-function&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Putting it All Together (aka Making an R Function)&lt;/h1&gt;
-&lt;p&gt;Now let’s take all the code we wrote above and combine it into a custom R function that calculates how much we can donate to offset the carbon dioxide emissions for a new flight. In this second example, we’ll fly round-trip from Raleigh/Durham, NC (departure city) to San Francisco, CA (arrival city).&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;carbon_offset_cost &amp;lt;- function(departing_airport_code, arriving_airport_code, year, num_people, radiative_force = TRUE, round_trip = FALSE) {
-  # year should range from 2015 - 2050 to assume linearity
-  # departing_airport_code and arriving_airport code are three letter airport codes
-  # radiative_force = TRUE (default) will use radiative forcing in the calculation
-  # set to FALSE to avoid using radiative forcing
-  # round_trip = FALSE (default) will double the cost calculation if set to TRUE
-  # carbon offset result is given in USD
-  
-  # note: you will need to load the airportr package before using this function
-  
-  # linear coefficients from high impact column of table 2
-  # source: https://19january2017snapshot.epa.gov/sites/production/files/2016-12/documents/sc_co2_tsd_august_2016.pdf
-  intercept &amp;lt;- (-5986.143)
-  slope &amp;lt;- 3.02381
-  
-  # calculate miles flown
-  miles &amp;lt;- round(airport_distance(departing_airport_code, arriving_airport_code) * 0.621)
-  
-  if (radiative_force == TRUE) {
-    # metric tons of co2 emitted w/ radiative forcing
-    co2_emitted &amp;lt;- miles * num_people * 0.24 * (1 / 2204.62) * 1.891
-    # source: https://blueskymodel.org/air-mile (for emission conversion factor per person)
-    # source: https://carbonfund.org/how-we-calculate/ (for carbon forcing coefficient)
-    
-    # cost in usd
-    if (round_trip == FALSE) {
-      # one-way
-      cost &amp;lt;- co2_emitted * (slope * year + intercept)
-    }
-    
-    else if (round_trip == TRUE) {
-      # round-trip
-      cost &amp;lt;- co2_emitted * (slope * year + intercept) * 2
-    }
-  }
-  
-  else if (radiative_force == FALSE) {
-    # metric tons of co2 emitted w/out radiative forcing
-    co2_emitted &amp;lt;- miles * num_people * 0.24 * (1 / 2204.62) 
-    
-    # cost in usd
-    if (round_trip == FALSE) {
-      # one-way
-      cost &amp;lt;- co2_emitted * (slope * year + intercept)
-    }
-    
-    else if (round_trip == TRUE) {
-      # round-trip
-      cost &amp;lt;- co2_emitted * (slope * year + intercept) * 2
-    }  
-  }
-  
-  else {
-    cost &amp;lt;- NA
-  }
-  
-  return(cost)
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now let’s test out the function for a round-trip flight from RDU to SFO (for 1 person).&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;carbon_offset_cost(departing_airport_code = &amp;quot;RDU&amp;quot;, 
-                   arriving_airport_code = &amp;quot;SFO&amp;quot;,
-                   year = 2019,
-                   num_people = 1,
-                   radiative_force = TRUE,
-                   round_trip = TRUE)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 117.2229&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Looks like we can donate $117 to ofset the carbon dioxide emitted from our round-trip flight from RDU to SFO in 2019. If we want to be more generous we can adjust the year for a future period. For example, if we change the year to the maximum value, 2050, we can donate $210. Our emissions are more expensive the further out in time we go (see the &lt;a href=&#34;https://19january2017snapshot.epa.gov/climatechange/social-cost-carbon_.html&#34;&gt;USEPA Social Cost of Carbon website&lt;/a&gt; for more information).&lt;/p&gt;
-&lt;p&gt;Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
-&lt;p&gt;Unless you’re an R user, I recognize that it will take extra work for you to figure out how much you should donate to offset your flight’s carbon dioxide emissions. The first task is for me to start writing a second post for non-R users, and in the mean time, I’ll give an example below to put this all into perspective for &lt;em&gt;non-R users&lt;/em&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;what-if-im-not-an-r-user&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;What if I’m not an R user?&lt;/h1&gt;
-&lt;p&gt;Here are some of the basic calculations you’d need to make if you are not an R user and want to calculate your carbon foot print for a flight you’re taking.&lt;/p&gt;
-&lt;p&gt;Steps:&lt;br/&gt;
-1. Determine the mileage between your arrival and destination airports in miles (i.e., jot this down as variable &lt;code&gt;miles&lt;/code&gt;). Use a website like &lt;a href=&#34;https://www.airmilescalculator.com/&#34;&gt;this&lt;/a&gt;.&lt;br/&gt;
-2. Decide how many people (i.e., jot this down as variable &lt;code&gt;num_people&lt;/code&gt;) are traveling and whether the trip is a round-trip or one way.&lt;br/&gt;
-3. If a one-way trip, use the formula: &lt;code&gt;co2_emitted = miles x num_people x 0.24 x (1 / 2204.62) x 1.891&lt;/code&gt; to determine the metric tons of carbon dioxide emitted from your flight. Don’t forget the &lt;a href=&#34;https://www.mathsisfun.com/operation-order-pemdas.html&#34;&gt;order of operations&lt;/a&gt; here. ;) The variable &lt;code&gt;miles&lt;/code&gt; comes from step 1 and the variable &lt;code&gt;num_people&lt;/code&gt; comes from step 2. If round-trip, calculate &lt;code&gt;co2_emitted&lt;/code&gt; as mentioned previously and multiply this by 2 since you’re traveling to your destination and back.&lt;br/&gt;
-4. Think about whether you view climate change as a short- or long-term goal. If you think of it based on short-term impacts only then choose the current year (i.e., jot this down as variable &lt;code&gt;year&lt;/code&gt; = 2019). However, if you are commited to addressing its more long-term impacts, you can choose any year up until 2050 (i.e. jot this down as variable &lt;code&gt;year&lt;/code&gt; = 2050). The closer to 2050 you choose, the larger your donation will be.&lt;br/&gt;
-5. Calculate the cost of your offset (i.e., how much you’ll donate) using the formula: &lt;code&gt;cost = co2_emitted x (3.02 x year - 5986.1)&lt;/code&gt;. Remember your &lt;a href=&#34;https://www.mathsisfun.com/operation-order-pemdas.html&#34;&gt;order of operations&lt;/a&gt;. The variable &lt;code&gt;co2_emitted&lt;/code&gt; comes from step 3 and the variable &lt;code&gt;year&lt;/code&gt; comes from step 4.&lt;br/&gt;
-6. Donate this amount (in US dollars) to your local climate change organization (e.g., one building solar panels, planting trees, or advocating for bicycle lanes).&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;If have questions, comments, or ideas related to this post, please let me know!&lt;/p&gt;
-&lt;/div&gt;
 </description>
     </item>
     
