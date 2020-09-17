@@ -42,6 +42,7 @@ The goal of this project is to combine past and future hydrology model (i.e., [S
 # Project Links
 - [GitHub Repository for Suttles et al. 2018](https://github.com/sheilasaia/paper-yadkin-swat-study)
 - [GitHub Repository for Saia et al. 2019](https://github.com/sheilasaia/paper-yadkin-swat-svi-study)
+- [USFS SRS Compass Live Article](https://www.srs.fs.usda.gov/compass/2020/09/17/climate-change-streamflow-and-social-vulnerability-locating-increased-risks/)
 
 # Acknowledgements
 Special thanks to the [Oak Ridge Institute for Science and Education](https://orise.orau.gov/) for support this work.
