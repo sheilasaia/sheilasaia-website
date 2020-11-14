@@ -11,6 +11,20 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Improving Professional Relationships for a Better, Healthier Academic Experience Panel</title>
+      <link>/talk/202011_cuahsi/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/202011_cuahsi/</guid>
+      <description>
+
+&lt;h2 id=&#34;description-br&#34;&gt;Description:&lt;/br&gt;&lt;/h2&gt;
+
+&lt;p&gt;This remote panel event jointly hosted by &lt;a href=&#34;https://agu-h3s.org/&#34; target=&#34;_blank&#34;&gt;AGU H3S&lt;/a&gt; and &lt;a href=&#34;https://www.cuahsi.org/&#34; target=&#34;_blank&#34;&gt;CUAHSI&lt;/a&gt; was part of the Navigating Academic Waters &lt;a href=&#34;https://www.cuahsi.org/education/cyberseminars/2019-fall-cyberseminar-series&#34; target=&#34;_blank&#34;&gt;cyberseminar series&lt;/a&gt;. This particular panel was titled, &amp;ldquo;Improving Professional Relationships for a Better, Healthier Academic Experience&amp;rdquo;. I was one of five panelists.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Transitioning machine learning from theory to practice in natural resources management</title>
       <link>/publication/ml_stakeholder_meeting/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 -0400</pubDate>
@@ -433,11 +447,25 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
     </item>
     
     <item>
+      <title>Using R and Python to Map Vulnerable Communities and Future Streamflow</title>
+      <link>/talk/202003_unc/</link>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 -0400</pubDate>
+      
+      <guid>/talk/202003_unc/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
+
+&lt;p&gt;I was an invited speaker for the Introduction to Watershed Systems (GEOG 441) course at UNC Chapel Hill taught by Andrew Murray. I discussed how I&amp;rsquo;ve used R and Python to do some of my research.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tidy Spatial Data in R</title>
-      <link>/talk/duke_mar2020/</link>
+      <link>/talk/202003_duke/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 -0500</pubDate>
       
-      <guid>/talk/duke_mar2020/</guid>
+      <guid>/talk/202003_duke/</guid>
       <description>
 
 &lt;h2 id=&#34;description-br&#34;&gt;Description:&lt;/br&gt;&lt;/h2&gt;
@@ -452,10 +480,10 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
     
     <item>
       <title>Environmental Data Science Panel</title>
-      <link>/talk/duke_apr2020/</link>
+      <link>/talk/202004_duke/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
       
-      <guid>/talk/duke_apr2020/</guid>
+      <guid>/talk/202004_duke/</guid>
       <description>
 
 &lt;h2 id=&#34;description-br&#34;&gt;Description:&lt;/br&gt;&lt;/h2&gt;
@@ -466,10 +494,10 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
     
     <item>
       <title>Introduction to Data Management Plans for Researchers</title>
-      <link>/talk/ncsu_feb2020/</link>
+      <link>/talk/202002_ncsu_lib/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
       
-      <guid>/talk/ncsu_feb2020/</guid>
+      <guid>/talk/202002_ncsu_lib/</guid>
       <description>
 
 &lt;h2 id=&#34;description-br&#34;&gt;Description:&lt;/br&gt;&lt;/h2&gt;
@@ -482,10 +510,10 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
     
     <item>
       <title>Using R and Python to Map Vulnerable Communities and Future Streamflow</title>
-      <link>/talk/duke_feb2020/</link>
+      <link>/talk/202002_duke/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
       
-      <guid>/talk/duke_feb2020/</guid>
+      <guid>/talk/202002_duke/</guid>
       <description>
 
 &lt;h2 id=&#34;description-br&#34;&gt;Description:&lt;/br&gt;&lt;/h2&gt;
@@ -539,10 +567,10 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
     
     <item>
       <title>Improved Accuracy of Watershed-Scale General Circulation Model Runoff Using Deep Neural Networks (Poster #GC43D-1361)</title>
-      <link>/talk/agu_dec2019/</link>
+      <link>/talk/201912_agu/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 -0500</pubDate>
       
-      <guid>/talk/agu_dec2019/</guid>
+      <guid>/talk/201912_agu/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
@@ -555,10 +583,10 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
     
     <item>
       <title>R-Ladies Global: Promoting Diversity and Inclusion in the R Community (Poster #ED33G-1047)</title>
-      <link>/talk/agu_dec2019_rladies/</link>
+      <link>/talk/201912_agu_rladies/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 -0500</pubDate>
       
-      <guid>/talk/agu_dec2019_rladies/</guid>
+      <guid>/talk/201912_agu_rladies/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
@@ -571,10 +599,10 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
     
     <item>
       <title>Mapping Vulnerable Communities and Streamflow Projections to Aid Climate Change Adaptation Planning</title>
-      <link>/talk/meas-oct2019/</link>
+      <link>/talk/201910_meas/</link>
       <pubDate>Mon, 07 Oct 2019 00:00:00 -0400</pubDate>
       
-      <guid>/talk/meas-oct2019/</guid>
+      <guid>/talk/201910_meas/</guid>
       <description>
 
 &lt;h2 id=&#34;bio-br&#34;&gt;Bio:&lt;/br&gt;&lt;/h2&gt;
@@ -585,10 +613,10 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
     
     <item>
       <title>Let&#39;s Talk About Water: Lost Waterways of Winston-Salem</title>
-      <link>/talk/ltaw_sept2019/</link>
+      <link>/talk/201909_ltaw/</link>
       <pubDate>Tue, 20 Aug 2019 00:00:00 -0400</pubDate>
       
-      <guid>/talk/ltaw_sept2019/</guid>
+      <guid>/talk/201909_ltaw/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
@@ -598,133 +626,6 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
 &lt;p&gt;To read more and RSVP for this free event, visit &lt;a href=&#34;https://www.eventbrite.com/e/lost-waterways-of-winston-salem-film-screening-panel-discussion-tickets-65981950791&#34; target=&#34;_blank&#34;&gt;this website&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;/img/lost_waterways_2019.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>An Intro to Preprints for Early Career Hydrologists</title>
-      <link>/post/2019-05-19-preprint-intro/</link>
-      <pubDate>Mon, 20 May 2019 21:12:00 -0500</pubDate>
-      
-      <guid>/post/2019-05-19-preprint-intro/</guid>
-      <description>
-
-
-&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Background&lt;/h1&gt;
-&lt;p&gt;When I attended the 2019 &lt;a href=&#34;https://sites.agu.org/&#34;&gt;American Geophysical Union (AGU)&lt;/a&gt; this past December in Washington, DC, I had the pleasure of meeting members of an international organization of early career hydrologists called the &lt;a href=&#34;https://younghs.com/&#34;&gt;Young Hydrologic Society (YHS)&lt;/a&gt;. To clarify, “young” here refers to early career, rather than age. I was interested in getting more involved in the organization and thought writing a blog post for the group’s website would be a great way for me to contribute. I had recently lead a discussion on preprints with peers back in North Carolina and thought a blog post on this topic would be a perfect opportunity to continue that discussion. I also had (and still have) a lot of questions regarding preprints and hoped that preparing the blog post would give the opportunity to answer these questions.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;goals-of-this-post&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Goals of This Post&lt;/h1&gt;
-&lt;p&gt;The blog post that follows is re-posted of the YHS article I wrote on preprints. You can find the original article &lt;a href=&#34;https://younghs.com/2019/05/20/an-introduction-to-preprints-for-early-career-hydrologists/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Thanks to H. Beria, C. Hall, S. Harrigan, C. Jackson, and N. Krell for their helpful feedback on this post.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Growing calls for open and reproducible research across science, technology, engineering, and math (STEM) disciplines have advanced the conversation around preprints (e.g., Schloss, 2017; Narock et al., 2019). Early Career Hydrologists may benefit from considering and discussing the role of preprints in shaping scientific discovery and career trajectories. Here we introduce preprints, offering Early Career Hydrologists with a variety of thoughts on the advantages and disadvantages of using preprints in research workflows, and providing tips and resources for learning more. If we missed an aspect of the preprint discussion that you feel passionate about or still have questions about, please feel free to reach out to Sheila (at &lt;a href=&#34;https://twitter.com/sheilasaia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor&#34;&gt;sheilasaia&lt;/a&gt;) and the Young Hydrology Society (YHS; at &lt;a href=&#34;https://twitter.com/younghydrology?lang=en&#34;&gt;YoungHydrology&lt;/a&gt;) on Twitter.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;what-is-a-preprint&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;What is a preprint?&lt;/h1&gt;
-&lt;p&gt;A preprint refers to a research product (typically a research article) that is made publicly available before or at the same time it goes to peer review. A preprint server refers to an open access website where authors can submit and manage versions of their preprints.&lt;/p&gt;
-&lt;p&gt;Some preprint servers such as European Geophysical Union (EGU) sponsored &lt;a href=&#34;https://www.hydrol-earth-syst-sci-discuss.net/discussion_papers.html&#34;&gt;Hydrology and Earth Systems Science (HESS) Discussions&lt;/a&gt; is affiliated with EGU’s HESS journal. Additionally, the American Geophysical Union (AGU) sponsored Earth and Space Science Open Archive (ESSOAr) preprint server is associated with AGU-affiliated journals. These journal-supported preprint servers offer a convenient publishing pipeline should the author’s work be accepted after peer review.&lt;/p&gt;
-&lt;p&gt;Other preprint servers are not affiliated with a particular journal (e.g., &lt;a href=&#34;https://eartharxiv.org/&#34;&gt;EarthArXiv&lt;/a&gt;, and &lt;a href=&#34;https://www.biorxiv.org/&#34;&gt;bioRxiv&lt;/a&gt;). If an authors’ article is accepted for publication to a partner journal, these servers may offer transfer services for authors. For example, the bioRxiv offers transfer services to several journals including Applied and Environmental Microbiology (see details &lt;a href=&#34;https://www.biorxiv.org/about-biorxiv&#34;&gt;here&lt;/a&gt;). Preprint servers are typically not-for-profit (e.g., arXiv, bioRxiv, EarthArXiv); it is always good to check a preprint server’s not-for-profit status before submitting a preprint. See the ‘Things to Consider before Sharing a Preprint’ discussion below for more information.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;advantages&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Advantages:&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Depending on the preprint server, authors may be given a digital object identifier (DOI) number that can be used to cite their work. Also, the preprint server manages the storage and versions of the preprint free of charge. The DOI allows others to cite, and ultimately, give authors credit for their ideas and work.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The preprint (and eventually a postprint, if accepted by a journal) can be shared more broadly. This is especially true of the final publication, since a journal subscription is not required.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Preprints improve the transparency of the peer review process by enabling readers to view article versions at each step of the review process; and thus, assess changes they’ve made.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Preprint servers enable discussions between authors and interested parties. Readers can contribute to and look through these discussions via preprint server commenting features and direct communication with authors.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Posting a preprint allows author to share so-called ‘negative results’, which may improve future studies and conserve future time and funding resources (van Emmerik et al. 2018)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Preprints may help streamline collaborations by avoiding or improving studies in different locations that address similar research goals.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Preprint servers empower scientists to take control of the timeline for making their results public (Schloss 2017). This might prove especially helpful to overcoming current limitations of peer review (e.g., gender bias; Grogan 2019).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Preprints can help facilitate research findings to the public domain, so as to stimulate interactions and collaborations with fellow researchers. This may be especially helpful for Earth Career Scientists looking for potential collaborators inside and outside of their field.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Earth Career Scientists may be able to use preprints in grant and job applications to present progress and preliminary results. For example, the US National Institutes of Health allows scientists to include preprints in grant proposals (Kaiser 2017a, 2017b).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Some disciplines (e.g., physics) use preprint servers to stake claim to their results (or at least have a DOI associated with their early work).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;disadvantages&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Disadvantages:&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The discussion of preprint disadvantages largely centers around the fact that preprints are not validated by peer review (Kaiser 2017b). Researchers can make claims, which may be cited by others, without valid data supporting those claims. This may become especially problematic at the interface of science and the general public, especially if the general public and media representatives do not understand that the preprint is not peer reviewed.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Another common criticism of preprints centers around fear of being “scooped”—when an author’s work is stolen before it can be published. [On the other hand, authors of preprints have a DOI. Also, some journals have announced “scooping protection” (Kaiser 2017b).]&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Researchers that post preprints need to do their homework before making their work public. See the ‘Things to Consider before Sharing a Preprint’ discussion below. Most notably, it is important that authors know what their journal-of-choice’s preprint policies are in terms of accepting preprints, type of preprint licenses, and preprint server funding structures (i.e., not-for-profit) that are allowed.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;things-to-consider-before-sharing-a-preprint&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Things to Consider Before Sharing a Preprint&lt;/h1&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Check whether the journal you are planning to submit your work to accepts preprints. You can check a journal’s preprint policy on &lt;a href=&#34;http://www.sherpa.ac.uk/romeo/index.php&#34;&gt;SHERPA/RoMEO&lt;/a&gt;. Many journals accept preprints posted on not-for-profit preprint servers, but it is best to confirm that this is the case. When in doubt, you can email the editor to clarify the journal’s preprint policy. In addition to the funding structure of the preprint server (e.g., not-for-profit), be sure to pay attention to the journal’s policies related to licenses that are assigned by the preprint servers (e.g., CC BY).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Ask your co-authors for permission to post your article as a preprint, which includes asking them about their institution’s or company’s preprint policy. Before you post, you want to make sure everyone agrees to post your article as a preprint.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Make sure your article is ready to be posted as a preprint. Once your preprint is in the public domain, it will be very hard to remove.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;where-can-i-post-andor-read-a-hydrology-preprint&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Where can I post and/or read a hydrology preprint?&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The &lt;a href=&#34;https://arxiv.org/&#34;&gt;arXiv&lt;/a&gt; is the oldest preprint server to-date (since 1991) and hosts research from physics, mathematics, computer science, statistics, engineering, and various other disciplines that interface with the hydrologic sciences. As of May 2019 (when this post was written), there were 241 arXiv search results for “hydrology” (0.02% of the entire collection).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Inspired by the arXiv, researchers established the &lt;a href=&#34;https://eartharxiv.org/&#34;&gt;EarthArXiv&lt;/a&gt; in 2017 to serve the earth sciences community; thus, hydrology is particularly well represented here. EarthArXiv is part of the &lt;a href=&#34;https://osf.io/&#34;&gt;Open Science Framework (OSF)&lt;/a&gt; initiative.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Last but not least, the &lt;a href=&#34;https://www.essoar.org/&#34;&gt;Earth and Space Science Open Archive (ESSOAr)&lt;/a&gt; preprint server was established in 2018 through a joint effort with the American Geophysical Union (AGU) and &lt;a href=&#34;https://www.atypon.com/&#34;&gt;Atypon&lt;/a&gt;. ESSOAr is especially well suited for research that will be submitted to AGU-affiliated journals.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;can-and-how-do-i-cite-a-preprint&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Can (and how do) I cite a preprint?&lt;/h1&gt;
-&lt;p&gt;As mentioned above, preprints need to be treated as unpublished, non-peer reviewed publications. As an author and reader, you need to assess the validity and quality of the work before you cite a preprint. Before submitting an article that cites preprinted work, you should check that the journal allows preprint citations. If the journal allows preprints, authors should adhere to the formatting guidelines to make it clear to reviewers/readers that the work is not peer-reviewed. The same goes for funding agencies. An example policy on how to cite preprints can be found for Nature-affiliated journals at &lt;a href=&#34;https://www.nature.com/authors/policies/preprints.html&#34; class=&#34;uri&#34;&gt;https://www.nature.com/authors/policies/preprints.html&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;references&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;References&lt;/h1&gt;
-&lt;p&gt;Grogan, K. 2019. How the entire scientific community can confront gender bias in the workplace. Nature Ecology &amp;amp; Evolution. 3:3-6. Accessed online at: &lt;a href=&#34;https://www.nature.com/articles/s41559-018-0747-4&#34; class=&#34;uri&#34;&gt;https://www.nature.com/articles/s41559-018-0747-4&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Kaiser, J. 2017a. NIH enables investigators to include draft preprints in grant proposals. Science. Mar. 24, 2017. Accessed online at: &lt;a href=&#34;https://www.sciencemag.org/news/2017/03/nih-enables-investigators-include-draft-preprints-grant-proposals&#34; class=&#34;uri&#34;&gt;https://www.sciencemag.org/news/2017/03/nih-enables-investigators-include-draft-preprints-grant-proposals&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Kaiser, J. 2017b. The preprint dilemma. Science. 357(6358):1344-1349. Available online at: &lt;a href=&#34;https://science.sciencemag.org/content/357/6358/1344&#34; class=&#34;uri&#34;&gt;https://science.sciencemag.org/content/357/6358/1344&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Narock, T., E. Goldstein, C. Jackson, A. Bubeck, A. Enright, J. Farquharson, et al. Earth Science is Ready for Preprints. Eos. Apr. 23, 2019. Available online at: &lt;a href=&#34;https://eartharxiv.org/kftsv/&#34; class=&#34;uri&#34;&gt;https://eartharxiv.org/kftsv/&lt;/a&gt; and &lt;a href=&#34;https://eos.org/project-updates/earth-science-is-ready-for-preprints&#34; class=&#34;uri&#34;&gt;https://eos.org/project-updates/earth-science-is-ready-for-preprints&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Schloss, P. D. 2017. Preprinting Microbiology. mbio. 8:e00438-17. Available online at: &lt;a href=&#34;https://mbio.asm.org/content/8/3/e00438-17&#34; class=&#34;uri&#34;&gt;https://mbio.asm.org/content/8/3/e00438-17&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;van Emmerik, T., A. Popp, A. Solcerova, H. Muller, and R. Hut. 2018. Reporting negative results to stimulate experimental hydrology: discussion of “The role of experimental work in hydrological sciences - insights from a community survey”. Hydrological Sciences Journal. 63:1269-1273. &lt;a href=&#34;https://doi.org/10.1080/02626667.2018.1493203&#34; class=&#34;uri&#34;&gt;https://doi.org/10.1080/02626667.2018.1493203&lt;/a&gt;. Available online at: &lt;a href=&#34;https://eartharxiv.org/jhrfb/&#34; class=&#34;uri&#34;&gt;https://eartharxiv.org/jhrfb/&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;additional-reading-on-preprints&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Additional Reading on Preprints&lt;/h1&gt;
-&lt;p&gt;Nature Geosciences (editorial). 2018. ArXives of Earth Science. Nature Geosciences. 11: 149. Available online at: &lt;a href=&#34;https://www.nature.com/articles/s41561-018-0083-y&#34; class=&#34;uri&#34;&gt;https://www.nature.com/articles/s41561-018-0083-y&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;ESSOAr FAQs: &lt;a href=&#34;https://www.essoar.org/faq&#34; class=&#34;uri&#34;&gt;https://www.essoar.org/faq&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PLOS Preprint Resources: &lt;a href=&#34;https://www.plos.org/preprints&#34; class=&#34;uri&#34;&gt;https://www.plos.org/preprints&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;additional-thoughts&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Additional Thoughts&lt;/h1&gt;
-&lt;p&gt;This post is meant to provide introductory information to early career hydrologists interested in sharing their work publicly via preprint. At this time, I’ve only submitted one paper for preprint; therefore, I’m inexperienced. It’d be interesting to hear from other early career scientists about how they’ve negotiated publication of preprints with more established scientists, particularly when it addressing points listed under ‘Disadvantages’ above.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Climate Risk Assessment in Western North Carolina</title>
-      <link>/project/nc-sociohydro-project/</link>
-      <pubDate>Wed, 01 May 2019 00:00:00 -0400</pubDate>
-      
-      <guid>/project/nc-sociohydro-project/</guid>
-      <description>
-
-&lt;h1 id=&#34;collaborators&#34;&gt;Collaborators&lt;/h1&gt;
-
-&lt;p&gt;BB Cutts (NC State), RE Emanuel (NC State), KL Martin (NC State), KM Suttles (USFS), JM Vose (USFS), DN Wear (USFS), JW Coulston (USFS)&lt;/p&gt;
-
-&lt;h1 id=&#34;timeline&#34;&gt;Timeline&lt;/h1&gt;
-
-&lt;p&gt;2017-2019&lt;/p&gt;
-
-&lt;h1 id=&#34;project-goal&#34;&gt;Project Goal&lt;/h1&gt;
-
-&lt;p&gt;The goal of this project is to combine past and future hydrology model (i.e., &lt;a href=&#34;https://swat.tamu.edu/&#34; target=&#34;_blank&#34;&gt;Soil and Water Assessment Tool (SWAT)&lt;/a&gt;) outputs with demographics data to create maps and prioritize climate change adaptation planning for especially vulnerable communities in western North Carolina&amp;rsquo;s Yadkin-Pee Dee River Watershed.&lt;/p&gt;
-
-&lt;h1 id=&#34;project-links&#34;&gt;Project Links&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/sheilasaia/paper-yadkin-swat-study&#34; target=&#34;_blank&#34;&gt;GitHub Repository for Suttles et al. 2018&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/sheilasaia/paper-yadkin-swat-svi-study&#34; target=&#34;_blank&#34;&gt;GitHub Repository for Saia et al. 2019&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.srs.fs.usda.gov/compass/2020/09/17/climate-change-streamflow-and-social-vulnerability-locating-increased-risks/&#34; target=&#34;_blank&#34;&gt;USFS SRS Compass Live Article&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h1&gt;
-
-&lt;p&gt;Special thanks to the &lt;a href=&#34;https://orise.orau.gov/&#34; target=&#34;_blank&#34;&gt;Oak Ridge Institute for Science and Education&lt;/a&gt; for support this work.&lt;/p&gt;
 </description>
     </item>
     
