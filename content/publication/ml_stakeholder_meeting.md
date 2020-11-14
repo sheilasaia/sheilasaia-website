@@ -36,8 +36,8 @@ selected = false
 projects = ["fact-project"]
 
 # Links (optional).
-url_pdf = "https://research.ncsu.edu/ges/files/2020/09/Saia-et-al.-Ecological-Modelling-2020.pdf"
-url_preprint = ""
+url_pdf = ""
+url_preprint = "https://eartharxiv.org/repository/view/1742/"
 url_code = ""
 url_dataset = ""
 url_project = ""
