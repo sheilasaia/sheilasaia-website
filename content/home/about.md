@@ -33,6 +33,11 @@ weight = 1
   course = "BS in Biological Engineering (Complex Systems)"
   institution = "Binghamton University (SUNY)"
   year = 2007
+  
+[[education.courses]]
+  course = "Certified Instructor"
+  institution = "The Carpentries"
+  year = 2020
  
 +++
 
