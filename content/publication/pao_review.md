@@ -36,7 +36,7 @@ selected = false
 projects = ["paos-streams-project"]
 
 # Links (optional).
-url_pdf = "https://eartharxiv.org/ge95h/"
+url_pdf = "https://eartharxiv.org/repository/view/1132/"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
