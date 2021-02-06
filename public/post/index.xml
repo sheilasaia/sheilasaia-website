@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>Web of Science Queries in R</title>
+      <link>/post/2021-02-06-wos-query/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021-02-06-wos-query/</guid>
+      <description>Background A few years ago, I opened up my email to find journal rejection notice for a review paper that I had submitted a few months prior. I had adapted this review from the introductory chapter of my PhD thesis. Over the course of the last year, I had recieved a rejection email from one journal, completely overhauled the paper, and resubmitted it to a second journal. My first thoughts upon opening the journal rejection notice went to frustration.</description>
+    </item>
+    
+    <item>
       <title>APIs to the Rescue (&amp; the Census of Agriculture) Part 2</title>
       <link>/post/2020-06-30-nass-api-part2/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>

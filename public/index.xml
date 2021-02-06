@@ -11,6 +11,85 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Web of Science Queries in R</title>
+      <link>/post/2021-02-06-wos-query/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021-02-06-wos-query/</guid>
+      <description>
+
+
+&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Background&lt;/h1&gt;
+&lt;p&gt;A few years ago, I opened up my email to find journal rejection notice for a review paper that I had submitted a few months prior. I had adapted this review from the introductory chapter of my PhD thesis. Over the course of the last year, I had recieved a rejection email from one journal, completely overhauled the paper, and resubmitted it to a second journal. My first thoughts upon opening the journal rejection notice went to frustration. After all that work, the review paper had been rejected a second time by a different journal. After talking to my collaborators and mentors (Thank you, Drs. Jim Vose, Ryan Emanuel, Tony Buda, Hunter Carrick, and Jay Regan!), they told me to stick with it. They said I had something, but I needed to look a little deeper and maybe try a new approach. Paraphrasing Dr. Ryan Emanuel’s advice, I could use the feedback from reviewers to pinpiont where I revised the paper and further clarify my message. What were the reviewers confused by and why?&lt;/p&gt;
+&lt;p&gt;Taking a step back, I wondered whether I could put my R coding skills to work for this review paper. There had to be a way to pull keyword search queries into R from Web of Science (WoS). After some Googling, I stumbled across the &lt;code&gt;rwos&lt;/code&gt; package and decided a meta-analysis might help me (1) learn more about the different disciplines publishing on the topic I was interested in (i.e., microbial phosphorus cycling in the environment) and (2) whether there was overlap (i.e., interdiciplinary research) happening amongst them.&lt;/p&gt;
+&lt;p&gt;That said, the code used in this blog post was adapted from a meta-analysis that was recently published in the journal &lt;em&gt;Environmental Science &amp;amp; Technology&lt;/em&gt;. If you’re interested, you can &lt;a href=&#34;https://github.com/sheilasaia/paper-pao-review&#34;&gt;see the associated code here&lt;/a&gt; and &lt;a href=&#34;https://eartharxiv.org/repository/view/1132/&#34;&gt;read the study here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you’re interested in writing a review paper or doing a meta-analysis, I recommend the following resources for help and inspiration.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://acsess.onlinelibrary.wiley.com/doi/full/10.2134/csa2019.64.0115&#34;&gt;&lt;em&gt;How to Write a Review Paper&lt;/em&gt;&lt;/a&gt; by Gregorich (2019)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.11253&#34;&gt;&lt;em&gt;The Role of Meta-Analysis in Hydrology&lt;/em&gt;&lt;/a&gt; by Evaristo and McDonnell (2017)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003149&#34;&gt;&lt;em&gt;Ten Simple Rules for Writing a Literature Review&lt;/em&gt;&lt;/a&gt; by Pautasso (2013)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/13122323-writing-science&#34;&gt;&lt;em&gt;Writing Science: How to Write Papers That Get Cited and Proposals That Get Funded&lt;/em&gt;&lt;/a&gt; by Schimel (2012)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;goals-of-this-post&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Goals of This Post&lt;/h1&gt;
+&lt;p&gt;The main goal of this blog post is to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use the &lt;code&gt;rwos&lt;/code&gt; package to query the &lt;a href=&#34;https://login.webofknowledge.com/error/Error?Error=IPError&amp;amp;PathInfo=%2F&amp;amp;RouterURL=https%3A%2F%2Fwww.webofknowledge.com%2F&amp;amp;Domain=.webofknowledge.com&amp;amp;Src=IP&amp;amp;Alias=WOK5&#34;&gt;Web of Science (WoS) scholarly database&lt;/a&gt; in R.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Being able to query WoS, view outputs, and analyze those outputs in R can simplify literature reviews and meta-analyses. Specifically, it can be tedious to click through WoS query results. Also, this approach requires meticulous note taking to ensure reproducibility. Doing WoS queries in R is more efficient &lt;em&gt;and&lt;/em&gt; reproducible. Win win!&lt;/p&gt;
+&lt;p&gt;Special thanks to my literaure review collaborators for sticking with me/the paper through all those drafts and &lt;a href=&#34;https://github.com/juba&#34;&gt;Julien Barnier&lt;/a&gt; for creating the &lt;code&gt;rwos&lt;/code&gt; package.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;set-up&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Set Up&lt;/h1&gt;
+&lt;p&gt;First load the &lt;code&gt;tidyverse&lt;/code&gt; package, which we’ll use for data wrangling and plotting. If you’ve never used &lt;code&gt;tidyverse&lt;/code&gt; before, you’ll have to install it to your computer first by typing &lt;code&gt;install.packages(&amp;quot;tidyverse&amp;quot;)&lt;/code&gt; into the R console.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next we’ll load the &lt;code&gt;rwos&lt;/code&gt; package, which allows us to access the WoS API and query this API using R. You can read more about this package &lt;a href=&#34;https://github.com/juba/rwos&#34;&gt;here&lt;/a&gt;. If you’re interested in learning more about request APIs, see &lt;a href=&#34;https://sheilasaia.rbind.io/post/2019-01-04-nass-api/&#34;&gt;my previous post&lt;/a&gt; on this topic.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;NOTE:&lt;/em&gt; There are two main caveats with the &lt;code&gt;rwos&lt;/code&gt; package. First, the R package is &lt;strong&gt;no longer being maintained&lt;/strong&gt;; there’s no support to fix issues or improve the package. Second, you have to run this script from an IP address (i.e., university computer or wifi network) that has a WoS database subscription. For example, if I run this script from my house (using a non-NC State University IP address or wifi network), I will get the following error when trying to authenticate the WoS session.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Error in wos_authenticate( ) : Authentication error : No matches returned for IP ###.###.##.##&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you get this error while you’re working at your institution may not have a subscription to Web of Science. If you know you have a subscription, then I’d recommend reaching out to your information technologies office staff.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;rwos&lt;/code&gt; package has to be installed directly from GitHub, and we’ll do that using the &lt;code&gt;devtools&lt;/code&gt; package. Once &lt;code&gt;devtools&lt;/code&gt; is installed, we can use it to install &lt;code&gt;rwos&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install devtools
+install.packages(&amp;quot;devtools&amp;quot;)
+
+# install rwos
+devtools::install_github(&amp;quot;juba/rwos&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The last step is to load &lt;code&gt;rwos&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# load rwos
+library(rwos)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;setting-up-our-connection-to-the-wos-api&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Setting Up Our Connection to the WoS API&lt;/h1&gt;
+&lt;p&gt;Setting up a connection to the WoS API requires getting a session identifier. To do this we’ll use the &lt;code&gt;wos_authenticate()&lt;/code&gt; function as show below.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;NOTE:&lt;/em&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# get session id
+session_id &amp;lt;- wos_authenticate()&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;searching-for-wos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Searching for WoS&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;retrieving-publication-information-from-wos-after-searching&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Retrieving Publication Information from WoS (After Searching)&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tidying-up-wos-query-results&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Tidying Up WoS Query Results&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plotting-wos-query-results&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Plotting WoS Query Results&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exporting-publication-information&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Exporting Publication Information&lt;/h1&gt;
+&lt;p&gt;&lt;br/&gt;
+Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
+&lt;p&gt;As always, please reach out if have questions, comments, or ideas related to this post!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Improving Professional Relationships for a Better, Healthier Academic Experience Panel</title>
       <link>/talk/202011_cuahsi/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
@@ -608,24 +687,6 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
 &lt;h2 id=&#34;bio-br&#34;&gt;Bio:&lt;/br&gt;&lt;/h2&gt;
 
 &lt;p&gt;Sheila Saia received her BS in Bioengineering from Binghamton University and her MS and PhD degrees in Biological and Environmental Engineering at Cornell University. She is a postdoctoral researcher in NC State University’s Department of Forestry and Environmental Resources and an affiliate of the USDA Forest Service Southern Research Station in RTP. Her current postdoctoral research links hydrologic model (i.e., Soil and Water Assessment Tool; SWAT) results and United States Census data to aid climate change adaptation planning in North Carolina. Sheila has experience using model-, laboratory-, and field-based research to improve water quantity and water quality.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Let&#39;s Talk About Water: Lost Waterways of Winston-Salem</title>
-      <link>/talk/201909_ltaw/</link>
-      <pubDate>Tue, 20 Aug 2019 00:00:00 -0400</pubDate>
-      
-      <guid>/talk/201909_ltaw/</guid>
-      <description>
-
-&lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
-
-&lt;p&gt;The Lost Waterways of Winston-Salem is a free film screening and panel discussion at &lt;a href=&#34;https://www.aperturecinema.com/f-aq/&#34; target=&#34;_blank&#34;&gt;a/perture cinema&lt;/a&gt;. Drawing on the Winston-Salem motto of the &amp;ldquo;City of Arts and Innovation,&amp;rdquo; this event seeks to engage students and community members in a conversation about local water issues by highlighting the connection between STEM and the arts. Beginning at 5:00 PM, all are invited to the Chatham Building Atrium (305 W. 4th St.) to enjoy refreshments, engage with community partners, and explore environmentally-themed artwork by local artists. The screening of &lt;a href=&#34;https://www.imdb.com/title/tt2421498/&#34; target=&#34;_blank&#34;&gt;Lost Rivers (2012)&lt;/a&gt; will begin at 6pm in a/perture studios 1 &amp;amp; 2. Immediately following the screening, expert panelists will engage in a discussion moderated by Linda Lilienfeld, the &lt;a href=&#34;http://letstalkaboutwater.com/&#34; target=&#34;_blank&#34;&gt;&amp;ldquo;Let&amp;rsquo;s Talk about Water&amp;rdquo;&lt;/a&gt; Founder and Project Coordinator. Panelists include: Dr. Lauren Lowman, Dr. Sheila Saia, Kristen Ford Haaf, and Christine Rucker.&lt;/p&gt;
-
-&lt;p&gt;To read more and RSVP for this free event, visit &lt;a href=&#34;https://www.eventbrite.com/e/lost-waterways-of-winston-salem-film-screening-panel-discussion-tickets-65981950791&#34; target=&#34;_blank&#34;&gt;this website&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/img/lost_waterways_2019.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

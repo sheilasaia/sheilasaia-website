@@ -1,0 +1,77 @@
+---
+title: "Web of Science Queries in R"
+author: "Sheila Saia"
+date: '2021-02-10'
+categories: ["R"]
+tags: []
+---
+
+
+
+<div id="background" class="section level1">
+<h1>Background</h1>
+<p>A few years ago, I opened up my email to find journal rejection notice for a review paper that I had submitted a few months prior. I had adapted this review from the introductory chapter of my PhD thesis. Over the course of the last year, I had recieved a rejection email from one journal, completely overhauled the paper, and resubmitted it to a second journal. My first thoughts upon opening the journal rejection notice went to frustration. After all that work, the review paper had been rejected a second time by a different journal. After talking to my collaborators and mentors (Thank you, Drs. Jim Vose, Ryan Emanuel, Tony Buda, Hunter Carrick, and Jay Regan!), they told me to stick with it. They said I had something, but I needed to look a little deeper and maybe try a new approach. Paraphrasing Dr. Ryan Emanuel’s advice, I could use the feedback from reviewers to pinpiont where I revised the paper and further clarify my message. What were the reviewers confused by and why?</p>
+<p>Taking a step back, I wondered whether I could put my R coding skills to work for this review paper. There had to be a way to pull keyword search queries into R from Web of Science (WoS). After some Googling, I stumbled across the <code>rwos</code> package and decided a meta-analysis might help me (1) learn more about the different disciplines publishing on the topic I was interested in (i.e., microbial phosphorus cycling in the environment) and (2) whether there was overlap (i.e., interdiciplinary research) happening amongst them.</p>
+<p>That said, the code used in this blog post was adapted from a meta-analysis that was recently published in the journal <em>Environmental Science &amp; Technology</em>. If you’re interested, you can <a href="https://github.com/sheilasaia/paper-pao-review">see the associated code here</a> and <a href="https://eartharxiv.org/repository/view/1132/">read the study here</a>.</p>
+<p>If you’re interested in writing a review paper or doing a meta-analysis, I recommend the following resources for help and inspiration.</p>
+<ul>
+<li><a href="https://acsess.onlinelibrary.wiley.com/doi/full/10.2134/csa2019.64.0115"><em>How to Write a Review Paper</em></a> by Gregorich (2019)</li>
+<li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.11253"><em>The Role of Meta-Analysis in Hydrology</em></a> by Evaristo and McDonnell (2017)</li>
+<li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003149"><em>Ten Simple Rules for Writing a Literature Review</em></a> by Pautasso (2013)</li>
+<li><a href="https://www.goodreads.com/book/show/13122323-writing-science"><em>Writing Science: How to Write Papers That Get Cited and Proposals That Get Funded</em></a> by Schimel (2012)</li>
+</ul>
+</div>
+<div id="goals-of-this-post" class="section level1">
+<h1>Goals of This Post</h1>
+<p>The main goal of this blog post is to:</p>
+<ul>
+<li>Use the <code>rwos</code> package to query the <a href="https://login.webofknowledge.com/error/Error?Error=IPError&amp;PathInfo=%2F&amp;RouterURL=https%3A%2F%2Fwww.webofknowledge.com%2F&amp;Domain=.webofknowledge.com&amp;Src=IP&amp;Alias=WOK5">Web of Science (WoS) scholarly database</a> in R.</li>
+</ul>
+<p>Being able to query WoS, view outputs, and analyze those outputs in R can simplify literature reviews and meta-analyses. Specifically, it can be tedious to click through WoS query results. Also, this approach requires meticulous note taking to ensure reproducibility. Doing WoS queries in R is more efficient <em>and</em> reproducible. Win win!</p>
+<p>Special thanks to my literaure review collaborators for sticking with me/the paper through all those drafts and <a href="https://github.com/juba">Julien Barnier</a> for creating the <code>rwos</code> package.</p>
+</div>
+<div id="set-up" class="section level1">
+<h1>Set Up</h1>
+<p>First load the <code>tidyverse</code> package, which we’ll use for data wrangling and plotting. If you’ve never used <code>tidyverse</code> before, you’ll have to install it to your computer first by typing <code>install.packages(&quot;tidyverse&quot;)</code> into the R console.</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<p>Next we’ll load the <code>rwos</code> package, which allows us to access the WoS API and query this API using R. You can read more about this package <a href="https://github.com/juba/rwos">here</a>. If you’re interested in learning more about request APIs, see <a href="https://sheilasaia.rbind.io/post/2019-01-04-nass-api/">my previous post</a> on this topic.</p>
+<p><em>NOTE:</em> There are two main caveats with the <code>rwos</code> package. First, the R package is <strong>no longer being maintained</strong>; there’s no support to fix issues or improve the package. Second, you have to run this script from an IP address (i.e., university computer or wifi network) that has a WoS database subscription. For example, if I run this script from my house (using a non-NC State University IP address or wifi network), I will get the following error when trying to authenticate the WoS session.</p>
+<blockquote>
+<p>Error in wos_authenticate( ) : Authentication error : No matches returned for IP ###.###.##.##</p>
+</blockquote>
+<p>If you get this error while you’re working at your institution may not have a subscription to Web of Science. If you know you have a subscription, then I’d recommend reaching out to your information technologies office staff.</p>
+<p>The <code>rwos</code> package has to be installed directly from GitHub, and we’ll do that using the <code>devtools</code> package. Once <code>devtools</code> is installed, we can use it to install <code>rwos</code>.</p>
+<pre class="r"><code># install devtools
+install.packages(&quot;devtools&quot;)
+
+# install rwos
+devtools::install_github(&quot;juba/rwos&quot;)</code></pre>
+<p>The last step is to load <code>rwos</code>.</p>
+<pre class="r"><code># load rwos
+library(rwos)</code></pre>
+</div>
+<div id="setting-up-our-connection-to-the-wos-api" class="section level1">
+<h1>Setting Up Our Connection to the WoS API</h1>
+<p>Setting up a connection to the WoS API requires getting a session identifier. To do this we’ll use the <code>wos_authenticate()</code> function as show below.</p>
+<p><em>NOTE:</em></p>
+<pre class="r"><code># get session id
+session_id &lt;- wos_authenticate()</code></pre>
+</div>
+<div id="searching-for-wos" class="section level1">
+<h1>Searching for WoS</h1>
+</div>
+<div id="retrieving-publication-information-from-wos-after-searching" class="section level1">
+<h1>Retrieving Publication Information from WoS (After Searching)</h1>
+</div>
+<div id="tidying-up-wos-query-results" class="section level1">
+<h1>Tidying Up WoS Query Results</h1>
+</div>
+<div id="plotting-wos-query-results" class="section level1">
+<h1>Plotting WoS Query Results</h1>
+</div>
+<div id="exporting-publication-information" class="section level1">
+<h1>Exporting Publication Information</h1>
+<p><br/>
+Some other thoughts that I wanted to mention before signing off:</p>
+<p>As always, please reach out if have questions, comments, or ideas related to this post!</p>
+</div>
