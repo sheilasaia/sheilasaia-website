@@ -13,4 +13,9 @@ tidycensus
 mapview
 airportr
 
-# use hugo version 0.50
+# have to use hugo version 0.50
+```
+library(blogdown)
+hugo_version()
+install_hugo(version = "0.50", use_brew = TRUE, force = TRUE)
+```
