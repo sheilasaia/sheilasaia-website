@@ -13,7 +13,7 @@
     <item>
       <title>Web of Science Queries in R</title>
       <link>/post/2021-02-06-wos-query/</link>
-      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2021-02-06-wos-query/</guid>
       <description>
@@ -43,8 +43,16 @@
 &lt;/div&gt;
 &lt;div id=&#34;set-up&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Set Up&lt;/h1&gt;
-&lt;p&gt;First load the &lt;code&gt;tidyverse&lt;/code&gt; package, which we’ll use for data wrangling and plotting. If you’ve never used &lt;code&gt;tidyverse&lt;/code&gt; before, you’ll have to install it to your computer first by typing &lt;code&gt;install.packages(&amp;quot;tidyverse&amp;quot;)&lt;/code&gt; into the R console.&lt;/p&gt;
+&lt;p&gt;First load the &lt;code&gt;tidyverse&lt;/code&gt; package, which we’ll use for data wrangling and plotting. If you’ve never used &lt;code&gt;tidyverse&lt;/code&gt; before, you’ll have to install it to your computer first by typing &lt;code&gt;install.packages(&#34;tidyverse&#34;)&lt;/code&gt; into the R console.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.3.1     ✓ purrr   0.3.4
+## ✓ tibble  3.0.1     ✓ dplyr   1.0.0
+## ✓ tidyr   1.1.0     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ───────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Next we’ll load the &lt;code&gt;rwos&lt;/code&gt; package, which allows us to access the WoS API and query this API using R. You can read more about this package &lt;a href=&#34;https://github.com/juba/rwos&#34;&gt;here&lt;/a&gt;. If you’re interested in learning more about request APIs, see &lt;a href=&#34;https://sheilasaia.rbind.io/post/2019-01-04-nass-api/&#34;&gt;my previous post&lt;/a&gt; on this topic.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;NOTE:&lt;/em&gt; There are two main caveats with the &lt;code&gt;rwos&lt;/code&gt; package. First, the R package is &lt;strong&gt;no longer being maintained&lt;/strong&gt;; there’s no support to fix issues or improve the package. Second, you have to run this script from an IP address (i.e., university computer or wifi network) that has a WoS database subscription. For example, if I run this script from my house (using a non-NC State University IP address or wifi network), I will get the following error when trying to authenticate the WoS session.&lt;/p&gt;
 &lt;blockquote&gt;

@@ -106,12 +106,12 @@
   <meta property="og:site_name" content=" ">
   <meta property="og:url" content="/post/2021-02-06-wos-query/">
   <meta property="og:title" content="Web of Science Queries in R |  ">
-  <meta property="og:description" content="Background A few years ago, I opened up my email to find journal rejection notice for a review paper that I had submitted a few months prior. I had adapted this review from the introductory chapter of my PhD thesis. Over the course of the last year, I had recieved a rejection email from one journal, completely overhauled the paper, and resubmitted it to a second journal. My first thoughts upon opening the journal rejection notice went to frustration."><meta property="og:image" content="/img/sheila_square.jpg">
+  <meta property="og:description" content="Background A few years ago, I opened up my email to find journal rejection notice for a review paper that I had submitted a few months prior. I had adapted this review from the introductory chapter of my PhD thesis. Over the course of the last year, I had recieved a rejection email from one journal, completely overhauled the paper, and resubmitted it to a second journal. My first thoughts upon opening the journal rejection notice went to frustration."><meta property="og:image" content="/img/sheila_portrait_cartoon.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2021-02-10T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2022-02-10T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2021-02-10T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2022-02-10T00:00:00&#43;00:00">
   
 
   
@@ -366,9 +366,9 @@
 
   <span class="article-date">
     
-    <meta content="2021-02-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2021-02-10 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      2021-02-10
+    <meta content="2022-02-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2022-02-10 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      2022-02-10
     </time>
   </span>
   <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
@@ -378,7 +378,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    4 min read
+    5 min read
   </span>
   
 
@@ -495,8 +495,16 @@
 </div>
 <div id="set-up" class="section level1">
 <h1>Set Up</h1>
-<p>First load the <code>tidyverse</code> package, which we’ll use for data wrangling and plotting. If you’ve never used <code>tidyverse</code> before, you’ll have to install it to your computer first by typing <code>install.packages(&quot;tidyverse&quot;)</code> into the R console.</p>
+<p>First load the <code>tidyverse</code> package, which we’ll use for data wrangling and plotting. If you’ve never used <code>tidyverse</code> before, you’ll have to install it to your computer first by typing <code>install.packages("tidyverse")</code> into the R console.</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.1     ✓ purrr   0.3.4
+## ✓ tibble  3.0.1     ✓ dplyr   1.0.0
+## ✓ tidyr   1.1.0     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
+<pre><code>## ── Conflicts ───────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
 <p>Next we’ll load the <code>rwos</code> package, which allows us to access the WoS API and query this API using R. You can read more about this package <a href="https://github.com/juba/rwos">here</a>. If you’re interested in learning more about request APIs, see <a href="https://sheilasaia.rbind.io/post/2019-01-04-nass-api/">my previous post</a> on this topic.</p>
 <p><em>NOTE:</em> There are two main caveats with the <code>rwos</code> package. First, the R package is <strong>no longer being maintained</strong>; there’s no support to fix issues or improve the package. Second, you have to run this script from an IP address (i.e., university computer or wifi network) that has a WoS database subscription. For example, if I run this script from my house (using a non-NC State University IP address or wifi network), I will get the following error when trying to authenticate the WoS session.</p>
 <blockquote>
@@ -555,7 +563,7 @@ Some other thoughts that I wanted to mention before signing off:</p>
 
 <div class="media author-card" itemscope itemtype="http://schema.org/Person">
   
-  <img class="portrait mr-3" src="/img/sheila_square.jpg" itemprop="image" alt="Avatar">
+  <img class="portrait mr-3" src="/img/sheila_portrait_cartoon.png" itemprop="image" alt="Avatar">
   
   <div class="media-body">
     <h5 class="card-title" itemprop="name"><a href="/">sheila m. saia, PhD</a></h5>

@@ -58,7 +58,7 @@ enableGitInfo = false
   ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "sheila_square.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  avatar = "sheila_portrait_cartoon.png"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   
   # Details for the Contact Widget
   email = "ssaia@ncsu.edu"
