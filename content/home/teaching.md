@@ -17,20 +17,23 @@ weight = 6
 
 # upcoming workshops:
 
-- *Introduction to R for Water Resources Management* - I'm teaching a two-hour long workshop at the [North Carolina Water Resources Research Institute (NC WRRI) Annual Confernece](https://wrri.ncsu.edu/conference/) on March 18, 2020 from 1:30-3:30pm. Find out more info and sign up [here](https://ncsu.qualtrics.com/jfe/form/SV_4NhZNhQVcyM8Cu9). **This event has been postponed due to COVID-19 measures taken by NC State University.** You can read more [here](https://wrri.ncsu.edu/conference/wp-content/uploads/sites/3/2020/03/WRRI_postponement_notice_3-11-20.pdf).
+- *Navigating RStudio and R Basics* - I'm teaching a 2-hr workshop for [R-Ladies RTP](https://www.meetup.com/rladies-rtp) on March 22, 2021 from 6:30-8:30pm ET. This workshop will cover very basic R and RStudio. This event is intended for women and non-binary folks interested in learning more about R. Men are welcome to attend as guests. More info [here](https://www.meetup.com/rladies-rtp/events/276098884/).
 
+- *NC State University Libraries Peer Schoolars Workshop* - I'm teaching a 2-hr virtual workshop titled "Introduction to Data Management Plans" on April 7, 2021 from 12pm-2pm. More information and to sign-up, visit the peer scholars workshop series calendar [here](https://www.lib.ncsu.edu/events/series/peer-scholars).
 
 # past workshops:
 
-- *NC State University Libraries Peer Schoolars Workshop* - I'm teaching a two-hour long workshop titled "Introduction to Data Management Plans" on February 12, 2020 from 12pm-2pm in the D.H. Hill Library ITTC2 Lab. More information and to sign-up, visit [here](https://www.lib.ncsu.edu/workshops/introduction-data-management-plans-researchers).
+- *Introduction to R for Water Resources Management* - I had planned to teach a 2-hr workshop at the [North Carolina Water Resources Research Institute (NC WRRI) Annual Confernece](https://wrri.ncsu.edu/conference/) on March 18, 2020 from 1:30-3:30pm. Find out more info and sign up [here](https://ncsu.qualtrics.com/jfe/form/SV_4NhZNhQVcyM8Cu9). **This event was cancelled due to COVID-19 measures taken by NC State University.** You can read more [here](https://wrri.ncsu.edu/conference/wp-content/uploads/sites/3/2020/03/WRRI_postponement_notice_3-11-20.pdf).
+
+- *NC State University Libraries Peer Schoolars Workshop* - I taught a 2-hr workshop titled "Introduction to Data Management Plans" on February 12, 2020 from 12pm-2pm in the D.H. Hill Library ITTC2 Lab. More information and to sign-up, visit [here](https://www.lib.ncsu.edu/workshops/introduction-data-management-plans-researchers).
 
 - *American Geophysical Union (AGU) 2019 Coding Help Desk* - If you write code for your research and will be attending the AGU 2019 Fall Meeting, consider volunteering at the AGU Coding Help Desk. Find out more about the event and sign-up to volunteer [here](https://github.com/sheilasaia/agu-2019-coding-help-desk).
 
-- *Data Manipulation, Analysis, and Visualization in R using the Tidyverse* - I'm co-organizing a workshop with Dr. Ashton Drew for [Transmitting Science](https://www.transmittingscience.org/) in Barcelona, Spain from November 4-8, 2019. You can read more about the workshop and sign up [here](https://www.transmittingscience.org/courses/statistics-and-bioinformatics/data-manipulation-analysis-visualization-in-r-using-tidyverse/).
+- *Data Manipulation, Analysis, and Visualization in R using the Tidyverse* - I co-organized a workshop with Dr. Ashton Drew for [Transmitting Science](https://www.transmittingscience.org/) in Barcelona, Spain from November 4-8, 2019. You can read more about the workshop and sign up [here](https://www.transmittingscience.org/courses/statistics-and-bioinformatics/data-manipulation-analysis-visualization-in-r-using-tidyverse/).
 
 - *Exploring Spatial Data with `sf`* - I organized and lead an workshop introducing to the sf package to NC State BAE 590 students. Code and slides from this class can be found [here](https://github.com/sheilasaia/sf-workshop-bae590).
 
-- *Coding Help Desk* - I co-organized the Coding Help Desk with [Dr. Sam Zipper](https://samzipper.weebly.com/) at the American Geophysical Union (AGU) Fall Meeting 2018 in Washington, DC. AGU attendees were welcome to stop by and ask coding related questions to volunteers well-versed in R, Python, MatLab, etc. programming.
+- *American Geophysical Union (AGU) 2018 Coding Help Desk* - I co-organized the Coding Help Desk with [Dr. Sam Zipper](https://samzipper.weebly.com/) at the American Geophysical Union (AGU) Fall Meeting 2018 in Washington, DC. AGU attendees were welcome to stop by and ask coding related questions to volunteers well-versed in R, Python, MatLab, etc. programming.
 
 - *R for Data Science Book Club* - I lead a bi-monthly bookclub to work through [R for Data Science](http://r4ds.had.co.nz/) for [R-Ladies RTP](https://www.meetup.com/R-Ladies-RTP/).
 
