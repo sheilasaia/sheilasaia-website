@@ -19,7 +19,7 @@ weight = 6
 
 - *Navigating RStudio and R Basics* - I'm teaching a 2-hr workshop for [R-Ladies RTP](https://www.meetup.com/rladies-rtp) on March 22, 2021 from 6:30-8:30pm ET. This workshop will cover very basic R and RStudio. This event is intended for women and non-binary folks interested in learning more about R. Men are welcome to attend as guests. More info [here](https://www.meetup.com/rladies-rtp/events/276098884/).
 
-- *NC State University Libraries Peer Schoolars Workshop* - I'm teaching a 2-hr virtual workshop titled "Introduction to Data Management Plans" on April 7, 2021 from 12pm-2pm. More information and to sign-up, visit the peer scholars workshop series calendar [here](https://www.lib.ncsu.edu/events/series/peer-scholars).
+- *NC State University Libraries Peer Schoolars Workshop* - I'm teaching a virtual workshop titled "Introduction to Data Management Plans" on April 7, 2021 from 12pm-1:30pm. More information and to sign-up, visit the peer scholars workshop series calendar [here](https://www.lib.ncsu.edu/workshops/introduction-data-management-plans-researchers-0).
 
 # past workshops:
 
