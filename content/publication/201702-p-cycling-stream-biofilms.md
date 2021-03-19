@@ -33,7 +33,7 @@ selected = false
 # Projects (optional).
 #   Associate this publication with one or more of your projects.
 #   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
-projects = ["paos-streams-project"]
+projects = ["201705-paos-streams-project"]
 
 # Links (optional).
 url_pdf = "https://www.journals.uchicago.edu/doi/full/10.1086/691439"

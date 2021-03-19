@@ -33,7 +33,7 @@ selected = false
 # Projects (optional).
 #   Associate this publication with one or more of your projects.
 #   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
-projects = ["stable-isotope-project"]
+projects = ["201612-stable-isotope-project"]
 
 # Links (optional).
 url_pdf = "https://onlinelibrary.wiley.com/doi/full/10.1002/hyp.11194"
