@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>agriculture on  </title>
+    <link>/tags/agriculture/</link>
+    <description>Recent content in agriculture on  </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sat, 31 Dec 2011 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/agriculture/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Water Management in Crete, Greece</title>
+      <link>/project/201112-greece-project/</link>
+      <pubDate>Sat, 31 Dec 2011 00:00:00 -0500</pubDate>
+      
+      <guid>/project/201112-greece-project/</guid>
+      <description>Collaborators M Kurth (Cornell University), M Bowes (Cornell University), TS Steenhuis (Cornell University), G Holst-Warhaft (Cornell University), Mayor N. Kastronakis (Municipality of Crete, Greece), G Garakis (Municipality of Crete, Greece)
+Timeline 2010-2012
+Project Goal The goal of this project was to collaborate with a law student (M Bowes) and a natural resources student (M Kurth) at Cornell University to synthesize a report on local water resources for the Municipality of Neapolis in Crete, Greece.</description>
+    </item>
+    
+    <item>
+      <title>Hydrologic Characterization Tool (HCT)</title>
+      <link>/project/201111-hct-project/</link>
+      <pubDate>Tue, 01 Nov 2011 00:00:00 -0400</pubDate>
+      
+      <guid>/project/201111-hct-project/</guid>
+      <description>Collaborators J Boll (Washington State University Pullman), ES Brooks (University of Idaho), Z Easton (Virginia Tech), L Kurkalova (North Carolina Ag &amp;amp; Tech), B Rittenburg (Univesrity of Idaho), A Squires (University of Idaho), TS Steenhuis (Cornell University), G Vellidis (University of Georgia), JD Wulfhorst (University of Idaho)
+Timeline 2007-2011
+Project Goal The goal of this project was to use an exisiting process-based model (i.e., the USDA WEPP model to develop a web-based hydrologic characterization tool (HCT) that could be used by water resources managers to evaluate the impact of agricultural best management practices on water quality (i.</description>
+    </item>
+    
+  </channel>
+</rss>

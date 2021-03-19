@@ -75,7 +75,7 @@ Sys.getenv(&quot;CENSUS_API_KEY&quot;)</code></pre>
 <p>Be sure to also apply for a NASS API key, which I’ll define in a string called <code>NASS_API_KEY</code>. You can apply for a NASS API key <a href="https://quickstats.nass.usda.gov/api">here</a>. As with the Census API key, this is unique to you so be sure to keep it in a safe place.</p>
 <pre class="r"><code>NASS_API_KEY &lt;- &quot;ADD YOUR NASS API KEY HERE&quot;</code></pre>
 <p>If you want to save your NASS API key to your R environment, you can use the code below. Setting the NASS API key in your R environment will keep it hidden and accessible only to you. This might be important if you’re planning to pass along your script to someone else…or post it on your blog. ;)</p>
-<p>To set the NASS API key your R environment you’ll have to navigate to the (hidden) .Renviron file on your computer. Then you will have to add <code>NASS_API_KEY &lt;- &quot;ADD YOUR NASS API KEY HERE&quot;</code> to that text file. Alternatively, you can also use <code>sys.setenv()</code> as indicated below. See <a href="https://rstats.wtf/r-startup.html#renviron">this tutorial</a> and <a href="https://community.rstudio.com/t/how-to-set-a-variable-in-renviron/5029">this tutorial</a>. You only need to do this once on your computer.</p>
+<p>To set the NASS API key your R environment you’ll have to navigate to the (hidden) .Renviron file on your computer. Then you will have to add <code>NASS_API_KEY &lt;- "ADD YOUR NASS API KEY HERE"</code> to that text file. Alternatively, you can also use <code>sys.setenv()</code> as indicated below. See <a href="https://rstats.wtf/r-startup.html#renviron">this tutorial</a> and <a href="https://community.rstudio.com/t/how-to-set-a-variable-in-renviron/5029">this tutorial</a>. You only need to do this once on your computer.</p>
 <pre class="r"><code># add NASS_API_KEY to  your .Renviron file
 sys.setenv(NASS_API_KEY &lt;- &quot;ADD YOUR NASS API KEY HERE&quot;)</code></pre>
 <p>Once you’ve added the NASS API key to your computer’s .Renviron file. You’ll have to run the following code each time you start a new R session. This is because you’ll need to remind R that it has this information available in the .Renviron file.</p>
@@ -121,11 +121,11 @@ path_nc_irrig_land &lt;- paste0(&quot;api/api_GET/?key=&quot;, NASS_API_KEY, &qu
 
 # check size of object
 nchar(char_raw_nc_irrig_land)
-## [1] 3549468
+## [1] 3555311
 
 # view first 50 characthers
 substr(char_raw_nc_irrig_land, 1, 50)
-## [1] &quot;{\&quot;data\&quot;:[{\&quot;domaincat_desc\&quot;:\&quot;OPERATORS: (1 OPERATOR&quot;</code></pre>
+## [1] &quot;{\&quot;data\&quot;:[{\&quot;short_desc\&quot;:\&quot;AG LAND, IRRIGATED - ACRES&quot;</code></pre>
 <p>This is still a little hard to work with so let’s use <code>fromJSON()</code> and convert the raw character strings to a large list. Due to recent (early 2020) updates to NASS, they now have the data saved in a “data” element of the JSON output.</p>
 <pre class="r"><code>list_raw_nc_irrig_land &lt;- fromJSON(char_raw_nc_irrig_land)
 
@@ -134,6 +134,34 @@ nc_irrig_land_raw_data &lt;- list_raw_nc_irrig_land$data
 
 # look at the data frame
 head(nc_irrig_land_raw_data)
+##                   short_desc asd_desc CV (%) source_desc zip_5
+## 1 AG LAND, IRRIGATED - ACRES             2.9      CENSUS      
+## 2 AG LAND, IRRIGATED - ACRES             6.2      CENSUS      
+## 3 AG LAND, IRRIGATED - ACRES             9.0      CENSUS      
+## 4 AG LAND, IRRIGATED - ACRES            74.2      CENSUS      
+## 5 AG LAND, IRRIGATED - ACRES            12.0      CENSUS      
+## 6 AG LAND, IRRIGATED - ACRES            15.6      CENSUS      
+##   congr_district_code unit_desc           load_time state_fips_code week_ending
+## 1                         ACRES 2012-12-31 00:00:00              37            
+## 2                         ACRES 2012-12-31 00:00:00              37            
+## 3                         ACRES 2012-12-31 00:00:00              37            
+## 4                         ACRES 2012-12-31 00:00:00              37            
+## 5                         ACRES 2012-12-31 00:00:00              37            
+## 6                         ACRES 2012-12-31 00:00:00              37            
+##   county_name agg_level_desc commodity_desc county_code statisticcat_desc
+## 1                      STATE        AG LAND                          AREA
+## 2                      STATE        AG LAND                          AREA
+## 3                      STATE        AG LAND                          AREA
+## 4                      STATE        AG LAND                          AREA
+## 5                      STATE        AG LAND                          AREA
+## 6                      STATE        AG LAND                          AREA
+##   region_desc county_ansi  location_desc country_code watershed_code
+## 1                         NORTH CAROLINA         9000       00000000
+## 2                         NORTH CAROLINA         9000       00000000
+## 3                         NORTH CAROLINA         9000       00000000
+## 4                         NORTH CAROLINA         9000       00000000
+## 5                         NORTH CAROLINA         9000       00000000
+## 6                         NORTH CAROLINA         9000       00000000
 ##                                                             domaincat_desc
 ## 1                                                 OPERATORS: (1 OPERATORS)
 ## 2                                         OPERATORS: (2 OR MORE OPERATORS)
@@ -141,62 +169,34 @@ head(nc_irrig_land_raw_data)
 ## 4 OPERATORS, PRINCIPAL: (PRIMARY OCCUPATION, (EXCL FARMING), AGE 25 TO 34)
 ## 5 OPERATORS, PRINCIPAL: (PRIMARY OCCUPATION, (EXCL FARMING), AGE 35 TO 44)
 ## 6 OPERATORS, PRINCIPAL: (PRIMARY OCCUPATION, (EXCL FARMING), AGE 45 TO 54)
-##   state_alpha county_ansi agg_level_desc commodity_desc          domain_desc
-## 1          NC                      STATE        AG LAND            OPERATORS
-## 2          NC                      STATE        AG LAND            OPERATORS
-## 3          NC                      STATE        AG LAND OPERATORS, PRINCIPAL
-## 4          NC                      STATE        AG LAND OPERATORS, PRINCIPAL
-## 5          NC                      STATE        AG LAND OPERATORS, PRINCIPAL
-## 6          NC                      STATE        AG LAND OPERATORS, PRINCIPAL
-##   week_ending           load_time state_ansi reference_period_desc zip_5
-## 1             2012-12-31 00:00:00         37                  YEAR      
-## 2             2012-12-31 00:00:00         37                  YEAR      
-## 3             2012-12-31 00:00:00         37                  YEAR      
-## 4             2012-12-31 00:00:00         37                  YEAR      
-## 5             2012-12-31 00:00:00         37                  YEAR      
-## 6             2012-12-31 00:00:00         37                  YEAR      
-##   county_code freq_desc watershed_desc country_code unit_desc     state_name
-## 1                ANNUAL                        9000     ACRES NORTH CAROLINA
-## 2                ANNUAL                        9000     ACRES NORTH CAROLINA
-## 3                ANNUAL                        9000     ACRES NORTH CAROLINA
-## 4                ANNUAL                        9000     ACRES NORTH CAROLINA
-## 5                ANNUAL                        9000     ACRES NORTH CAROLINA
-## 6                ANNUAL                        9000     ACRES NORTH CAROLINA
-##    Value county_name prodn_practice_desc congr_district_code year  sector_desc
-## 1 76,221                       IRRIGATED                     2012 DEMOGRAPHICS
-## 2 98,305                       IRRIGATED                     2012 DEMOGRAPHICS
-## 3 21,912                       IRRIGATED                     2012 DEMOGRAPHICS
-## 4    669                       IRRIGATED                     2012 DEMOGRAPHICS
-## 5  2,131                       IRRIGATED                     2012 DEMOGRAPHICS
-## 6  7,379                       IRRIGATED                     2012 DEMOGRAPHICS
-##   source_desc asd_desc begin_code watershed_code CV (%) region_desc asd_code
-## 1      CENSUS                  00       00000000    2.9                     
-## 2      CENSUS                  00       00000000    6.2                     
-## 3      CENSUS                  00       00000000    9.0                     
-## 4      CENSUS                  00       00000000   74.2                     
-## 5      CENSUS                  00       00000000   12.0                     
-## 6      CENSUS                  00       00000000   15.6                     
-##    country_name        util_practice_desc state_fips_code statisticcat_desc
-## 1 UNITED STATES ALL UTILIZATION PRACTICES              37              AREA
-## 2 UNITED STATES ALL UTILIZATION PRACTICES              37              AREA
-## 3 UNITED STATES ALL UTILIZATION PRACTICES              37              AREA
-## 4 UNITED STATES ALL UTILIZATION PRACTICES              37              AREA
-## 5 UNITED STATES ALL UTILIZATION PRACTICES              37              AREA
-## 6 UNITED STATES ALL UTILIZATION PRACTICES              37              AREA
-##              group_desc  class_desc  location_desc end_code
-## 1 FARMS &amp; LAND &amp; ASSETS ALL CLASSES NORTH CAROLINA       00
-## 2 FARMS &amp; LAND &amp; ASSETS ALL CLASSES NORTH CAROLINA       00
-## 3 FARMS &amp; LAND &amp; ASSETS ALL CLASSES NORTH CAROLINA       00
-## 4 FARMS &amp; LAND &amp; ASSETS ALL CLASSES NORTH CAROLINA       00
-## 5 FARMS &amp; LAND &amp; ASSETS ALL CLASSES NORTH CAROLINA       00
-## 6 FARMS &amp; LAND &amp; ASSETS ALL CLASSES NORTH CAROLINA       00
-##                   short_desc
-## 1 AG LAND, IRRIGATED - ACRES
-## 2 AG LAND, IRRIGATED - ACRES
-## 3 AG LAND, IRRIGATED - ACRES
-## 4 AG LAND, IRRIGATED - ACRES
-## 5 AG LAND, IRRIGATED - ACRES
-## 6 AG LAND, IRRIGATED - ACRES</code></pre>
+##            domain_desc     state_name state_ansi            group_desc
+## 1            OPERATORS NORTH CAROLINA         37 FARMS &amp; LAND &amp; ASSETS
+## 2            OPERATORS NORTH CAROLINA         37 FARMS &amp; LAND &amp; ASSETS
+## 3 OPERATORS, PRINCIPAL NORTH CAROLINA         37 FARMS &amp; LAND &amp; ASSETS
+## 4 OPERATORS, PRINCIPAL NORTH CAROLINA         37 FARMS &amp; LAND &amp; ASSETS
+## 5 OPERATORS, PRINCIPAL NORTH CAROLINA         37 FARMS &amp; LAND &amp; ASSETS
+## 6 OPERATORS, PRINCIPAL NORTH CAROLINA         37 FARMS &amp; LAND &amp; ASSETS
+##    class_desc  sector_desc  Value year begin_code reference_period_desc
+## 1 ALL CLASSES DEMOGRAPHICS 76,221 2012         00                  YEAR
+## 2 ALL CLASSES DEMOGRAPHICS 98,305 2012         00                  YEAR
+## 3 ALL CLASSES DEMOGRAPHICS 21,912 2012         00                  YEAR
+## 4 ALL CLASSES DEMOGRAPHICS    669 2012         00                  YEAR
+## 5 ALL CLASSES DEMOGRAPHICS  2,131 2012         00                  YEAR
+## 6 ALL CLASSES DEMOGRAPHICS  7,379 2012         00                  YEAR
+##          util_practice_desc state_alpha prodn_practice_desc freq_desc asd_code
+## 1 ALL UTILIZATION PRACTICES          NC           IRRIGATED    ANNUAL         
+## 2 ALL UTILIZATION PRACTICES          NC           IRRIGATED    ANNUAL         
+## 3 ALL UTILIZATION PRACTICES          NC           IRRIGATED    ANNUAL         
+## 4 ALL UTILIZATION PRACTICES          NC           IRRIGATED    ANNUAL         
+## 5 ALL UTILIZATION PRACTICES          NC           IRRIGATED    ANNUAL         
+## 6 ALL UTILIZATION PRACTICES          NC           IRRIGATED    ANNUAL         
+##    country_name watershed_desc end_code
+## 1 UNITED STATES                      00
+## 2 UNITED STATES                      00
+## 3 UNITED STATES                      00
+## 4 UNITED STATES                      00
+## 5 UNITED STATES                      00
+## 6 UNITED STATES                      00</code></pre>
 <p>This looks ok but there are still some things that would be nice to clean up. As mentioned above, I wanted to focus on the acres of irrigated lands in NC. For simplicity, I’ll only look at farms/ranches with 2,000 ac or more under operation. Let’s step through each line in the piped (i.e., <code>%&gt;%</code>) code below. See the in-line comments for the details.</p>
 <pre class="r"><code>nc_irrigated &lt;- nc_irrig_land_raw_data %&gt;%
 
