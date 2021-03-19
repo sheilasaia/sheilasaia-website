@@ -1,5 +1,5 @@
 +++
-title = "Asssessing BMP effectiveness and guiding BMP planning using process-based modeling"
+title = "Assessing BMP effectiveness and guiding BMP planning using process-based modeling"
 date = 2015-04-01T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.

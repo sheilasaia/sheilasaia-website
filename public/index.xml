@@ -98,6 +98,15 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
     </item>
     
     <item>
+      <title>Ten Simple Rules for Researchers Who Want to Develop Web Apps</title>
+      <link>/publication/202103-tsr-web-apps/</link>
+      <pubDate>Thu, 18 Mar 2021 00:00:00 -0400</pubDate>
+      
+      <guid>/publication/202103-tsr-web-apps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Forecasting Temporary Shellfish Harvest Closures in Coastal North Carolina (Poster)</title>
       <link>/talk/202102_ncgis/</link>
       <pubDate>Thu, 18 Feb 2021 00:00:00 -0500</pubDate>
@@ -113,10 +122,10 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
     
     <item>
       <title>Critical Review of Polyphosphate and Polyphosphate Accumulating Organisms for Agricultural Water Quality Management</title>
-      <link>/publication/pao_review/</link>
+      <link>/publication/202102-pao-review/</link>
       <pubDate>Tue, 09 Feb 2021 00:00:00 -0500</pubDate>
       
-      <guid>/publication/pao_review/</guid>
+      <guid>/publication/202102-pao-review/</guid>
       <description></description>
     </item>
     
@@ -136,10 +145,10 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
     
     <item>
       <title>Transitioning machine learning from theory to practice in natural resources management</title>
-      <link>/publication/ml_stakeholder_meeting/</link>
+      <link>/publication/202009-ml-stakeholder-meeting/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 -0400</pubDate>
       
-      <guid>/publication/ml_stakeholder_meeting/</guid>
+      <guid>/publication/202009-ml-stakeholder-meeting/</guid>
       <description></description>
     </item>
     
@@ -627,10 +636,10 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
     
     <item>
       <title>Improved Accuracy of Watershed-Scale General Circulation Model Runoff Using Deep Neural Networks</title>
-      <link>/publication/dnn-validation/</link>
+      <link>/publication/201912-dnn-validation/</link>
       <pubDate>Tue, 31 Dec 2019 00:00:00 -0500</pubDate>
       
-      <guid>/publication/dnn-validation/</guid>
+      <guid>/publication/201912-dnn-validation/</guid>
       <description></description>
     </item>
     
@@ -679,22 +688,6 @@ Some other thoughts that I wanted to mention before signing off:&lt;/p&gt;
 &lt;p&gt;Projecting future climate change impacts on water resources is a vital research task and general circulation models (GCMs) help researchers achieve this goal. However, the spatial resolution of downscaled GCMs (e.g., 1.4° grid) makes them difficult to apply to non-grid conforming scales relevant to water resources management: individual watersheds. Machine learning techniques such as deep neural networks (DNNs) may address this issue by downscaling GCM data without a priori specification of complex hydrologic processes in a watershed. Here, we use a DNN to predict monthly watershed-scale runoff (i.e., stream discharge divided by watershed area) from monthly, gridded, downscaled, Coupled Model Intercomparison Project Phase 5 GCM hydrologic fluxes (i.e., precipitation, evapotranspiration, and temperature). We trained the DNN on a subset of observed hydrologic fluxes and watershed characteristics from 2,731 watersheds in the continental United States and tested its ability to predict observed runoff using the remaining data. The DNN described 94% of the variability in observed runoff and was spatially and temporally robust. DNN runoff predictions were nearly twice as accurate as raw, monthly, gridded, downscaled GCM runoff and had the lowest mean absolute error of other grid-to-watershed-scale conversion techniques, including: long-term monthly mean climatology, linear least squares, lasso, support vector machine, extreme gradient boosting, and simple artificial neural network approaches. This study serves as a guide to hydrologists interested in implementing machine learning techniques and also demonstrates how DNNs can be used to convert gridded GCM hydrologic fluxes to scales more relevant to water resources research and management.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://agu.confex.com/agu/fm19/meetingapp.cgi/Paper/499522&#34; target=&#34;_blank&#34;&gt;Click here to view my AGU abstract. &lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>R-Ladies Global: Promoting Diversity and Inclusion in the R Community (Poster #ED33G-1047)</title>
-      <link>/talk/201912_agu_rladies/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 -0500</pubDate>
-      
-      <guid>/talk/201912_agu_rladies/</guid>
-      <description>
-
-&lt;h2 id=&#34;abstract-br&#34;&gt;Abstract:&lt;/br&gt;&lt;/h2&gt;
-
-&lt;p&gt;R-Ladies Global is a worldwide organization focused on achieving proportionate representation of genders currently underrepresented in the R programming community. To meet this goal, we support a network of local chapters who organize events that encourage, inspire, and empower individuals to meet their programming potential. Since R-Ladies Global was founded in 2016, it has grown to provide training and mentoring to in over 47,000 members, in 159 cities, and 47 countries. Local chapters have held over 1,500 events focused on a wide range of topics from workshops on popular R programming libraries (e.g., ggplot, Shiny) to data science panels on various topics (e.g., Ethics in Data Science, Women in Tech) to hackathons (e.g., #TidyTuesday) to speaking opportunities (e.g., Lightning Talks) to networking events (e.g., dinner meet-ups, book clubs). There are many leadership, training, career development, and mentoring opportunities for early career scientists who join R-Ladies Global. Please stop by our poster or visit our website (&lt;a href=&#34;https://rladies.org/about-us&#34; target=&#34;_blank&#34;&gt;https://rladies.org/about-us&lt;/a&gt;) to learn more about how you can get involved and/or support our mission.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://agu.confex.com/agu/fm19/meetingapp.cgi/Paper/490269&#34; target=&#34;_blank&#34;&gt;Click here to view my AGU abstract. &lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
