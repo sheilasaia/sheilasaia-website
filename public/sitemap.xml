@@ -12,6 +12,14 @@
     
     <url>
     
+      <loc>/publication/202103-tsr-web-apps/</loc>
+      <lastmod>2021-03-18T00:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/talk/202102_ncgis/</loc>
       <lastmod>2021-02-18T00:00:00-05:00</lastmod>
     </url>
@@ -20,7 +28,7 @@
     
     <url>
     
-      <loc>/publication/pao_review/</loc>
+      <loc>/publication/202102-pao-review/</loc>
       <lastmod>2021-02-09T00:00:00-05:00</lastmod>
     </url>
     
@@ -36,7 +44,7 @@
     
     <url>
     
-      <loc>/publication/ml_stakeholder_meeting/</loc>
+      <loc>/publication/202009-ml-stakeholder-meeting/</loc>
       <lastmod>2020-09-10T00:00:00-04:00</lastmod>
     </url>
     
@@ -92,15 +100,23 @@
     
     <url>
     
-      <loc>/publication/dnn-validation/</loc>
-      <lastmod>2019-12-31T00:00:00-05:00</lastmod>
+      <loc>/project/202002-fact-project/</loc>
+      <lastmod>2020-01-01T00:00:00-05:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>/project/streamflow-ml-project/</loc>
+      <loc>/project/202001-shellcast-project/</loc>
+      <lastmod>2020-01-01T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/publication/201912-dnn-validation/</loc>
       <lastmod>2019-12-31T00:00:00-05:00</lastmod>
     </url>
     
@@ -140,6 +156,14 @@
     
     <url>
     
+      <loc>/project/201907-streamflow-ml-project/</loc>
+      <lastmod>2019-07-01T00:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/post/2019-05-19-preprint-intro/</loc>
       <lastmod>2019-05-20T21:12:00-05:00</lastmod>
     </url>
@@ -148,7 +172,7 @@
     
     <url>
     
-      <loc>/project/nc-sociohydro-project/</loc>
+      <loc>/project/201905-nc-sociohydro-project/</loc>
       <lastmod>2019-05-01T00:00:00-04:00</lastmod>
     </url>
     
@@ -164,7 +188,7 @@
     
     <url>
     
-      <loc>/publication/yadkin-swat-svi/</loc>
+      <loc>/publication/201904-yadkin-swat-svi/</loc>
       <lastmod>2019-04-01T00:00:00-04:00</lastmod>
     </url>
     
@@ -244,7 +268,7 @@
     
     <url>
     
-      <loc>/publication/yadkin-swat/</loc>
+      <loc>/publication/201807-yadkin-swat/</loc>
       <lastmod>2018-07-20T00:00:00-04:00</lastmod>
     </url>
     
@@ -276,7 +300,7 @@
     
     <url>
     
-      <loc>/publication/ecohydro-stable-isotope-model/</loc>
+      <loc>/publication/201706-ecohydro-stable-isotope-model/</loc>
       <lastmod>2017-06-30T00:00:00-04:00</lastmod>
     </url>
     
@@ -284,7 +308,7 @@
     
     <url>
     
-      <loc>/project/paos-streams-project/</loc>
+      <loc>/project/201705-paos-streams-project/</loc>
       <lastmod>2017-05-31T00:00:00-04:00</lastmod>
     </url>
     
@@ -292,7 +316,7 @@
     
     <url>
     
-      <loc>/publication/p-cycling-in-stream-biofilms/</loc>
+      <loc>/publication/201702-p-cycling-stream-biofilms/</loc>
       <lastmod>2017-02-24T00:00:00-05:00</lastmod>
     </url>
     
@@ -332,8 +356,8 @@
     
     <url>
     
-      <loc>/project/stable-isotope-project/</loc>
-      <lastmod>2016-12-31T00:00:00-05:00</lastmod>
+      <loc>/project/201612-stable-isotope-project/</loc>
+      <lastmod>2016-12-01T00:00:00-05:00</lastmod>
     </url>
     
   
@@ -348,7 +372,7 @@
     
     <url>
     
-      <loc>/project/mrgp-project/</loc>
+      <loc>/project/201505-mrgp-project/</loc>
       <lastmod>2015-05-31T00:00:00-04:00</lastmod>
     </url>
     
@@ -356,7 +380,7 @@
     
     <url>
     
-      <loc>/publication/hct-model/</loc>
+      <loc>/publication/201504-hct-model/</loc>
       <lastmod>2015-04-01T00:00:00-04:00</lastmod>
     </url>
     
@@ -364,7 +388,7 @@
     
     <url>
     
-      <loc>/publication/wepp-pesticides-model/</loc>
+      <loc>/publication/201301-wepp-pesticides-model/</loc>
       <lastmod>2013-01-01T00:00:00-05:00</lastmod>
     </url>
     
@@ -372,7 +396,7 @@
     
     <url>
     
-      <loc>/project/hct-project/</loc>
+      <loc>/project/201112-greece-project/</loc>
       <lastmod>2011-12-31T00:00:00-05:00</lastmod>
     </url>
     
@@ -380,15 +404,15 @@
     
     <url>
     
-      <loc>/project/greece-project/</loc>
-      <lastmod>2011-12-31T00:00:00-05:00</lastmod>
+      <loc>/project/201111-hct-project/</loc>
+      <lastmod>2011-11-01T00:00:00-04:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>/publication/pesticides-groundwater/</loc>
+      <loc>/publication/201101-pesticides-groundwater/</loc>
       <lastmod>2011-01-01T00:00:00-05:00</lastmod>
     </url>
     
@@ -406,7 +430,7 @@
     <url>
     
       <loc>/publication_types/2/</loc>
-      <lastmod>2020-09-10T00:00:00-04:00</lastmod>
+      <lastmod>2021-03-18T00:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -432,7 +456,7 @@
     <url>
     
       <loc>/project/</loc>
-      <lastmod>2019-12-31T00:00:00-05:00</lastmod>
+      <lastmod>2020-01-01T00:00:00-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -441,7 +465,7 @@
     <url>
     
       <loc>/publication_types/</loc>
-      <lastmod>2020-09-10T00:00:00-04:00</lastmod>
+      <lastmod>2021-03-18T00:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -467,8 +491,53 @@
     
     <url>
     
+      <loc>/tags/agriculture/</loc>
+      <lastmod>2011-12-31T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/aquaculture/</loc>
+      <lastmod>2020-01-01T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/tags/climate-change/</loc>
-      <lastmod>2019-12-31T00:00:00-05:00</lastmod>
+      <lastmod>2019-07-01T00:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/education/</loc>
+      <lastmod>2020-01-01T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/forecasting/</loc>
+      <lastmod>2020-01-01T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/forestry/</loc>
+      <lastmod>2019-05-01T00:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -477,7 +546,16 @@
     <url>
     
       <loc>/tags/modeling/</loc>
-      <lastmod>2019-12-31T00:00:00-05:00</lastmod>
+      <lastmod>2020-01-01T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/natural-resources-management/</loc>
+      <lastmod>2020-01-01T00:00:00-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -487,6 +565,15 @@
     
       <loc>/tags/phosphorus/</loc>
       <lastmod>2017-05-31T00:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/rainfall/</loc>
+      <lastmod>2020-01-01T00:00:00-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -504,7 +591,16 @@
     <url>
     
       <loc>/tags/stable-isotopes/</loc>
-      <lastmod>2016-12-31T00:00:00-05:00</lastmod>
+      <lastmod>2016-12-01T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/stakeholders/</loc>
+      <lastmod>2020-01-01T00:00:00-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -513,7 +609,7 @@
     <url>
     
       <loc>/tags/streamflow/</loc>
-      <lastmod>2019-12-31T00:00:00-05:00</lastmod>
+      <lastmod>2019-07-01T00:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -541,6 +637,15 @@
     
       <loc>/tags/water-scarcity/</loc>
       <lastmod>2011-12-31T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/web-apps/</loc>
+      <lastmod>2020-01-01T00:00:00-05:00</lastmod>
       <priority>0</priority>
     </url>
     

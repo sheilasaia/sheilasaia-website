@@ -22,20 +22,74 @@
     </item>
     
     <item>
+      <title>agriculture</title>
+      <link>/tags/agriculture/</link>
+      <pubDate>Sat, 31 Dec 2011 00:00:00 -0500</pubDate>
+      
+      <guid>/tags/agriculture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aquaculture</title>
+      <link>/tags/aquaculture/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/tags/aquaculture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>climate-change</title>
       <link>/tags/climate-change/</link>
-      <pubDate>Tue, 31 Dec 2019 00:00:00 -0500</pubDate>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>/tags/climate-change/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>education</title>
+      <link>/tags/education/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/tags/education/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>forecasting</title>
+      <link>/tags/forecasting/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/tags/forecasting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>forestry</title>
+      <link>/tags/forestry/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>/tags/forestry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>modeling</title>
       <link>/tags/modeling/</link>
-      <pubDate>Tue, 31 Dec 2019 00:00:00 -0500</pubDate>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>/tags/modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>natural-resources-management</title>
+      <link>/tags/natural-resources-management/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/tags/natural-resources-management/</guid>
       <description></description>
     </item>
     
@@ -45,6 +99,15 @@
       <pubDate>Wed, 31 May 2017 00:00:00 -0400</pubDate>
       
       <guid>/tags/phosphorus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rainfall</title>
+      <link>/tags/rainfall/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/tags/rainfall/</guid>
       <description></description>
     </item>
     
@@ -60,16 +123,25 @@
     <item>
       <title>stable-isotopes</title>
       <link>/tags/stable-isotopes/</link>
-      <pubDate>Sat, 31 Dec 2016 00:00:00 -0500</pubDate>
+      <pubDate>Thu, 01 Dec 2016 00:00:00 -0500</pubDate>
       
       <guid>/tags/stable-isotopes/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>stakeholders</title>
+      <link>/tags/stakeholders/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/tags/stakeholders/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>streamflow</title>
       <link>/tags/streamflow/</link>
-      <pubDate>Tue, 31 Dec 2019 00:00:00 -0500</pubDate>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>/tags/streamflow/</guid>
       <description></description>
@@ -99,6 +171,15 @@
       <pubDate>Sat, 31 Dec 2011 00:00:00 -0500</pubDate>
       
       <guid>/tags/water-scarcity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web-apps</title>
+      <link>/tags/web-apps/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/tags/web-apps/</guid>
       <description></description>
     </item>
     

@@ -569,7 +569,7 @@ head(output_daily_rch, n = 5)
 ## #   BURYPSTmg &lt;dbl&gt;, BED_PSTmg &lt;dbl&gt;, BACTP_OUTct &lt;dbl&gt;, BACTLP_OUTct &lt;dbl&gt;,
 ## #   CMETAL_1kg &lt;dbl&gt;, CMETAL_2kg &lt;dbl&gt;, CMETAL_3kg &lt;dbl&gt;, TOTNkg &lt;dbl&gt;,
 ## #   TOTPkg &lt;dbl&gt;, NO3_mg_l &lt;dbl&gt;, WTMPdegc &lt;dbl&gt;</code></pre>
-<p>That’s so tidy! We can summarize all those steps into one function that we’ll call <code>tidy_daily_rch_file()</code> that takes the raw input that we’ve read in (using <code>read_table2(&quot;output.rch&quot;, col_names=FALSE, skip=9)</code>) and outputs a formatted daily SWAT output table.</p>
+<p>That’s so tidy! We can summarize all those steps into one function that we’ll call <code>tidy_daily_rch_file()</code> that takes the raw input that we’ve read in (using <code>read_table2("output.rch", col_names=FALSE, skip=9)</code>) and outputs a formatted daily SWAT output table.</p>
 <pre class="r"><code>tidy_daily_rch_file &lt;- function(daily_rch_raw_data) {
   # import daily_rch_raw_data into R session using: 
   # daily_rch_raw_data &lt;- read_table2(&quot;output.rch&quot;, col_names=FALSE, skip=9)
@@ -746,7 +746,7 @@ head(output_monthly_rch, n = 5)
 ## #   BACTP_OUTct &lt;dbl&gt;, BACTLP_OUTct &lt;dbl&gt;, CMETALnumkg &lt;dbl&gt;,
 ## #   CMETALnum2kg &lt;dbl&gt;, CMETALnum3kg &lt;dbl&gt;, TOTNkg &lt;dbl&gt;, TOTPkg &lt;dbl&gt;,
 ## #   NO3ConcMg_l &lt;dbl&gt;, WTMPdegc &lt;dbl&gt;</code></pre>
-<p>That’s way more tidy! We can summarize all those steps into one function that called <code>tidy_monthly_rch_file()</code>. This function takes the raw input that we’ve read into our R session (using <code>read_table2(&quot;output.rch&quot;, col_names=FALSE, skip=9)</code>) and outputs a formatted monthly SWAT output table.</p>
+<p>That’s way more tidy! We can summarize all those steps into one function that called <code>tidy_monthly_rch_file()</code>. This function takes the raw input that we’ve read into our R session (using <code>read_table2("output.rch", col_names=FALSE, skip=9)</code>) and outputs a formatted monthly SWAT output table.</p>
 <pre class="r"><code>tidy_monthly_rch_file &lt;- function(monthly_rch_raw_data) {
   # import monthly_rch_raw_data into R session using: 
   # monthly_rch_raw_data &lt;- read_table2(&quot;output.rch&quot;, col_names=FALSE, skip=9)
@@ -841,7 +841,7 @@ ggplot(data = outlet_monthly_data, mapping = aes(x = as.factor(YR), y = FLOW_OUT
 <p><img src="/post/2018-10-16-tidy-swat_files/figure-html/plotting%20monthly%20data%20part%203-1.png" width="672" /></p>
 <p>Some other thoughts that I wanted to mention before signing off:</p>
 <ul>
-<li>I think using R to tidy up SWAT outputs is a great way to introduce principles of reproducible to your hydrology data analysis workflows. You can do this by saving the functions above in scripts. If you want to take it a step further you can save the functions to their own R script; where the name of the script is the same as the function name. For example, the code for the <code>tidy_daily_rch_file()</code> function should be saved to <code>tidy_daily_rch_file.R</code>. You can then load this file into your workspace using <code>load(&quot;...tidy_daily_rch_file.R&quot;)</code> and use it after loading.</li>
+<li>I think using R to tidy up SWAT outputs is a great way to introduce principles of reproducible to your hydrology data analysis workflows. You can do this by saving the functions above in scripts. If you want to take it a step further you can save the functions to their own R script; where the name of the script is the same as the function name. For example, the code for the <code>tidy_daily_rch_file()</code> function should be saved to <code>tidy_daily_rch_file.R</code>. You can then load this file into your workspace using <code>load("...tidy_daily_rch_file.R")</code> and use it after loading.</li>
 <li>When tidying up the monthly SWAT outputs, I used a for loop but I’m sure there are other more efficient ways of doing this. Maybe using <code>tidyr::fill()</code> or <code>purrr::map()</code>? I’ll keep working on this.</li>
 <li>Above, I mentioned saving the yearly summary data in a separate data frame and running QA/QC on this with the newly tidied monthly data. This is something I’d like to do eventually.</li>
 </ul>
@@ -933,7 +933,7 @@ ggplot(data = outlet_monthly_data, mapping = aes(x = as.factor(YR), y = FLOW_OUT
         
       
       <li>
-        <a itemprop="sameAs" href="https://www.linkedin.com/in/sheila-m-saia-69427292" target="_blank" rel="noopener">
+        <a itemprop="sameAs" href="https://www.linkedin.com/in/sheila-m-saia-phd-69427292/" target="_blank" rel="noopener">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
