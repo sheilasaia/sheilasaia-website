@@ -10,7 +10,7 @@ summary = "Integrating hydrology model outputs and demographics data to aid risk
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["modeling","water-quantity", "climate change", "sociohydrology"]
+tags = ["modeling","water-quantity", "climate-change", "sociohydrology"]
 
 # Optional external URL for project (replaces project detail page).
 # external_link = "http://example.org"
