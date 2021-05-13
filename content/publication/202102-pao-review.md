@@ -17,8 +17,8 @@ authors = ["**SM Saia**", "HJ Carrick", "AR Buda", "JM Regan", "MT Walter"]
 publication_types = ["3"]
 
 # Publication name and optional abbreviated version.
-publication = "*Environmental Science & Technology (in press), EarthArXiv (preprint)*"
-publication_short = "*ES&T (in press), EarthArxiv (preprint)*"
+publication = "*Environmental Science & Technology (and preprint via EarthArxiv)*"
+publication_short = "*ES&T (and preprint via EarthArxiv)*"
 
 # Abstract and optional shortened version.
 abstract = "Despite ongoing management efforts, phosphorus (P) loading from agricultural landscapes continues to impair water quality. Wastewater treatment research has enhanced our knowledge of microbial mechanisms influencing P cycling, especially regarding microbes known as polyphosphate accumulating organisms (PAOs) that store P as polyphosphate (polyP) under oxic conditions and release P under anoxic conditions. However, there is limited application of PAO research to reduce agricultural P loading and improve water quality. Herein, we conducted a meta-analysis to identify articles in Web of Science on polyP and its use by PAOs across five disciplines (i.e., wastewater treatment, terrestrial, freshwater, marine, and agriculture). We also summarized research that provides preliminary support for PAO-mediated P cycling in natural habitats. Terrestrial, freshwater, marine, and agriculture disciplines had fewer polyP and PAO articles compared to wastewater treatment, with agriculture consistently having the least. Most metaanalysis articles did not overlap disciplines. We found preliminary support for PAOs in natural habitats and identified several knowledge gaps and research opportunities. There is an urgent need for interdisciplinary research linking PAOs, polyP, and oxygen availability with existing knowledge of P forms and cycling mechanisms in natural and agricultural environments to improve agricultural P management strategies and achieve water quality goals."
