@@ -14,7 +14,7 @@ authors = ["**SM Saia**", "HJ Carrick", "AR Buda", "JM Regan", "MT Walter"]
 # 4 = Technical report
 # 5 = Book
 # 6 = Book chapter
-publication_types = ["3"]
+publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
 publication = "*Environmental Science & Technology (and preprint via EarthArxiv)*"
