@@ -50,11 +50,11 @@ enableGitInfo = false
 
   # Your details.
   name = "sheila m. saia, PhD"
-  role = "Postdoctoral Researcher"
+  role = "Associate Director"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "NC State University", url = "https://www.bae.ncsu.edu/" }
+  organizations = [ {name = "State Climate Office of NC", url = "https://climate.ncsu.edu/"}, { name = "NC State University (Affiliate)", url = "https://www.ncsu.edu/" }
   ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
@@ -62,7 +62,7 @@ enableGitInfo = false
   
   # Details for the Contact Widget
   email = "ssaia@ncsu.edu"
-  address = "NC State University, Department of Biological & Agricultural Engineering, 3100 Faucette Drive, Raleigh, NC 27695-7625, USA"
+  address = "State Climate Office of NC, 1005 Capability Drive, Raleigh, NC 27606, USA"
   office_hours = ""
   phone = ""
   skype = ""
@@ -91,8 +91,8 @@ enableGitInfo = false
   #   3: OpenStreetMap (Mapbox)
   map = 0
   map_api_key = ""
-  latitude = "35.781745"
-  longitude = "-78.676260"
+  latitude = "35.7707266595166"
+  longitude = "-78.68096295780353"
   zoom = 15
 
   # SITE SETUP
