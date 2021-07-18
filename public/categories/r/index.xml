@@ -2,88 +2,79 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on  </title>
-    <link>/categories/r/</link>
+    <link>https://sheilasaia.rbind.io/categories/r/</link>
     <description>Recent content in R on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 10 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheilasaia.rbind.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Web of Science Queries in R</title>
-      <link>/post/2021-02-06-wos-query/</link>
-      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2021-02-06-wos-query/</guid>
-      <description>Background A few years ago, I opened up my email to find journal rejection notice for a review paper that I had submitted a few months prior. I had adapted this review from the introductory chapter of my PhD thesis. Over the course of the last year, I had recieved a rejection email from one journal, completely overhauled the paper, and resubmitted it to a second journal. My first thoughts upon opening the journal rejection notice went to frustration.</description>
-    </item>
     
     <item>
       <title>APIs to the Rescue (&amp; the Census of Agriculture) Part 2</title>
-      <link>/post/2020-06-30-nass-api-part2/</link>
+      <link>https://sheilasaia.rbind.io/post/2020-06-30-nass-api-part2/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/2020-06-30-nass-api-part2/</guid>
+      <guid>https://sheilasaia.rbind.io/post/2020-06-30-nass-api-part2/</guid>
       <description>Background In a previous blog post, I discussed the use of application program interfaces (APIs) in R. Specifically, I focused on accessing data from the US Department of Agriculture’s National Agricultural Statistics Survey (NASS) Quick Stats API. Since I wrote that previous blog post in January 2019, several R packages that aid access to the NASS Quick Stats API have come to my attention.</description>
     </item>
     
     <item>
       <title>Calculating the Cost of My Flight&#39;s Carbon Footprint in R</title>
-      <link>/post/2019-04-19-carbon-cost-calcs/</link>
+      <link>https://sheilasaia.rbind.io/post/2019-04-19-carbon-cost-calcs/</link>
       <pubDate>Thu, 18 Apr 2019 21:12:00 -0500</pubDate>
       
-      <guid>/post/2019-04-19-carbon-cost-calcs/</guid>
+      <guid>https://sheilasaia.rbind.io/post/2019-04-19-carbon-cost-calcs/</guid>
       <description>Background Much of my postdoctoral research is focused on studying (and building tools to help decision makers mitigate) the impacts of climate change on communities in North Carolina. I’m also committed to reducing my carbon footprint and have read over and over that flying makes up the largest fraction of an average person’s carbon dioxide emissions. In early January I decided that I wanted to try to reduce the number of flights I took in 2019.</description>
     </item>
     
     <item>
       <title>R Resources for Water Scientists</title>
-      <link>/post/2019-02-15-water-resources/</link>
+      <link>https://sheilasaia.rbind.io/post/2019-02-15-water-resources/</link>
       <pubDate>Fri, 15 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/2019-02-15-water-resources/</guid>
+      <guid>https://sheilasaia.rbind.io/post/2019-02-15-water-resources/</guid>
       <description>Background There are lots of resources out there for R users and I thought it might be helpful to compile some that might be especially helpful for water scientists. I’ll also admit that this is a 50% selfish task meant to help me keep track of resources for my own learning.
  Goals of This Post The main goal of this blog post is to compile links to R resources including: packages, tutorials, books, etc.</description>
     </item>
     
     <item>
       <title>APIs to the Rescue (&amp; the Census of Agriculture) Part 1</title>
-      <link>/post/2019-01-04-nass-api/</link>
+      <link>https://sheilasaia.rbind.io/post/2019-01-04-nass-api/</link>
       <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/2019-01-04-nass-api/</guid>
+      <guid>https://sheilasaia.rbind.io/post/2019-01-04-nass-api/</guid>
       <description>Background This post was originally posted on Jan. 4, 2019 but was revised on May 14, 2020.
 Application program interfaces (APIs) help users access (“API request”) and retrieve (“API response”) data from web-based, data servers via programs like R, Python, etc. If you’re interested in more details, several others before me have done a great job writing about API’s and R: this post by C.</description>
     </item>
     
     <item>
       <title>Tidy Tuesday Hydrology Version: Tidying Up SWAT Outputs</title>
-      <link>/post/2018-10-16-tidy-swat/</link>
+      <link>https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat/</link>
       <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-10-16-tidy-swat/</guid>
+      <guid>https://sheilasaia.rbind.io/post/2018-10-16-tidy-swat/</guid>
       <description>Background I recently participated in Thomas Mock’s Tidy Tuesday R challenge with other members of the NC State University R Learning Group. It was a lot of fun and after participating, I felt motivated to share what I’ve been doing to tidy up my own data sets.
 Specifically, I’ve been working with collaborator, Kelly Suttles, to tidy up model outputs from the Soil and Water Assessment Tool (SWAT). SWAT is a hydrologic model used to predict daily and monthly streamflow and water quality at the watershed-scale.</description>
     </item>
     
     <item>
       <title>Using tibbletime::rollify with USGS Streamgage Data</title>
-      <link>/post/2018-08-04-usgs-rollify/</link>
+      <link>https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify/</link>
       <pubDate>Wed, 05 Sep 2018 21:12:00 -0500</pubDate>
       
-      <guid>/post/2018-08-04-usgs-rollify/</guid>
+      <guid>https://sheilasaia.rbind.io/post/2018-08-04-usgs-rollify/</guid>
       <description>Background While attending rstudio::conf 2018, I heard about the tibbletime package developed by Davis Vaughan and Matt Dancho for analysis of time series data. In his conference talk, Davis Vaughan presented several business/finance examples to showcase tibbletime’s functionality and mentioned a few, general non-business applications at the end of his talk. I couldn’t help but think about how this package might be especially helpful for environmental scientists working with time series data.</description>
     </item>
     
     <item>
       <title>My First Post</title>
-      <link>/post/2018-07-20-my-first-post/</link>
+      <link>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</link>
       <pubDate>Mon, 23 Jul 2018 21:13:14 -0500</pubDate>
       
-      <guid>/post/2018-07-20-my-first-post/</guid>
+      <guid>https://sheilasaia.rbind.io/post/2018-07-20-my-first-post/</guid>
       <description>Welcome to the wateR blog! I’ve been considering starting a water-centric data science blog for a while now. Getting this blogdown website up and running has helped solidify my motivation to write regularly about water-related data science advances that are available to R users…and maybe Python users too (both languages are so useful!).
 Some of the specific goals of this blog are to (in no special order):
  Practice developing my science communication and R skills.</description>

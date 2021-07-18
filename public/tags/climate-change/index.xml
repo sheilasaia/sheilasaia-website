@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>climate-change on  </title>
-    <link>/tags/climate-change/</link>
+    <link>https://sheilasaia.rbind.io/tags/climate-change/</link>
     <description>Recent content in climate-change on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Mon, 01 Jul 2019 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="/tags/climate-change/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheilasaia.rbind.io/tags/climate-change/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Machine Learning Applications in Hydrology</title>
-      <link>/project/201907-streamflow-ml-project/</link>
+      <link>https://sheilasaia.rbind.io/project/201907-streamflow-ml-project/</link>
       <pubDate>Mon, 01 Jul 2019 00:00:00 -0400</pubDate>
       
-      <guid>/project/201907-streamflow-ml-project/</guid>
+      <guid>https://sheilasaia.rbind.io/project/201907-streamflow-ml-project/</guid>
       <description>Collaborators JS Rice (NC State), JM Vose (USFS), and RE Emanuel (NC State)
 Timeline 2019-2020
 Project Goal The goal of this project was to use machine learning models for two applications in hydrology. First, we used a hierarchical machine learning ensemble model to predict streamflow. Then, we assessed model sensitivies to learn how changes in the percentage of different types of land cover in specific places in the watershed influenced (i.</description>
@@ -25,10 +25,10 @@ Project Goal The goal of this project was to use machine learning models for two
     
     <item>
       <title>Climate Risk Assessment in Western North Carolina</title>
-      <link>/project/201905-nc-sociohydro-project/</link>
+      <link>https://sheilasaia.rbind.io/project/201905-nc-sociohydro-project/</link>
       <pubDate>Wed, 01 May 2019 00:00:00 -0400</pubDate>
       
-      <guid>/project/201905-nc-sociohydro-project/</guid>
+      <guid>https://sheilasaia.rbind.io/project/201905-nc-sociohydro-project/</guid>
       <description>Collaborators BB Cutts (NC State), RE Emanuel (NC State), KL Martin (NC State), KM Suttles (USFS), JM Vose (USFS), DN Wear (USFS), JW Coulston (USFS)
 Timeline 2017-2019
 Project Goal The goal of this project is to combine past and future hydrology model (i.e., Soil and Water Assessment Tool (SWAT)) outputs with demographics data to create maps and prioritize climate change adaptation planning for especially vulnerable communities in western North Carolina&amp;rsquo;s Yadkin-Pee Dee River Watershed.</description>

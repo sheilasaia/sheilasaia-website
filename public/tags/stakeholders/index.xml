@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>stakeholders on  </title>
-    <link>/tags/stakeholders/</link>
+    <link>https://sheilasaia.rbind.io/tags/stakeholders/</link>
     <description>Recent content in stakeholders on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Wed, 01 Jan 2020 00:00:00 -0500</lastBuildDate>
     
-	<atom:link href="/tags/stakeholders/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheilasaia.rbind.io/tags/stakeholders/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data Driven Natural Resources Management</title>
-      <link>/project/202002-fact-project/</link>
+      <link>https://sheilasaia.rbind.io/project/202002-fact-project/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 -0500</pubDate>
       
-      <guid>/project/202002-fact-project/</guid>
+      <guid>https://sheilasaia.rbind.io/project/202002-fact-project/</guid>
       <description>Collaborators NG Nelson, E Fidan, B Reich, A Huseth, S Hall, W Hunt, K Grieger (all at NC State)
 Timeline 2020-2022
 Project Goal There are two main goals of this project. The first goal is to identify stakeholder (i.e., natural resources managers) priorities, knowledge gaps, and barriers to implementing machine learning for natural resources management (e.g., agriculture, aquaculture, forestry, water resources, etc.). The second is to develop educational materials based on the findings of the first goal to empower use of machine learning and other data-driven decision support tools for natural resources management.</description>

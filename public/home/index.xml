@@ -2,86 +2,86 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on  </title>
-    <link>/home/</link>
+    <link>https://sheilasaia.rbind.io/home/</link>
     <description>Recent content in Homes on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheilasaia.rbind.io/home/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/home/about/</link>
+      <link>https://sheilasaia.rbind.io/home/about/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/about/</guid>
-      <description>about me I work alongside a team of scientists at the State Climate Office of North Carolina and am an affiliate of North Carolina State University. My current research uses data analytics (i.e., data wrangling, statistical and physically-based modeling, and data visualizing) to predict and minimize human impacts on water resources at regional and national scales. I&amp;rsquo;m broadly interested in open science and research questions exploring the relationships between humans, climate, and water resources (water quantity and water quality).</description>
+      <guid>https://sheilasaia.rbind.io/home/about/</guid>
+      <description>about me I work alongside a team of scientists at the State Climate Office of North Carolina and am an affiliate of North Carolina State University. My current research uses data analytics (i.e., data wrangling, statistical and physically-based modeling, and data visualizing) to predict and minimize human impacts on water resources at regional and national scales. I&amp;rsquo;m passionate about open science and broadly interested in research questions exploring the relationships between humans, climate, and water resources (water quantity and water quality).</description>
     </item>
     
     <item>
       <title>recent wateR blog posts</title>
-      <link>/home/posts/</link>
+      <link>https://sheilasaia.rbind.io/home/posts/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/posts/</guid>
+      <guid>https://sheilasaia.rbind.io/home/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>projects</title>
-      <link>/home/projects/</link>
+      <link>https://sheilasaia.rbind.io/home/projects/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/projects/</guid>
+      <guid>https://sheilasaia.rbind.io/home/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>recent publications</title>
-      <link>/home/publications/</link>
+      <link>https://sheilasaia.rbind.io/home/publications/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/publications/</guid>
+      <guid>https://sheilasaia.rbind.io/home/publications/</guid>
       <description></description>
     </item>
     
     <item>
       <title>recent &amp; upcoming talks</title>
-      <link>/home/talks/</link>
+      <link>https://sheilasaia.rbind.io/home/talks/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/talks/</guid>
+      <guid>https://sheilasaia.rbind.io/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>teaching &amp; workshops</title>
-      <link>/home/teaching/</link>
+      <link>https://sheilasaia.rbind.io/home/teaching/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/teaching/</guid>
+      <guid>https://sheilasaia.rbind.io/home/teaching/</guid>
       <description>upcoming workshops:  Navigating RStudio and R Basics - I&amp;rsquo;m teaching a 2-hr workshop for R-Ladies RTP on March 22, 2021 from 6:30-8:30pm ET. This workshop will cover very basic R and RStudio. This event is intended for women and non-binary folks interested in learning more about R. Men are welcome to attend as guests. More info here.
  NC State University Libraries Peer Schoolars Workshop - I&amp;rsquo;m teaching a virtual workshop titled &amp;ldquo;Introduction to Data Management Plans&amp;rdquo; on April 7, 2021 from 12pm-1:30pm.</description>
     </item>
     
     <item>
       <title>tags</title>
-      <link>/home/tags/</link>
+      <link>https://sheilasaia.rbind.io/home/tags/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 -0400</pubDate>
       
-      <guid>/home/tags/</guid>
+      <guid>https://sheilasaia.rbind.io/home/tags/</guid>
       <description></description>
     </item>
     
     <item>
       <title>contact</title>
-      <link>/home/contact/</link>
+      <link>https://sheilasaia.rbind.io/home/contact/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/home/contact/</guid>
+      <guid>https://sheilasaia.rbind.io/home/contact/</guid>
       <description></description>
     </item>
     

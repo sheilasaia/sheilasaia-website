@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>aquaculture on  </title>
-    <link>/tags/aquaculture/</link>
+    <link>https://sheilasaia.rbind.io/tags/aquaculture/</link>
     <description>Recent content in aquaculture on  </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Wed, 01 Jan 2020 00:00:00 -0500</lastBuildDate>
     
-	<atom:link href="/tags/aquaculture/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sheilasaia.rbind.io/tags/aquaculture/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ShellCast Web App</title>
-      <link>/project/202001-shellcast-project/</link>
+      <link>https://sheilasaia.rbind.io/project/202001-shellcast-project/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 -0500</pubDate>
       
-      <guid>/project/202001-shellcast-project/</guid>
-      <description>Collaborators NG Nelson (NC State), S Hall (NC State), A Haines (NC Division of Marine Fisheries), S Jenkins (NC Division of Marine Fisheries), D Glenn (NOAA NWS), K Riley (NOAA NWS), E Herbst (NC Sea Grant), C Matteo (NC Shellfish Growers Association), E Allen (NC State OIT), C Tenan (NC State OIT), W Turner (NC State OIT), M Vandegrift (NC State Libraries)
+      <guid>https://sheilasaia.rbind.io/project/202001-shellcast-project/</guid>
+      <description>Collaborators NG Nelson (NC State), S Hall (NC State), A Haines (NC Division of Marine Fisheries), S Jenkins (NC Division of Marine Fisheries), D Glenn (NOAA NWS), K Riley (NOAA NWS), E Herbst (NC Sea Grant), C Matteo (NC Shellfish Growers Association), E Allen (NC State OIT), C Tenan (NC State OIT), W Turner (NC State OIT), M Vandegrift (NC State Libraries), S Young (NC State)
 Timeline 2020-2022
 Project Goal The goal of this project is to develop a web application (web app) forecast tool, called ShellCast.</description>
     </item>
