@@ -17,13 +17,15 @@ weight = 6
 
 # upcoming workshops:
 
-- *Navigating RStudio and R Basics* - I'm teaching a 2-hr workshop for [R-Ladies RTP](https://www.meetup.com/rladies-rtp) on March 22, 2021 from 6:30-8:30pm ET. This workshop will cover very basic R and RStudio. This event is intended for women and non-binary folks interested in learning more about R. Men are welcome to attend as guests. More info [here](https://www.meetup.com/rladies-rtp/events/276098884/).
-
-- *NC State University Libraries Peer Schoolars Workshop* - I'm teaching a virtual workshop titled "Introduction to Data Management Plans" on April 7, 2021 from 12pm-1:30pm. More information and to sign-up, visit the peer scholars workshop series calendar [here](https://www.lib.ncsu.edu/workshops/introduction-data-management-plans-researchers-0).
+- I have nothing planned at this time. Please check back soon!
 
 # past workshops:
 
-- *Introduction to R for Water Resources Management* - I had planned to teach a 2-hr workshop at the [North Carolina Water Resources Research Institute (NC WRRI) Annual Confernece](https://wrri.ncsu.edu/conference/) on March 18, 2020 from 1:30-3:30pm. Find out more info and sign up [here](https://ncsu.qualtrics.com/jfe/form/SV_4NhZNhQVcyM8Cu9). **This event was cancelled due to COVID-19 measures taken by NC State University.** You can read more [here](https://wrri.ncsu.edu/conference/wp-content/uploads/sites/3/2020/03/WRRI_postponement_notice_3-11-20.pdf).
+- *Navigating RStudio and R Basics* - I taught a 2-hr workshop for [R-Ladies RTP](https://www.meetup.com/rladies-rtp) on March 22, 2021 from 6:30-8:30pm ET. This workshop covered very basic R and RStudio. This event is intended for women and non-binary folks interested in learning more about R. Men are welcome to attend as guests. More info [here](https://www.meetup.com/rladies-rtp/events/276098884/).
+
+- *NC State University Libraries Peer Schoolars Workshop* - I taught a virtual workshop titled "Introduction to Data Management Plans" on April 7, 2021 from 12pm-1:30pm. More information and to sign-up, visit the peer scholars workshop series calendar [here](https://www.lib.ncsu.edu/workshops/introduction-data-management-plans-researchers-0).
+
+- *Introduction to R for Water Resources Management* - I planned to teach a 2-hr workshop at the [North Carolina Water Resources Research Institute (NC WRRI) Annual Confernece](https://wrri.ncsu.edu/conference/) on March 18, 2020 from 1:30-3:30pm but it was canceled due to the COVID19 pandemic.
 
 - *NC State University Libraries Peer Schoolars Workshop* - I taught a 2-hr workshop titled "Introduction to Data Management Plans" on February 12, 2020 from 12pm-2pm in the D.H. Hill Library ITTC2 Lab. More information and to sign-up, visit [here](https://www.lib.ncsu.edu/workshops/introduction-data-management-plans-researchers).
 

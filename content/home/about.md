@@ -13,9 +13,9 @@ weight = 1
     "hydrology",
     "biogeochemistry",
     "water resources management",
-    "climate change adpation",
+    "climate change adaptation",
     "data science",
-    "reproducible research"
+    "open & reproducible research"
   ]
 
 # List your qualifications (such as academic degrees).
